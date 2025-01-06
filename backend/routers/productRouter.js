@@ -408,18 +408,20 @@ productRouter.put(
 
 productRouter.delete(
   '/:id',
-  isAuth,
-  isAdmin,
   expressAsyncHandler(async (req, res) => {
-    const product = await Product.findById(req.params.id);
-    if (product) {
-      const deleteProduct = await product.remove();
-      res.send({ message: 'Product Deleted', product: deleteProduct });
-    } else {
-      res.status(404).send({ message: 'Product Not Found' });
+    try {
+      const product = await Product.findByIdAndDelete(req.params.id);
+      if (!product) {
+        return res.status(404).send({ message: 'Product Not Found' });
+      }
+      res.send({ message: 'Product Deleted', product });
+    } catch (error) {
+      console.error('Error deleting product:', error);
+      res.status(500).send({ message: 'Error deleting product', error: error.message });
     }
   })
 );
+
 
 productRouter.post(
   '/:id/reviews',
@@ -1277,7 +1279,7 @@ productRouter.delete(
       }
 
       // Delete the purchase
-      await purchase.remove();
+      await Purchase.deleteOne({ _id: req.params.id });
 
       res.json({ message: 'Purchase deleted successfully' });
     } catch (error) {
