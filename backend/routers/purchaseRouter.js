@@ -17,6 +17,27 @@ purchaseRouter.get('/get/:id', async (req, res) => {
 });
 
 
+purchaseRouter.get("/purchase/suggestions", async (req, res) => {
+  try {
+    let { search = "" } = req.query;
+    search = search.replace(/\s+/g, "").toUpperCase(); // Normalize the search term
+
+    // Search both `invoiceNo` and `customerName` fields with case insensitive regex
+    const suggestions = await Purchase.find({
+      $or: [
+        { invoiceNo: { $regex: search, $options: "i" } },
+        { customerName: { $regex: search, $options: "i" } }
+      ]
+    }).sort({ invoiceNo: -1 }).collation({ locale: "en", numericOrdering: true }).limit(5); // Limit suggestions to 5
+
+    res.status(200).json(suggestions);
+  } catch (error) {
+    console.error("Error fetching suggestions:", error); // Log the error for debugging
+    res.status(500).json({ message: "Error fetching suggestions" });
+  }
+});
+
+
 purchaseRouter.get("/suggestions", async (req, res) => {
   try {
     let { search = "" } = req.query;

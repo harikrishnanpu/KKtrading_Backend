@@ -217,14 +217,14 @@ billingRouter.post('/create', async (req, res) => {
       }
 
       // Ensure paymentAmount does not exceed totalAmount
-      if (parsedPaymentAmount > totalAmount) {
-        await session.abortTransaction();
-        session.endSession();
-        return res.status(400).json({
-          message:
-            'Payment amount cannot exceed total amount after discount',
-        });
-      }
+      // if (parsedPaymentAmount > totalAmount) {
+      //   await session.abortTransaction();
+      //   session.endSession();
+      //   return res.status(400).json({
+      //     message:
+      //       'Payment amount cannot exceed total amount after discount',
+      //   });
+      // }
 
       const currentDate = new Date(paymentReceivedDate || Date.now());
 
@@ -684,13 +684,13 @@ billingRouter.post('/edit/:id', async (req, res) => {
       }
 
       const totalAmount = parseFloat(billingAmount) - parseFloat(discount || 0);
-      if (parsedPaymentAmount > totalAmount) {
-        await session.abortTransaction();
-        session.endSession();
-        return res.status(400).json({
-          message: 'Payment amount cannot exceed the total amount after discount.',
-        });
-      }
+      // if (parsedPaymentAmount > totalAmount) {
+      //   await session.abortTransaction();
+      //   session.endSession();
+      //   return res.status(400).json({
+      //     message: 'Payment amount cannot exceed the total amount after discount.',
+      //   });
+      // }
 
       const paymentReferenceId = 'PAY' + Date.now().toString();
       const currentDate = new Date(paymentReceivedDate || Date.now());
