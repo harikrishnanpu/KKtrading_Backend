@@ -503,6 +503,18 @@ productRouter.post(
         if (product) {
           product.countInStock += quantityInNumbers;
           product.price = parseFloat(item.totalPriceInNumbers);
+          product.actLength = item.actLength;
+          product.actBreadth = item.actBreadth;
+          product.size = item.size;
+          product.length = item.length;
+          product.breadth = item.breadth;
+          product.psRatio = item.psRatio;
+          product.name = item.name;
+          product.brand = item.brand;
+          product.category = item.category;
+          product.sUnit = item.sUnit;
+          product.pUnit = item.pUnit;
+          product.gstPercent = item.gstPercent,
           Object.assign(product, item);
           await product.save();
         } else {
@@ -511,6 +523,7 @@ productRouter.post(
             ...item,
             countInStock: quantityInNumbers,
             price: parseFloat(item.totalPriceInNumbers),
+            gstPercent: item.gstPercent,
           });
           await newProduct.save();
         }
@@ -767,6 +780,7 @@ productRouter.put(
           product.sUnit = item.sUnit;
           product.pUnit = item.pUnit;
           product.price = parseFloat(item.totalPriceInNumbers);
+          product.gstPercent = item.gstPercent,
           Object.assign(product, item);
           await product.save();
         } else {
@@ -775,6 +789,7 @@ productRouter.put(
             ...item,
             countInStock: newQuantity,
             price: parseFloat(item.totalPriceInNumbers),
+            gstPercent: item.gstPercent,
           });
           await newProduct.save();
         }

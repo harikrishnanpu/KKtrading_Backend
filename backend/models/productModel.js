@@ -36,6 +36,7 @@ const productSchema = new mongoose.Schema(
     countInStock: { type: Number, required: true },
     rating: { type: Number,},
     numReviews: { type: Number,},
+    gstPercent: { type: Number },
     reviews: [reviewSchema],
   },
   {
