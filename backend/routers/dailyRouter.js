@@ -488,6 +488,7 @@ transactionRouter.get('/allbill/payments', async (req, res) => {
             billingId: billing._id,
             amount: payment.amount,
             paymentFrom: billing.customerName,
+            invoiceNo: billing.invoiceNo,
             method: payment.method,
             date: payment.date,
             remark: payment.remark,
