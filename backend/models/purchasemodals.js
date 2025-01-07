@@ -23,7 +23,7 @@ const itemSchema = new mongoose.Schema(
     billPartPriceInNumbers: { type: Number, required: true },
     allocatedOtherExpense: { type: Number, default: 0 },
     totalPriceInNumbers: { type: Number, default: 0 },
-    gstPercent: { type: Number, required: true },
+    gstPercent: { type: Number, required: true, default: 18 },
   },
   { _id: false }
 );
