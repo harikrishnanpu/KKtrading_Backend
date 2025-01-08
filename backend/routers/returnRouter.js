@@ -41,6 +41,7 @@ returnRouter.post('/create', async (req, res) => {
       customerAddress,
       sellerName,
       sellerAddress,
+      otherExpenses, // array of { amount, remark }
     } = req.body;
 
     // --- 1. Basic Validations ---
@@ -79,7 +80,7 @@ returnRouter.post('/create', async (req, res) => {
     let finalReturnNo = returnNo;
     const existingReturn = await Return.findOne({ returnNo }).session(session);
     if (existingReturn) {
-      // Generate new returnNo with 'CN' prefix
+      // If returnNo is already used, we can generate a new one with 'CN' prefix (example).
       const latestReturn = await Return.findOne({ returnNo: /^CN\d+$/ })
         .sort({ returnNo: -1 })
         .collation({ locale: 'en', numericOrdering: true })
@@ -88,7 +89,10 @@ returnRouter.post('/create', async (req, res) => {
       if (!latestReturn) {
         finalReturnNo = 'CN1';
       } else {
-        const latestNumberPart = parseInt(latestReturn.returnNo.replace('CN', ''), 10);
+        const latestNumberPart = parseInt(
+          latestReturn.returnNo.replace('CN', ''),
+          10
+        );
         const nextNumber = latestNumberPart + 1;
         finalReturnNo = `CN${nextNumber}`;
       }
@@ -97,12 +101,16 @@ returnRouter.post('/create', async (req, res) => {
     // --- 4. Load Related Document (Billing or Purchase) ---
     let relatedDoc;
     if (returnType === 'bill') {
-      relatedDoc = await Billing.findOne({ invoiceNo: billingNo }).session(session);
+      relatedDoc = await Billing.findOne({ invoiceNo: billingNo }).session(
+        session
+      );
       if (!relatedDoc) {
         throw new Error(`Billing with invoiceNo ${billingNo} not found.`);
       }
     } else {
-      relatedDoc = await Purchase.findOne({ purchaseId: purchaseNo }).session(session);
+      relatedDoc = await Purchase.findOne({ purchaseId: purchaseNo }).session(
+        session
+      );
       if (!relatedDoc) {
         throw new Error(`Purchase with purchaseId ${purchaseNo} not found.`);
       }
@@ -129,67 +137,78 @@ returnRouter.post('/create', async (req, res) => {
       returnAmount: returnAmount || 0,
       netReturnAmount: netReturnAmount || 0,
       products: filteredProducts,
-    });
+      otherExpenses: Array.isArray(otherExpenses) ? otherExpenses : [], // store the array
 
-    // Populate fields based on returnType
-    if (returnType === 'bill') {
-      newReturn.billingNo = billingNo;
-      newReturn.customerName = customerName;
-      newReturn.customerAddress = customerAddress;
-    } else {
-      newReturn.purchaseNo = purchaseNo;
-      newReturn.sellerName = sellerName;
-      newReturn.sellerAddress = sellerAddress;
-    }
+      // Bill fields
+      billingNo: returnType === 'bill' ? billingNo : undefined,
+      customerName: returnType === 'bill' ? customerName : undefined,
+      customerAddress: returnType === 'bill' ? customerAddress : undefined,
+
+      // Purchase fields
+      purchaseNo: returnType === 'purchase' ? purchaseNo : undefined,
+      sellerName: returnType === 'purchase' ? sellerName : undefined,
+      sellerAddress: returnType === 'purchase' ? sellerAddress : undefined,
+    });
 
     // Save the Return Document
     await newReturn.save({ session });
 
-    // --- 7. Update Product Stocks and Related Document's Returned Quantities ---
+    // --- 7. Update Product Stocks and Returned Quantities in Billing/Purchase ---
     for (const rProd of filteredProducts) {
-      const dbProduct = await Product.findOne({ item_id: rProd.item_id }).session(session);
+      const dbProduct = await Product.findOne({
+        item_id: rProd.item_id,
+      }).session(session);
+
       if (!dbProduct) {
-        throw new Error(`Product with ID ${rProd.item_id} not found in Product collection.`);
+        throw new Error(
+          `Product with ID ${rProd.item_id} not found in Product collection.`
+        );
       }
 
-      // Adjust countInStock based on returnType
+      // (A) Purchase Return => Decrease Stock
       if (returnType === 'purchase') {
-        // Decrease stock for Purchase Returns
         if (dbProduct.countInStock < Number(rProd.quantity)) {
           throw new Error(
             `Insufficient stock for product ${rProd.item_id}. Cannot decrease by ${rProd.quantity}. Current stock: ${dbProduct.countInStock}`
           );
         }
         dbProduct.countInStock -= Number(rProd.quantity);
-      } else if (returnType === 'bill') {
-        // Increase stock for Bill Returns
+      }
+      // (B) Bill Return => Increase Stock
+      else if (returnType === 'bill') {
         dbProduct.countInStock += Number(rProd.quantity);
       }
 
-      // Save the updated Product
+      // Save updated product
       await dbProduct.save({ session });
 
-      // Update returnedQuantity in Billing or Purchase Document
+      // Update returnedQuantity in Billing or Purchase
       if (returnType === 'bill') {
         const billProd = relatedDoc.products.find(
           (bp) => bp.item_id === rProd.item_id
         );
         if (!billProd) {
-          throw new Error(`Product ${rProd.item_id} not found in billing doc for update.`);
+          throw new Error(
+            `Product ${rProd.item_id} not found in billing doc for update.`
+          );
         }
-        billProd.returnedQuantity = (billProd.returnedQuantity || 0) + Number(rProd.quantity);
+        billProd.returnedQuantity =
+          (billProd.returnedQuantity || 0) + Number(rProd.quantity);
       } else {
         const purchaseItem = relatedDoc.items.find(
           (pi) => pi.itemId === rProd.item_id
         );
         if (!purchaseItem) {
-          throw new Error(`Item ${rProd.item_id} not found in purchase doc for update.`);
+          throw new Error(
+            `Item ${rProd.item_id} not found in purchase doc for update.`
+          );
         }
-        purchaseItem.returnedQuantity = (purchaseItem.returnedQuantity || 0) + Number(rProd.quantity);
+        purchaseItem.returnedQuantity =
+          (purchaseItem.returnedQuantity || 0) + Number(rProd.quantity);
       }
     }
 
-    // Save the updated Billing or Purchase Document
+    // Save updated Billing or Purchase
     await relatedDoc.save({ session });
 
     // --- 8. Commit the Transaction ---
@@ -199,7 +218,7 @@ returnRouter.post('/create', async (req, res) => {
     // --- 9. Respond to Client ---
     res.status(201).json({ success: true, returnNo: finalReturnNo });
   } catch (error) {
-    // --- 10. Rollback Transaction in Case of Error ---
+    // --- 10. Rollback Transaction in case of error ---
     await session.abortTransaction();
     session.endSession();
     console.error('Error creating return:', error);
@@ -390,7 +409,7 @@ returnRouter.get('/damage/getDamagedData', async (req, res) => {
       await relatedDoc.save({ session });
   
       // 5. Delete the Return Entry
-      await returnEntry.remove({ session });
+      await returnEntry.deleteOne({ session });
   
       // 6. Commit the Transaction
       await session.commitTransaction();
@@ -447,74 +466,8 @@ returnRouter.get('/damage/getDamagedData', async (req, res) => {
     }
   });
   
-  // Update return details by Return No
-  returnRouter.put('/api/returns/update/:returnNo', async (req, res) => {
-    const session = await Return.startSession();
-    session.startTransaction();
-  
-    try {
-      const returnNo = req.params.returnNo;
-      const {
-        billingNo,
-        returnDate,
-        customerName,
-        customerAddress,
-        products,
-        returnAmount,
-        totalTax,
-        netReturnAmount,
-      } = req.body;
-  
-      // Filter out products with quantity 0
-      const filteredProducts = products.filter((product) => product.quantity > 0);
-  
-      // Update return details
-      const updatedReturn = await Return.findOneAndUpdate(
-        { returnNo: returnNo },
-        {
-          returnDate,
-          billingNo,
-          returnAmount,
-          totalTax,
-          netReturnAmount,
-          customerName,
-          customerAddress,
-          products: filteredProducts,
-        },
-        { new: true, session }
-      );
-  
-      if (!updatedReturn) {
-        throw new Error(`Return with No ${returnNo} not found`);
-      }
-  
-      // Update countInStock for each product
-      for (const product of filteredProducts) {
-        const updatedProduct = await Product.findOne({ item_id: product.item_id }).session(session);
-  
-        if (!updatedProduct) {
-          throw new Error(`Product with ID ${product.item_id} not found`);
-        }
-  
-        // Adjust countInStock (increase if product is returned)
-        updatedProduct.countInStock += parseFloat(product.quantity);
-  
-        await updatedProduct.save({ session });
-      }
-  
-      // Commit the transaction
-      await session.commitTransaction();
-      session.endSession();
-  
-      res.json(updatedReturn);
-    } catch (error) {
-      // Abort the transaction in case of an error
-      await session.abortTransaction();
-      session.endSession();
-  
-      res.status(500).json({ message: 'Error updating return or updating stock', error });
-    }
-  });
+
+
   
 
 export default returnRouter;

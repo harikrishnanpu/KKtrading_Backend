@@ -686,7 +686,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
   session.startTransaction();
 
   try {
-    const { invoiceNo, paymentAmount, paymentMethod, userId, date } = req.body;
+    const { invoiceNo, paymentAmount, paymentMethod,paymentRemark, userId, date } = req.body;
 
     // Validate required fields
     if (!invoiceNo || !paymentAmount || !paymentMethod || !userId) {
@@ -739,7 +739,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
       amount: parsedPaymentAmount,
       method: paymentMethod.trim(),
       referenceId: referenceId,
-      remark: `Bill ${invoiceNo.trim()}`,
+      remark: `Bill ${invoiceNo.trim()} : Remark ${paymentRemark}`,
       submittedBy: userId,
       date: paymentDate,
     };
@@ -747,7 +747,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
     const customerPaymentEntry = {
       amount: parsedPaymentAmount,
       method: paymentMethod.trim(),
-      remark: `Bill ${invoiceNo.trim()}`,
+      remark: `Bill ${invoiceNo.trim()}  : Remark ${paymentRemark}`,
       submittedBy: userId,
       date: paymentDate,
       referenceId: referenceId,
