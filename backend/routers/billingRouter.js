@@ -37,6 +37,7 @@ billingRouter.post('/create', async (req, res) => {
       paymentMethod,
       paymentReceivedDate,
       salesmanPhoneNumber,
+      roundOff,
       unloading = 0,
       transportation = 0,
       handlingcharge = 0,
@@ -182,6 +183,7 @@ billingRouter.post('/create', async (req, res) => {
       customerContactNumber: customerContactNumber.trim(),
       marketedBy: marketedBy ? marketedBy.trim() : '',
       submittedBy: userId,
+      roundOff: parseFloat(roundOff) || 0,
       showroom: showroom,
       handlingCharge: parseFloat(handlingcharge),
       remark: remark ? remark.trim() : '',
@@ -406,6 +408,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       paymentMethod,
       paymentReceivedDate,
       marketedBy,
+      roundOff,
       userId,
       showroom,
       salesmanPhoneNumber,
@@ -762,6 +765,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       paymentStatus: paymentStatus || existingBilling.paymentStatus,
       deliveryStatus: deliveryStatus || existingBilling.deliveryStatus,
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
+      roundOff: parseFloat(roundOff) || 0,
     });
 
     // === Update Salesman Phone Number ===
