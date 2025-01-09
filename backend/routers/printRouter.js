@@ -384,25 +384,31 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
 
     // Helper to safely compute all the product-based calculations
     const computeProductFields = (product) => {
+      // Base total: quantity * selling price
       const baseTotal =
         (parseFloat(product.quantity) || 0) *
         (parseFloat(product.sellingPriceinQty) || 0);
-
-      const discountAmt =
+        
+        const discountAmt =
         (parseFloat(product.quantity) || 0) * perItemDiscount;
-
-      const rateWithoutGST = baseTotal - discountAmt; // net after discount
-
+        
+      // Calculate GST rate and amount
       const gstRate = parseFloat(product.gstRate) || 0; // e.g., 18 means 18%
-      const gstAmount = rateWithoutGST * (gstRate / 100);
-
-      // Split equally between CGST and SGST
+      const rateWithoutGST = ( baseTotal / (1 + gstRate / 100) ) - discountAmt; // Derive rate without GST
+      
+      // Calculate discount amount
+      // const perItemDiscount = parseFloat(perItemDiscount) || 0;
+      // Adjust for discount (assumes discount applies to rate without GST)
+      const rateAfterDiscount = rateWithoutGST;
+      const gstAmount = rateWithoutGST * (gstRate / 100); // GST component of the base total
+    
+      // Split GST equally between CGST and SGST
       const cgst = gstAmount / 2;
       const sgst = gstAmount / 2;
-
-      // Final net amount (with GST)
-      const netAmount = rateWithoutGST + gstAmount;
-
+    
+      // Final net amount after discount and adding GST
+      const netAmount = rateAfterDiscount + gstAmount;
+    
       return {
         baseTotal,
         discountAmt,
@@ -414,6 +420,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
         netAmount,
       };
     };
+    
 
     // Generate the invoice page HTML
     const generatePageHTML = (
