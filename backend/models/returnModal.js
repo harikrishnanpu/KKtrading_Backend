@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 // Define a sub-schema for Other Expenses
 const otherExpensesSchema = mongoose.Schema(
   {
-    amount: { type: Number, required: true },
-    remark: { type: String, default: '' },
+    amount: { type: Number},
+    remark: { type: String},
   },
   { _id: false } // we can disable _id for sub-docs if desired
 );
