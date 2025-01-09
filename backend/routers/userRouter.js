@@ -733,6 +733,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
       date: paymentDate,
       referenceId: referenceId,
       invoiceNo: invoiceNo.trim(),
+      remark: `Bill ${invoiceNo.trim()} : Remark ${paymentRemark}`
     };
 
     const accountPaymentEntry = {
