@@ -1213,8 +1213,8 @@ printRouter.post('/generate-purchase-invoice-html', async (req, res) => {
               <th>Purchased Qty</th>
               <th>P. Unit</th>
               <th>Qty (in Nos)</th>
-              <th>Cash Part</th>
-              <th>Bill Part</th>
+              <th>Purchase Expense</th>
+              <th>Bill Price</th>
               <th>Total</th>
               <th>Other Expense</th>
               <th>Grand Total</th>
