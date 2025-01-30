@@ -12,6 +12,9 @@ import Log from '../models/Logmodal.js';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
 import CustomerAccount from '../models/customerModal.js';
 import mongoose from 'mongoose';
+import jwt from 'jsonwebtoken';
+import { isAdmin } from '../utils.js';
+
 
 const userRouter = express.Router();
 
@@ -43,25 +46,157 @@ userRouter.post(
    
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
-        res.send({
-          _id: user._id,
-          name: user.name,
-          email: user.email,
-          isAdmin: user.isAdmin,
-          isSeller: user.isSeller,
-        });
-        return;
-      }
+        const serviceToken =  jwt.sign(
+            {
+              userId: user._id,
+            },
+            process.env.JWT_SECRET || 'SECRET_KEY',
+            {
+              expiresIn: '1 days',
+            }
+          );
+     return   res.status(200).json({
+            serviceToken,
+            user: {
+              _id: user._id,
+              email: user.email,
+              name: user.name,
+              role: user.role,
+              isAdmin: user.isAdmin
+            }
+      });
     }
+  }
 
   } catch (error) {
     console.log('Error during sign-in:', error);
-    res.status(500).json({ message: 'Internal Server Error' });
+   return res.status(500).json({ message: 'Internal Server Error' });
   }
-    res.status(401).send({ message: 'Invalid email or password' });
+   return res.status(401).send({ message: 'Invalid email or password' });
   })
 );
 
+
+
+userRouter.post(
+  '/register',
+  expressAsyncHandler(async (req, res) => {
+    try {
+      const { email, password, firstName, lastName } = req.body;
+
+      // Validate input fields
+      if (!email || !password) {
+        return res.status(400).json({ message: "Email and password are required" });
+      }
+
+      if (!firstName || !lastName) {
+        return res.status(400).json({ message: "First and last name are required" });
+      }
+
+      // Check if user already exists
+      const isAlreadyRegistered = await User.findOne({ email }); // Use await here
+      if (isAlreadyRegistered) {
+        console.log('User already exists');
+        return res.status(400).json({ message: "User already exists" });
+      }
+
+      // Create new user
+      const hashedPassword = bcrypt.hashSync(password, 10);
+      const createdUser = new User({
+        email,
+        password: hashedPassword,
+        name: `${firstName} ${lastName}`, // Proper name formatting
+        role: 'user'
+      });
+
+      if(createdUser){
+
+        const serviceToken =  jwt.sign(
+          {
+            userId: createdUser._id,
+          },
+          process.env.JWT_SECRET || 'SECRET_KEY',
+          {
+            expiresIn: '1 days',
+          }
+        );
+
+        // Save the user to the database
+        await createdUser.save();
+        
+        // Prepare the response object
+        const user = {
+          _id: createdUser._id,
+          email: createdUser.email,
+          name: createdUser.name,
+          role: createdUser.role,
+          isAdmin: createdUser.isAdmin,
+
+        };
+        
+      return res.status(200).json({ serviceToken, user }); // Use 201 for successful creation
+      }
+    } catch (error) {
+      console.error("Error during user registration:", error); // Log the error
+      return res.status(500).json({ message: "Internal server error" });
+    }
+  })
+);
+
+
+
+
+userRouter.get(
+  '/auth/check-token',
+  expressAsyncHandler(async (req, res) => {
+    try {
+      const authorization = req.headers.authorization;
+
+      // Check if the token is missing
+      if (!authorization) {
+        console.log('Token Missing');
+        return res.status(401).json({ message: 'Token Missing' });
+      }
+
+      // Extract the token
+      const accessToken = authorization.split(' ')[1];
+
+      // Verify the token
+      let data;
+      try {
+        data = jwt.verify(accessToken, 'SECRET_KEY'); // Replace with your secret key
+      } catch (error) {
+        console.error('Invalid Token:', error.message);
+        return res.status(401).json({ message: 'Invalid Token' });
+      }
+
+      // Get userId from the token data
+      const userId = typeof data === 'object' ? data?.userId : '';
+
+      // Fetch the user from the database
+      const user = await User.findById(userId); // Ensure this is awaited
+
+      if (!user) {
+        console.log('User not found for given token');
+        return res.status(401).json({ message: 'Invalid Token' });
+      }
+
+      // Respond with user data
+      return res.status(200).json({
+        user: {
+          _id: user._id,
+          email: user.email,
+          name: user.name,
+          role: user.role,
+          isAdmin: user.isAdmin,
+        },
+      });
+    } catch (err) {
+      console.error('Unexpected Error:', err.message);
+      return res.status(500).json({ message: 'Internal Server Error' });
+    }
+  })
+);
 
 
 
@@ -117,25 +252,6 @@ userRouter.post('/logout/:userId', async (req, res) => {
 
 
 
-userRouter.post(
-  '/register',
-  expressAsyncHandler(async (req, res) => {
-    const user = new User({
-      name: req.body.name,
-      email: req.body.email,
-      password: bcrypt.hashSync(req.body.password, 8),
-    });
-    const createdUser = await user.save();
-    res.send({
-      _id: createdUser._id,
-      name: createdUser.name,
-      email: createdUser.email,
-      isAdmin: createdUser.isAdmin,
-      isSeller: user.isSeller,
-      token: generateToken(createdUser),
-    });
-  })
-);
 
 
 
@@ -177,6 +293,16 @@ userRouter.get(
     res.send(users);
   })
 );
+
+
+userRouter.get('/notify/all', async (req, res) => {
+  try {
+    const users = await User.find({}, '_id name'); // adjust fields as needed
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch users' });
+  }
+});
 
 userRouter.delete(
   '/:id',
@@ -220,7 +346,7 @@ userRouter.get('/user/:id',
         res.status(404).send({msg: "User Not Found"})
       }
     }catch(error){
-      res.statsu(500).send({msg: "Error Occured"})
+      res.status(500).send({msg: "Error Occured"})
     }
   })
 )

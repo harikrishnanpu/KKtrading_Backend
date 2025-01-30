@@ -128,7 +128,7 @@ productRouter.get(
 
 productRouter.get('/searchform/search', async (req, res) => {
   let searchQuery = (req.query.q || '').trim();
-  const limit = parseFloat(req.query.limit) || 8;
+  const limit = parseFloat(req.query.limit) || 16;
 
   try {
     let products = [];
@@ -273,17 +273,32 @@ productRouter.get(
 productRouter.get(
   '/:id',
   expressAsyncHandler(async (req, res) => {
-    const product = await Product.findById(req.params.id).populate(
-      'seller',
-      'seller.name seller.logo seller.rating seller.numReviews'
-    );
-    if (product) {
-      res.send(product);
-    } else {
-      res.status(404).send({ message: 'Product Not Found' });
+    const id = req.params.id.toUpperCase();
+
+    try {
+      let product;
+      
+      // Check if the id starts with 'K' followed by numbers
+      if (/^K\d+$/.test(id) || /^k\d+$/.test(id)) {
+        // Search by item_id
+        product = await Product.findOne({ item_id: id });
+      } else {
+        // Search by _id
+        product = await Product.findById(id);
+      }
+
+      if (product) {
+        res.send(product);
+      } else {
+        res.status(404).send({ message: 'Product Not Found' });
+      }
+    } catch (error) {
+      // Handle errors (e.g., invalid ObjectId format)
+      res.status(400).send({ message: 'Invalid ID format or other error', error: error.message });
     }
   })
 );
+
 
 productRouter.post(
   '/',
@@ -375,36 +390,39 @@ productRouter.put('/update-stock/:id', async (req, res) => {
 
 productRouter.put(
   '/:id',
-  isAuth,
   expressAsyncHandler(async (req, res) => {
     const productId = req.params.id;
+    const updatedProduct = req.body; // Directly use req.body
     const product = await Product.findById(productId);
+    
     if (product) {
-      product.name = req.body.name;
-      product.price = req.body.price;
-      product.image = req.body.image;
-      product.category = req.body.category;
-      product.brand = req.body.brand;
-      product.countInStock = req.body.countInStock;
-      product.description = req.body.description;
-      product.item_id = req.body.itemId;
-      product.psRatio = req.body.psRatio;
-      product.pUnit = req.body.pUnit;
-      product.sUnit = req.body.sUnit;
-      product.length = req.body.length;
-      product.breadth = req.body.breadth;
-      product.size = req.body.size;
-      product.unit = req.body.unit;
-      product.type = req.body.type;
-      product.cashPartPrice = req.body.cashPartPrice;
-      product.billPartPrice = req.body.billPartPrice;
-      const updatedProduct = await product.save();
-      res.send({ message: 'Product Updated', product: updatedProduct });
+      product.item_id = updatedProduct.item_id || updatedProduct.itemId || product.item_id;
+      product.name = updatedProduct.name || product.name;
+      product.price = updatedProduct.price || product.price;
+      product.image = updatedProduct.image || product.image;
+      product.category = updatedProduct.category || product.category;
+      product.brand = updatedProduct.brand || product.brand;
+      product.countInStock = updatedProduct.countInStock || product.countInStock;
+      product.description = updatedProduct.description || product.description;
+      product.psRatio = updatedProduct.psRatio || product.psRatio;
+      product.pUnit = updatedProduct.pUnit || product.pUnit;
+      product.sUnit = updatedProduct.sUnit || product.sUnit;
+      product.length = updatedProduct.length || product.length;
+      product.breadth = updatedProduct.breadth || product.breadth;
+      product.size = updatedProduct.size || product.size;
+      product.unit = updatedProduct.unit || product.unit;
+      product.type = updatedProduct.type || product.type;
+      product.cashPartPrice = updatedProduct.cashPartPrice || product.cashPartPrice;
+      product.billPartPrice = updatedProduct.billPartPrice || product.billPartPrice;
+      
+      const updated = await product.save();
+      res.send({ message: 'Product Updated', product: updated });
     } else {
       res.status(404).send({ message: 'Product Not Found' });
     }
   })
 );
+
 
 productRouter.delete(
   '/:id',

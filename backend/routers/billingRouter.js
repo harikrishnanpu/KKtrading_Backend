@@ -1100,7 +1100,6 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
       if (!billings) {
         return res.status(404).json({ message: 'No billings found' });
       }
-  
       res.status(200).json(billings);
     } catch (error) {
       console.error('Error fetching billings:', error);

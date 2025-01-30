@@ -26,6 +26,12 @@ import customerRouter from './routers/customerRouter.js';
 import supplierRouter from './routers/supplierRouter.js';
 import stockUpdateRouter from './routers/stockUpdateRouter.js';
 import leaveApplicationRouter from './routers/leaveApplicationRouter.js';
+import dashboardRouter from './routers/dashboardRouter.js';
+import announcementRouter from './routers/announcementRouter.js';
+import taskRouter from './routers/taskBoardRouter.js';
+import calendarRouter from './routers/calendarRouter.js';
+import chatRouter from './routers/chatRouter.js';
+import notificationRouter from './routers/notificationRouter.js';
 
 
 dotenv.config();
@@ -39,7 +45,7 @@ app.use(bodyParser.json({ limit: '10mb' }));
 
 
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://tradeinkk:GsBVSseXMHIrpc2r@kktdb.zujhi.mongodb.net/?retryWrites=true&w=majority&appName=KKTDB');
+mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://hari:1234@kktradingbackend.ip6yq.mongodb.net/?retryWrites=true&w=majority&appName=KKTRADINGBACKEND');
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
@@ -57,6 +63,13 @@ app.use('/api/customer', customerRouter);
 app.use('/api/seller', supplierRouter);
 app.use('/api/stock-update', stockUpdateRouter);
 app.use('/api/leaves', leaveApplicationRouter);
+app.use('/api/chart', dashboardRouter); 
+app.use('/api/announcements', announcementRouter);
+app.use('/api/taskboard', taskRouter)
+app.use('/api/calendar', calendarRouter);
+app.use('/api/chat', chatRouter);
+app.use('/api/notifications', notificationRouter);
+
 
 
 
@@ -126,115 +139,136 @@ const httpServer = http.Server(app);
 const io = new Server(httpServer, { cors: { origin: '*' } });
 const users = [];
 
+
+
 io.on('connection', (socket) => {
+  console.log('Socket connected:', socket.id);
 
+  // Listen for "sendMessage" from client
+  socket.on('sendMessage', async (message) => {
+    console.log('Message received from client:', message);
+    
+    // Optionally store to DB or broadcast
+    // For example, we can emit to everyone:
+    io.emit('receiveMessage', message);
+  });
+
+  // Optional: Listen for custom events or handle disconnection
   socket.on('disconnect', () => {
-    const user = users.find((x) => x.socketId === socket.id);
-    if (user) {
-      user.online = false;
-      console.log('Offline', user.name);
-      const admin = users.find((x) => x.isAdmin && x.online);
-      if (admin) {
-        io.to(admin.socketId).emit('updateUser', user);
-      }
-    }
+    console.log('Socket disconnected:', socket.id);
   });
-
-  socket.on('onLogin', (user) => {
-    const updatedUser = {
-      ...user,
-      online: true,
-      socketId: socket.id,
-      messages: [],
-    };
-    const existUser = users.find((x) => x._id === updatedUser._id);
-    if (existUser) {
-      existUser.socketId = socket.id;
-      existUser.online = true;
-    } else {
-      users.push(updatedUser);
-    }
-    console.log('Online', user.name);
-    const admin = users.find((x) => x.isAdmin && x.online);
-    if (admin) {
-      io.to(admin.socketId).emit('updateUser', updatedUser);
-    }
-    if (updatedUser.isAdmin) {
-      io.to(updatedUser.socketId).emit('listUsers', users);
-    }
-  });
-
-  socket.on('onUserSelected', (user) => {
-    const admin = users.find((x) => x.isAdmin && x.online);
-    if (admin) {
-      const existUser = users.find((x) => x._id === user._id);
-      io.to(admin.socketId).emit('selectUser', existUser);
-    }
-  });
-
-  socket.on('typing', (data) => {
-    socket.broadcast.emit('typing', data); // Notify other users
-  });
-
-  socket.on('stopTyping', (data) => {
-    socket.broadcast.emit('stopTyping', data); // Notify other users to stop typing
-  });
-
-  socket.on('onMessage', (message) => {
-    if (message.isAdmin) {
-      const user = users.find((x) => x._id === message._id && x.online);
-      if (user) {
-        io.to(user.socketId).emit('message', message);
-        user.messages.push(message);
-      }
-    } else {
-      const admin = users.find((x) => x.isAdmin && x.online);
-      if (admin) {
-        io.to(admin.socketId).emit('message', message);
-        const user = users.find((x) => x._id === message._id && x.online);
-        user.messages.push(message);
-      } else {
-        io.to(socket.id).emit('message', {
-          name: 'Admin',
-          body: 'Sorry. I am not online right now',
-        });
-      }
-    }
-  });
-
-
-// Listen for location updates from the client
-socket.on('update-location', async (data) => {
-  try {
-    const { userId, longitude, latitude, userName } = data;
-
-    // Basic validation
-    if (typeof longitude !== 'number' || typeof latitude !== 'number') {
-      throw new Error('Invalid coordinates');
-    }
-
-    // Update the location or create it if it doesn't exist
-    const updatedLocation = await Location.findOneAndUpdate(
-      { userId }, // Search by userId
-      { name: userName, coordinates: [longitude, latitude] }, // Update name and coordinates
-      { upsert: true, new: true } // If not found, create it (upsert)
-    );
-
-    // Broadcast the location update to all connected clients
-    io.emit('location-updated', { userId, longitude, latitude, userName });
-
-    // Optionally: console.log(`Location updated for user ${userId}: [${longitude}, ${latitude}]`);
-
-  } catch (error) {
-    console.error('Error updating location:', error);
-  }
 });
 
 
+// io.on('connection', (socket) => {
+
+//   socket.on('disconnect', () => {
+//     const user = users.find((x) => x.socketId === socket.id);
+//     if (user) {
+//       user.online = false;
+//       console.log('Offline', user.name);
+//       const admin = users.find((x) => x.isAdmin && x.online);
+//       if (admin) {
+//         io.to(admin.socketId).emit('updateUser', user);
+//       }
+//     }
+//   });
+
+//   socket.on('onLogin', (user) => {
+//     const updatedUser = {
+//       ...user,
+//       online: true,
+//       socketId: socket.id,
+//       messages: [],
+//     };
+//     const existUser = users.find((x) => x._id === updatedUser._id);
+//     if (existUser) {
+//       existUser.socketId = socket.id;
+//       existUser.online = true;
+//     } else {
+//       users.push(updatedUser);
+//     }
+//     console.log('Online', user.name);
+//     const admin = users.find((x) => x.isAdmin && x.online);
+//     if (admin) {
+//       io.to(admin.socketId).emit('updateUser', updatedUser);
+//     }
+//     if (updatedUser.isAdmin) {
+//       io.to(updatedUser.socketId).emit('listUsers', users);
+//     }
+//   });
+
+//   socket.on('onUserSelected', (user) => {
+//     const admin = users.find((x) => x.isAdmin && x.online);
+//     if (admin) {
+//       const existUser = users.find((x) => x._id === user._id);
+//       io.to(admin.socketId).emit('selectUser', existUser);
+//     }
+//   });
+
+//   socket.on('typing', (data) => {
+//     socket.broadcast.emit('typing', data); // Notify other users
+//   });
+
+//   socket.on('stopTyping', (data) => {
+//     socket.broadcast.emit('stopTyping', data); // Notify other users to stop typing
+//   });
+
+//   socket.on('onMessage', (message) => {
+//     if (message.isAdmin) {
+//       const user = users.find((x) => x._id === message._id && x.online);
+//       if (user) {
+//         io.to(user.socketId).emit('message', message);
+//         user.messages.push(message);
+//       }
+//     } else {
+//       const admin = users.find((x) => x.isAdmin && x.online);
+//       if (admin) {
+//         io.to(admin.socketId).emit('message', message);
+//         const user = users.find((x) => x._id === message._id && x.online);
+//         user.messages.push(message);
+//       } else {
+//         io.to(socket.id).emit('message', {
+//           name: 'Admin',
+//           body: 'Sorry. I am not online right now',
+//         });
+//       }
+//     }
+//   });
+
+
+// // Listen for location updates from the client
+// socket.on('update-location', async (data) => {
+//   try {
+//     const { userId, longitude, latitude, userName } = data;
+
+//     // Basic validation
+//     if (typeof longitude !== 'number' || typeof latitude !== 'number') {
+//       throw new Error('Invalid coordinates');
+//     }
+
+//     // Update the location or create it if it doesn't exist
+//     const updatedLocation = await Location.findOneAndUpdate(
+//       { userId }, // Search by userId
+//       { name: userName, coordinates: [longitude, latitude] }, // Update name and coordinates
+//       { upsert: true, new: true } // If not found, create it (upsert)
+//     );
+
+//     // Broadcast the location update to all connected clients
+//     io.emit('location-updated', { userId, longitude, latitude, userName });
+
+//     // Optionally: console.log(`Location updated for user ${userId}: [${longitude}, ${latitude}]`);
+
+//   } catch (error) {
+//     console.error('Error updating location:', error);
+//   }
+// });
 
 
 
-});
+
+
+// });
 
 httpServer.listen(port,'0.0.0.0', () => {
   console.log(`Serve at http://localhost:${port}`);
