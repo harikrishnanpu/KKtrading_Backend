@@ -1,7 +1,7 @@
 // taskboard.js
 
 import express from 'express';
-import Taskboard from '../models/taskboardModal.js';
+import Taskboard from '../models/taskBoardModal.js';
 import Users from '../models/userModel.js';
 
 // 2. INITIAL BACKLOGS (for when we create a new Taskboard)
