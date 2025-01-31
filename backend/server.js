@@ -45,7 +45,7 @@ app.use(bodyParser.json({ limit: '10mb' }));
 
 
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://hari:1234@kktradingbackend.ip6yq.mongodb.net/?retryWrites=true&w=majority&appName=KKTRADINGBACKEND');
+mongoose.connect('mongodb+srv://hari:1234@kktradingbackend.ip6yq.mongodb.net/?retryWrites=true&w=majority&appName=KKTRADINGBACKEND');
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
