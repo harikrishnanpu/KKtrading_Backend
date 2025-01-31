@@ -1,6 +1,5 @@
 import express from 'express';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
-
 const accountRouter = express.Router();
 
 
