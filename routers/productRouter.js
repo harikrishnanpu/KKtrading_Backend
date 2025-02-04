@@ -1407,6 +1407,17 @@ productRouter.get('/lastadded/id', async (req, res) => {
 });
 
 
+productRouter.get('/product/all', async (req, res) => {
+  try {
+    // Fetch the invoice with the highest sequence number starting with 'K'
+    const items = await Product.find();
+    res.json(items);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching last order' });
+  }
+});
+
+
 
 
 productRouter.get(
