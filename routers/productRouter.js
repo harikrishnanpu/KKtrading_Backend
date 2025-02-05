@@ -254,7 +254,7 @@ productRouter.get(
   '/seed',
   expressAsyncHandler(async (req, res) => {
     // await Product.remove({});
-    const seller = await User.findOne({ isSeller: true });
+    const seller = await User.findOne({ isEmployee: true });
     if (seller) {
       const products = data.products.map((product) => ({
         ...product,

@@ -13,7 +13,6 @@ import PaymentsAccount from '../models/paymentsAccountModal.js';
 import CustomerAccount from '../models/customerModal.js';
 import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
-import { isAdmin } from '../utils.js';
 
 
 const userRouter = express.Router();
@@ -32,7 +31,6 @@ userRouter.get(
 userRouter.get(
   '/seed',
   expressAsyncHandler(async (req, res) => {
-    // await User.remove({});
     const createdUsers = await User.insertMany(data.users);
     res.send({ createdUsers });
   })
@@ -62,7 +60,8 @@ userRouter.post(
               email: user.email,
               name: user.name,
               role: user.role,
-              isAdmin: user.isAdmin
+              isAdmin: user.isAdmin,
+              isEmployee: user.isEmployee
             }
       });
     }
@@ -106,7 +105,11 @@ userRouter.post(
         email,
         password: hashedPassword,
         name: `${firstName} ${lastName}`, // Proper name formatting
-        role: 'user'
+        role: 'sales',
+        isAdmin: false,
+        isEmployee: false,
+        isSuper: false,
+        status: 'offline'
       });
 
       if(createdUser){
@@ -131,7 +134,7 @@ userRouter.post(
           name: createdUser.name,
           role: createdUser.role,
           isAdmin: createdUser.isAdmin,
-
+          isEmployee: createdUser.isEmployee
         };
         
       return res.status(200).json({ serviceToken, user }); // Use 201 for successful creation
