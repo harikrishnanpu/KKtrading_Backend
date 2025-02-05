@@ -388,13 +388,22 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
       const baseTotal =
         (parseFloat(product.quantity) || 0) *
         (parseFloat(product.sellingPriceinQty) || 0);
+
+        const itemBase = product.quantity * product.sellingPriceinQty;
+
+// This row's discount portion: "itemBase / sumOfBase * discount"
+let sumOfBase = 0;
+productList.forEach((p) => {
+  sumOfBase += (parseFloat(p.quantity) || 0) * (parseFloat(p.sellingPriceinQty) || 0);
+});
+const discountRatio = sumOfBase > 0 ? (parseFloat(discount) || 0) / sumOfBase : 0;
+const itemDiscount = itemBase * discountRatio;
         
-        const discountAmt =
-        (parseFloat(product.quantity) || 0) * perItemDiscount;
+        const discountAmt = baseTotal * discountRatio;
         
       // Calculate GST rate and amount
       const gstRate = parseFloat(product.gstRate) || 0; // e.g., 18 means 18%
-      const rateWithoutGST = ( baseTotal / (1 + gstRate / 100) ) - discountAmt; // Derive rate without GST
+      const rateWithoutGST = itemBase / (1 + gstRate / 100) - itemDiscount;
       
       // Calculate discount amount
       // const perItemDiscount = parseFloat(perItemDiscount) || 0;
