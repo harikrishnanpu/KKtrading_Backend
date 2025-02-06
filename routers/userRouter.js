@@ -39,39 +39,42 @@ userRouter.get(
 userRouter.post(
   '/signin',
   expressAsyncHandler(async (req, res) => {
-    try{
-    const user = await User.findOne({ email: req.body.email });
-   
-    if (user) {
-      if (bcrypt.compareSync(req.body.password, user.password)) {
-        const serviceToken =  jwt.sign(
-            {
-              userId: user._id,
-            },
-            process.env.JWT_SECRET || 'SECRET_KEY',
-            {
-              expiresIn: '1 days',
-            }
-          );
-     return   res.status(200).json({
-            serviceToken,
-            user: {
-              _id: user._id,
-              email: user.email,
-              name: user.name,
-              role: user.role,
-              isAdmin: user.isAdmin,
-              isEmployee: user.isEmployee
-            }
-      });
-    }
-  }
+    const { email, password } = req.body;
 
-  } catch (error) {
-    console.log('Error during sign-in:', error);
-   return res.status(500).json({ message: 'Internal Server Error' });
-  }
-   return res.status(401).send({ message: 'Invalid email or password' });
+    // Check if both email and password are provided
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Email and password are required' });
+    }
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid User Name || User Not Found' });
+    }
+
+    const isPasswordValid = bcrypt.compareSync(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: 'Wrong Password!' });
+    }
+
+    // Generate JWT token if login is successful
+    const serviceToken = jwt.sign(
+      { userId: user._id },
+      process.env.JWT_SECRET || 'SECRET_KEY',
+      { expiresIn: '1 days' }
+    );
+
+    return res.status(200).json({
+      serviceToken,
+      user: {
+        _id: user._id,
+        id: user._id,
+        email: user.email,
+        name: user.name,
+        role: user.role,
+        isAdmin: user.isAdmin,
+        isEmployee: user.isEmployee
+      }
+    });
   })
 );
 
@@ -130,6 +133,7 @@ userRouter.post(
         // Prepare the response object
         const user = {
           _id: createdUser._id,
+          id: createdUser._id,
           email: createdUser.email,
           name: createdUser.name,
           role: createdUser.role,
@@ -255,8 +259,63 @@ userRouter.post('/logout/:userId', async (req, res) => {
 
 
 
-
-
+userRouter.put("/user/edit/:id",  
+  expressAsyncHandler(async (req, res) => {
+    const userId = req.params.id;
+    
+    // Find the user by ID
+    const user = await User.findById(userId);
+    
+    if (!user) {
+      res.status(404);
+      throw new Error('User not found');
+    }
+    
+    // Update fields from the request body (if provided)
+    user.name = req.body.name || user.name;
+    user.email = req.body.email || user.email;
+    
+    // If a new password is provided, update it.
+    // NOTE: In production, make sure to hash the password before saving!
+    if (req.body.password) {
+       user.password = bcrypt.hashSync(req.body.password, 8);
+    }
+    
+    // Update boolean fields explicitly (in case false is passed)
+    if (req.body.isAdmin !== undefined) {
+      user.isAdmin = req.body.isAdmin;
+    }
+    if (req.body.isEmployee !== undefined) {
+      user.isEmployee = req.body.isEmployee;
+    }
+    if (req.body.isSuper !== undefined) {
+      user.isSuper = req.body.isSuper;
+    }
+    
+    // Update additional fields
+    user.role = req.body.role || user.role;
+    user.contactNumber = req.body.contactNumber || user.contactNumber;
+    user.faceDescriptor = req.body.faceDescriptor || user.faceDescriptor;
+    user.work_email = req.body.work_email || user.work_email;
+    user.personal_email = req.body.personal_email || user.personal_email;
+    user.work_phone = req.body.work_phone || user.work_phone;
+    user.personal_phone = req.body.personal_phone || user.personal_phone;
+    user.location = req.body.location || user.location;
+    user.avatar = req.body.avatar || user.avatar;
+    user.status = req.body.status || user.status;
+    user.birthdayText = req.body.birthdayText || user.birthdayText;
+    user.online_status = req.body.online_status || user.online_status;
+    
+    // Save the updated user document to the database
+    const updatedUser = await user.save();
+    
+    // Return the updated user as a JSON response
+    res.json({
+      message: 'User updated successfully',
+      user: updatedUser,
+    });
+  }));
+  
 
 
 

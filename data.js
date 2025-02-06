@@ -10,6 +10,7 @@ const data = {
       password: bcrypt.hashSync('RahulWins$2025$', 8),
       isAdmin: true,
       isEmployee: true,
+      isSuper: true
     },
   ],
   products: [

@@ -505,7 +505,8 @@ billingRouter.post('/edit/:id', async (req, res) => {
         breadth,
         psRatio,
         size,
-        gstRate
+        gstRate,
+        itemRemark
       } = updatedProduct;
 
       const trimmedItemId = item_id.trim();
@@ -554,7 +555,8 @@ billingRouter.post('/edit/:id', async (req, res) => {
           breadth: parseFloat(breadth) || 0,
           psRatio: parseFloat(psRatio) || 0,
           size: size || productInDB.size,
-          gstRate: parseFloat(gstRate) || 0
+          gstRate: parseFloat(gstRate) || 0,
+          itemRemark: itemRemark
         });
       } else {
         // New product to add
@@ -585,7 +587,8 @@ billingRouter.post('/edit/:id', async (req, res) => {
           breadth: parseFloat(breadth) || 0,
           psRatio: parseFloat(psRatio) || 0,
           size: productInDB.size || size,
-          gstRate: parseFloat(gstRate) || 0
+          gstRate: parseFloat(gstRate) || 0,
+          itemRemark: itemRemark
         });
       }
     }
