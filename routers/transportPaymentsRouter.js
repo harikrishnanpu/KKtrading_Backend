@@ -220,7 +220,7 @@ transportPaymentsRouter.get('/all', async (req, res) => {
 
 transportPaymentsRouter.get('/name/:name', async (req, res) => {
   try{
-    const transports = await TransportPayment.findOne({ transportName: new RegExp(req.params.name, 'i') });
+    const transports = await Transportation.findOne({ transportCompanyName: new RegExp(req.params.name, 'i') });
     res.json(transports);
   }catch (err) {
     res.status(404).json({ message: 'Transport not found.' });

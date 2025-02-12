@@ -350,7 +350,6 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
     } = safeGet(req.body, '');
 
 
-    console.log("ddf")
 
     // If no invoiceNo, can't proceed
     if (!invoiceNo) {
