@@ -1,17 +1,17 @@
-import mongoose from 'mongoose';
+// models/ChatMessage.js
+import mongoose from "mongoose";
+const ChatMessageSchema = new mongoose.Schema(
+  {
+    from: { type: String, required: true },
+    to: { type: String, required: true },
+    text: { type: String, default: '' },
+    time: { type: String }, // Or store Date, up to you.
 
-// backend/models/ChatMessage.js
+    // If you want to store the file URL (image/audio/video), you can do:
+    fileUrl: { type: String }
+  },
+  { timestamps: true }
+);
 
-const chatMessageSchema = new mongoose.Schema({
-  // If you need your own numeric ID
-  id: { type: Number, required: true, unique: true },
-  from: { type: String, required: true },
-  to: { type: String, required: true },
-  text: { type: String, required: true },
-  // Use a Date so we can store actual timestamps
-  time: { type: Date, default: Date.now }
-});
-
-const Chat = mongoose.model('ChatMessage', chatMessageSchema);
-
-export default Chat;
+const ChatMessage = mongoose.model('ChatMessage', ChatMessageSchema);
+export default ChatMessage;

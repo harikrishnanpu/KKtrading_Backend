@@ -1,66 +1,80 @@
-// backend/routes/chats.js
+// routes/chatRoutes.js
 import express from 'express';
-import Chat from '../models/chatModal.js';
-import User from '../models/userModel.js';
+import ChatMessage from '../models/chatModal.js'; // Your Mongoose model
+import User from '../models/userModel.js'; // Your Mongoose model for users
 
-const chatRouter = express.Router();
 
-chatRouter.get('/', async (req, res) => {
+const router = express.Router();
+
+/**
+ * GET /api/chat/users
+ * Example route to fetch 'chat users'.
+ * (Alternatively, you can just call /api/users if you have a separate userRoutes.js).
+ */
+router.get('/users', async (req, res) => {
   try {
-    const messages = await Chat.find({}).sort({ time: 1 });
-    return res.json(messages);
-  } catch (error) {
-    console.error('Error fetching messages:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    // Typically, you'd query your User model here.
+    // For demo, we return an empty array or mock data:
+    const users = await User.find({});
+    res.json({ users });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Error fetching users' });
   }
 });
 
-
-chatRouter.get('/users', async (req, res) => {
-    try {
-      const users = await User.find({});
-      return res.json({ users });
-    } catch (error) {
-      console.error('Error fetching users:', error);
-      return res.status(500).json({ error: 'Internal server error' });
-    }
-  });
-
-// POST /api/chat - insert a new chat message
-chatRouter.post('/', async (req, res) => {
+/**
+ * POST /api/chat/filter
+ * Return chat messages involving a particular user (userName).
+ */
+router.post('/filter', async (req, res) => {
   try {
-    // e.g. { id, from, to, text, time }
-    const { id, from, to, text } = req.body;
-    const newMsg = new Chat({
-      id,
+    const { user } = req.body;
+    // Pull all messages from or to "user"
+    const messages = await ChatMessage.find({
+      $or: [{ from: user }, { to: user }]
+    })
+      .sort({ createdAt: 1 })
+      .lean();
+
+    res.json(messages);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error fetching chat messages' });
+  }
+});
+
+/**
+ * POST /api/chat
+ * Insert a new chat message (optionally includes fileUrl).
+ * The front-end is responsible for uploading to Cloudinary
+ * and sending the resulting fileUrl to this route.
+ */
+router.post('/', async (req, res) => {
+  try {
+    const { from, to, text, time, fileUrl } = req.body;
+
+    const newMsg = new ChatMessage({
       from,
       to,
       text,
-      // time is set automatically if not provided
+      time,
+      fileUrl // store only the Cloudinary URL (or any file URL)
     });
-    await newMsg.save();
-    return res.json(newMsg);
+
+    const savedMsg = await newMsg.save();
+
+    // Emit via Socket.io (if you're using it)
+    const io = req.app.get('socketio');
+    if (io) {
+      io.emit('chatMessage', savedMsg);
+    }
+
+    res.json(savedMsg);
   } catch (error) {
-    console.error('Error inserting chat:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.error(error);
+    res.status(500).json({ message: 'Error creating new chat message' });
   }
 });
 
-// POST /api/chat/filter - filter messages for a specific user
-chatRouter.post('/filter', async (req, res) => {
-  try {
-    // example body: { user: 'Alene', endpoints: 'chat' }
-    const { user } = req.body;
-
-    const messages = await Chat.find({
-      $or: [{ from: user }, { to: user }]
-    }).sort({ time: 1 });
-
-    return res.json(messages);
-  } catch (error) {
-    console.error('Error filtering chat:', error);
-    return res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-export default chatRouter;
+export default router;

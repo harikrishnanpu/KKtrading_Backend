@@ -253,22 +253,36 @@ productRouter.get('/admin/categories', async (req, res) => {
 productRouter.get(
   '/seed',
   expressAsyncHandler(async (req, res) => {
-    // await Product.remove({});
-    const seller = await User.findOne({ isEmployee: true });
-    if (seller) {
-      const products = data.products.map((product) => ({
-        ...product,
-        seller: seller._id,
-      }));
-      const createdProducts = await Product.insertMany(products);
-      res.send({ createdProducts });
-    } else {
-      res
-        .status(500)
-        .send({ message: 'No seller found. first run /api/users/seed' });
+    // Clear the collection to start fresh
+    await Product.deleteMany({});
+
+    // Filter out products that do not have a valid 'name'
+    const validProducts = data.products.filter((product) => {
+      return product.name && product.name.trim() !== '';
+    });
+
+    // Optionally log the products that are being skipped due to missing 'name'
+    const skippedProducts = data.products.filter(
+      (product) => !product.name || product.name.trim() === ''
+    );
+    if (skippedProducts.length > 0) {
+      console.log(
+        `Skipped ${skippedProducts.length} product(s) due to missing 'name':`,
+        skippedProducts
+      );
     }
+
+    // Log valid products for debugging
+    console.log('Products to insert:', validProducts);
+
+    // Insert only the valid products into the database
+    const createdProducts = await Product.insertMany(validProducts);
+
+    // Return a 201 status with the inserted products
+    res.status(201).json({ createdProducts });
   })
 );
+
 
 productRouter.get(
   '/:id',

@@ -321,17 +321,16 @@ printRouter.post('/generate-pdf', async (req, res) => {
 
 // New route to send the HTML content directly
 
+
 printRouter.post('/generate-invoice-html', async (req, res) => {
   try {
+    // 1. Extract incoming fields from request body
     let {
       invoiceNo,
       invoiceDate,
       salesmanName,
       salesmanPhoneNumber,
       expectedDeliveryDate,
-      paymentAmount,
-      paymentMethod,
-      paymentReceivedDate,
       customerName,
       customerAddress,
       customerContactNumber,
@@ -342,35 +341,124 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
       unloading,
       handling,
       discount,
-      products,
-      perItemDiscount,
+      roundOff,
       grandTotal,
+      products,
+      printOptions,     // Front-end column checklist
+      paymentAmount,     // single payment amount from the front end (fallback)
+      paymentReceivedDate,
     } = safeGet(req.body, '');
 
-    // Validate required fields
+
+    console.log("ddf")
+
+    // If no invoiceNo, can't proceed
     if (!invoiceNo) {
       return res.status(400).json({ error: 'invoiceNo is required' });
     }
 
-    // Safely handle products array
-    const productList = Array.isArray(products) ? products : [];
-    const totalProducts = productList.length;
+    // Convert numeric fields from request body (fallback values)
+    billingAmount   = parseFloat(billingAmount)   || 0;
+    subTotal        = parseFloat(subTotal)        || 0;
+    discount        = parseFloat(discount)        || 0;
+    transportation  = parseFloat(transportation)  || 0;
+    unloading       = parseFloat(unloading)       || 0;
+    handling        = parseFloat(handling)        || 0;
+    roundOff        = parseFloat(roundOff)        || 0;
+    grandTotal      = parseFloat(grandTotal)      || 0;
 
-    // Convert numeric fields safely to float
-    billingAmount = parseFloat(billingAmount) || 0;
-    paymentAmount = parseFloat(paymentAmount) || 0;
-    subTotal = parseFloat(subTotal) || 0;
-    discount = parseFloat(discount) || 0;
-    transportation = parseFloat(transportation) || 0;
-    unloading = parseFloat(unloading) || 0;
-    handling = parseFloat(handling) || 0;
-    grandTotal = parseFloat(grandTotal) || 0;
-    perItemDiscount = parseFloat(perItemDiscount) || 0;
+    // 2. Attempt to find the Billing document by invoiceNo
+    const billingDoc = await Billing.findOne({ invoiceNo });
 
+    // 3. Prepare final variables (will be pulled from DB if doc found, otherwise fallback to request)
+    let finalInvoiceDate             = invoiceDate;
+    let finalSalesmanName            = salesmanName;
+    let finalSalesmanPhoneNumber     = salesmanPhoneNumber;
+    let finalExpectedDeliveryDate    = expectedDeliveryDate;
+    let finalCustomerName            = customerName;
+    let finalCustomerAddress         = customerAddress;
+    let finalCustomerContactNumber   = customerContactNumber;
+    let finalMarketedBy              = marketedBy;
+    let finalBillingAmount           = billingAmount;
+    let finalSubTotal                = subTotal;
+    let finalDiscount                = discount;
+    let finalTransportation          = transportation;
+    let finalUnloading               = unloading;
+    let finalHandling                = handling;
+    let finalRoundOff                = roundOff;
+    let finalGrandTotal              = grandTotal;
+    let finalProducts                = Array.isArray(products) ? products : [];
+    let finalDeliveryStatus          = "Not Delivered"; // fallback if no doc
+    let totalPaymentReceived         = 0;
+    let lastPaymentDate              = null;
+
+    if (billingDoc) {
+      // Override fields from DB
+      // finalInvoiceDate             = billingDoc.invoiceDate;
+      // finalSalesmanName            = billingDoc.salesmanName;
+      // finalSalesmanPhoneNumber     = billingDoc.salesmanPhoneNumber;
+      // finalExpectedDeliveryDate    = billingDoc.expectedDeliveryDate;
+      // finalCustomerName            = billingDoc.customerName;
+      // finalCustomerAddress         = billingDoc.customerAddress;
+      // finalCustomerContactNumber   = billingDoc.customerContactNumber;
+      // finalMarketedBy              = billingDoc.marketedBy;
+      // finalBillingAmount           = billingDoc.billingAmount;
+      // finalSubTotal                = billingDoc.billingAmount; // or separate if you store subTotal differently
+      // finalDiscount                = billingDoc.discount;
+      // finalTransportation          = billingDoc.transportation;
+      // finalUnloading               = billingDoc.unloading;
+      // finalHandling                = billingDoc.handlingCharge || 0;
+      // finalRoundOff                = billingDoc.roundOff;
+      // finalGrandTotal              = billingDoc.grandTotal;
+      // finalProducts                = billingDoc.products || [];
+
+      // Delivery status directly from the doc
+      finalDeliveryStatus = billingDoc.deliveryStatus || 'Pending';
+
+      // Compute payment from doc’s payments array
+      if (Array.isArray(billingDoc.payments) && billingDoc.payments.length > 0) {
+        billingDoc.payments.forEach((p) => {
+          totalPaymentReceived += parseFloat(p.amount) || 0;
+          const pDate = new Date(p.date);
+          if (!lastPaymentDate || pDate > lastPaymentDate) {
+            lastPaymentDate = pDate;
+          }
+        });
+      }
+    }
+
+    // If no doc or doc has no payments, fallback to single payment info from request
+    if (totalPaymentReceived === 0) {
+      totalPaymentReceived = parseFloat(paymentAmount) || 0;
+      lastPaymentDate = paymentReceivedDate ? new Date(paymentReceivedDate) : null;
+    }
+
+    const lastPaymentDateStr = lastPaymentDate
+      ? lastPaymentDate.toLocaleDateString()
+      : '-';
+
+    // If we do NOT have a billingDoc (meaning we got no official deliveryStatus),
+    // we fallback to computing from products:
+    if (!billingDoc) {
+      if (finalProducts.length > 0) {
+        const allDelivered = finalProducts.every(p => p.deliveryStatus === "Delivered");
+        const anyDelivered = finalProducts.some(
+          p => p.deliveryStatus === "Delivered" || p.deliveryStatus === "Partially Delivered"
+        );
+        if (allDelivered) {
+          finalDeliveryStatus = "Fully Delivered";
+        } else if (anyDelivered) {
+          finalDeliveryStatus = "Partially Delivered";
+        }
+      }
+    }
+
+    // 4. Prepare pagination variables (10 items per page)
     const productsPerPage = 10;
-    const NewQrCodeId = `${invoiceNo}-${Date.now()}`;
+    const totalPages = Math.ceil(finalProducts.length / productsPerPage) || 1;
 
-    // Save a record to QrCodeDB if needed
+    // 5. Generate a new QR code ID and store in DB
+    const NewQrCodeId = `${invoiceNo}-${Date.now()}`;
     if (NewQrCodeId) {
       const qrcodeDb = new QrCodeDB({
         qrcodeId: NewQrCodeId,
@@ -378,382 +466,442 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
       });
       await qrcodeDb.save();
     }
-
-    // Generate QR Code as Data URL
     const qrCodeDataURL = await QRCode.toDataURL(NewQrCodeId);
 
-    // Helper to safely compute all the product-based calculations
+    // 6. Set default print options if not provided
+    printOptions = printOptions || {
+      showItemId: true,
+      showItemName: true,
+      showItemRemark: true, // if your front-end is sending a separate toggle
+      showQuantity: true,
+      showUnit: true,
+      showPrice: true,
+      showRate: true,
+      showGst: true,
+      showCgst: true,
+      showSgst: true,
+      showDiscount: true,
+      showNetAmount: true,
+    };
+
+    // 7. Helper to compute per-product fields
     const computeProductFields = (product) => {
-      // Base total: quantity * selling price
-      const baseTotal =
-        (parseFloat(product.quantity) || 0) *
-        (parseFloat(product.sellingPriceinQty) || 0);
+      const qty = parseFloat(product.quantity) || 0;
+      const priceInQty = parseFloat(product.sellingPriceinQty) || 0;
+      const itemBase = qty * priceInQty;
 
-        const itemBase = product.quantity * product.sellingPriceinQty;
+      // Compute the sum of bases for discount distribution
+      let sumOfBase = 0;
+      finalProducts.forEach((p) => {
+        sumOfBase += (parseFloat(p.quantity) || 0) * (parseFloat(p.sellingPriceinQty) || 0);
+      });
 
-// This row's discount portion: "itemBase / sumOfBase * discount"
-let sumOfBase = 0;
-productList.forEach((p) => {
-  sumOfBase += (parseFloat(p.quantity) || 0) * (parseFloat(p.sellingPriceinQty) || 0);
-});
-const discountRatio = sumOfBase > 0 ? (parseFloat(discount) || 0) / sumOfBase : 0;
-const itemDiscount = itemBase * discountRatio;
-        
-        const discountAmt = baseTotal * discountRatio;
-        
-      // Calculate GST rate and amount
-      const gstRate = parseFloat(product.gstRate) || 0; // e.g., 18 means 18%
+      const discountRatio = sumOfBase > 0 ? (parseFloat(discount) || 0) / sumOfBase : 0;
+      const itemDiscount = itemBase * discountRatio;
+      const gstRate = parseFloat(product.gstRate) || 0;
       const rateWithoutGST = itemBase / (1 + gstRate / 100) - itemDiscount;
-      
-      // Calculate discount amount
-      // const perItemDiscount = parseFloat(perItemDiscount) || 0;
-      // Adjust for discount (assumes discount applies to rate without GST)
-      const rateAfterDiscount = rateWithoutGST;
-      const gstAmount = rateWithoutGST * (gstRate / 100); // GST component of the base total
-    
-      // Split GST equally between CGST and SGST
+      const gstAmount = rateWithoutGST * (gstRate / 100);
       const cgst = gstAmount / 2;
       const sgst = gstAmount / 2;
-    
-      // Final net amount after discount and adding GST
-      const netAmount = rateAfterDiscount + gstAmount;
-    
+      const netTotal = rateWithoutGST + gstAmount;
+
       return {
-        baseTotal,
-        discountAmt,
+        baseTotal: itemBase,
+        discountAmt: itemDiscount,
         rateWithoutGST,
         gstRate,
         gstAmount,
         cgst,
         sgst,
-        netAmount,
+        netAmount: netTotal,
       };
     };
+
+    // 8. Build table header row based on printOptions
+    const buildHeaderRow = () => {
+      let header = '<tr><th>Sl</th>';
+
+      if (printOptions.showItemId) {
+        header += '<th>Item Id</th>';
+      }
+
+      // We combine item name + remark in one column if either is enabled
+      if (printOptions.showItemName || printOptions.showItemRemark) {
+        header += '<th>Item</th>';
+      }
+
+      if (printOptions.showQuantity) {
+        header += '<th>Qty</th>';
+      }
+      if (printOptions.showUnit) {
+        header += '<th>Unit</th>';
+      }
+      if (printOptions.showPrice) {
+        header += '<th>Price</th>';
+      }
+      if (printOptions.showRate) {
+        header += '<th>Rate</th>';
+      }
+      if (printOptions.showGst) {
+        header += '<th>GST %</th>';
+      }
+      if (printOptions.showCgst) {
+        header += '<th>CGST</th>';
+      }
+      if (printOptions.showSgst) {
+        header += '<th>SGST</th>';
+      }
+      if (printOptions.showDiscount) {
+        header += '<th>Disc</th>';
+      }
+      if (printOptions.showNetAmount) {
+        header += '<th>Net Amount</th>';
+      }
+
+      header += '</tr>';
+      return header;
+    };
+
+    // 9. Build a single product row
+    const buildProductRow = (product, index, pageNumber) => {
+      const {
+        rateWithoutGST,
+        gstRate,
+        cgst,
+        sgst,
+        discountAmt,
+        netAmount,
+      } = computeProductFields(product);
     
+      let row = `<tr><td>${index + 1 + (pageNumber - 1) * productsPerPage}</td>`;
 
-    // Generate the invoice page HTML
-    const generatePageHTML = (
-      productsChunk,
-      pageNumber,
-      totalPages,
-      showTotals
-    ) => {
-      return `
-      <div class="invoice">
-        <!-- Header Section -->
-        <div class="header">
-            <p style="font-weight: 900;">KK TRADING</p>
-            <p style="font-size: 14px;margin-top: 10px;font-weight: 900;">
-              Tiles, Granites, Sanitary Wares, UV Sheets
-            </p>
-        </div>
+      if (printOptions.showItemId) {
+        row += `<td>${safeGet(product.item_id)}</td>`;
+      }
 
-        <!-- Invoice Information -->
-        <div class="invoice-info">
-          <div style="font-size: 12px;">
-              <p style="font-size: 14px;font-weight: bolder;">Estimate no: <strong>${invoiceNo}</strong></p>
-              <p>Estimation Date: <strong>${new Date(invoiceDate).toLocaleDateString()}</strong></p>
-              <p>Expected Delivery Date: <strong>${new Date(expectedDeliveryDate).toLocaleDateString()}</strong></p>
-              <p>Salesman: <strong>${salesmanName}</strong></p>
-              <p>Salesman Contact No: <strong>${salesmanPhoneNumber}</strong></p>
-              <p>Marketed By: <strong>${marketedBy}</strong></p>
-              <p style="margin-top:5px;font-weight:bold;">Additional info:</p>
-          </div>
+      // Combine item name + remark in one column
+      if (printOptions.showItemName || printOptions.showItemRemark) {
+        const itemNameText = safeGet(product.name);
+        const itemRemarkText = safeGet(product.itemRemark);
+        let nameCell = '';
 
-          <!-- QR Code Section -->
-          <div class="qr-code-section" style="text-align: right;">
-            <img
-              src="${qrCodeDataURL}"
-              alt="QR Code for Invoice"
-              style="width: 60px; height: 60px;" 
-            />
-          </div>
+        // If showItemName is true and there's a name, show it in bold
+        if (printOptions.showItemName && itemNameText) {
+          nameCell += `<div style="font-weight:bold;">${itemNameText}</div>`;
+        }
 
-          <div style="font-size: 12px;">
-              <p><strong>From:</strong></p>
-              <p style="font-weight: bold;">KK TRADING</p>
-              <p style="font-size: 12px;">Moncompu, Chambakulam, Alappuzha</p>
-              <p style="font-size: 12px;">Alappuzha, 688503</p>
-              <p style="font-size: 12px;">Contact: 0477 2080282</p>
-              <p style="font-size: 12px;">tradeinkk@gmail.com</p>
-          </div>
-        </div>
+        // If showItemRemark is true and there's a remark, show it under or alone
+        if (printOptions.showItemRemark && itemRemarkText) {
+          if (nameCell) {
+            // we already have the itemName in bold, so show remark in smaller font
+            nameCell += `<div style="font-size:11px; margin-top:2px;">${itemRemarkText}</div>`;
+          } else {
+            // no itemName, so just show remark in bold
+            nameCell = `<div style="font-weight:bold;">${itemRemarkText}</div>`;
+          }
+        }
 
-        <div class="invoice-info">
-          <div style="font-size: 12px;">
-              <p><strong>Estimate To:</strong></p>
-              <p style="font-weight: bold;">Customer Name: ${customerName}</p>
-              <p>Address: ${customerAddress}</p>
-              <p>State: Kerala</p>
-              <p>Contact: ${customerContactNumber}</p>
-          </div>
+        // Fallback if nameCell is empty
+        if (!nameCell) {
+          nameCell = '-';
+        }
 
-          <div style="font-size: 14px;margin-right: 160px;font-weight:900;"><strong>Estimate Bill</strong></p>
-          </div>
+        row += `<td>${nameCell}</td>`;
+      }
 
-          <div style="font-size: 12px;display: none;">
-            <p><strong>Payment:</strong></p>
-            <p>Amount Paid: ₹${paymentAmount.toFixed(2)}</p>
-            <p>Method: ${paymentMethod || ''}</p>
-            <p>Received Date: ${paymentReceivedDate || ''}</p>
-            <p>Remaining: ₹${(billingAmount - paymentAmount).toFixed(2)}</p>
-          </div>
-        </div>
+      if (printOptions.showQuantity) {
+        row += `<td>${safeGet(product.enteredQty)}</td>`;
+      }
+      if (printOptions.showUnit) {
+        row += `<td>${safeGet(product.unit)}</td>`;
+      }
+      if (printOptions.showPrice) {
+        // sellingPrice or fallback 0
+        const priceVal = parseFloat(product.sellingPrice) || 0;
+        row += `<td>₹${priceVal.toFixed(2)}</td>`;
+      }
+      if (printOptions.showRate) {
+        row += `<td>₹${rateWithoutGST.toFixed(2)}</td>`;
+      }
+      if (printOptions.showGst) {
+        row += `<td>${gstRate}%</td>`;
+      }
+      if (printOptions.showCgst) {
+        row += `<td>₹${cgst.toFixed(2)}</td>`;
+      }
+      if (printOptions.showSgst) {
+        row += `<td>₹${sgst.toFixed(2)}</td>`;
+      }
+      if (printOptions.showDiscount) {
+        row += `<td>₹${discountAmt.toFixed(2)}</td>`;
+      }
+      if (printOptions.showNetAmount) {
+        row += `<td>₹${netAmount.toFixed(2)}</td>`;
+      }
 
-        <!-- Invoice Table -->
-        <table class="invoice-table">
+      row += '</tr>';
+      return row;
+    };
+
+    // Before generating pages, recalc totals from the products (ignoring frontend subTotal)
+    // Compute the total amount of products without GST and the total GST.
+    let computedSubtotal = 0;
+    let computedTotalGST = 0;
+
+    let sumOfBase = 0;
+    finalProducts.forEach((p) => {
+      sumOfBase += (parseFloat(p.quantity) || 0) * (parseFloat(p.sellingPriceinQty) || 0);
+    });
+
+    finalProducts.forEach(product => {
+      const qty = parseFloat(product.quantity) || 0;
+      const priceInQty = parseFloat(product.sellingPriceinQty) || 0;
+      const gstRate = parseFloat(product.gstRate) || 0;
+      const discountRatio = sumOfBase > 0 ? (parseFloat(discount) || 0) / sumOfBase : 0;
+      const itemDiscount = (qty * priceInQty) * discountRatio;
+      const amountWithoutGST = (qty * priceInQty) / (1 + gstRate / 100) - itemDiscount;
+      computedSubtotal += amountWithoutGST;
+      const productGST = amountWithoutGST * (gstRate / 100);
+      computedTotalGST += productGST;
+    });
+
+    const computedGrandTotal = computedSubtotal + computedTotalGST + finalTransportation + finalUnloading + finalHandling - finalRoundOff;
+
+    // 10. Generate HTML for a single invoice page
+    const generatePageHTML = (productsChunk, pageNumber, totalPages, showTotals) => {
+      const headerRow = buildHeaderRow();
+      const rows = productsChunk
+        .map((product, index) => buildProductRow(product, index, pageNumber))
+        .join('');
+
+      // Payment info table from the *final* computed totals
+      const paymentInfoTable = `
+        <table class="payment-table">
           <thead>
             <tr>
-              <th>Sl</th>
-              <th>Item Id</th>
-              <th>Item Name</th>
-              <th>Qty</th>
-              <th>Unit</th>
-              <th>Price</th>
-              <th>Rate</th>
-              <th>GST %</th>
-              <th>CGST</th>
-              <th>SGST</th>
-              <th>Disc</th>
-              <th>Net Amount</th>
+              <th>Total Payment Received</th>
+              <th>Last Payment Date</th>
             </tr>
           </thead>
           <tbody>
-          ${
-            productsChunk.length > 0
-              ? productsChunk
-                  .map((product, index) => {
-                    const {
-                      baseTotal,
-                      discountAmt,
-                      rateWithoutGST,
-                      gstRate,
-                      gstAmount,
-                      cgst,
-                      sgst,
-                      netAmount,
-                    } = computeProductFields(product);
-
-                    return `
-                      <tr>
-                        <td>${index + 1 + (pageNumber - 1) * productsPerPage}</td>
-                        <td>${safeGet(product.item_id)}</td>
-                        <td>${safeGet(product.name)}</td>
-                        <td>${safeGet(product.enteredQty)}</td>
-                        <td>${safeGet(product.unit)}</td>
-                        <td>₹${parseFloat(product.sellingPrice || 0).toFixed(2)}</td>
-                        <td>₹${rateWithoutGST.toFixed(2)}</td>
-                        <td>${gstRate}%</td>
-                        <td>₹${cgst.toFixed(2)}</td>
-                        <td>₹${sgst.toFixed(2)}</td>
-                        <td>₹${discountAmt.toFixed(2)}</td>
-                        <td>₹${netAmount.toFixed(2)}</td>
-                      </tr>
-                    `;
-                  })
-                  .join('')
-              : '<tr><td colspan="12">No Products Available</td></tr>'
-          }
+            <tr>
+              <td>₹${totalPaymentReceived.toFixed(2)}</td>
+              <td>${lastPaymentDateStr}</td>
+            </tr>
           </tbody>
         </table>
+      `;
 
-        <!-- Totals Section -->
-        ${
-          showTotals
-            ? `
-              <div class="totals-section">
-                <div style="display: flex; justify-content: space-between;margin-top:20px;" class="totals">
-                  <!-- Signature / Stamp area -->
-                  <div style="font-size: 12px;margin-top: 30px;text-align:left;" class="payment-instructions">
-                  <p style="margin-top: 40px;">Date: ${new Date(invoiceDate).toLocaleDateString('en-GB')} </p>
-                  <p><strong>Authorised Signatory:</strong></p>
-                      <p style="font-weight: bold;text-align: center;margin-top: 20px;">KK TRADING</p>
-                  </div>
+      // Updated Totals table (removing discount column and adding total GST)
+      const totalsTable = `
+        <table class="totals-table">
+          <thead>
+            <tr>
+              <th>Subtotal</th>
+              <th>Total GST</th>
+              <th>Transportation</th>
+              <th>Unloading</th>
+              <th>Handling</th>
+              <th>Round Off</th>
+              <th>Grand Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>₹${computedSubtotal.toFixed(2)}</td>
+              <td>₹${computedTotalGST.toFixed(2)}</td>
+              <td>₹${finalTransportation.toFixed(2)}</td>
+              <td>₹${finalUnloading.toFixed(2)}</td>
+              <td>₹${finalHandling.toFixed(2)}</td>
+              <td>₹${finalRoundOff.toFixed(2)}</td>
+              <td>₹${grandTotal.toFixed(2)}</td>
+            </tr>
+          </tbody>
+        </table>
+      `;
 
-                  <!-- Right side totals -->
-                  <div style="font-size: 14px;text-align:right;">
-                      <p>Subtotal: <span>₹${subTotal.toFixed(2)}</span></p>
-                      <p>Discount: <span>₹${discount.toFixed(2)}</span></p>
-                      <p>Transportation: <span>₹${transportation.toFixed(2)}</span></p>
-                      <p>Unloading: <span>₹${unloading.toFixed(2)}</span></p>
-                      <p>Handling: <span>₹${handling.toFixed(2)}</span></p>
-                      <p style="margin-top:10px;">Round Off: <span>₹0.00</span></p>
-                      <p style="font-size: 18px;margin-top:10px;"><strong>Grand Total: <span>₹${grandTotal.toFixed(2)}</span></strong></p>
-                  </div>
-                </div>
-              </div>
-              `
-            : ``
-        }
+      // Delivery status from finalDeliveryStatus
+      const deliveryStatusSection = `
+        <div class="delivery-status" style="margin-top:10px; font-size:13px; text-align:right;">
+          <strong>Delivery Status:</strong> ${finalDeliveryStatus}
+        </div>
+      `;
 
-        <!-- Footer Section -->
-        <footer>Page ${pageNumber} of ${totalPages}</footer>
+      // Return the page HTML
+      return `
+        <div class="invoice">
+          <!-- Header -->
+          <div class="header">
+            <p>KK TRADING</p>
+            <p style="font-size:14px; margin-top:10px;">Tiles, Granites, Sanitary Wares, UV Sheets</p>
+          </div>
 
-        <footer style="margin-top:10px;">
-          <p style="font-size: 12px; color: #444;">
-            Thank you for your business! 45 ദിവസത്തിന് ശേഷം ഉൽപ്പന്നങ്ങൾ മാറ്റിസ്ഥാപിക്കാനോ തിരികെ നൽകാനോ കഴിയില്ല.
-            30 ദിവസത്തിനുള്ളിൽ പകരം വയ്ക്കുന്നവർക്ക് മാത്രം ജിഎസ്ടി ഉൾപ്പെടെയുള്ള റീഫണ്ടുകൾ.
-          </p>
-        </footer>
-      </div>
+          <!-- Invoice Info -->
+          <div class="invoice-info">
+            <div class="info-left">
+              <p><strong>Invoice No:</strong> ${invoiceNo}</p>
+              <p><strong>Invoice Date:</strong> ${
+                finalInvoiceDate ? new Date(finalInvoiceDate).toLocaleDateString() : '-'
+              }</p>
+              <p><strong>Expected Delivery:</strong> ${
+                finalExpectedDeliveryDate ? new Date(finalExpectedDeliveryDate).toLocaleDateString() : '-'
+              }</p>
+              <p><strong>Salesman:</strong> ${finalSalesmanName || '-'}</p>
+              <p><strong>Salesman Contact:</strong> ${finalSalesmanPhoneNumber || '-'}</p>
+              <p><strong>Marketed By:</strong> ${finalMarketedBy || '-'}</p>
+            </div>
+            <div class="info-right" style="text-align:right;">
+              <p><strong>From:</strong></p>
+              <p>KK TRADING</p>
+              <p>Moncompu, Chambakulam, Alappuzha</p>
+              <p>Alappuzha, 688503</p>
+              <p><strong>Contact:</strong> 0477 2080282</p>
+              <p><strong>Email:</strong> tradeinkk@gmail.com</p>
+              <img
+                src="${qrCodeDataURL}"
+                alt="QR Code"
+                style="width:60px; height:60px; margin-top:10px;"
+              />
+            </div>
+          </div>
+
+          <!-- Customer, Payment & Delivery Info -->
+          <div class="invoice-info">
+            <div class="customer-info">
+              <p><strong>Bill To:</strong></p>
+              <p><strong>Name:</strong> ${finalCustomerName || '-'}</p>
+              <p><strong>Address:</strong> ${finalCustomerAddress || '-'}</p>
+              <p><strong>Contact:</strong> ${finalCustomerContactNumber || '-'}</p>
+            </div>
+            <div class="payment-delivery-info" style="text-align:right;">
+              ${paymentInfoTable}
+              ${deliveryStatusSection}
+            </div>
+          </div>
+
+          <!-- Products Table -->
+          <table class="invoice-table">
+            <thead>
+              ${headerRow}
+            </thead>
+            <tbody>
+              ${
+                productsChunk.length > 0
+                  ? rows
+                  : '<tr><td colspan="11">No Products Available</td></tr>'
+              }
+            </tbody>
+          </table>
+
+          <!-- Totals Table (only on last page) -->
+          ${showTotals ? totalsTable : ''}
+
+          <footer>Page ${pageNumber} of ${totalPages}</footer>
+          <footer class="footer-note">
+            <p style="font-size:12px; color:#444; text-align:center; margin-top:10px;">
+              45 ദിവസത്തിന് ശേഷം ഉൽപ്പന്നങ്ങൾ മാറ്റസ്ഥാനുവാനോ തിരികെ നൽകാനോ കഴിയില്ല. <br>
+              30 ദിവസത്തിനുള്ളിൽ പകരം വയ്ക്കുന്നവർക്ക് മാത്രം ജിഎസ്ടി ഉൾപ്പെടെയുള്ള റീഫണ്ടുകൾ.
+            </p>
+          </footer>
+        </div>
       `;
     };
 
-    // Generate pages if products exceed productsPerPage
+    // 11. Generate all pages HTML
     let combinedHTMLContent = '';
-    const totalPages = Math.ceil(productList.length / productsPerPage) || 1;
-
     for (let i = 0; i < totalPages; i++) {
-      const productsChunk = productList.slice(
+      const productsChunk = finalProducts.slice(
         i * productsPerPage,
         (i + 1) * productsPerPage
       );
-      const showTotals = i === totalPages - 1; // only show totals on the last page
-      combinedHTMLContent += generatePageHTML(
-        productsChunk,
-        i + 1,
-        totalPages,
-        showTotals
-      );
+      const showTotals = i === totalPages - 1; // Only show totals on last page
+      combinedHTMLContent += generatePageHTML(productsChunk, i + 1, totalPages, showTotals);
     }
 
-    // Wrap final content in HTML/CSS
+    // 12. Final HTML structure
     const fullHTMLContent = `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>KK INVOICE</title>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-      <style>
-        * {
-          margin: 0; 
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Poppins', sans-serif;
-        }
-        body {
-          background-color: #f9f9f9;
-          margin: 10px;
-        }
-        .invoice {
-          background-color: #fff;
-          width: 100%;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-          margin: auto;
-          page-break-after: always;
-        }
-        .header {
-          background-color: #960101; /* Dark Red */
-          padding: 20px;
-          color: #fff;
-          text-align: center;
-          font-size: 22px;
-          font-weight: bold;
-          border-top-left-radius: 10px;
-          border-top-right-radius: 10px;
-        }
-        .invoice-info {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 15px;
-          padding-bottom: 10px;
-          border-bottom: 2px solid #e0e0e0;
-        }
-        .invoice-info div {
-          font-size: 12px;
-          color: #333;
-          line-height: 1.6;
-          margin-right: 10px;
-        }
-        .invoice-table {
-          width: 100%;
-          border-collapse: collapse;
-          margin-top: 15px;
-        }
-        .invoice-table th {
-          background-color: #f4cccc; /* Light Red */
-          color: #960101; /* Dark Red */
-          padding: 10px;
-          border: 1px solid #ddd;
-          font-size: 12px;
-        }
-        .invoice-table td {
-          padding: 10px;
-          text-align: center;
-          border: 1px solid #ddd;
-          font-size: 12px;
-        }
-        .totals-section {
-          margin-top: 20px;
-        }
-        .totals {
-          text-align: right;
-        }
-        .totals p {
-          margin: 5px 0;
-          font-size: 14px;
-        }
-        .totals span {
-          font-weight: bold;
-          color: #960101;
-        }
-        .payment-instructions {
-          margin-top: 30px;
-        }
-        .qr-code-section img {
-          width: 60px;
-          height: 60px;
-        }
-        footer {
-          text-align: center;
-          margin-top: 20px;
-          font-size: 12px;
-          color: #777;
-        }
-
-        @page {
-          margin: 20px;
-        }
-
-        @media print {
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KK INVOICE</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <style>
+          * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+          }
           body {
-            margin: 0;
-          }
-          body * {
-            visibility: hidden;
-          }
-          #printable, #printable * {
-            visibility: visible;
-          }
-          #printable {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
+            background-color: #f9f9f9; padding: 20px;
           }
           .invoice {
-            page-break-inside: avoid;
+            background-color: #fff; margin: auto; padding: 20px;
+            border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; page-break-after: always;
           }
-        }
-      </style>
-      <script>
-        // Auto-print on page load
-        window.onload = function() {
-          window.print();
-        };
-      </script>
-    </head>
-    <body>
-      <div id="printable">
-        ${combinedHTMLContent}
-      </div>
-    </body>
-    </html>`;
+          .header {
+            background-color: #960101; padding: 20px; color: #fff; text-align: center;
+            font-size: 22px; font-weight: bold;
+            border-top-left-radius: 10px; border-top-right-radius: 10px;
+          }
+          .invoice-info {
+            display: flex; justify-content: space-between;
+            margin-top: 15px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0;
+          }
+          .invoice-info div {
+            font-size: 12px; color: #333; line-height: 1.6;
+          }
+          .invoice-table {
+            width: 100%; border-collapse: collapse; margin-top: 15px;
+          }
+          .invoice-table th {
+            background-color: #f4cccc; color: #960101; padding: 10px;
+            border: 1px solid #ddd; font-size: 12px;
+          }
+          .invoice-table td {
+            padding: 10px; text-align: center; border: 1px solid #ddd;
+            font-size: 12px;
+          }
+          .payment-table, .totals-table {
+            width: 100%; border-collapse: collapse; margin-top: 15px;
+          }
+          .payment-table th, .payment-table td,
+          .totals-table th, .totals-table td {
+            border: 1px solid #ddd; padding: 8px; text-align: center;
+            font-size: 12px;
+          }
+          .payment-table th, .totals-table th {
+            background-color: #f4cccc; color: #960101;
+          }
+          footer {
+            text-align: center; margin-top: 20px; font-size: 12px; color: #777;
+          }
+          @page { margin: 20px; }
+          @media print {
+            body { margin: 0; }
+            body * { visibility: hidden; }
+            #printable, #printable * { visibility: visible; }
+            #printable {
+              position: absolute; left: 0; top: 0; width: 100%;
+            }
+            .invoice { page-break-inside: avoid; }
+          }
+        </style>
+        <script>
+          window.onload = function() {
+            window.print();
+          };
+        </script>
+      </head>
+      <body>
+        <div id="printable">
+          ${combinedHTMLContent}
+        </div>
+      </body>
+      </html>
+    `;
 
-    // Send the HTML as a response
+    // 13. Send the final HTML
     res.setHeader('Content-Type', 'text/html');
     res.send(fullHTMLContent);
   } catch (error) {
@@ -761,6 +909,9 @@ const itemDiscount = itemBase * discountRatio;
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+
+
 
 
 
