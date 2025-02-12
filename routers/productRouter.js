@@ -546,6 +546,7 @@ productRouter.post(
           product.category = item.category;
           product.sUnit = item.sUnit;
           product.pUnit = item.pUnit;
+          product.hsnCode = item.hsnCode;
           product.gstPercent = item.gstPercent,
           Object.assign(product, item);
           await product.save();
@@ -811,6 +812,7 @@ productRouter.put(
           product.category = item.category;
           product.sUnit = item.sUnit;
           product.pUnit = item.pUnit;
+          product.hsnCode = item.hsnCode;
           product.price = parseFloat(item.totalPriceInNumbers);
           product.gstPercent = item.gstPercent,
           Object.assign(product, item);
