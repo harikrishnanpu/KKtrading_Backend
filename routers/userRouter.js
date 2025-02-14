@@ -192,10 +192,12 @@ userRouter.get(
       return res.status(200).json({
         user: {
           _id: user._id,
+          id: user._id,
           email: user.email,
           name: user.name,
           role: user.role,
           isAdmin: user.isAdmin,
+          isEmployee: user.isEmployee
         },
       });
     } catch (err) {
