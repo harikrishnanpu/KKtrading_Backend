@@ -72,7 +72,8 @@ userRouter.post(
         name: user.name,
         role: user.role,
         isAdmin: user.isAdmin,
-        isEmployee: user.isEmployee
+        isEmployee: user.isEmployee,
+        isSuper: user.isSuper
       }
     });
   })
@@ -138,7 +139,8 @@ userRouter.post(
           name: createdUser.name,
           role: createdUser.role,
           isAdmin: createdUser.isAdmin,
-          isEmployee: createdUser.isEmployee
+          isEmployee: createdUser.isEmployee,
+          isSuper: createdUser.isSuper
         };
         
       return res.status(200).json({ serviceToken, user }); // Use 201 for successful creation
@@ -197,7 +199,8 @@ userRouter.get(
           name: user.name,
           role: user.role,
           isAdmin: user.isAdmin,
-          isEmployee: user.isEmployee
+          isEmployee: user.isEmployee,
+          isSuper: user.isSuper
         },
       });
     } catch (err) {

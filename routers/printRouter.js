@@ -1890,171 +1890,178 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
   const generatePageHTML = (productsChunk, pageNumber, totalPages) => {
     let rowsHTML = productsChunk.map((product, index) => {
       const slNo = index + 1 + (pageNumber - 1) * productsPerPage;
-
       const quantity = parseInt(product.quantity, 10) || 0;
       const deliveredQuantity = parseInt(product.deliveredQuantity, 10) || 0;
       const psRatio = parseInt(product.psRatio, 10) || 1;
       const remainingQuantity = quantity - deliveredQuantity;
+      // Determine if remaining is zero
+      const isRemainingZero = remainingQuantity === 0;
+      const checkboxAttributes = isRemainingZero 
+        ? 'checked style="accent-color: red;"'
+        : 'style="accent-color: initial;"';
 
       if (psRatio > 1) {
         // Calculate boxes and pieces for ordered
         const oBoxes = Math.floor(quantity / psRatio);
         const oPieces = quantity % psRatio;
-
         // Calculate boxes and pieces for delivered
         const dBoxes = Math.floor(deliveredQuantity / psRatio);
         const dPieces = deliveredQuantity % psRatio;
-
         // Calculate boxes and pieces for remaining
         const rBoxes = Math.floor(remainingQuantity / psRatio);
         const rPieces = remainingQuantity % psRatio;
 
         return `
           <tr>
+            <td><input type="checkbox" ${checkboxAttributes} /></td>
             <td>${slNo}</td>
             <td>${safeGet(product.item_id)}</td>
             <td>${safeGet(product.name)}</td>
             <!-- Ordered -->
-            <td>${oBoxes}</td>
-            <td>${oPieces}</td>
-            <td>${(oBoxes * psRatio) + oPieces}</td>
+            <td class="ordered-section">${oBoxes}</td>
+            <td class="ordered-section">${oPieces}</td>
+            <td class="ordered-section" style="border-right:2px solid #000;">${(oBoxes * psRatio) + oPieces}</td>
             <!-- Delivered -->
-            <td>${dBoxes}</td>
-            <td>${dPieces}</td>
-            <td>${(dBoxes * psRatio) + dPieces}</td>
+            <td class="delivered-section">${dBoxes}</td>
+            <td class="delivered-section">${dPieces}</td>
+            <td class="delivered-section" style="border-right:2px solid #000;">${(dBoxes * psRatio) + dPieces}</td>
             <!-- Remaining -->
-            <td>${rBoxes}</td>
-            <td>${rPieces}</td>
-            <td>${(rBoxes * psRatio) + rPieces}</td>
+            <td class="remaining-section">${rBoxes}</td>
+            <td class="remaining-section">${rPieces}</td>
+            <td class="remaining-section"><strong>${(rBoxes * psRatio) + rPieces}</strong></td>
           </tr>
         `;
       } else {
-        // psRatio = 1, show as single numbers
+        // For psRatio = 1, merge each section across 3 columns (keeping the 12-column structure)
         return `
           <tr>
+            <td><input type="checkbox" ${checkboxAttributes} /></td>
             <td>${slNo}</td>
             <td>${safeGet(product.item_id)}</td>
             <td>${safeGet(product.name)}</td>
-            <td>${quantity}</td>
-            <td>${deliveredQuantity}</td>
-            <td>${remainingQuantity}</td>
+            <td colspan="3" style="background-color: #f8d7da; border-right:2px solid #000;">${quantity}</td>
+            <td colspan="3" style="background-color: #d1e7dd; border-right:2px solid #000;">${deliveredQuantity}</td>
+            <td colspan="3" style="background-color: #fff3cd;"><strong>${remainingQuantity}</strong></td>
           </tr>
         `;
       }
     }).join('');
 
-    // If no products
+    // If no products, adjust colspan (13 columns because of the extra checkbox column)
     if (productsChunk.length === 0) {
-      rowsHTML = '<tr><td colspan="12">No Products</td></tr>';
+      rowsHTML = `<tr><td colspan="13">No Products</td></tr>`;
     }
 
-    // Determine table header based on psRatio of the first product in the chunk (assuming consistent psRatio usage)
+    // Determine table header based on psRatio of the first product in the chunk
     let tableHeaders = '';
     const firstProduct = productsChunk[0];
     const firstPsRatio = firstProduct ? parseInt(firstProduct.psRatio, 10) || 1 : 1;
 
     if (firstPsRatio > 1) {
+      // Header for products with breakdown (boxes, pcs, total)
       tableHeaders = `
         <tr>
+          <th rowspan="2">Check</th>
           <th rowspan="2">Sl</th>
           <th rowspan="2">Item ID</th>
           <th rowspan="2">Product Name</th>
-          <th colspan="3">Ordered</th>
-          <th colspan="3">Delivered</th>
-          <th colspan="3">Remaining</th>
+          <th colspan="3" class="ordered-section">Ordered</th>
+          <th colspan="3" class="delivered-section">Delivered</th>
+          <th colspan="3" class="remaining-section">Remaining</th>
         </tr>
         <tr>
-          <th>Boxes</th>
-          <th>Pcs</th>
-          <th>Total Pcs</th>
-          <th>Boxes</th>
-          <th>Pcs</th>
-          <th>Total Pcs</th>
-          <th>Boxes</th>
-          <th>Pcs</th>
-          <th>Total Pcs</th>
+          <th class="ordered-section">Boxes</th>
+          <th class="ordered-section">Pcs</th>
+          <th class="ordered-section" style="border-right:2px solid #000;">Total Pcs</th>
+          <th class="delivered-section">Boxes</th>
+          <th class="delivered-section">Pcs</th>
+          <th class="delivered-section" style="border-right:2px solid #000;">Total Pcs</th>
+          <th class="remaining-section">Boxes</th>
+          <th class="remaining-section">Pcs</th>
+          <th class="remaining-section">Total Pcs</th>
         </tr>
       `;
     } else {
+      // Header for products without breakdown.
       tableHeaders = `
         <tr>
+          <th>Check</th>
           <th>Sl</th>
           <th>Item ID</th>
           <th>Product Name</th>
-          <th>Ordered</th>
-          <th>Delivered</th>
-          <th>Remaining</th>
+          <th colspan="3" style="background-color: #f8d7da; border-right:2px solid #000;">Ordered</th>
+          <th colspan="3" style="background-color: #d1e7dd; border-right:2px solid #000;">Delivered</th>
+          <th colspan="3" style="background-color: #fff3cd;">Remaining</th>
         </tr>
       `;
     }
 
     return `
-    <div class="loading-slip">
-      <!-- Header Section -->
-      <div class="header">
-        <h1>KK TRADING</h1>
-        <p class="sub-header">Tiles, Granites, Sanitary Wares, UV Sheets</p>
-      </div>
-
-      <!-- Delivery & Payment Info -->
-      <div class="info-section">
-        <div class="left-info">
-          <p><strong>Loading Slip For Invoice:</strong> ${safeGet(invoiceNo)}</p>
-          <p><strong>Invoice Date:</strong> ${new Date(invoiceDate).toLocaleDateString()}</p>
-          <p><strong>Expected Delivery:</strong> ${new Date(expectedDeliveryDate).toLocaleDateString()}</p>
-          <p><strong>Salesman:</strong> ${safeGet(salesmanName)}</p>
-          <p><strong>Marketed By:</strong> ${safeGet(marketedBy)}</p>
-          <p><strong>Delivery Status:</strong> ${safeGet(deliveryStatus)}</p>
+      <div class="loading-slip">
+        <!-- Header Section -->
+        <div class="header">
+          <h1>KK TRADING</h1>
+          <p class="sub-header">Tiles, Granites, Sanitary Wares, UV Sheets</p>
         </div>
-        <div class="right-info">
-          <p><strong>Customer:</strong> ${safeGet(customerName)}</p>
-          <p>${safeGet(customerAddress)}</p>
-          <p>Contact: ${safeGet(customerContactNumber)}</p>
-          <p><strong>Delivery Dates:</strong> ${deliveryDates.length > 0 ? deliveryDates.join(', ') : 'N/A'}</p>
-          <p><strong>Total Paid:</strong> Rs. ${parseFloat(totalAmountPaid).toFixed(2)}</p>
+
+        <!-- Delivery & Payment Info -->
+        <div class="info-section">
+          <div class="left-info">
+            <p><strong>Loading Slip For Invoice:</strong> ${safeGet(invoiceNo)}</p>
+            <p><strong>Invoice Date:</strong> ${new Date(invoiceDate).toLocaleDateString()}</p>
+            <p><strong>Expected Delivery:</strong> ${new Date(expectedDeliveryDate).toLocaleDateString()}</p>
+            <p><strong>Salesman:</strong> ${safeGet(salesmanName)}</p>
+            <p><strong>Marketed By:</strong> ${safeGet(marketedBy)}</p>
+            <p><strong>Delivery Status:</strong> ${safeGet(deliveryStatus)}</p>
+          </div>
+          <div class="right-info">
+            <p><strong>Customer:</strong> ${safeGet(customerName)}</p>
+            <p>${safeGet(customerAddress)}</p>
+            <p>Contact: ${safeGet(customerContactNumber)}</p>
+            <p><strong>Delivery Dates:</strong> ${deliveryDates.length > 0 ? deliveryDates.join(', ') : 'N/A'}</p>
+            <p><strong>Total Paid:</strong> Rs. ${parseFloat(totalAmountPaid).toFixed(2)}</p>
+          </div>
         </div>
-      </div>
 
-      <div class="loading-slip-title">
-        <h2>LOADING SLIP</h2>
-      </div>
+        <div class="loading-slip-title">
+          <h2>LOADING SLIP</h2>
+        </div>
 
-      <!-- Payment Details Section -->
-      <div class="payment-details">
-        <p><strong>Payment Details:</strong></p>
-        ${
-          paymentDetails.length > 0
-          ? paymentDetails.map(pd => `<p>${pd}</p>`).join('')
-          : '<p>No payment details available.</p>'
-        }
-      </div>
+        <!-- Payment Details Section -->
+        <div class="payment-details">
+          <p><strong>Payment Details:</strong></p>
+          ${
+            paymentDetails.length > 0
+              ? paymentDetails.map(pd => `<p>${pd}</p>`).join('')
+              : '<p>No payment details available.</p>'
+          }
+        </div>
 
-      <!-- Products Table -->
-      <table class="products-table">
-        <thead>
-          ${tableHeaders}
-        </thead>
-        <tbody>
-          ${rowsHTML}
-        </tbody>
-      </table>
+        <!-- Products Table -->
+        <table class="products-table">
+          <thead>
+            ${tableHeaders}
+          </thead>
+          <tbody>
+            ${rowsHTML}
+          </tbody>
+        </table>
 
-      <div class="footer-section">
-        <p>Page ${pageNumber} of ${totalPages}</p>
-        <p class="disclaimer">
-        KK TRADING - loading Slip of ${invoiceNo}
-        </p>
+        <div class="footer-section">
+          <p>Page ${pageNumber} of ${totalPages}</p>
+          <p class="disclaimer">
+            KK TRADING - Loading Slip of ${invoiceNo}
+          </p>
+        </div>
+        ${pageNumber === totalPages ? `
+          <div class="customer-signatory">
+            <p>Customer Signatory: ___________________________</p>
+            <p>Date: ___________________________</p>
+          </div>
+        ` : ''}
       </div>
-    </div>
     `;
   };
-
-  // Generate the full HTML content for all pages
-  let combinedHTMLContent = '';
-  for (let i = 0; i < totalPages; i++) {
-    const productsChunk = products.slice(i * productsPerPage, (i + 1) * productsPerPage);
-    combinedHTMLContent += generatePageHTML(productsChunk, i + 1, totalPages);
-  }
 
   const fullHTMLContent = `
     <!DOCTYPE html>
@@ -2082,7 +2089,7 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
             page-break-after: always;
           }
           .header {
-            background-color: #960101; /* Dark Red */
+            background-color: #960101;
             padding: 10px;
             color: #fff;
             text-align: center;
@@ -2135,17 +2142,27 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
             margin-top: 10px;
             font-size: 9px;
           }
-          .products-table th {
-            background-color: #f4cccc;
-            color: #960101;
-            padding: 4px;
-            border: 1px solid #ddd;
-            text-align: center;
-          }
+          .products-table th,
           .products-table td {
             padding: 4px;
             text-align: center;
             border: 1px solid #ddd;
+          }
+          /* Background colours for sections */
+          .ordered-section {
+            background-color: #f8d7da; /* Light Red */
+          }
+          .delivered-section {
+            background-color: #d1e7dd; /* Light Green */
+          }
+          .remaining-section {
+            background-color: #fff3cd; /* Light Yellow */
+          }
+          .products-table th {
+            background-color: #f4cccc;
+            color: #960101;
+          }
+          .products-table td {
             color: #333;
             font-size: 9px;
           }
@@ -2159,11 +2176,16 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
             font-style: italic;
             margin-top: 5px;
           }
-
+          .customer-signatory {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 10px;
+            font-weight: bold;
+          }
           @media print {
             body {
-              margin:0;
-              padding:0;
+              margin: 0;
+              padding: 0;
             }
             .loading-slip {
               page-break-after: always;
@@ -2175,7 +2197,14 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
         </style>
       </head>
       <body>
-        ${combinedHTMLContent}
+        ${(() => {
+          let combinedHTMLContent = '';
+          for (let i = 0; i < totalPages; i++) {
+            const productsChunk = products.slice(i * productsPerPage, (i + 1) * productsPerPage);
+            combinedHTMLContent += generatePageHTML(productsChunk, i + 1, totalPages);
+          }
+          return combinedHTMLContent;
+        })()}
         <script>
           window.onload = function() {
             window.print();
@@ -2186,11 +2215,6 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
   `;
 
   try {
-    // Optionally, save the loading slip HTML to a file or log if needed
-    // Generate QR Code as Data URL (if needed)
-    // const qrCodeDataURL = await QRCode.toDataURL(NewQrCodeId); // Adjust as per requirement
-
-    // Send the HTML directly with print onload
     res.setHeader('Content-Type', 'text/html');
     res.send(fullHTMLContent);
   } catch (error) {
@@ -2198,6 +2222,11 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+
+
+
+
 
 
 printRouter.post('/generate-leave-application-pdf', async (req, res) => {
