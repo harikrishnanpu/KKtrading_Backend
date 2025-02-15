@@ -26,7 +26,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35,7 +35,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ALINTA"
+      "seller": "ALINTA",
+      "hsnCode": ""
     },
     {
       "name": "ALINTA AMBER 2X2",
@@ -49,7 +50,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -58,7 +59,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ALINTA"
+      "seller": "ALINTA",
+      "hsnCode": ""
     },
     {
       "name": "ALINTA SPARTANWOOD 2X2",
@@ -72,7 +74,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -81,7 +83,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ALINTA"
+      "seller": "ALINTA",
+      "hsnCode": ""
     },
     {
       "name": "ALINTA PAPERINO 2X2",
@@ -95,7 +98,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -104,7 +107,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ALINTA"
+      "seller": "ALINTA",
+      "hsnCode": ""
     },
     {
       "name": "ALINTA MIRRORWOOD 2X2",
@@ -118,7 +122,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -127,7 +131,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ALINTA"
+      "seller": "ALINTA",
+      "hsnCode": ""
     },
     {
       "name": "ALINTA IVORY 2X2",
@@ -141,7 +146,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -150,7 +155,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ALINTA"
+      "seller": "ALINTA",
+      "hsnCode": ""
     },
     {
       "name": "SONCERA ANIKA BOTTOCHINO 4X2",
@@ -164,7 +170,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -173,7 +179,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SONCERA ARMANI BROWN 4X2",
@@ -187,7 +194,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -196,7 +203,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SONCERA BRECCIA MOJAVE 4X2",
@@ -210,7 +218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -219,7 +227,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SONCERA LIZORA IVORY 4X2",
@@ -233,7 +242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -242,7 +251,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SONCERA MONTANA CREMA 4X2",
@@ -256,7 +266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -265,7 +275,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SONCERA ORDITO CHOCO 4X2",
@@ -279,7 +290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -288,7 +299,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SONCERA UTIL GOLD 4X2",
@@ -302,7 +314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -311,7 +323,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SONCERA ZENON GREY 4X2",
@@ -325,7 +338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -334,7 +347,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1026 F ASTO 1X1",
@@ -348,7 +362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -357,7 +371,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1032 F ASTO 1X1",
@@ -371,7 +386,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -380,7 +395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1195 F ASTO 1X1",
@@ -394,7 +410,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -403,7 +419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1210 F ASTO 1X1",
@@ -417,7 +434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -426,7 +443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1032 L ASTO 18X12",
@@ -440,7 +458,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -449,7 +467,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1032 D ASTO 18X12",
@@ -463,7 +482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -472,7 +491,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1032 HL 35 ASTO 18X12",
@@ -486,7 +506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -495,7 +515,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 35",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1006 L ASTO 18X12",
@@ -509,7 +530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -518,7 +539,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1006 D ASTO 18X12",
@@ -532,7 +554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -541,7 +563,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1195 D ASTO 18X12",
@@ -555,7 +578,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -564,7 +587,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1195 HL 38 ASTO 18X12",
@@ -578,7 +602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -587,7 +611,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 38",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1195 L ASTO 18X12",
@@ -601,7 +626,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -610,7 +635,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1210 D ASTO 18X12",
@@ -624,7 +650,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -633,7 +659,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1210 HL05 ASTO 18X12",
@@ -647,7 +674,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -656,7 +683,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 5",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1210 L ASTO 18X12",
@@ -670,7 +698,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -679,7 +707,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1026 D ASTO 18X12",
@@ -693,7 +722,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -702,7 +731,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1026 HL 35 2X1",
@@ -716,7 +746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -725,7 +755,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 35",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1026 L ASTO 18X12",
@@ -739,7 +770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -748,7 +779,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1045 D ASTIS 2X1",
@@ -762,7 +794,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -771,7 +803,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1045 HL 1 ASTIS 2X1",
@@ -785,7 +818,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -794,7 +827,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1045 L ASTIS 2X1",
@@ -808,7 +842,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -817,7 +851,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4154 HL1 ASTIS 2X1",
@@ -831,7 +866,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -840,7 +875,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4154 HL2 ASTIS 2X1",
@@ -854,7 +890,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -863,7 +899,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4154 D ASTIS 2X1",
@@ -877,7 +914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -886,7 +923,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4154 L ASTIS 2X1",
@@ -900,7 +938,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -909,7 +947,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4160 D ASTIS 2X1",
@@ -923,7 +962,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -932,7 +971,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4160 HL2 ASTIS 2X1",
@@ -946,7 +986,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -955,7 +995,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4160 L ASTIS 2X1",
@@ -969,7 +1010,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -978,7 +1019,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4165 D ASTIS 2X1",
@@ -992,7 +1034,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -1001,7 +1043,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4165 HL1 ASTIS 2X1",
@@ -1015,7 +1058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -1024,7 +1067,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4165 L ASTIS 2X1",
@@ -1038,7 +1082,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -1047,7 +1091,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1006 HL 32 ASTO 18X12",
@@ -1061,7 +1106,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1070,7 +1115,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 32",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY EUPHORIA NERO 800X800",
@@ -1084,7 +1130,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 2.65,
       "breadth": 2.65,
@@ -1093,7 +1139,8 @@ const data = {
       "actLength": 6.885,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY HAZE GREY 800X800",
@@ -1107,7 +1154,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 2.65,
       "breadth": 2.65,
@@ -1116,7 +1163,8 @@ const data = {
       "actLength": 6.885,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "1272 D CAPTIVA 15X10",
@@ -1130,7 +1178,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1139,7 +1187,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY HAZE BROWN 800X800",
@@ -1153,7 +1202,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 2.65,
       "breadth": 2.65,
@@ -1162,7 +1211,8 @@ const data = {
       "actLength": 6.885,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "1272 FL CAPTIVA 1X1",
@@ -1176,7 +1226,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -1185,7 +1235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY SEVILLA BLUE D FLOOR 300X300",
@@ -1199,7 +1250,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -1208,7 +1259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "1272 HL01 CAPTIVA 15X10",
@@ -1222,7 +1274,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1231,7 +1283,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1272 K7 CAPTIVA 15X10",
@@ -1245,7 +1298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1254,7 +1307,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1272 K8 CAPTIVA 15X10",
@@ -1268,7 +1322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1277,7 +1331,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1272 K9 CAPTIVA 15X10",
@@ -1291,7 +1346,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1300,7 +1355,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1272 L CAPTIVA 15X10",
@@ -1314,7 +1370,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1323,7 +1379,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1274 D CAPTIVA 15X10",
@@ -1337,7 +1394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1346,7 +1403,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1274 FL CAPTIVA 1X1",
@@ -1360,7 +1418,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -1369,7 +1427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1274 HL01 CAPTIVA 15X10",
@@ -1383,7 +1442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1392,7 +1451,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1275 D CAPTIVA 15X10",
@@ -1406,7 +1466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1415,7 +1475,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA TITANIUM PILLAR COCK F1003101",
@@ -1438,7 +1499,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA RUBY PILLAR COCK F1005101",
@@ -1461,7 +1523,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BERTA DARK 300X450",
@@ -1475,7 +1538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1484,7 +1547,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ASTORIO DARK 300X450",
@@ -1498,7 +1562,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1507,7 +1571,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY IRMA DARK 300X450",
@@ -1521,7 +1586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1530,7 +1595,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "CERA GAYLE PILLAR COCK (F1014101)",
@@ -1553,7 +1619,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LACEWOOD D 300X450",
@@ -1567,7 +1634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1576,7 +1643,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "CERA GARNET PILLAR COCK (F2002101)",
@@ -1599,7 +1667,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA DIVERTER H/F INNER (F4030101)",
@@ -1622,7 +1691,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY SEVILLA BLUE DARK 300X450",
@@ -1636,7 +1706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1645,7 +1715,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "CERA OVERHEAD SHOWER F7010506",
@@ -1668,7 +1739,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY CORTE DARK 300X450",
@@ -1682,7 +1754,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1691,7 +1763,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "CERA SHOWER ARM F7040105",
@@ -1714,7 +1787,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA CHELSEA BATH SPOUT F1016661",
@@ -1737,7 +1811,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LACEWOOD L 300X450",
@@ -1751,7 +1826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1760,7 +1835,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "CERA CHELSEA EXPOSED PART DIVERTER (F1016721)",
@@ -1783,7 +1859,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ESPRESSO DARK 300X450",
@@ -1797,7 +1874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -1806,7 +1883,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "CERA GARNET SWAN NECK (F2002104)",
@@ -1829,7 +1907,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA FOUNTAIN WALL MIXER BEND F2013401",
@@ -1852,7 +1931,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1275 FL CAPTIVA 1X1",
@@ -1866,7 +1946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -1875,7 +1955,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1275 HL2 CAPTIVA 15X10",
@@ -1889,7 +1970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1898,7 +1979,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1276 D CAPTIVA 15X10",
@@ -1912,7 +1994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1921,7 +2003,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1276 FL CAPTIVA 12X12",
@@ -1935,7 +2018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -1944,7 +2027,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1276 HL1 CAPTIVA 15X10",
@@ -1958,7 +2042,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1967,7 +2051,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1276 HL2 CAPTIVA 15X10",
@@ -1981,7 +2066,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -1990,7 +2075,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1277 D CAPTIVA 15X10",
@@ -2004,7 +2090,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2013,7 +2099,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1277 FL CAPTIVA 1X1",
@@ -2027,7 +2114,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -2036,7 +2123,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1277 HL02 CAPTIVA 15X10",
@@ -2050,7 +2138,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2059,7 +2147,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1280 D CAPTIVA 15X10",
@@ -2073,7 +2162,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2082,7 +2171,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1280 FL CAPTIVA 1X1",
@@ -2096,7 +2186,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -2105,7 +2195,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1280 HL01 CAPTIVA 15X10",
@@ -2119,7 +2210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2128,7 +2219,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "2006 L CAPTIVA 15X10",
@@ -2142,7 +2234,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2151,7 +2243,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "5187 CAPTIVA 15X10",
@@ -2165,7 +2258,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2174,7 +2267,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "5491 CAPTIVA 15X10",
@@ -2188,7 +2282,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2197,7 +2291,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "6027 CAPTIVA 15X10",
@@ -2211,7 +2306,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2220,7 +2315,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "6028 CAPTIVA 15X10",
@@ -2234,7 +2330,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2243,7 +2339,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "6070 CAPTIVA 15X10",
@@ -2257,7 +2354,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2266,7 +2363,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9002 D CAPTIVA 15X10",
@@ -2280,7 +2378,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2289,7 +2387,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9002 FL CAPTIVA 1X1",
@@ -2303,7 +2402,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -2312,7 +2411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9002 HL6 CAPTIVA 15X10",
@@ -2326,7 +2426,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2335,7 +2435,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 6",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9002 L CAPTIVA 15X10",
@@ -2349,7 +2450,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2358,7 +2459,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9164 D CAPTIVA 15X10",
@@ -2372,7 +2474,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2381,7 +2483,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9164 FL CAPTIVA 1X1",
@@ -2395,7 +2498,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -2404,7 +2507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9164 HL2 CAPTIVA 15X10",
@@ -2418,7 +2522,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2427,7 +2531,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9164 L CAPTIVA 15X10",
@@ -2441,7 +2546,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2450,7 +2555,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9179 D CAPTIVA 15X10",
@@ -2464,7 +2570,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2473,7 +2579,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9179 FL CAPTIVA 1X1",
@@ -2487,7 +2594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -2496,7 +2603,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9179 HL1 CAPTIVA 15X10",
@@ -2510,7 +2618,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2519,7 +2627,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "9179 L CAPTIVA 15X10",
@@ -2533,7 +2642,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -2542,7 +2651,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY NEO STATUARIO L 300X450",
@@ -2556,7 +2666,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2565,7 +2675,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OXFORD NEGRO 300X450",
@@ -2579,7 +2690,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2588,7 +2699,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ASTORIO LIGHT 300X450",
@@ -2602,7 +2714,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2611,7 +2723,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ASTORIO HL01 300X450",
@@ -2625,7 +2738,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2634,7 +2747,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BERTA LIGHT 300X450",
@@ -2648,7 +2762,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2657,7 +2771,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BERTA HL02 300X450",
@@ -2671,7 +2786,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2680,7 +2795,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY SEVILLA BLUE HL01 A&B 300X450",
@@ -2694,7 +2810,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2703,7 +2819,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1A&B",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LACEWOOD HL01 300X450",
@@ -2717,7 +2834,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2726,7 +2843,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OXFORD HL01 300X450",
@@ -2740,7 +2858,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2749,7 +2867,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY IRMA LIGHT 300X450",
@@ -2763,7 +2882,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2772,7 +2891,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OXFORD BIANCO 300X450",
@@ -2786,7 +2906,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2795,7 +2915,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY NEO STATUARIO HL01 300X450",
@@ -2809,7 +2930,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2818,7 +2939,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY SEVILLA BLUE LIGHT 300X450",
@@ -2832,7 +2954,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2841,7 +2963,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY CORTE HL01 300X450",
@@ -2855,7 +2978,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2864,7 +2987,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY IRMA HL01 300X450",
@@ -2878,7 +3002,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2887,7 +3011,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY CORTE LIGHT 300X450",
@@ -2901,7 +3026,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2910,7 +3035,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ESPRESSO HL01A&B 300X450",
@@ -2924,7 +3050,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -2933,7 +3059,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1A&B",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY UNIVERSAL BEIGE 1X1",
@@ -2947,7 +3074,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -2956,7 +3083,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OSANE BLUE D FLOOR1X1",
@@ -2970,7 +3098,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -2979,7 +3107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LURENT D FL 1X1",
@@ -2993,7 +3122,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -3002,7 +3131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OXFORD NEGRO FL 1X1",
@@ -3016,7 +3146,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -3025,7 +3155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LACEWOOD D FLOOR 1X1",
@@ -3039,7 +3170,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -3048,7 +3179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY IRMA D FLOOR 1X1",
@@ -3062,7 +3194,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -3071,7 +3203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TRENTO NERO MATT 4X2",
@@ -3085,7 +3218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3094,7 +3227,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TRENTO NERO POLISH 4X2",
@@ -3108,7 +3242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3117,7 +3251,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TRENTO BROWN MATT 4X2",
@@ -3131,7 +3266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3140,7 +3275,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TRENTO BROWN POLISH 4X2",
@@ -3154,7 +3290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3163,7 +3299,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "POLISH",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON PORTORO NERO 4X2",
@@ -3177,7 +3314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3186,7 +3323,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON PORTORO SNOW 4X2",
@@ -3200,7 +3338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3209,7 +3347,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON ARGOS GREY L 4X2",
@@ -3223,7 +3362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3232,7 +3371,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ELITE BROWN 2X2",
@@ -3246,7 +3386,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3255,7 +3395,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ELITE CREMA 2X2",
@@ -3269,7 +3410,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3278,7 +3419,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY AEGIS BEIGE 2X2",
@@ -3292,7 +3434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3301,7 +3443,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ELITE NERO 2X2",
@@ -3315,7 +3458,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3324,7 +3467,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OPULENCE GRIS 800X800",
@@ -3338,7 +3482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 2.65,
       "breadth": 2.65,
@@ -3347,7 +3491,8 @@ const data = {
       "actLength": 6.885,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TUSCAN BEIGE 800X800",
@@ -3361,7 +3506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 2.65,
       "breadth": 2.65,
@@ -3370,7 +3515,8 @@ const data = {
       "actLength": 6.885,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY DACIA GREY 2X2",
@@ -3384,7 +3530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3393,7 +3539,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY DACIA BROWN 2X2",
@@ -3407,7 +3554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3416,7 +3563,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY DACIA WHITE 2X2",
@@ -3430,7 +3578,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3439,7 +3587,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT1076 MATT 2X2",
@@ -3453,7 +3602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3462,7 +3611,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT 1144 MATT 2X2",
@@ -3476,7 +3626,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3485,7 +3635,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT 1167 2X2",
@@ -3499,7 +3650,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3508,7 +3659,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT 2030 MATT 2X2",
@@ -3522,7 +3674,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3531,7 +3683,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT 4014- D MATT 2X2",
@@ -3545,7 +3698,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3554,7 +3707,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT 4014 - L MATT 2X2",
@@ -3568,7 +3722,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3577,7 +3731,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT 5032 MATT 2X2",
@@ -3591,7 +3746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3600,7 +3755,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT 8025 GLOSSY 2X2",
@@ -3614,7 +3770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3623,7 +3779,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT WOOD 70 MATT 2X2",
@@ -3637,7 +3794,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3646,7 +3803,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "CERROCK ALFA CREMA GOLSSY 2X2",
@@ -3660,7 +3818,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3669,7 +3827,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERAROCK ANATOMY BROWN GLOSSY 2X2",
@@ -3683,7 +3842,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3692,7 +3851,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERAROCK AURA SATUARIO 2X2",
@@ -3706,7 +3866,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3715,7 +3875,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERAROCK FORMOSA GREY GLOSSY 2X2",
@@ -3729,7 +3890,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3738,7 +3899,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERAROCK GLAMOUR BEIGE GLOSSY 2X2",
@@ -3752,7 +3914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3761,7 +3923,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERAROCK LIVING GREEN GLOSSY 2X2",
@@ -3775,7 +3938,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3784,7 +3947,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERAROCK STALIN DYNA 2X2",
@@ -3798,7 +3962,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3807,7 +3971,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERAROCK VECTOR MARBLE 2X2",
@@ -3821,7 +3986,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -3830,7 +3995,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA AGORA AZUL 1X1",
@@ -3844,7 +4010,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -3853,7 +4019,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA AQUA BROWN 1X1",
@@ -3867,7 +4034,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -3876,7 +4043,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA ARMANI WHITE 4X2",
@@ -3890,7 +4058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3899,7 +4067,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA BORNITE BIANCO 4X2",
@@ -3913,7 +4082,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3922,7 +4091,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA BORNITE BROWN 4X2",
@@ -3936,7 +4106,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3945,7 +4115,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA BORNITE GREY 4X2",
@@ -3959,7 +4130,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3968,7 +4139,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA BORNITE IVORY 4X2",
@@ -3982,7 +4154,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -3991,7 +4163,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA GIALLO NATURAL 1X1",
@@ -4005,7 +4178,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -4014,7 +4187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA LIVER POOL BROWN 16X16",
@@ -4028,7 +4202,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -4037,7 +4211,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA ORCHER BROWN 1X1",
@@ -4051,7 +4226,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -4060,7 +4235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA PEVETERWOOD 16X16",
@@ -4074,7 +4250,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -4083,7 +4259,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA PRIZMA SATUARIO 4X2",
@@ -4097,7 +4274,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -4106,7 +4283,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA RIVENZA BROWN 1X1",
@@ -4120,7 +4298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -4129,7 +4307,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA RIVENZA DOVE 1X1",
@@ -4143,7 +4322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -4152,7 +4331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA ROCK BROWN 1X1",
@@ -4166,7 +4346,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -4175,7 +4355,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA TEAKWOOD NERO 1X1",
@@ -4189,7 +4370,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -4198,7 +4379,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA ZEMENT COCO 1X1",
@@ -4212,7 +4394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -4221,7 +4403,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "SIMPOLO 1010 4X2",
@@ -4235,7 +4418,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -4244,7 +4427,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SIMPOLO"
+      "seller": "SIMPOLO",
+      "hsnCode": ""
     },
     {
       "name": "SIMPOLO 1034 3PC 4X2",
@@ -4258,7 +4442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -4267,7 +4451,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SIMPOLO"
+      "seller": "SIMPOLO",
+      "hsnCode": ""
     },
     {
       "name": "SIMPOLO 1040 3PC 4X2",
@@ -4281,7 +4466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -4290,7 +4475,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SIMPOLO"
+      "seller": "SIMPOLO",
+      "hsnCode": ""
     },
     {
       "name": "SIMPOLO 1045 4X2",
@@ -4304,7 +4490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -4313,7 +4499,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SIMPOLO"
+      "seller": "SIMPOLO",
+      "hsnCode": ""
     },
     {
       "name": "SIMPOLO 1049 3PC 4X2",
@@ -4327,7 +4514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -4336,7 +4523,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SIMPOLO"
+      "seller": "SIMPOLO",
+      "hsnCode": ""
     },
     {
       "name": "SIMPOLO 1053 4X2",
@@ -4350,7 +4538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -4359,7 +4547,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SIMPOLO"
+      "seller": "SIMPOLO",
+      "hsnCode": ""
     },
     {
       "name": "SIMPOLO 1066 4X2",
@@ -4373,7 +4562,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -4382,7 +4571,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SIMPOLO"
+      "seller": "SIMPOLO",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY GALET BROWN 40X40",
@@ -4396,7 +4586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -4405,7 +4595,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY CIAZ GREY 40X40",
@@ -4419,7 +4610,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -4428,7 +4619,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY PODERO GRIS 40X40",
@@ -4442,7 +4634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -4451,7 +4643,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY PODERO GREY 40X40",
@@ -4465,7 +4658,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -4474,7 +4667,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY CARINA GREY HL A&B 18X12",
@@ -4488,7 +4682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -4497,7 +4691,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL A&B",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY FOLK LIGHT 2X1",
@@ -4511,7 +4706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4520,7 +4715,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY STRIX GREY LIGHT 2X1",
@@ -4534,7 +4730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4543,7 +4739,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY PARAMO CREMA LIGHT 2X1",
@@ -4557,7 +4754,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4566,7 +4763,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TEMPERA LIGHT 2X1",
@@ -4580,7 +4778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4589,7 +4787,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY STRIX GREY DARK 2X1",
@@ -4603,7 +4802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4612,7 +4811,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TEMPERA DARK 2X1",
@@ -4626,7 +4826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4635,7 +4835,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "MOZART JET BLACK CRISTAL 4X2",
@@ -4649,7 +4850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -4658,7 +4859,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "MOZART"
+      "seller": "MOZART",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY FOLK HL A&B 2X1",
@@ -4672,7 +4874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4681,7 +4883,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL A&B",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "MOZART SUPERWHITE CRISTA 4X2",
@@ -4695,7 +4898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -4704,7 +4907,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "MOZART"
+      "seller": "MOZART",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY STRIX GREY HL01 A&B 2X1",
@@ -4718,7 +4922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4727,7 +4931,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1A&B",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TEMPERA HL01 2X1",
@@ -4741,7 +4946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4750,7 +4955,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY PARAMO GREY DARK 2X1",
@@ -4764,7 +4970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4773,7 +4979,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY PARAMO BEIGE D 2X1",
@@ -4787,7 +4994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4796,7 +5003,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY PARAMO CREMA HL03 2X1",
@@ -4810,7 +5018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -4819,7 +5027,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 3",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY GEOSTONE BEIGE 2X2",
@@ -4833,7 +5042,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -4842,7 +5051,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY GEOSTONE GREY DARK 2X2",
@@ -4856,7 +5066,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -4865,7 +5075,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "HEAVY DUTY ",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY GEOSTONE GREY LIGHT 2X2",
@@ -4879,7 +5090,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -4888,7 +5099,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "HEAVY DUTY ",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY GEOSTONE MAROON 2X2",
@@ -4902,7 +5114,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -4911,7 +5123,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "HEAVY DUTY ",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY STRIX GREY D FLOOR 1X1",
@@ -4925,7 +5138,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -4934,7 +5147,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TEMPERA D FLOOR 1X1",
@@ -4948,7 +5162,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -4957,7 +5171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY SIERRA GREY D FLOOR 1X1",
@@ -4971,7 +5186,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -4980,7 +5195,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY MARCIA SLATE FLOOR 1X1",
@@ -4994,7 +5210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -5003,7 +5219,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LAVICA LIGHT 300X450",
@@ -5017,7 +5234,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5026,7 +5243,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY CARINA GREY LIGHT 300X450",
@@ -5040,7 +5258,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5049,7 +5267,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OSANE BLUE LIGHT 300X450",
@@ -5063,7 +5282,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5072,7 +5291,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LAVICA DARK 300X450",
@@ -5086,7 +5306,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5095,7 +5315,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LAVICA HL01 300X450",
@@ -5109,7 +5330,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5118,7 +5339,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OSANE BLUE HL01 A&B 300X450",
@@ -5132,7 +5354,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5141,7 +5363,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1A&B",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY OSANE BLUE DARK 300X450",
@@ -5155,7 +5378,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5164,7 +5387,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY PARAMO CREMA HL01 2X1",
@@ -5178,7 +5402,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -5187,7 +5411,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON IRISH GREY 4X2",
@@ -5201,7 +5426,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -5210,7 +5435,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON IRISH NERO 4X2",
@@ -5224,7 +5450,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -5233,7 +5459,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON DAINO 4X2",
@@ -5247,7 +5474,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -5256,7 +5483,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY FENCE CREMA 2X2",
@@ -5270,7 +5498,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -5279,7 +5507,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY FENCE NERO 2X2",
@@ -5293,7 +5522,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -5302,7 +5531,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY FENCE BROWN 2X2",
@@ -5316,7 +5546,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -5325,7 +5555,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY AEGIS BROWN 2X2",
@@ -5339,7 +5570,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -5348,7 +5579,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ELITE NATURAL 2X2",
@@ -5362,7 +5594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -5371,7 +5603,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "MOZART JET BLACK CLOUD 4X2",
@@ -5385,7 +5618,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -5394,7 +5627,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "MOZART"
+      "seller": "MOZART",
+      "hsnCode": ""
     },
     {
       "name": "MOZART SUPERWHITE MATT 4X2",
@@ -5408,7 +5642,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -5417,7 +5651,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "MOZART"
+      "seller": "MOZART",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC MELBOURN GRAFITO 2X1",
@@ -5431,7 +5666,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -5440,7 +5675,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC THEO GRAFITO 2X1",
@@ -5454,7 +5690,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -5463,7 +5699,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC THEO OCEAN 2X1",
@@ -5477,7 +5714,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -5486,7 +5723,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC THEO PIZARA 2X1",
@@ -5500,7 +5738,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -5509,7 +5747,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC MODERN NOCE 2X1 STANZA",
@@ -5523,7 +5762,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -5532,7 +5771,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "FAMOUS BLK 924 1X1",
@@ -5546,7 +5786,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -5555,7 +5795,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FAMOUS MT:COPPER CLOUDY 1X1",
@@ -5569,7 +5810,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -5578,7 +5819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHALLOW DIGI: 2475 F 1X1",
@@ -5592,7 +5834,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -5601,7 +5843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHALLOW DIGI:2475 D 18X12",
@@ -5615,7 +5858,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5624,7 +5867,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHALLOW DIGI: 2475 L 18X12",
@@ -5638,7 +5882,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5647,7 +5891,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHALLOW DIGI: 2475 HL2 18X12",
@@ -5661,7 +5906,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5670,7 +5915,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 2 DIGITAL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SIMKEN 1006 D 2X1",
@@ -5684,7 +5930,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -5693,7 +5939,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SIMKEN 1006 L 2X1",
@@ -5707,7 +5954,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -5716,7 +5963,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SIMKEN 1006 HL1 2X1",
@@ -5730,7 +5978,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -5739,7 +5987,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SIMKEN 1006 F 1X1",
@@ -5753,7 +6002,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 9,
       "length": 1,
       "breadth": 1,
@@ -5762,7 +6011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SANARIYA 298 D 18X12",
@@ -5776,7 +6026,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5785,7 +6035,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SANARIYA 298 FL 1X1",
@@ -5799,7 +6050,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -5808,7 +6059,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE 2059 - P 2X2",
@@ -5822,7 +6074,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -5831,7 +6083,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE AMEZONE AZULE 2X2",
@@ -5845,7 +6098,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -5854,7 +6107,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA ARRONE EVA 04 18X12",
@@ -5868,7 +6122,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -5877,7 +6131,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SANARIYA 298 HL 18X12",
@@ -5891,7 +6146,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5900,7 +6155,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA ARRONE RETY 04 18X12",
@@ -5914,7 +6170,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -5923,7 +6179,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SANARIYA 298 L 18X12",
@@ -5937,7 +6194,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5946,7 +6203,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SANARIYA 323 D 18X12",
@@ -5960,7 +6218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -5969,7 +6227,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA ARRONE RODADO 07 18X12",
@@ -5983,7 +6242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -5992,7 +6251,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SANARIYA 323 FL 1X1",
@@ -6006,7 +6266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -6015,7 +6275,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SANARIYA 323 HL 18X12",
@@ -6029,7 +6290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -6038,7 +6299,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SANARIYA 323 L 18X12",
@@ -6052,7 +6314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -6061,7 +6323,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ROSTO 4181 18X12",
@@ -6075,7 +6338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -6084,7 +6347,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ROSTO 4211 18X12",
@@ -6098,7 +6362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -6107,7 +6371,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC COLORADO SILVER GREY 2X1",
@@ -6121,7 +6386,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -6130,7 +6395,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC RUSTICO BLACK&WHITE 2X1",
@@ -6144,7 +6410,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -6153,7 +6419,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC IBERIA STONE 2X1",
@@ -6167,7 +6434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -6176,7 +6443,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ROSTO/STONIS TITAN09 18X12",
@@ -6190,7 +6458,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -6199,7 +6467,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NEWROYAL STEP MAGIC ALMOND 1000X300",
@@ -6213,7 +6482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 3.25,
       "breadth": 1,
@@ -6222,7 +6491,8 @@ const data = {
       "actLength": 3.23,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NEWROYAL STEP MAGIC GRIS 1000X300",
@@ -6236,7 +6506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 3.25,
       "breadth": 1,
@@ -6245,7 +6515,8 @@ const data = {
       "actLength": 3.23,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "REAL ARBESCATO GOLD 4X2",
@@ -6259,7 +6530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -6268,7 +6539,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1009 LIGHT BLACK GRANITE SLAB",
@@ -6284,14 +6556,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1010 DARK BLACK GRANITE SLAB",
@@ -6307,14 +6580,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1011 FLAVAR BLACK GRANITE",
@@ -6330,14 +6604,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL ALLEGRA INTG HALF PEDESTAL BASIN",
@@ -6360,7 +6635,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL AMBER EXP. PART HIGHFLOW SINGLE LEAVER 132304",
@@ -6383,7 +6659,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ASTA ANGLE COCK 501106",
@@ -6406,7 +6683,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ASTA BIBCOCK LONGBODY TAP 501104",
@@ -6429,7 +6707,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LONG BODY TAP",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ASTA CONCEALED UPPERPART 501114",
@@ -6452,7 +6731,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ASTA ONE PIECE CLOSET S-300",
@@ -6470,12 +6750,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ASTA PILLAR COCK TAP 501101",
@@ -6498,7 +6779,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ASTA WALL MIXER BEND OVERHEAD SHOWER 501202",
@@ -6521,7 +6803,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL BATH SPOUT 251123 TAP",
@@ -6544,7 +6827,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "REAL BRICHWOOD MAROON 4X2",
@@ -6558,7 +6842,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -6567,7 +6851,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL BLACK STIK SINK COCK LONG SWIVEL 291209",
@@ -6590,7 +6875,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL BLADE PILLAR COCK LONG 211231",
@@ -6613,7 +6899,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL BRAVO HALF PEDESTAL BASIN",
@@ -6636,7 +6923,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL CON:STOP COCK 20MM REGULAR 173118",
@@ -6659,7 +6947,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STOP COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "ERIN SEAT COVER",
@@ -6682,7 +6971,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL ETHINIC HALF PEDESTAL BASIN",
@@ -6705,7 +6995,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL EWC P TRAP",
@@ -6728,7 +7019,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL EWC S TRAP",
@@ -6751,7 +7043,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL FIONA TABLE TOP BASIN",
@@ -6774,7 +7067,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL FLIP ANGLE COCK WITH WALL FLANGE 502106",
@@ -6797,7 +7091,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL FLIP BIBCOCK LONGBODY 502104",
@@ -6820,7 +7115,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LONG BODY TAP",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL FLIP CSC UPPERPART 15-20MM 502114",
@@ -6843,7 +7139,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL FLIP PILLAR COCK 502101",
@@ -6866,7 +7163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL FLIP W/MIXER WITH TELEPHONIC 502205",
@@ -6889,7 +7187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL GLYDE EXPOSSED PART DIVERTER 201304",
@@ -6912,7 +7211,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL GLYDE PILLAR COCK 201101",
@@ -6935,7 +7235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL GRAND WALL HUNG BASIN",
@@ -6958,7 +7259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL HIGHFLOW DIVERTER CONCEALED BODY 101309",
@@ -6981,7 +7283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL H - KAI ONE PC CLOSET S-300",
@@ -6999,12 +7302,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL MONDO TABLE TOP BASIN",
@@ -7027,7 +7331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL NOAH ONE PC CLOSET S-300",
@@ -7045,12 +7350,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL NOA SINGLE FLUSH -PVC CISTERN",
@@ -7073,7 +7379,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL OPAL TABLE TOP BASIN",
@@ -7096,7 +7403,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL OVERHEADSHOWER 10\"X10\" 251631",
@@ -7119,7 +7427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL OVERHEAD SHOWER 10\" 251630",
@@ -7142,7 +7451,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL OVERHEAD SHOWER 10' ROUND 323650",
@@ -7165,7 +7475,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL SALSA WALL HUNG BASIN",
@@ -7188,7 +7499,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL SHOWER ARM 15\" BRASS 111617",
@@ -7211,7 +7523,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL SIAZ TABLE TOP BASIN",
@@ -7234,7 +7547,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "REAL GRANITE BROWN 4X2",
@@ -7248,7 +7562,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7257,7 +7571,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "REAL ISEBELLA GREY 4X2",
@@ -7271,7 +7586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7280,7 +7595,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "REAL PINEWOOD SATIN MATT 4X2",
@@ -7294,7 +7610,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7303,7 +7619,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL SPIN WALL HUNG BASIN",
@@ -7326,7 +7643,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL TELEPHONIC HANDSHOWER 241609",
@@ -7349,7 +7667,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL VIOLA ONE PC CLOSET S-300MM",
@@ -7367,12 +7686,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL WASTE COUPLER FULL THREADED 271504",
@@ -7395,7 +7715,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL WASTE COUPLER HALF THREADED",
@@ -7418,7 +7739,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ZINNIA HALF PEDESTAL BASIN",
@@ -7441,7 +7763,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA BROMIN PURPLE 4X2",
@@ -7455,7 +7778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7464,7 +7787,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE BULBURRY BEIGE 2X2",
@@ -7478,7 +7802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -7487,7 +7811,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "AGL ZINNIA WALL HUNG BASIN",
@@ -7510,7 +7835,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE EGYPTWOOD CHOCKO 4X2",
@@ -7524,7 +7850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7533,7 +7859,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE EGYPTWOOD IVORY 4X2",
@@ -7547,7 +7874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7556,7 +7883,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE EMPRADOR BLUE 4X2",
@@ -7570,7 +7898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7579,7 +7907,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA ETHENA BLUE 2X2",
@@ -7593,7 +7922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -7602,7 +7931,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA HUMIRA AZULE 4X2",
@@ -7616,7 +7946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7625,7 +7955,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "AGL JAMES ONE PC CLOSET S-225",
@@ -7643,12 +7974,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA HUMIRA CREMA 4X2",
@@ -7662,7 +7994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7671,7 +8003,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "AGL OVERHEAD SHOWER ABS 6X6 241631",
@@ -7694,7 +8027,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "CERA CAPSTAN MINI S 300 ONE PC S1013181",
@@ -7712,12 +8046,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA CIMBA S 225 ONE PC EWC S1013163",
@@ -7735,12 +8070,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA CINCO S 300 ONE PC EWC S1013199",
@@ -7758,12 +8094,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA CONA S 225 ONE PC EWC S1013164",
@@ -7781,12 +8118,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA FOUNTAIN W/M BASIN FAUCET F2013154",
@@ -7809,7 +8147,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA GAYLE LONGBODY TAP 1014152",
@@ -7832,7 +8171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LONG BODY TAP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SUNCORE MEXICO WHITE 4X2",
@@ -7846,7 +8186,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -7855,7 +8195,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "CERA GAYLE PILLAR COCK TALL F1014102",
@@ -7878,7 +8219,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA OVERHEAD SHOWER F7020102",
@@ -7901,7 +8243,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA GAYLE SINK COCK F1014251",
@@ -7924,7 +8267,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE MOJINI GREY 2X2",
@@ -7938,7 +8282,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -7947,7 +8291,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "CERA GARNET ANGLE COCK F2002201",
@@ -7970,7 +8315,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA GARNET WALL MIXER BEND F2002401",
@@ -7993,7 +8339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA VICTOR PILLAR COCK TALL F1015102",
@@ -8016,7 +8363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA VICTOR WALL MIXER BEND F1015401",
@@ -8039,7 +8387,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA VICTOR SHORT BODY F1015151",
@@ -8062,7 +8411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA VICTOR ANGLE COCK F1015201",
@@ -8085,7 +8435,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA VICTOR SINK MIXER W/M F1015501",
@@ -8108,7 +8459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA OVERHEAD SHOWER SQUARE F7010601",
@@ -8131,7 +8483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA OVERHEAD SHOWER SQUARE F7010507",
@@ -8154,7 +8507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE ALPINE S-220 EWC",
@@ -8172,12 +8526,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE ALTO WB 51X40 S.WHITE V1009110",
@@ -8200,7 +8555,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE ASPIRO P EWC 1PC CLOSET",
@@ -8223,7 +8579,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE ASPIRO S-220 1PC CLOSET",
@@ -8241,12 +8598,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE CLEO WB 51X40 S.WHITE 1003610",
@@ -8269,7 +8627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE DELTA WB 55X40 1001010",
@@ -8292,7 +8651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE FABIO S-220 EWC 1PC",
@@ -8310,12 +8670,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE FABIO S-300 EWC 1PC",
@@ -8333,12 +8694,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE FLORA S-220 2010731 EWC",
@@ -8356,12 +8718,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE MARIO WB 1008710",
@@ -8384,7 +8747,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE SLICK S S.COVER 2001131 EWC",
@@ -8407,7 +8771,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE TOZZO S-220 20123 EWC",
@@ -8425,12 +8790,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE TOZZO WB 36X31 1010510",
@@ -8453,7 +8819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE VENICE S-220 511080 EWC",
@@ -8471,12 +8838,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE VIKING WB 55X40 1000810",
@@ -8499,7 +8867,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE WINDSOR WB 46X36 1003610",
@@ -8522,7 +8891,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE ACUPAN 58X44 2007610",
@@ -8545,7 +8915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE TALL PED 1100310",
@@ -8568,7 +8939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE HALFPEDESTAL 1102710",
@@ -8591,7 +8963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE WM ENIGMA SRCONNEOCUTEPLATE EWC",
@@ -8614,7 +8987,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE SLEEKESSENCE PVC CIS WITH ODONISER 511209",
@@ -8637,7 +9011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE ORISSA PAN 6L FLUSH 58X44 2004210",
@@ -8660,7 +9035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE TRAP P SMALL2400304",
@@ -8683,7 +9059,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740001 DOVE PILLAR COCK",
@@ -8706,7 +9083,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740012 DOVE SWAN NECK TAP",
@@ -8729,7 +9107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740018 DOVE WALLMIXER CRUTCH",
@@ -8752,7 +9131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740022 DOVE WALLMIXER 3-1",
@@ -8775,7 +9155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740041 DOVE BIBCOCK W/F",
@@ -8798,7 +9179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740011 DOVE BIBCOCK LB",
@@ -8821,7 +9203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740023 DOVE SINK MIXER",
@@ -8844,7 +9227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740024 DOVE SINK COCK",
@@ -8867,7 +9251,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F740013 DOVE CSC EXPOSED KIT",
@@ -8890,7 +9275,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530001 STARC PILLAR COCK",
@@ -8913,7 +9299,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530002 STARC PILLAR TAP TALL",
@@ -8936,7 +9323,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530020 STARC WALLMIXER BEND",
@@ -8959,7 +9347,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530041 STARC BIB COCK",
@@ -8982,7 +9371,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530043 STARC ANGLE COCK",
@@ -9005,7 +9395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530023 STARC SINK MIXER",
@@ -9028,7 +9419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530009 STARC CSC SLEEVE & HANDLE",
@@ -9051,7 +9443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530024 STARC SINK COCK WM",
@@ -9074,7 +9467,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F530034 STARC SINK COCK TM",
@@ -9097,7 +9491,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F280001 CP PILLAR COCK",
@@ -9120,7 +9515,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F280022 WALLMIXER 3IN1",
@@ -9143,7 +9539,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F280012 SWAN NECK TAP",
@@ -9166,7 +9563,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F280002 BIBCOCK",
@@ -9189,7 +9587,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE MOON YELLOW 4X2",
@@ -9203,7 +9602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -9212,7 +9611,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F280027 CSC EXPOSED KIT",
@@ -9235,7 +9635,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F280026 SINK COCK",
@@ -9258,7 +9659,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F280041 HIFLO DIVERTER KIT",
@@ -9281,7 +9683,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F280007 BATH SPOUT",
@@ -9304,7 +9707,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F480001 PILLAR COCK",
@@ -9327,7 +9731,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F480004 BIBCOCK",
@@ -9350,7 +9755,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F480009 BATH SPOUT",
@@ -9373,7 +9779,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360001 ELEMENT PILLAR COCK",
@@ -9396,7 +9803,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360002 ELEMENT PILLAR COCK TALL",
@@ -9419,7 +9827,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360004 ELEMENT BIBCOCK",
@@ -9442,7 +9851,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360007 CSC EXPOSED KIT",
@@ -9465,7 +9875,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360006 ANGLE COCK",
@@ -9488,7 +9899,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE MURANO ASH 2X2",
@@ -9502,7 +9914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -9511,7 +9923,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360027 SINKMIXER WM",
@@ -9534,7 +9947,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360023 SINKCOCK",
@@ -9557,7 +9971,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA PARIS BEIGE 2X2",
@@ -9571,7 +9986,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -9580,7 +9995,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA PARIS BROWN 2X2",
@@ -9594,7 +10010,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -9603,7 +10019,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA PEDRA DARK 2X2",
@@ -9617,7 +10034,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -9626,7 +10043,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA PEDRA LIGHT 2X2",
@@ -9640,7 +10058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -9649,7 +10067,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE PYRAMID PINE 2X2",
@@ -9663,7 +10082,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -9672,7 +10091,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE QUBIC BROWN 2X2",
@@ -9686,7 +10106,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -9695,7 +10115,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA RIO STONE BROWN",
@@ -9709,7 +10130,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -9718,7 +10139,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE ROCKWOOD BEIGE 4X2",
@@ -9732,7 +10154,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -9741,7 +10163,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA ROCKWOOD CREMA 4X2",
@@ -9755,7 +10178,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -9764,7 +10187,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE ROME BLUE 4X2",
@@ -9778,7 +10202,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -9787,7 +10211,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA ROYAL DYNA BLUE 4X2",
@@ -9801,7 +10226,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -9810,7 +10235,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE SUNRISE ONYX BLACK 4X2",
@@ -9824,7 +10250,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -9833,7 +10259,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360015 UPPER PARTS H.F DIVT",
@@ -9856,7 +10283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA WOVEN RED 4X2",
@@ -9870,7 +10298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -9879,7 +10307,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F360019 SGL WALL MIXER BEND",
@@ -9902,7 +10331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F440001 CP PILLAR COCK",
@@ -9925,7 +10355,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "LAMIT ROSALI SYPHONIC 300MM",
@@ -9943,12 +10374,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F440003 BIBCOCK",
@@ -9971,7 +10403,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "LAMIT DAGON SYPHONIC 300MM",
@@ -9989,12 +10422,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LAMIT FERNA SYPHONIC 300MM",
@@ -10012,12 +10446,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F440006 BATH SPOUT",
@@ -10040,7 +10475,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F520001 AVIOR PILLAR COCK",
@@ -10063,7 +10499,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "LAMIT EVORA 1PC WHITE 'P'",
@@ -10086,7 +10523,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F520023 SINK COCK WT SWIVEL SPOUT",
@@ -10109,7 +10547,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F520007 EX. PART CON. STOP COCK",
@@ -10132,7 +10571,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STOP COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F520015 SINGLE LEVER EX.KIT H.F DIVERTOR",
@@ -10155,7 +10595,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F520009 BATH SPOUT",
@@ -10178,7 +10619,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "NEWVITRA 1007 NEO SIPHONIC PC 300MM WHITE",
@@ -10196,12 +10638,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F410001 EDGE PILLAR COCK",
@@ -10224,7 +10667,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F410002 EDGE PILLAR COCK TALL",
@@ -10247,7 +10691,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F410004 EDGE BIBCOCK",
@@ -10270,7 +10715,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "NEWVITRA 3505 SPINEL SIPHONIC 220MM W",
@@ -10288,12 +10734,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F410016 EDGE HI-FLO DIVERTOR KIT",
@@ -10316,7 +10763,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F570048 ASPIRO HIFLO DIVERTOR EXP. KIT",
@@ -10339,7 +10787,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F570018 ASPIRO WALLMIXER CRUTCH",
@@ -10362,7 +10811,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "NEWVITRA 5005 CLASSIC SIPHONIC 220",
@@ -10380,12 +10830,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F570022 ASPIRO WALLMIXER 3IN1",
@@ -10408,7 +10859,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F570013 ASPIRO SWAN NECK LH",
@@ -10431,7 +10883,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F570008 ASPIRO CON STOCK COCK 20MM",
@@ -10454,7 +10907,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STOP COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F240011 ECO SENSOR FAUCET",
@@ -10477,7 +10931,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F850091 BCP HI-FLO DIVERTOR BODY",
@@ -10500,7 +10955,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F920026 SINK TAP ORANGE",
@@ -10523,7 +10979,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F850097 CSC HEAVY DUTY BODY 20MM",
@@ -10546,7 +11003,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F850002 WASTE COUPLING 32MM FT",
@@ -10569,7 +11027,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "NEWVITRA 5009 MATIS SIPHONIC 220MM W",
@@ -10587,12 +11046,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE 305 ADHESIVE GREY 20KG",
@@ -10605,17 +11065,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "BAG",
-      "sUnit": "BAG",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE 307 ADHESIVE GREY 20KG",
@@ -10633,12 +11094,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON FLEUR OMNI SUITE 300MM S-TRAP",
@@ -10656,12 +11118,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON FLORA OMNI 300 S-TRAP",
@@ -10679,12 +11142,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WAVE OMNI SUITE P-TRAP 180MM",
@@ -10702,12 +11166,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "P TRAP 180mm",
+      "size": "P TRAP 180 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SEGA GERMFREE OMNI S-300",
@@ -10725,12 +11190,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON STYLO OMNI S-300",
@@ -10748,12 +11214,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON FLAIR OMNI S-220",
@@ -10771,12 +11238,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DAMA OMNI S-300",
@@ -10794,12 +11262,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON J/S COSMO MINI WB",
@@ -10822,7 +11291,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HP FUSION NEO COSMO MINI",
@@ -10845,7 +11315,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB ALBA",
@@ -10868,7 +11339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HP AQUA ALBA & RIO",
@@ -10891,7 +11363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB SPUN",
@@ -10914,7 +11387,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HP SPUN",
@@ -10937,7 +11411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB NANO",
@@ -10960,7 +11435,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB FLORA",
@@ -10983,7 +11459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON RAIN SHOWER ELITE S0039C 150MM",
@@ -11006,7 +11483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SINK COCK VIVA T4818C",
@@ -11029,7 +11507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WALLMIXER WITH BEND VIVA T4821BC",
@@ -11052,7 +11531,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SHOWER ARM 6 SS RECTANGLE S0022C",
@@ -11075,7 +11555,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON PILLAR COCK VIVA T4801C",
@@ -11098,7 +11579,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON BIBCOCK TWIRL T3505C",
@@ -11121,7 +11603,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WALLMIXER WITH CRUTCH TWIRL T3522C",
@@ -11144,7 +11627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON OVERHEAD SHOWER OPTIMA SINGLE FLOW S1714C",
@@ -11167,7 +11651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON PILLAR COCK SPUN T3401C",
@@ -11190,7 +11675,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON PILLAR COCK DELTA T1301C",
@@ -11213,7 +11699,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3007 BLACK & WHITE CABINET",
@@ -11236,7 +11723,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3009 WHITE& WOOD CABINET",
@@ -11259,7 +11747,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3007 TEAK &BLACK CABINET",
@@ -11282,7 +11771,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3008 TEAK &WHITE CABINET",
@@ -11305,7 +11795,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SPOUT DELTA T1325C",
@@ -11328,7 +11819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DIS EXP PART DIV DELTA T1378C",
@@ -11351,7 +11843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DIS RAINSHOWER ROUND OPTIMA O1731C",
@@ -11374,7 +11867,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SHOWER ARM 18CP RND CIRCULAR S1023C",
@@ -11397,7 +11891,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DIS PILLAR C ALTIS T3301C",
@@ -11420,7 +11915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DIS SPOUT PALIN ALTIS T3325C",
@@ -11443,7 +11939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON CON PART DIV ELITE1 T2636C0",
@@ -11466,7 +11963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DIS EXP PART DIV ALTIS T3340C",
@@ -11489,7 +11987,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON RAINSHOWER ROUND ELITE S0031C 200MM",
@@ -11512,7 +12011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3007 MATT BLACK CABINET",
@@ -11535,7 +12035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3002 BLACK &RED CABINET",
@@ -11558,7 +12059,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HANDSHOWER WITH TUBE OPTIMA PLUS S1717C",
@@ -11581,7 +12083,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DIS HANDSHOWER SINGLE FLOW S0617C",
@@ -11604,7 +12107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HANDSHOWER SINGLE FLOW S0017C",
@@ -11627,7 +12131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HANDSHOWER SINGLE FLOW 1.5MTR S0046C",
@@ -11650,7 +12155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HEALTH FAUCET S0030S",
@@ -11673,7 +12179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HEALTH FAUCET AQUA S1627C",
@@ -11696,7 +12203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HEALTH FAUCET CP FANTASIA S0426C",
@@ -11719,7 +12227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HEALTH FAUCET CP RIVERA S1326C/S0826C",
@@ -11742,7 +12251,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON HEALTH FAUCET ASTRA S1001C",
@@ -11765,7 +12275,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC S FLEUR E5807PW 300MM",
@@ -11783,12 +12294,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC S FLORA NEW 3OOMM",
@@ -11806,12 +12318,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC S LYRIC E5707PW 300MM",
@@ -11829,12 +12342,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON PILLAR COCK RUBY T2901C",
@@ -11857,7 +12371,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON BIBCOCK LONGNOSE RUBY T2906C",
@@ -11880,7 +12395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ANGLE COCK RUBY T2910C",
@@ -11903,7 +12419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SINKCOCK RUBY T2918C",
@@ -11926,7 +12443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WALLMIXER WITH BEND RUBY T2921C",
@@ -11949,7 +12467,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SHOWER ARM TUBULAR S1125C",
@@ -11972,7 +12491,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON PILLAR COCK JAZZ T3101C",
@@ -11995,7 +12515,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON BIBCOCK LONG JAZZ T3106C",
@@ -12018,7 +12539,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ANGLECOCK JAZZ T3110C",
@@ -12041,7 +12563,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SINKCOCK JAZZ GOOSENECK T3184C",
@@ -12064,7 +12587,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WALLMIXER WITH CRUTCH JAZZ T3122C",
@@ -12087,7 +12611,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SHOWER SQUARE 4.5 S0006C",
@@ -12110,7 +12635,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON BIBCOCK LONGNOSE VIVA T4806C",
@@ -12133,7 +12659,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ANGLECOCK VIVA T4810C",
@@ -12156,7 +12683,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON RAINSHOWER ROUND S0005C 100MM",
@@ -12179,7 +12707,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON BIBCOCK LONGNOSE TWIRL T3506C",
@@ -12202,7 +12731,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SINKCOCK TWIRL T3518C",
@@ -12225,7 +12755,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SPOUT SPUN T3425C",
@@ -12248,7 +12779,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON CON PART DIV HIGHFLOW T0083C",
@@ -12271,7 +12803,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EXP PART CON DIV SPUN T3478CK",
@@ -12294,7 +12827,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON RAINSHOWER ELITE S0032C 200MM",
@@ -12317,7 +12851,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC RUBY P0464PW",
@@ -12340,7 +12875,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SEATCOVER RUBY NEXT P0478PW",
@@ -12363,7 +12899,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC P ECOFLUSH 180MM",
@@ -12381,12 +12918,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "P TRAP 180mm",
+      "size": "P TRAP 180 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC P WAVE P8308PW 180MM",
@@ -12404,12 +12942,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "P TRAP 180mm",
+      "size": "P TRAP 180 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC S LINEA P5807PW 220MM",
@@ -12427,12 +12966,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC S COMPACT G4207PW104 300MM",
@@ -12450,12 +12990,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB LANZA G4015W0403 57X42",
@@ -12478,7 +13019,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB RUBY CORNER P0445PW 40X40",
@@ -12501,7 +13043,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON URINAL RUBY P0419PW 35X38X40",
@@ -12524,7 +13067,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC EXT EUROPA P0265PW",
@@ -12547,7 +13091,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON CISTERN EUROPA P0253PW",
@@ -12570,7 +13115,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON FITTINGS EUROPA P0270PW",
@@ -12593,7 +13139,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SEATCOVER RUBY P5024PW",
@@ -12616,7 +13163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC COMPACT P4464PW",
@@ -12639,7 +13187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SEATCOVER COMPACT P4452PW",
@@ -12662,7 +13211,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA ELECTROPLATE 9245AL SS201",
@@ -12685,7 +13235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB TT OMEGA RECTA PLUS P7312PW3",
@@ -12708,7 +13259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB TT GEMMA P5912PW45X35",
@@ -12731,7 +13283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB TT MAGIC P6912PW",
@@ -12754,7 +13307,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 9050B SS304 SATIN",
@@ -12777,7 +13331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 10050D SS304 SATIN",
@@ -12800,7 +13355,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB TT KENWOOD P1512PW0101 40X35",
@@ -12823,7 +13379,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA HM 6045 SS304 SATIN",
@@ -12846,7 +13403,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB TT LINEA P5812PW46X35",
@@ -12869,7 +13427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WB TT AVANTE G3712PW 62X41",
@@ -12892,7 +13451,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "ROMANTIC PINK GRANITE",
@@ -12908,14 +13468,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK RTC",
@@ -12938,7 +13499,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "MINT GREEN GRANITE",
@@ -12954,14 +13516,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FISH BLACK GRANITE",
@@ -12977,14 +13540,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RACK BOLT",
@@ -13007,7 +13571,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "ROMANTIC BLUE GRANITE",
@@ -13023,14 +13588,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SINK COCK BOLT",
@@ -13053,7 +13619,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SEVEN ROSE GRANITE",
@@ -13069,14 +13636,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "308.5X101",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TAN BROWN LEPPOTHARA GRANITE",
@@ -13092,14 +13660,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET BRASS",
@@ -13122,7 +13691,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA ZED BLACK 2600X800",
@@ -13136,7 +13706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 8.75,
       "breadth": 2.63,
@@ -13145,7 +13715,8 @@ const data = {
       "actLength": 22.385,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA GLASS WHITE 2600X800",
@@ -13159,7 +13730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 8.75,
       "breadth": 2.63,
@@ -13168,7 +13739,8 @@ const data = {
       "actLength": 22.385,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND NSA 25 KG",
@@ -13181,17 +13753,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "BAG",
-      "sUnit": "BAG",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "25 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND NSA 10KG",
@@ -13204,20 +13777,21 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "BAG",
-      "sUnit": "BAG",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "10 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
-      "name": "WEBER CLASSIC 20 KG",
+      "name": "WEBER CLASSIC 20KG",
       "item_id": "K623",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -13227,17 +13801,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "BAG",
-      "sUnit": "BAG",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "WEBER"
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND NSA 5KG",
@@ -13255,15 +13830,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
-      "name": "WEBER PREMIER 20 KG",
+      "name": "WEBER PREMIER 20KG",
       "item_id": "K625",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -13273,17 +13849,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "BAG",
-      "sUnit": "BAG",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "WEBER"
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER IVORY 1 KG",
@@ -13296,17 +13873,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER GREY 500G",
@@ -13319,17 +13897,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER CHOCOLATE 500G",
@@ -13342,17 +13921,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER JAISALMER 500G",
@@ -13365,17 +13945,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER WHITE 1 KG",
@@ -13388,17 +13969,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER ALPHINE BLUE 500G",
@@ -13411,17 +13993,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER GROUT ADD 350 ML",
@@ -13439,12 +14022,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "350 ML",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "WEBER"
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER CLEANER CERAPLUS 1 LTR",
@@ -13462,12 +14046,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 LTR",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "WEBER"
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER WHITE 500G",
@@ -13480,17 +14065,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY BLACK 5 KG",
@@ -13503,17 +14089,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER TERACOTTA 500G",
@@ -13526,17 +14113,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY WHITE 1 KG",
@@ -13549,17 +14137,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER ALPHINE BLUE 500G",
@@ -13572,20 +14161,21 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "BAG",
-      "sUnit": "BAG",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
-      "name": "WEBER J.FILLER JET BLACK 500 G",
+      "name": "WEBER J.FILLER JET BLACK 500 GM",
       "item_id": "K640",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -13595,17 +14185,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER COPPERCLOUDY 500G",
@@ -13618,17 +14209,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "WEBER TILE SPACER 2 MM",
@@ -13651,7 +14243,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "WEBER TILE SPACER 3MM",
@@ -13674,7 +14267,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "WEBER TILE SPACER 4MM",
@@ -13697,7 +14291,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER JET BLACK 500G",
@@ -13710,17 +14305,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER GRANITE BROWN 500G",
@@ -13733,17 +14329,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER SKY BLUE 500G",
@@ -13756,17 +14353,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY ANTHRACITE 1 KG",
@@ -13779,17 +14377,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY STEEL 1 KG",
@@ -13802,17 +14401,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER ALPHINE GREEN 500G",
@@ -13825,17 +14425,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER ROSYPINK 500G",
@@ -13848,17 +14449,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER MAGENTA 500G",
@@ -13871,17 +14473,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER SILVERGREY 500G",
@@ -13894,17 +14497,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "ESSARBOND J.FILLER IVORY 500G",
@@ -13917,17 +14521,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "ESSARBOND"
+      "type": "J FILLER",
+      "seller": "ESSARBOND",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER IVORY 500G",
@@ -13940,17 +14545,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY BLACK 1KG",
@@ -13963,17 +14569,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER PINK 500G",
@@ -13986,17 +14593,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER TERACOTTA 500G",
@@ -14009,17 +14617,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER J.FILLER EMERALD 500G",
@@ -14032,17 +14641,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY STEEL 5KG",
@@ -14055,17 +14665,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY CHOCOLATE 5KG",
@@ -14078,17 +14689,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY IVORY 5KG",
@@ -14101,17 +14713,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY WHITE 5 KG",
@@ -14124,17 +14737,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY CHOCOLATE 1KG",
@@ -14147,17 +14761,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY IVORY 1KG",
@@ -14170,17 +14785,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA BRECCIA 800X1600",
@@ -14194,7 +14810,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -14203,7 +14819,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA LILAC WHITE 800X1600",
@@ -14217,7 +14834,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -14226,7 +14843,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA VOLKAS RADICO 800X1600",
@@ -14240,7 +14858,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -14249,7 +14867,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA MARLIN GRISS 4X2",
@@ -14263,7 +14882,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14272,7 +14891,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA PARADISO BIANCO 4X2",
@@ -14286,7 +14906,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14295,7 +14915,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA PARADISO COCO 4X2",
@@ -14309,7 +14930,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14318,7 +14939,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA PARADISO IVORY 4X2",
@@ -14332,7 +14954,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14341,7 +14963,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA WILLIAM GREY 4X2",
@@ -14355,7 +14978,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14364,7 +14987,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA NATURAL WOOD IVORY 200X1000",
@@ -14378,7 +15002,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 3.26,
       "breadth": 0.691,
@@ -14387,7 +15011,8 @@ const data = {
       "actLength": 2.152,
       "actBreadth": 1,
       "type": "STRIP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA ASAD MAPLE 200X1000",
@@ -14401,7 +15026,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 3.26,
       "breadth": 0.691,
@@ -14410,7 +15035,8 @@ const data = {
       "actLength": 2.152,
       "actBreadth": 1,
       "type": "STRIP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA ASAD RED 200X1000",
@@ -14424,7 +15050,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 3.26,
       "breadth": 0.691,
@@ -14433,7 +15059,8 @@ const data = {
       "actLength": 2.152,
       "actBreadth": 1,
       "type": "STRIP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA FIRE WOOD CANDLE 200X1000",
@@ -14447,7 +15074,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 3.26,
       "breadth": 0.691,
@@ -14456,7 +15083,8 @@ const data = {
       "actLength": 2.152,
       "actBreadth": 1,
       "type": "STRIP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA DALMIA TERASTONE 200X1000",
@@ -14470,7 +15098,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 3.26,
       "breadth": 0.691,
@@ -14479,7 +15107,8 @@ const data = {
       "actLength": 2.152,
       "actBreadth": 1,
       "type": "STRIP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA COAL MULTI 200X1000",
@@ -14493,7 +15122,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 3.26,
       "breadth": 0.691,
@@ -14502,7 +15131,8 @@ const data = {
       "actLength": 2.152,
       "actBreadth": 1,
       "type": "STRIP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA STAIRWAY VERDE. 300X1200",
@@ -14516,7 +15146,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 4,
       "breadth": 1,
@@ -14525,7 +15155,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA STAIRWAY NERO. 300X1200",
@@ -14539,7 +15170,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 4,
       "breadth": 1,
@@ -14548,7 +15179,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA STAIRWAY BEIGE 300X1200",
@@ -14562,7 +15194,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 4,
       "breadth": 1,
@@ -14571,7 +15203,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA GRIPSOM LT GREY 4X2",
@@ -14585,7 +15218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14594,7 +15227,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA GRIPSOM DK GREY 4X2",
@@ -14608,7 +15242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14617,7 +15251,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA GRIPSOM VERDE 4X2",
@@ -14631,7 +15266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14640,7 +15275,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA MARMO BROWN 4X2",
@@ -14654,7 +15290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -14663,7 +15299,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA SYBER CASHMIRE 2X2",
@@ -14677,7 +15314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -14686,7 +15323,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA MAJESTIC ONYX 2X2",
@@ -14700,7 +15338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -14709,7 +15347,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA BALON BEIGE 2X2",
@@ -14723,7 +15362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -14732,7 +15371,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA CLASSIC DYNA BEIGE 2X2",
@@ -14746,7 +15386,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -14755,7 +15395,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA ULTRON BROWN 2X2",
@@ -14769,7 +15410,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -14778,7 +15419,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA OPIATE GREY 2X2",
@@ -14792,7 +15434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -14801,7 +15443,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "COTTONWASTE 500G",
@@ -14824,7 +15467,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "COTTON WASTE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "COTTONWASTE 1KG",
@@ -14847,7 +15491,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "COTTON WASTE",
-      "seller": "NEXTO MARKETING"
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE STANZA SINGLE PC 285 MM",
@@ -14865,12 +15510,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "PARRY MERRY W/B - C 8983",
@@ -14893,7 +15539,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE \"MERRY\" SHORT PEDESTAL",
@@ -14916,7 +15563,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP HEALTH FAUCET SPLASH",
@@ -14939,7 +15587,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP PILLAR COCK AGATE PRO G3302A1",
@@ -14962,7 +15611,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP WALLMIXER 2IN1 CLARET",
@@ -14985,7 +15635,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP SWAN NECK PILLARTAP UNO",
@@ -15008,7 +15659,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP ANGLE VALVE TRIGON",
@@ -15031,7 +15683,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE VISTA WITH SOFTCLOSET 220 SINGLE PC",
@@ -15049,12 +15702,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP WM SINKCOCK CLARET",
@@ -15077,7 +15731,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP ANGLE VALVE CLARET",
@@ -15100,7 +15755,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP PILLAR COCK CLARET G4601A1",
@@ -15123,7 +15779,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP LONGBODY BIBCOCK CLARET",
@@ -15146,7 +15803,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE T5001 A1 CP PILLAR COCK UNO",
@@ -15169,7 +15827,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE T5016A1 CP WALLMIXER 2IN1 UNO",
@@ -15192,7 +15851,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE T5021 A1CP WM SINKCOCK UNO",
@@ -15215,7 +15875,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE LONGBODY BIBCOCKUNO",
@@ -15238,7 +15899,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE T5007 A1 CP ANGLE VALVE UNO",
@@ -15261,7 +15923,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE G 4887 A1 CP HIGH DIVERTER BODY",
@@ -15284,7 +15947,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP ULTRA HIGHFLOW UPPER TRIM ALPHA",
@@ -15307,7 +15971,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP WALL SPOUT ALPHA",
@@ -15330,7 +15995,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP PILLAR COCK PLUTO G3801A1",
@@ -15353,7 +16019,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP HIGHFLOW DIVERTER UPPER TRIM EDGE",
@@ -15376,7 +16043,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP WALLSPOUT EDGE",
@@ -15399,7 +16067,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP PILLAR COCK EDGE G4802A1",
@@ -15422,7 +16091,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE T9852 A1 CP SHOWER WITH ARM SLEEK ROUND",
@@ -15445,7 +16115,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP SS RAINSHOWER 200MM SQUARE",
@@ -15468,7 +16139,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP SS RAINSHOWER 200MM ROUND",
@@ -15491,7 +16163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP WM SHOWER ARM 24\"",
@@ -15514,7 +16187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP PILLAR COCK DROPLET",
@@ -15537,7 +16211,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP PILLAR COCK EUCLID G2302A1",
@@ -15560,7 +16235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP FT WASTECOUPLING ALPHA",
@@ -15583,7 +16259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE BSN ZEST 565MM",
@@ -15606,7 +16283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE ZEST SHORT PEDESTAL",
@@ -15629,7 +16307,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE WALLHUNGBSN JOY",
@@ -15652,7 +16331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE PEDESTAL JOY/SHINE",
@@ -15675,7 +16355,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE WALLHUNG BSN SHINE",
@@ -15698,7 +16379,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE REVIVE WALLHUNG BSN",
@@ -15721,7 +16403,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE HALFPEDESTAL REVIVE",
@@ -15744,7 +16427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE BOWLBSN CELICO ROUND",
@@ -15767,7 +16451,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE BOWLBSN HARMONY",
@@ -15790,7 +16475,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE BOWLBSN IMPERIAL 500",
@@ -15813,7 +16499,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE BOWLBSN OLYMPUS",
@@ -15836,7 +16523,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE WALLHUNG SUPERIO",
@@ -15859,7 +16547,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE LINEA PLUS PUSH PLATE ROUND CHROME",
@@ -15882,7 +16571,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA AQUILINE SINGLE PC 220MM",
@@ -15900,12 +16590,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA REEVE SINGLE PC 290MM",
@@ -15923,12 +16614,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA PRIMEPLUS SINGLE PC 220MM",
@@ -15946,12 +16638,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA EDEN SINGLE PC 300MM",
@@ -15969,12 +16662,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA DUKE 300MM SINGLE PC",
@@ -15992,12 +16686,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA ENTICE 285MM SINGLE PC",
@@ -16015,12 +16710,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA JOY 300MM SINGLE PC",
@@ -16038,12 +16734,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA CUTE 220MM SINGLE PC",
@@ -16061,12 +16758,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA SUTRA 220MM SINGLE PC",
@@ -16084,12 +16782,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA PRIME 220MM SINGLE PC",
@@ -16107,12 +16806,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE EWC PETITE S TRAP",
@@ -16135,7 +16835,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE SLIMLINE ULSAV CISTERN",
@@ -16158,7 +16859,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE EWC P TRAP PETITE",
@@ -16181,7 +16883,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE SILMLINE UNO",
@@ -16204,7 +16907,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE SEATCOVER PETITE",
@@ -16227,7 +16931,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA ASTER 220MM SINGLE PC",
@@ -16245,12 +16950,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE BOWLBSN QUAD",
@@ -16273,7 +16979,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "APRICOT 8037 GLOSSY 2X2",
@@ -16287,7 +16994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -16296,7 +17003,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "APRICOT"
+      "seller": "APRICOT",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 5043",
@@ -16319,7 +17027,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 6045 ELECTROPLATE SS201",
@@ -16342,7 +17051,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 8550 SATIN SS304",
@@ -16365,7 +17075,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TELEPHONE SHOWER MULTI NO.2",
@@ -16388,7 +17099,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "RAINSHOWER 6X6 SENWICH",
@@ -16411,7 +17123,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SENDWICH RAINSHOWER 8X",
@@ -16434,7 +17147,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER ARM 18",
@@ -16457,7 +17171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER ARM 24 BRASS",
@@ -16480,7 +17195,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET CONTI",
@@ -16503,7 +17219,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET COSMO",
@@ -16526,7 +17243,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET HEXA",
@@ -16549,7 +17267,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET CAMEL",
@@ -16572,7 +17291,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "LONG BODY GEO",
@@ -16595,7 +17315,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SAFARI BLUE LEPPOTHARA GRANITE",
@@ -16611,14 +17332,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "296X101",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LONGBODY SOLO",
@@ -16641,7 +17363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK SOLO",
@@ -16664,7 +17387,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINKCOCK SOLO",
@@ -16687,7 +17411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SHIMOGO RED GRANITE",
@@ -16703,14 +17428,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "314.5X129.5",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LONG BODY FLOW",
@@ -16733,7 +17459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "LONGBODY GRACE",
@@ -16756,7 +17483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "LONGBODY STAR",
@@ -16779,7 +17507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK STAR",
@@ -16802,7 +17531,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINK COCK STAR",
@@ -16825,7 +17555,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "LONG BODY PRIME",
@@ -16848,7 +17579,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK PRIME",
@@ -16871,7 +17603,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINK COCK PRIME",
@@ -16894,7 +17627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "LONGBODY BREZZA",
@@ -16917,7 +17651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK BREZZA",
@@ -16940,7 +17675,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINKCOCK BREZZA",
@@ -16963,7 +17699,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK GEO",
@@ -16986,7 +17723,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINKCOCK GEO",
@@ -17009,7 +17747,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "LONGBODY M.OPEL",
@@ -17032,7 +17771,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK MINI OPEL",
@@ -17055,7 +17795,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINKCOCK M.OPEL",
@@ -17078,7 +17819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "AC2IN ONE MINI OPEL",
@@ -17101,7 +17843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINK COCK COLOR",
@@ -17124,7 +17867,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "4X4 BEND SHOWER",
@@ -17147,7 +17891,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "ANGLE COCK BRASS",
@@ -17170,7 +17915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "ANGLE COCK LIGHT (ANGLE VALVE)",
@@ -17193,7 +17939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "CP GRATINGS 5X5 HEAVY GLOSSY",
@@ -17216,7 +17963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "TAFLON TAPE",
@@ -17239,7 +17987,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "WP 1 1/4",
@@ -17262,7 +18011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PVC CONNECTION 18",
@@ -17285,7 +18035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PVC CONNECTION 24",
@@ -17308,7 +18059,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PVC CONNECTION 18 HOT",
@@ -17331,7 +18083,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PVC CONNECTION 24 HOT",
@@ -17354,7 +18107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "WASTE COUPLING F/T",
@@ -17377,7 +18131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "WASTE COUPLING H/T",
@@ -17400,7 +18155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "RACK BOLT HEAVY",
@@ -17423,7 +18179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SUMO BOLT",
@@ -17446,7 +18203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "CP CUP FLAT",
@@ -17469,7 +18227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "CP CUP DOOM",
@@ -17492,7 +18251,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "LONG BODY VENUE",
@@ -17515,7 +18275,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK VENUE",
@@ -17538,7 +18299,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK VENUE LONG",
@@ -17561,7 +18323,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINK COCK VENUE",
@@ -17584,7 +18347,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "REAL GRANITE BLUE 4X2",
@@ -17598,7 +18362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -17607,7 +18371,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TELEPHONE SHOWER SQUARE 1",
@@ -17630,7 +18395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER ARM 15 BRASS",
@@ -17653,7 +18419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "TOWEL ROD 18 PATEL SQUARE RUBICON",
@@ -17676,7 +18443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL ROD",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "TOWEL ROD 24 SQUARE",
@@ -17699,7 +18467,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL ROD",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "CERA CONA P ONE PC EWC S1013202",
@@ -17722,7 +18491,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOGRES CADBURY 2X2",
@@ -17736,7 +18506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -17745,7 +18515,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOGRES ROSATA 2X2",
@@ -17759,7 +18530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -17768,7 +18539,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOGRES DYNA 2X2 NANO OLD",
@@ -17782,7 +18554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -17791,7 +18563,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA HEALTH FAUCET SS HOSE F8030108",
@@ -17814,7 +18587,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "NEWVITRA 5003 VEGA WASHDOWN 220MM",
@@ -17832,12 +18606,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NEWVITRA 857/9016 SLEEK SIPHONIC 300MM",
@@ -17855,12 +18630,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NEWVITRA 6171 PROVE P TRAP 180MM",
@@ -17878,12 +18654,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "P TRAP 180mm",
+      "size": "P TRAP 180 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO LEO 12\" WHITE ONE PC",
@@ -17901,12 +18678,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO AJIO 16\" WHITE HP ONE PC",
@@ -17929,7 +18707,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO LUCIE 20\" WHITE TABLETOP",
@@ -17952,7 +18731,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO SABLE 18\" WHITE W/B",
@@ -17975,7 +18755,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO SIERRA 20\" WHITE W/B",
@@ -17998,7 +18779,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NOVIA SEAT COVER WHITE",
@@ -18021,7 +18803,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NOVIA FLUSH TANK WHITE",
@@ -18044,7 +18827,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3009 OLIVE GREEN & WHITE CABINET",
@@ -18067,7 +18851,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3008 GREY & WHITE CABINET",
@@ -18090,7 +18875,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3002 TEAK & WHITE CABINET",
@@ -18113,7 +18899,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3005 MATT BLACK CABINET",
@@ -18136,7 +18923,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VELLE 3001F 32\" TEAK & WHITE",
@@ -18159,7 +18947,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO ANYA 16\" (MINI ARISE) H.P. ONE PC WHITE",
@@ -18182,7 +18971,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO YAMI CORNER W/B WHITE",
@@ -18205,7 +18995,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO COSMOS P TRAP EWC WHITE",
@@ -18228,7 +19019,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO KIOS S TRAP EWC WHITE",
@@ -18251,7 +19043,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VARMORA PARADISO GREY 4X2",
@@ -18265,7 +19058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -18274,7 +19067,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CP HEALTH FAUCET CORAL NEO",
@@ -18297,7 +19091,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "GRIPSTONE 901 BUSH",
@@ -18320,7 +19115,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STONE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRIPSTONE 902 SQUARE",
@@ -18343,7 +19139,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STONE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRIPSTONE 903 LINED",
@@ -18366,7 +19163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STONE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "KAMRON EXOTIC LIGHT 4X2",
@@ -18380,7 +19178,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -18389,7 +19187,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ORANGE CERAMICS"
+      "seller": "ORANGE CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "KAMRON KERYA GREY 4X2",
@@ -18403,7 +19202,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -18412,7 +19211,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ORANGE CERAMICS"
+      "seller": "ORANGE CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "KAMRON LOUIS ONYX 4X2",
@@ -18426,7 +19226,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -18435,7 +19235,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ORANGE CERAMICS"
+      "seller": "ORANGE CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "KAMRON MARQUINA BIANCO 4X2",
@@ -18449,7 +19250,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -18458,7 +19259,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ORANGE CERAMICS"
+      "seller": "ORANGE CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "KAMRON MOON ONIX 4X2",
@@ -18472,7 +19274,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -18481,7 +19283,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ORANGE CERAMICS"
+      "seller": "ORANGE CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "KAMRON TERAZO GREY (SIYA RAM) 4X2",
@@ -18495,7 +19298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -18504,7 +19307,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ORANGE CERAMICS"
+      "seller": "ORANGE CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM WOODLAND",
@@ -18518,7 +19322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18527,7 +19331,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM MARMOL 2X2",
@@ -18541,7 +19346,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18550,7 +19355,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM ESTONIYO NANO 2X2",
@@ -18564,7 +19370,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18573,7 +19379,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NARROW STONE PLAIN WHITE 4X2",
@@ -18587,7 +19394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -18596,7 +19403,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "KOYO NANO IVORY 2X2",
@@ -18610,7 +19418,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18619,7 +19427,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 24814 2X2",
@@ -18633,7 +19442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18642,7 +19451,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 24823 2X2",
@@ -18656,7 +19466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18665,7 +19475,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 24843 2X2",
@@ -18679,7 +19490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18688,7 +19499,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 24844 2X2",
@@ -18702,7 +19514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18711,7 +19523,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 24825 2X2",
@@ -18725,7 +19538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18734,10 +19547,11 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
-      "name": "WEBER J.FILLER WHITE 500 G",
+      "name": "WEBER J.FILLER WHITE 500 GM",
       "item_id": "K873",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -18747,17 +19561,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "PAC",
-      "sUnit": "PAC",
+      "pUnit": "NOS",
+      "sUnit": "NOS",
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "J FILLER",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE ATRIX GREY 2X2",
@@ -18771,7 +19586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18780,7 +19595,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "LATTO MADHURAI 501 2X1",
@@ -18794,7 +19610,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -18803,7 +19619,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "STONIS CROATIA02 2X1",
@@ -18817,7 +19634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -18826,7 +19643,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "STONIS TOMMY10 18X12",
@@ -18840,7 +19658,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -18849,7 +19667,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE ATRIX BROWN 2X2",
@@ -18863,7 +19682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18872,7 +19691,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE LUCENT WOOD BROWN 2X2",
@@ -18886,7 +19706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18895,7 +19715,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE APUNA WOOD GREY 2X2",
@@ -18909,7 +19730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18918,7 +19739,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE MAPPLE WOOD BROWN 2X2",
@@ -18932,7 +19754,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18941,7 +19763,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE MORIS WOOD BEIGE 2X2",
@@ -18955,7 +19778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18964,7 +19787,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE CLASSIC WHITE 2X2",
@@ -18978,7 +19802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -18987,7 +19811,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE NOVA BIANCO 2X2",
@@ -19001,7 +19826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19010,7 +19835,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE ASPIRA CREMA 2X2",
@@ -19024,7 +19850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19033,7 +19859,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE BINACA BEIGE 2X2",
@@ -19047,7 +19874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19056,7 +19883,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE LAPIS WHITE 2X2",
@@ -19070,7 +19898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19079,7 +19907,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE ZEMFO 2X2",
@@ -19093,7 +19922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19102,7 +19931,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SOAP DISH DOUBLE SUPREME",
@@ -19125,7 +19955,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "TOWEL RING SQURE",
@@ -19148,7 +19979,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL RING",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "AESCO ECONOMY 16X14X7 SINK",
@@ -19171,7 +20003,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "NAVYA 18X16X7 SINK",
@@ -19194,7 +20027,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "NAVYA 18X16X8",
@@ -19217,7 +20051,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 20X17X8 SINK",
@@ -19240,7 +20075,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 24X18X9 GLOSSY SINK",
@@ -19263,7 +20099,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "NAVYA 22X18X9 SINK",
@@ -19286,7 +20123,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH HANDMADE 24X18X10 GOLD",
@@ -19309,7 +20147,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "SOAP DISH SINGLE",
@@ -19332,7 +20171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "WASHING MACHINE TAP",
@@ -19355,7 +20195,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET OLIVE[H]",
@@ -19378,7 +20219,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA CUTE 300MM SINGLE PC",
@@ -19396,12 +20238,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA CUTE P TRAP SINGLE PC",
@@ -19424,7 +20267,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE CRESTIA MARVEL P TRAP SINGLE PC",
@@ -19447,7 +20291,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED FLOOR TILE 2 X2",
@@ -19461,7 +20306,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 2,
       "breadth": 2,
@@ -19470,7 +20315,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "WALLMIXER SOLO",
@@ -19493,7 +20339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "KOYO 104 2X2",
@@ -19507,7 +20354,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19516,7 +20363,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "KOYO 111 NANO 2X2",
@@ -19530,7 +20378,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19539,7 +20387,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL FFILIPPO ONE PIECE CLOSET S-220 MM",
@@ -19557,12 +20406,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL FFILIPPO ONE PIECE CLOSET P-180 MM",
@@ -19580,12 +20430,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "P TRAP 180mm",
+      "size": "P TRAP 180 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "SEVILLA MOJINI BIEGE 2X2",
@@ -19599,7 +20450,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19608,7 +20459,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "KOYO 137 2X2",
@@ -19622,7 +20474,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19631,7 +20483,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "KOYO 123 2X2",
@@ -19645,7 +20498,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19654,7 +20507,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE DRAGON 1001 2X2",
@@ -19668,7 +20522,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19677,7 +20531,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE DRAGON 1002 2X2",
@@ -19691,7 +20546,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19700,7 +20555,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE AMAZON 1001 2X2",
@@ -19714,7 +20570,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19723,7 +20579,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE AMAZON 101 2X2",
@@ -19737,7 +20594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19746,7 +20603,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE SKY ONYX BLUE 2X2",
@@ -19760,7 +20618,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -19769,7 +20627,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE CORNAVO GREY 4X2",
@@ -19783,7 +20642,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -19792,7 +20651,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "GREENSTONE WHITE CARARA 4X2",
@@ -19806,7 +20666,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -19815,7 +20675,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 20X17X8 SINK",
@@ -19838,7 +20699,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1188B 2X1",
@@ -19852,7 +20714,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -19861,7 +20723,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1381 2X1",
@@ -19875,7 +20738,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -19884,7 +20747,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1072 2X1",
@@ -19898,7 +20762,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -19907,7 +20771,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1429 2X1",
@@ -19921,7 +20786,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -19930,7 +20795,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1467 2X1",
@@ -19944,7 +20810,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -19953,7 +20819,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1673 2X1",
@@ -19967,7 +20834,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -19976,7 +20843,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1674 2X1",
@@ -19990,7 +20858,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -19999,7 +20867,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1703 2X1",
@@ -20013,7 +20882,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -20022,7 +20891,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA SUPERIA COCHIN ASTILA"
+      "seller": "TOSCANA SUPERIA COCHIN ASTILA",
+      "hsnCode": ""
     },
     {
       "name": "KUPPAM WHITE GRANITE",
@@ -20038,14 +20908,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "285.5X99.5",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ROYAL BROWN LAPOTHRA GRANITE",
@@ -20061,14 +20932,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GELETIC BROWN",
@@ -20084,14 +20956,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "335.5X122.5",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GOLDEN GALAXY (GALAXY BLACK)",
@@ -20099,7 +20972,7 @@ const data = {
       "category": "GRANITE",
       "image": "/image/",
       "price": null,
-      "countInStock": 128,
+      "countInStock": 127,
       "brand": "GRANITE",
       "rating": 0,
       "numReviews": 0,
@@ -20107,14 +20980,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "317X71",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SUPER BLACK GRANITE 2 FT",
@@ -20130,14 +21004,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ASIAN TOP 2 FT",
@@ -20153,14 +21028,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ASIAN TOP 3 FT",
@@ -20176,14 +21052,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "339.2X107",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BHARATHI SINK 20X17X10 HM BLACK",
@@ -20206,7 +21083,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "SYNI STONE POLISH",
@@ -20229,7 +21107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STONE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "2014 WOOD WHITE (VELLE)",
@@ -20252,7 +21131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "2008 GREY & WHITE VELLE",
@@ -20275,7 +21155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "2007 WHITE &BLACK",
@@ -20298,7 +21179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "2012 F WOOD FULL SET VELLE",
@@ -20321,7 +21203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "2013F 80 CM WOOD WHITE",
@@ -20344,7 +21227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL 291304 BL STICK UPPER PLATE",
@@ -20367,7 +21251,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL 501207 ASTA SINK COCK",
@@ -20390,7 +21275,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "VICTOR WALL MIXER 3 IN 1 CERA F1015403",
@@ -20413,7 +21299,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GAYLE WALLMIXER BEND CERA F1014401",
@@ -20436,7 +21323,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PLATINUM BATH SPOUT CERA (F1001661)",
@@ -20459,7 +21347,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER ARM CERA F7040104",
@@ -20482,7 +21371,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CAPSTAN MINI S 225 ONE PIECE CERA S1013160",
@@ -20500,12 +21390,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HINDWARE F570006 ASPIRO LN BIB COCK",
@@ -20528,7 +21419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F570023 ASPIRO SINK COCK WM",
@@ -20551,7 +21443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F360009 BATH SPOUT HINDWARE",
@@ -20574,7 +21467,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F160148 RAIN SHOWER 100 MM BLAC WT 225 MM ARM HINDWARE",
@@ -20597,7 +21491,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F160146 RAIN SHOWER SS SQ 200 MM",
@@ -20620,7 +21515,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F160143 ULTRA THIN 100 MM SHOWER ARM 225 MM HINDWARE",
@@ -20643,7 +21539,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F160142 ULTRA THIN 150 MM SHOWER ARM 225 HINDWARE",
@@ -20666,7 +21563,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F160123 OH SHOWER WHITE HINDWARE",
@@ -20689,7 +21587,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F160124 OH SHOWER BLACK HINDWARE",
@@ -20712,7 +21611,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F160024 RAIN SHOWER ARM ROUND 450 MM HINDWARE",
@@ -20735,10 +21635,11 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
-      "name": "BIRLA AEROCON TILE ADHENSIVE T1 20 KG",
+      "name": "BIRLA AEROCON TILE ADHENSIVE T1 20KG",
       "item_id": "K965",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -20753,12 +21654,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "BIRLA"
+      "seller": "BIRLA",
+      "hsnCode": ""
     },
     {
       "name": "MIDNIGHT BLACK 1 KG DUO SP100",
@@ -20776,12 +21678,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "RESIN KIT 25 KG",
@@ -20799,12 +21702,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "25 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE SAPPHIRE 0.75 KG 7103 BLUE",
@@ -20822,12 +21726,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "0.75 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE CADMIUM RED 0.75 KG 7126",
@@ -20845,12 +21750,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "0.75 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "SUPER SET 300 ML",
@@ -20868,12 +21774,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "300 ML",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "CG SELF PRIME 0.5 (65FT)",
@@ -20896,7 +21803,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "MOTOR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "C G MONOBLOCK 0.5 HP (50 FT)",
@@ -20919,7 +21827,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "MOTOR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "C G MOBOBLOCK 0.5 HP (60FT)",
@@ -20942,7 +21851,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "MOTOR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CAPTIVA 5191 15X10",
@@ -20956,7 +21866,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -20965,7 +21875,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CAPTIVA 1272 K2 15X10",
@@ -20979,7 +21890,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -20988,7 +21899,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 9021 2X2",
@@ -21002,7 +21914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -21011,7 +21923,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 9010 2X2",
@@ -21025,7 +21938,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -21034,7 +21947,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 9027 2X2",
@@ -21048,7 +21962,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -21057,7 +21971,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 9031 2X2",
@@ -21071,7 +21986,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -21080,7 +21995,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4008 2X2",
@@ -21094,7 +22010,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -21103,7 +22019,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "ZZ TOSCANA 9021 2X2",
@@ -21117,7 +22034,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -21126,7 +22043,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 4002 2X2",
@@ -21140,7 +22058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -21149,7 +22067,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 6017 2X2",
@@ -21163,7 +22082,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -21172,7 +22091,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET PVC CP",
@@ -21195,7 +22115,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SS GRATINGS LOCK MOTI M 5",
@@ -21218,7 +22139,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SINK COCK FLOCARE",
@@ -21241,7 +22163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK ALIVE 6",
@@ -21264,7 +22187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "AGL VIOLA ONE PIECE CLOSET S-220 MM",
@@ -21282,12 +22206,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "S TRAP 220 MM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL CARDIFF ONE PIECE CLOSET S-300",
@@ -21305,12 +22230,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "S TRAP 300 MM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ARRON SINGLE PCS CLOSET P TRAP",
@@ -21333,7 +22259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL CHAM WALL HUNG BASIN",
@@ -21356,7 +22283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL H-BIA HALF PEDESTAL",
@@ -21379,7 +22307,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "CERA CIMBA P ONE PC EWC (S1013201)",
@@ -21402,7 +22331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ASIAN TOP WHITE",
@@ -21418,14 +22348,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "336X99",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CRYSTAL BROWN GLOSSY",
@@ -21441,14 +22372,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CRYSTAL BROWN LAPOTHRA",
@@ -21464,14 +22396,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "296.5X92",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PARRYWARE 5006A1 UNO LONGBODY",
@@ -21494,7 +22427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "ANTISKY BIANCO STANZA 4X2",
@@ -21508,7 +22442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -21517,7 +22451,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "MULTI CARRARA STANZA 4X2",
@@ -21531,7 +22466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -21540,7 +22475,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "CULCATTA PARIS STANZA 4X2",
@@ -21554,7 +22490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -21563,7 +22499,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "1272 K3 CAPTIVA 15X10",
@@ -21577,7 +22514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -21586,7 +22523,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1274 HL-2 CAPTIVA 15X10",
@@ -21600,7 +22538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -21609,7 +22547,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BLADE SINK COCK SWIVEL AGL 211207",
@@ -21632,7 +22571,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "RINGO PILLAR COCK AGL 131101",
@@ -21655,7 +22595,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL HEALTH FAUCET 241625",
@@ -21678,7 +22619,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "ASTA BATH SPOUT AGL 501306",
@@ -21701,7 +22643,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER HOSE SS 1.5 AGL 281825",
@@ -21724,7 +22667,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER ARM 15\" SS AGL 191620",
@@ -21747,7 +22691,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "CHAM HEALTH FAUCET (ABS) AGL 251805",
@@ -21770,7 +22715,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "MAGESTIC BLACK LAPOTHRA",
@@ -21778,7 +22724,7 @@ const data = {
       "category": "GRANITE",
       "image": "/image/",
       "price": null,
-      "countInStock": 112,
+      "countInStock": 828,
       "brand": "GRANITE",
       "rating": 0,
       "numReviews": 0,
@@ -21786,14 +22732,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "264.5X99",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NOSARA GREEN",
@@ -21809,14 +22756,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "322X99",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICON BROWN",
@@ -21832,14 +22780,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SUPER BLACK 2FT",
@@ -21855,14 +22804,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SUPER BLACK 3FT",
@@ -21878,14 +22828,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "314.5X101",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOREX METRIX BLACK 4X2",
@@ -21899,7 +22850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -21908,7 +22859,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "MUGAL MARKETING"
+      "seller": "MUGAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "CARIBBEAN 03 STANZA",
@@ -21922,7 +22874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -21931,7 +22883,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "5380 D LEXO 15X10",
@@ -21945,7 +22898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -21954,7 +22907,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5380 HL -1 LEXO 15X10",
@@ -21968,7 +22922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -21977,7 +22931,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5380 L LEXO 15X10",
@@ -21991,7 +22946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22000,7 +22955,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5389 D LEXO 15X10",
@@ -22014,7 +22970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22023,7 +22979,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5389 - HL -1 LEXO 15X10",
@@ -22037,7 +22994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22046,7 +23003,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5389-L LEXO DIGITAL 15X10",
@@ -22060,7 +23018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22069,7 +23027,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5393-D LEXO DIGITAL 15X10",
@@ -22083,7 +23042,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22092,7 +23051,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5393-HL-1 LEXO DIGITAL 15X10",
@@ -22106,7 +23066,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22115,7 +23075,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1 DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5393-L 15X10 LEXO DIGITAL",
@@ -22129,7 +23090,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22138,7 +23099,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5394-D LEXO DIGITAL 15X10",
@@ -22152,7 +23114,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22161,7 +23123,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5394-HL-1 LEXO DIGITAL 15X10",
@@ -22175,7 +23138,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22184,7 +23147,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1 DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5394-L LEXO DIGITAL 15X10",
@@ -22198,7 +23162,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22207,7 +23171,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5411-D LEXO DIGITAL 15X10",
@@ -22221,7 +23186,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22230,7 +23195,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5411-HL-1 LEXO DIGITAL 15X10",
@@ -22244,7 +23210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22253,7 +23219,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1 DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5411-L 15X10 LEXO DIGITAL",
@@ -22267,7 +23234,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22276,7 +23243,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5415 D 15X10 LEXO DIGITAL",
@@ -22290,7 +23258,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22299,7 +23267,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5415-HL-1 LEXO DIGITAL 15X10",
@@ -22313,7 +23282,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22322,7 +23291,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 1 DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5415 L 15X10 LEXO DIGITAL",
@@ -22336,7 +23306,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22345,7 +23315,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5380-FLOOR LEXO DIGITAL 15X10",
@@ -22359,7 +23330,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22368,7 +23339,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5389-FLOOR LEXO DIGITAL 15X10",
@@ -22382,7 +23354,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22391,7 +23363,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5393-FLOOR LEXO DIGITAL 15X10",
@@ -22405,7 +23378,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22414,7 +23387,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5394-FLOOR LEXO DIGITAL 15X10",
@@ -22428,7 +23402,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22437,7 +23411,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5411-FLOOR LEXO DIGITAL 15X10",
@@ -22451,7 +23426,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22460,7 +23435,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "5415-FLOOR 15X10 LEXO DIGITAL",
@@ -22474,7 +23450,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -22483,7 +23459,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL DIGITAL",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "CERA CANBERA WASH BASIN (S 2040155)",
@@ -22506,7 +23483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA CANBERA HALF PEDASTAL (2090129)",
@@ -22529,7 +23507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HAND SHOWER WITH HOLDER& HOSE CERA (7030315)",
@@ -22552,7 +23531,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET SS HOSE CERA (F8030107)",
@@ -22575,7 +23555,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "F570010 ASPIRO TIPTON SPOUT -2 NEW",
@@ -22598,7 +23579,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "TRIXON AZUL 4X2 COVERTECH",
@@ -22612,7 +23594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -22621,7 +23603,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "F160024 - 1 NEW RAIN SHOWER ARM ROUND 450 MM",
@@ -22644,7 +23627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F570010 ASPIRO TIPTON SPOUT NEWWW",
@@ -22667,7 +23651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "F160146 RAIN SHOWER 200 MM - NEWWW",
@@ -22690,7 +23675,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "CON PAC 5KG",
@@ -22708,12 +23694,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "WEBER"
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "PARRY ALPHA W/M SINK COCK G2721A1",
@@ -22736,7 +23723,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY ALPHA DECK MOUNTED SINK COCK G2738A1",
@@ -22759,7 +23747,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY OVALLO PILLAR COCK T5501A1",
@@ -22782,7 +23771,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY DROPLET BIB COCK G4704A1",
@@ -22805,7 +23795,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY EDGE PILLAR COCK G4802A1",
@@ -22828,7 +23819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY EDGE WALL MOUNTED SINK COCKG4836A1",
@@ -22851,7 +23843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY EDGE BIBCOCK WITH AERATOR G4880A1",
@@ -22874,7 +23867,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY SUTRA WALL HUNG W/B-WH C041X1C",
@@ -22897,7 +23891,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY C042A1C - SHINE WALL HUNG BASIN (20X14)WH",
@@ -22920,7 +23915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY REVIVE WASH BASIN C8981",
@@ -22943,7 +23939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY TAPTI 18' W/B -WHITE C04901",
@@ -22966,7 +23963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY-KOLAR WALL HUNG BASIN 18X13 -C042E1C",
@@ -22989,7 +23987,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY C0467 ALCOVE BASIN WHITE",
@@ -23012,7 +24011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "C891846-PRIME PLUS SINGLE PIECE S 220 CLOSET WHITE",
@@ -23030,12 +24030,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY SUTRA S/P S -220MM WHITE C896546",
@@ -23053,12 +24054,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY CUTE S/P 220 C896046",
@@ -23076,12 +24078,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "EWC P TRAP PRO SET CERA S1059104",
@@ -23104,7 +24107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VICTOR SINK COCK CERA F1015251",
@@ -23127,7 +24131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ANGLE COCK CERA F 8040204",
@@ -23150,7 +24155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VICTOR CONC STOP COCK CERA F 1015362",
@@ -23173,7 +24179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STOP COCK",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VICTOR EXPOSED PART DIV CERA F1015701",
@@ -23196,7 +24203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER ARM CERA F7040106 18''",
@@ -23219,7 +24227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "WEBER. JOINT POXYFILL CRIMSON 1 KG",
@@ -23237,15 +24246,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "WEBER"
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
-      "name": "WEBER. JOINT POXY RESIN KIT",
+      "name": "WEBER. JOINT EPOXY RESIN KIT",
       "item_id": "K1096",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -23264,8 +24274,9 @@ const data = {
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER. SHINE ARMOR GOLD 1 KG",
@@ -23283,12 +24294,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "WEBER"
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "WEBER.SHINE ARMOR SILVER GUILTY 1 KG",
@@ -23306,12 +24318,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "WEBER"
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "CAPTIVA 1280 HL-02 15X10",
@@ -23325,7 +24338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -23334,7 +24347,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TERACOTTA 953 1X1 LORENA",
@@ -23348,7 +24362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -23357,7 +24371,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TERACOTTA 954 1X1 LORENA",
@@ -23371,7 +24386,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -23380,7 +24395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TERACOTTA 957 1X1 LORENA",
@@ -23394,7 +24410,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -23403,7 +24419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TERACOTTA 958 1X1 LORENA",
@@ -23417,7 +24434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -23426,7 +24443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRACE GREY 4X2 COVERTECH",
@@ -23440,7 +24458,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -23449,7 +24467,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRACE BIANCO 4X2 COVERTECH",
@@ -23463,7 +24482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -23472,7 +24491,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PURA BEIGE 4X2 LIVENZA",
@@ -23486,7 +24506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -23495,7 +24515,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "MEXICAN GREY 6X4 LIVOLLA",
@@ -23509,7 +24530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -23518,7 +24539,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SPANISH BEIGE 6X4 LIVOLLA",
@@ -23532,7 +24554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -23541,7 +24563,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SATUARIO GREY 6X4 LIVOLLA",
@@ -23555,7 +24578,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -23564,7 +24587,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FAMOUS BLACK 528 1X1",
@@ -23578,7 +24602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -23587,7 +24611,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "MARKINO BLACK POLISH",
@@ -23595,7 +24620,7 @@ const data = {
       "category": "GRANITE",
       "image": "/image/",
       "price": null,
-      "countInStock": 0,
+      "countInStock": 371,
       "brand": "GRANITE",
       "rating": 0,
       "numReviews": 0,
@@ -23603,14 +24628,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "D COIN LAPOTHRA",
@@ -23626,14 +24652,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "C BROWN LAPPOTHRA SLAB",
@@ -23649,14 +24676,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA SILVER RINS L.P 18X12",
@@ -23670,7 +24698,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23679,7 +24707,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 6109 - G 18X12",
@@ -23693,7 +24722,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23702,7 +24731,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCA 5908-G 18X12",
@@ -23716,7 +24746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23725,7 +24755,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 5311-G 18X12",
@@ -23739,7 +24770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23748,7 +24779,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA LIZA GOLD - L-08 18X12",
@@ -23762,7 +24794,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23771,7 +24803,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L 8",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSC ORCHID-KCH -01-02 18X12",
@@ -23785,7 +24818,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23794,7 +24827,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-01-02",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA ORCHID -KCH -02-02 18X12",
@@ -23808,7 +24842,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23817,7 +24851,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-02-02",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA SILVER RINS -KCH- 03-P 18X12",
@@ -23831,7 +24866,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23840,7 +24875,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-03",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA SILVER RINS -KCH 04--P 18X12",
@@ -23854,7 +24890,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23863,7 +24899,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-04",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCA LIZA GOLD -KCH -02-08 18X12",
@@ -23877,7 +24914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -23886,7 +24923,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-02-08",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1026 FL 1X1",
@@ -23900,7 +24938,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 9,
       "length": 1,
       "breadth": 1,
@@ -23909,7 +24947,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1032 - FL 1X1",
@@ -23923,7 +24962,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 9,
       "length": 1,
       "breadth": 1,
@@ -23932,7 +24971,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1195 - FL 1X1",
@@ -23946,7 +24986,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 9,
       "length": 1,
       "breadth": 1,
@@ -23955,7 +24995,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1195 HL -1 2X1",
@@ -23969,7 +25010,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -23978,7 +25019,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1210 - HL-1 2X1",
@@ -23992,7 +25034,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -24001,7 +25043,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1032 - HL -1 2X1",
@@ -24015,7 +25058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -24024,7 +25067,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1026 D 1X2",
@@ -24038,7 +25082,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -24047,7 +25091,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "BRECCIA CLASSIC COVERTECH 4X2",
@@ -24061,7 +25106,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -24070,7 +25115,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "INDUS SATUARIO COVERTECH 4X2",
@@ -24084,7 +25130,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -24093,7 +25139,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK (TALL 12\")",
@@ -24116,7 +25163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "6701 L - PARKING 40X40 BEETHAS (LEMOREX)",
@@ -24130,7 +25178,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -24139,7 +25187,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "6701 D - PARKING 40X40 BEETHAS (LEMOREX)",
@@ -24153,7 +25202,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -24162,7 +25211,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ECOFLUSH 225 S TRAP",
@@ -24180,12 +25230,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA LOVELY SATUARIO 1200X800",
@@ -24199,7 +25250,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -24208,7 +25259,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA ONYX DRESDEN GREEN 1200X800",
@@ -24222,7 +25274,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -24231,7 +25283,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA PORTOFINO 1200X800",
@@ -24245,7 +25298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -24254,7 +25307,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA SPANISH GREY 1200X800",
@@ -24268,7 +25322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -24277,7 +25331,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA VENETIAN GOLDEN 1200X800",
@@ -24291,7 +25346,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -24300,7 +25355,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "GREEN RAY ROCK WOOD BROWN SEVILLA 4X2",
@@ -24314,7 +25370,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -24323,7 +25379,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SPIDER GREY 4X2 COVERTECH STANZA",
@@ -24337,7 +25394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -24346,7 +25403,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 625 2X2 STANZA",
@@ -24360,7 +25418,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -24369,7 +25427,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 624 2X2 STANZA",
@@ -24383,7 +25442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -24392,7 +25451,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 623 2X2 STANZA",
@@ -24406,7 +25466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -24415,7 +25475,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 570 2X2 STANZA",
@@ -24429,7 +25490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -24438,7 +25499,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 622 2X2 STANZA",
@@ -24452,7 +25514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -24461,7 +25523,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "PARRY GENEVE N BELOW COUNTER W/B",
@@ -24484,7 +25547,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY FLAIR BELOW COUNTER W/B",
@@ -24507,7 +25571,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "VELLE CABINET 3019 LAMINATED",
@@ -24530,7 +25595,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO TABLE TOP JONASE 19\"",
@@ -24553,7 +25619,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO TABEL TOP LUCAS 21\"",
@@ -24576,7 +25643,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO TABLE TOP NOUR 16\"",
@@ -24599,7 +25667,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BENCARDO TABEL TOP LUKE 25\"",
@@ -24622,7 +25691,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL JAMES ONE PIECE CLOSET P TRAP",
@@ -24645,7 +25715,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "1PC SQUARO 220 MM WT (LIFON)",
@@ -24668,7 +25739,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "1PC SQUARO (P) WT",
@@ -24691,7 +25763,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "20X17X8 CHINA MAT SINK",
@@ -24714,7 +25787,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH SINK 22X18X9 GLOSSY",
@@ -24737,7 +25811,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH SINK 24X18X9 MAT",
@@ -24760,7 +25835,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH HAND MADE BLACK 24X18X10",
@@ -24783,7 +25859,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH HANMADE SILVER 24X18X10",
@@ -24806,7 +25883,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 18X16X8",
@@ -24829,7 +25907,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH SINK 24X18X9",
@@ -24852,7 +25931,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "LIVOXY 634 2X2 STANZA",
@@ -24866,7 +25946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -24875,7 +25955,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVOXY 641 2X2 STANZA",
@@ -24889,7 +25970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -24898,7 +25979,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVOXY 664 2X2 STANZA",
@@ -24912,7 +25994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -24921,7 +26003,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON LYRIC OMINI SUITE 220 MM S - TRAP",
@@ -24939,12 +26022,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "ARISTO BLUE 4X2 LIVENZA STANZA",
@@ -24958,7 +26042,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -24967,7 +26051,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "COSMIC COTTA 4X2 LIVOLLA STANZA",
@@ -24981,7 +26066,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -24990,7 +26075,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "BELLY WOOD BROWN 4X2 NESTER STANZA",
@@ -25004,7 +26090,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25013,7 +26099,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "EGYPTAN BROWN L-TILE 4X2 STANZA",
@@ -25027,7 +26114,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25036,7 +26123,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LEMSTONE 8186 4X2 CARVING",
@@ -25050,7 +26138,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25059,7 +26147,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LEMSTONE 8187 4X2 CARVING",
@@ -25073,7 +26162,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25082,7 +26171,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LONIX DYNA CHEMRI GREY ENDLESS 1200X800",
@@ -25096,7 +26186,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -25105,7 +26195,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SEVILLA"
+      "seller": "SEVILLA",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM BENTLY WHITE STANZA 1600X800",
@@ -25119,7 +26210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -25128,7 +26219,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM ALESSIA GREY STANZA 1600X800",
@@ -25142,7 +26234,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -25151,7 +26243,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM EMIL BEIGE STANZA 1600X800",
@@ -25165,7 +26258,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -25174,7 +26267,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM DEVINE CREMA STANZA 1600X800",
@@ -25188,7 +26282,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -25197,7 +26291,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SS CORNER",
@@ -25220,7 +26315,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "CONCEALED AXEL QUBIC 4/3",
@@ -25243,7 +26339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "CONCEALED AXEL ORENGE 1/2",
@@ -25266,7 +26363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "LIVOXY 640 2X2 STANZA",
@@ -25280,7 +26378,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -25289,7 +26387,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TRIO TALL BODY PILLAR COCK",
@@ -25312,7 +26411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO LONG BODY",
@@ -25335,7 +26435,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TELEPHONIC SHOWER ALFA",
@@ -25358,7 +26459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DOUBLE SOAP DISH ROUND",
@@ -25381,7 +26483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SOAP DISH WITH BRUSH HOLDER ROUND",
@@ -25404,7 +26507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "AGL E- KAI ONE PC CLOSET S-300",
@@ -25422,12 +26526,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "S TRAP 300 MM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "CERA CONGO CISTERN",
@@ -25450,7 +26555,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA CAJOL SEAT COVER",
@@ -25473,7 +26579,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "F160147 RAIN SHOWER 100 MM WT 225 ARM S HINDWARE",
@@ -25496,7 +26603,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "HINDWARE"
+      "seller": "HINDWARE",
+      "hsnCode": ""
     },
     {
       "name": "20X16 W/B LIFON HILITE",
@@ -25519,7 +26627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "18X13 W/B LIFON HILITE",
@@ -25542,7 +26651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "EWC S LIFON HILITE",
@@ -25565,7 +26675,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FLUSHING CISTERNS HILITE",
@@ -25588,7 +26699,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLID TOILET SEAT COVER HILITE",
@@ -25611,7 +26723,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "J/S VIGO GERMFREE NEO W/B JOHNSON",
@@ -25634,7 +26747,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "CERA OVERHEAD SHOWER SQUARE F7010501",
@@ -25657,7 +26771,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "T P RED 3 FT GRANITE",
@@ -25673,14 +26788,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "328.5X103",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "T P RED 2 FT GRANITE",
@@ -25696,14 +26812,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BIB COCK SHORT BODY",
@@ -25726,7 +26843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "TOWEL ROD NEW SINGAM 24",
@@ -25749,7 +26867,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL ROD",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HF HOOKBRASS",
@@ -25772,7 +26891,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK VICTOR",
@@ -25795,7 +26915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "PILLAR COCK FLORA",
@@ -25818,7 +26939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA ANTUNE NATURAL MATT 4X2",
@@ -25832,7 +26954,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25841,7 +26963,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA ANTUNE WENGUE MATT 4X2",
@@ -25855,7 +26978,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25864,7 +26987,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA COCO MATT 4X2",
@@ -25878,7 +27002,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25887,7 +27011,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA COTTAGE CHOCO MATT 4X2",
@@ -25901,7 +27026,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25910,7 +27035,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA CREAM MATT 4X2",
@@ -25924,7 +27050,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25933,7 +27059,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA SLATE MATT 4X2",
@@ -25947,7 +27074,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25956,7 +27083,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA SNOW MATT 4X2",
@@ -25970,7 +27098,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -25979,7 +27107,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "TOSCANA superia"
+      "seller": "TOSCANA superia",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DESIRE PILLAR COCK",
@@ -26002,7 +27131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON FLORA CONCEALED STOP COCK",
@@ -26025,7 +27155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STOP COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "TILE CLEANER CORROSION FREE ASIAN ASSOCIATES BIO GREEN",
@@ -26048,7 +27179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TILE CLEANER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON PASTRORAL GREY LIGHT 4X2",
@@ -26062,7 +27194,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26071,7 +27203,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON PASTORAL GREY DARK 4X2",
@@ -26085,7 +27218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26094,7 +27227,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY BON CARINTO BROWN 4X2",
@@ -26108,7 +27242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26117,7 +27251,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ORTAGGI NERO 2X2",
@@ -26131,7 +27266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -26140,7 +27275,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "AGL BLACK STIK PILLAR COCK 291101",
@@ -26163,7 +27299,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL PORSH ONE PIECE CLOSET S- 300",
@@ -26181,12 +27318,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "S TRAP 300 MM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "STYLX 3G 2C RED BLACK",
@@ -26209,7 +27347,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "STYLX 3GT BROWN",
@@ -26232,7 +27371,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "STYLX 3GDSD BLACK AND WHITE",
@@ -26255,7 +27395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "STYLX 3GZ GREY WHITE",
@@ -26278,7 +27419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY DELIGHT DECOR 2X2",
@@ -26292,7 +27434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -26301,7 +27443,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON HEALTH FAUCET ALTIS",
@@ -26324,7 +27467,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO TESLA BEIGE STANZA 4X2",
@@ -26338,7 +27482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26347,7 +27491,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX ARMANI AZUL 4X2",
@@ -26361,7 +27506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26370,7 +27515,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX ARMANI GOLD 4X2",
@@ -26384,7 +27530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26393,7 +27539,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX CARISIA CHOCO 4X2",
@@ -26407,7 +27554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26416,7 +27563,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX CINEREA GRIS 4X2",
@@ -26430,7 +27578,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26439,7 +27587,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX DONEST WHITE 4X2",
@@ -26453,7 +27602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26462,7 +27611,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX CRYSTAL ONYX 4X2",
@@ -26476,7 +27626,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26485,7 +27635,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "I VENUS L TILE 4X2 STANZA",
@@ -26499,7 +27650,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -26508,7 +27659,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 4001 2X2",
@@ -26522,7 +27674,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -26531,7 +27683,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 4005 2X2",
@@ -26545,7 +27698,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -26554,7 +27707,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 4006 2X2",
@@ -26568,7 +27722,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -26577,7 +27731,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 4048 2X2",
@@ -26591,7 +27746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -26600,7 +27755,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 4061 2X2",
@@ -26614,7 +27770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -26623,7 +27779,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA DYNA CHEMRI BIANCO 1200X800",
@@ -26637,7 +27794,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -26646,7 +27803,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA SUPER SATUARIO 1200X800",
@@ -26660,7 +27818,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -26669,7 +27827,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 18X16X9 SINK",
@@ -26692,7 +27851,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 18X16X8 GLOSSY",
@@ -26715,7 +27875,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 18X16X8 CHINA MAT",
@@ -26738,7 +27899,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 24X18X9 CHINA MAT",
@@ -26761,7 +27923,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "LIFON EWC 225 MM",
@@ -26779,12 +27942,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "P BLACK GRANITE SLAB 2 FT",
@@ -26792,7 +27956,7 @@ const data = {
       "category": "GRANITE",
       "image": "/image/",
       "price": null,
-      "countInStock": 87,
+      "countInStock": 111,
       "brand": "GRANITE",
       "rating": 0,
       "numReviews": 0,
@@ -26800,14 +27964,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "255X77",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON T3224C FUSION NON TELEPHONIC",
@@ -26830,7 +27995,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO PILLAR COCK",
@@ -26853,7 +28019,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DESIRE LONG BODY",
@@ -26876,7 +28043,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON CP FLANGE FLAT",
@@ -26899,7 +28067,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON NANO ANGLE COCK",
@@ -26922,7 +28091,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "STYLX LED MIRROR 450X600 MM",
@@ -26945,7 +28115,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "STYLX LED MIRROR 600X750 MM",
@@ -26968,7 +28139,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "TOWEL RING HEAVY NAPKIN",
@@ -26991,7 +28163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL RING",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "K K HANDMADE 24X18 SILVER",
@@ -27014,7 +28187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "K K ASSOCIATES"
+      "seller": "K K ASSOCIATES",
+      "hsnCode": ""
     },
     {
       "name": "K K HAND MADE 18X16 SILVER",
@@ -27037,7 +28211,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "K K ASSOCIATES"
+      "seller": "K K ASSOCIATES",
+      "hsnCode": ""
     },
     {
       "name": "WHITE HOUSE 1075 2X2",
@@ -27051,7 +28226,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -27060,7 +28235,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SIYA 1050 2X2 SPOT ON GALLERY",
@@ -27074,7 +28250,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -27083,7 +28259,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SIYA 1017 2X2 SPOT ON GALLERY",
@@ -27097,7 +28274,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -27106,7 +28283,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SIYA NANO IVORY 2X2 SPOT ON GALLERY",
@@ -27120,7 +28298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -27129,7 +28307,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VLHB-4005 HALF PEDESTAL BASIN LINCO",
@@ -27152,7 +28331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF P",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLPD - 4005 PEDESTAL LINCO",
@@ -27175,7 +28355,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLWB-6016 W/B LINCO",
@@ -27198,7 +28379,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "SOLOREX ACRON BLUE 4X2 MUGAL",
@@ -27212,7 +28394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -27221,7 +28403,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": "MUGAL MARKETING"
+      "seller": "MUGAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON WASTE COUPLLING F/T DOOM",
@@ -27244,7 +28427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY PRIME GRAPHITE MATT 4X2",
@@ -27258,7 +28442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -27267,7 +28451,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TRENTO GALAXY BLACK POLISH 4X2",
@@ -27281,7 +28466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -27290,7 +28475,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TRENTO GALAXY BLACK MATT 4X2",
@@ -27304,7 +28490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -27313,7 +28499,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY GEOSTONE OLIVE 2X2",
@@ -27327,7 +28514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -27336,7 +28523,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "HEAVY DUTY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "BNA GLASS BOND EPOXY 500 GM",
@@ -27354,15 +28542,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": ""
+      "type": "EPOXY",
+      "seller": "",
+      "hsnCode": ""
     },
     {
-      "name": "BNA SILVER GLITTER CLG21 G0 GM",
+      "name": "BNA SILVER GLITTER CLG21 50 GM",
       "item_id": "K1300",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -27377,12 +28566,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "50 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": ""
+      "type": "GLITTER",
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BNA BLACK GLITTER CLG22 - 50 GM",
@@ -27400,12 +28590,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "50 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": ""
+      "type": "GLITTER",
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BNA GOLD GLITTER CLG23 - 50 GM",
@@ -27423,12 +28614,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "50 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": ""
+      "type": "GLITTER",
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BNA JET BLACK CL02",
@@ -27451,7 +28643,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BNA OFF WHITE CL09",
@@ -27474,7 +28667,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BNA VANDEX BB75 10KG",
@@ -27492,12 +28686,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "10 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY GABRIELLE DARK 1X1",
@@ -27511,7 +28706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -27520,7 +28715,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY CASA DAINO DARK 1X1",
@@ -27534,7 +28730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -27543,7 +28739,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "VLOC - 1020 ONE PC CLOSET 12\"",
@@ -27566,7 +28763,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLOC - 1014 ONE PC CLOSET 9\" LINCO",
@@ -27589,7 +28787,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY JUBILANT BEIGE 18X12",
@@ -27603,7 +28802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27612,7 +28811,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY VERTEX MUSHROOM 18X12",
@@ -27626,7 +28826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27635,7 +28835,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LUCIE BROWN 18X12",
@@ -27649,7 +28850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27658,7 +28859,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LUCIE CREMA 18X12",
@@ -27672,7 +28874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27681,7 +28883,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY JUBILANT CREAMA 18X12",
@@ -27695,7 +28898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27704,7 +28907,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY JUBILANT HL 01 18X12",
@@ -27718,7 +28922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27727,7 +28931,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY VERTEX CREAMA 18X12",
@@ -27741,7 +28946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27750,7 +28955,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY VERTEX HL- 01 18X12",
@@ -27764,7 +28970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27773,7 +28979,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LUCIE HL 01 18X12",
@@ -27787,7 +28994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -27796,7 +29003,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY LIA EMPERADOR DARK 1X1",
@@ -27810,7 +29018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 10,
       "length": 1,
       "breadth": 1,
@@ -27819,7 +29027,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "AGL BIA WALL HUNG BASIN",
@@ -27842,7 +29051,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "LEVELING KIT EQALIZER WAGE LOCK (QTY 100)",
@@ -27865,7 +29075,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LEVELING KIT EQUALIZER CLIP 3MM",
@@ -27888,7 +29099,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LEVELING KIT EQUALIZER CLIP 4MM",
@@ -27911,7 +29123,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RANDOR SPACER 3MM",
@@ -27934,7 +29147,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RANDOR SPACER 2 MM",
@@ -27957,7 +29171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RANDOR SPACER 4MM",
@@ -27980,7 +29195,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ZIBON 8359 2X1 STANZA",
@@ -27994,7 +29210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -28003,7 +29219,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "AGL KAI ONE PIECE CLOSET S-300",
@@ -28021,12 +29238,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "S TRAP 300 MM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "WEBER EPOX EASY BLUE 1 KG",
@@ -28044,12 +29262,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "WEBER"
+      "type": "EPOXY",
+      "seller": "WEBER",
+      "hsnCode": ""
     },
     {
       "name": "LIFON EWC (P)",
@@ -28072,7 +29291,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LIFON BALENO CORNER W/B",
@@ -28095,7 +29315,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LIFON PERRY CORNER W/B",
@@ -28118,7 +29339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LIFON CORNER W/B",
@@ -28141,7 +29363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TURBO ANGLE COCK",
@@ -28164,7 +29387,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "VARLET 1022 CLOSET 225 MM LINCO",
@@ -28182,12 +29406,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "LINCO"
+      "seller": "LINCO",
+      "hsnCode": ""
     },
     {
       "name": "VARLET 1003 CLOSET P TRAP LINCO",
@@ -28210,7 +29435,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "LINCO"
+      "seller": "LINCO",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON T6498C DENIZ SLCD 45MM HIGH FLOW UPPER TRIM",
@@ -28233,7 +29459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON S0030C JET SPRAY FLX TUBE & HOOK",
@@ -28256,7 +29483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON T6101C DENIZ PILLAR COCK",
@@ -28279,7 +29507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON T6398C DORIS SLCD HF UPPER TRIM",
@@ -28302,7 +29531,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "CERA EWC S TRAP S1059103",
@@ -28325,7 +29555,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOREX AURORA SKYLINE 4X2",
@@ -28339,7 +29570,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -28348,7 +29579,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": "SOLOREX"
+      "seller": "SOLOREX",
+      "hsnCode": ""
     },
     {
       "name": "SOLOREX ESTRADA BLUE 4X2",
@@ -28362,7 +29594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -28371,7 +29603,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": "SOLOREX"
+      "seller": "SOLOREX",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA SINK 35X20",
@@ -28394,7 +29627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "WALNET 2X17X10 MAT SINK",
@@ -28417,7 +29651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL FFILIPPO CLOSET S-300",
@@ -28435,12 +29670,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON EWC LINEA 300 MM",
@@ -28458,12 +29694,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "COVERTECH ITALIAN WHITE 4X2 STANZA",
@@ -28477,7 +29714,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -28486,7 +29723,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "MACON GREY SIMOLA 4X2 STANZA",
@@ -28500,7 +29738,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -28509,7 +29747,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "NANO 1045 WHITE HOUSE SONI FLOORAMIC",
@@ -28523,7 +29762,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -28532,7 +29771,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": "SONI FLOORAMIC"
+      "seller": "SONI FLOORAMIC",
+      "hsnCode": ""
     },
     {
       "name": "L - TILE SURPRISE BIANCO 4X2",
@@ -28546,7 +29786,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -28555,7 +29795,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "PAMESHA TERACOTTA 1X1 AUKLAND PARKING TILE",
@@ -28569,7 +29810,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -28578,7 +29819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED 18X12",
@@ -28592,7 +29834,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.5,
       "breadth": 1,
@@ -28601,7 +29843,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED 15X10",
@@ -28615,7 +29858,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -28624,7 +29867,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED 4X2",
@@ -28638,7 +29882,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 4,
       "breadth": 2,
@@ -28647,7 +29891,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED GRANITE",
@@ -28663,14 +29908,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ASSORTED GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SELZER WATER TANK WHITE 1000 LTR",
@@ -28693,7 +29939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "SELZER WATER TANK BLACK 1000 LTR",
@@ -28716,7 +29963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "SELZER WATER TANK WHITE 500 LTR",
@@ -28739,7 +29987,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "SELZER WATER TANK BLACK 500 LTR",
@@ -28762,7 +30011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "SELZER WATER TANK WHITE SCPL 1000 LTR",
@@ -28785,7 +30035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "ZIBON 8355 2X1 STANZA",
@@ -28799,7 +30050,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -28808,7 +30059,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LATTO ASSANSOL 507 2X1",
@@ -28822,7 +30074,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 2,
       "breadth": 1,
@@ -28831,7 +30083,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "STONIS RADLY 08 12X18 STANZA",
@@ -28845,7 +30098,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -28854,7 +30107,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LATTO KERALA 511 2X1 STANZA",
@@ -28868,7 +30122,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -28877,7 +30131,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "5X5 GRATINGS EXTRA HEAVY MAAT",
@@ -28900,7 +30155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET KABA",
@@ -28923,7 +30179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET GUN ABS HEAD",
@@ -28946,7 +30203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "JAQUAR RAIN SHOWER 6X6",
@@ -28969,7 +30227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SOLOREX BLACK HIGH GLOSSY STANZA 4X2",
@@ -28983,7 +30242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -28992,7 +30251,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM CARVING 8020 2X2 STANZA",
@@ -29006,7 +30266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -29015,7 +30275,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM PUNCH SEREIS 173 2X2 STANZA",
@@ -29029,7 +30290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -29038,7 +30299,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SANARIA TESLA BEIGE 4X2 STANZA",
@@ -29052,7 +30314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29061,7 +30323,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "L - TILE EPRICAL LIGHT GREY STANZA 4X2",
@@ -29075,7 +30338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29084,7 +30347,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SPENCERA FLARE WHITE 4X2",
@@ -29098,7 +30362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29107,7 +30371,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SPENCERA SILICA BLUE 4X2 STANZA",
@@ -29121,7 +30386,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29130,7 +30395,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "CERA 1001721 DIVERTER",
@@ -29153,7 +30419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FAB CERA 1050 2X2 JET GRANITO",
@@ -29167,7 +30434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -29176,7 +30443,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FAB CERA 1017 2X2 JET GRANITO",
@@ -29190,7 +30458,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -29199,7 +30467,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "JET GRANITO 1075 2X2",
@@ -29213,7 +30482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -29222,7 +30491,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "JET GRANITO IVORY 2X2",
@@ -29236,7 +30506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -29245,7 +30515,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AGL HARMONY ROSSO 4X2",
@@ -29259,7 +30530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29268,7 +30539,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL HARMONY GREY 4X2",
@@ -29282,7 +30554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29291,7 +30563,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL SATUARIO JUPITER 4X2",
@@ -29305,7 +30578,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29314,7 +30587,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL PLEMG 1017 4X2",
@@ -29328,7 +30602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29337,7 +30611,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL PLEMG 1014 4X2",
@@ -29351,7 +30626,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29360,7 +30635,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED 2X1",
@@ -29374,7 +30650,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 2,
       "breadth": 1,
@@ -29383,7 +30659,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 3303 2X2 STANZA",
@@ -29397,7 +30674,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -29406,7 +30683,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "VARLET 1003 S TRAP 300 MM LINCO",
@@ -29429,7 +30707,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "LINCO"
+      "seller": "LINCO",
+      "hsnCode": ""
     },
     {
       "name": "L- TILE DIANAMIC GREY 4X2 MATT CARVING",
@@ -29443,7 +30722,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29452,7 +30731,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "L - TILE DIANAMIC SILVER 4X2 CARVING MAT",
@@ -29466,7 +30746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29475,7 +30755,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "L TILE ROUTE BLACK 4X2 STANZA",
@@ -29489,7 +30770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29498,7 +30779,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "L - TILE ROUTE BEIGE 4X2",
@@ -29512,7 +30794,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29521,7 +30803,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LIVOLLA POKEMON CREMA GLOSSY 4X2 STANZA",
@@ -29535,7 +30818,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -29544,7 +30827,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SELZER SELFRESH TANK 1000 LTR 2.5 FT (WHITE) WITH STAND",
@@ -29567,7 +30851,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE J.F BLACK 500 GM",
@@ -29585,12 +30870,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE J.F GREY 500 GM",
@@ -29608,12 +30894,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE J.F WHITE 500 GM",
@@ -29631,12 +30918,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE J.F WHITE 1 KG",
@@ -29654,12 +30942,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE SAPPHIRE 500 GM (BLUE) J.F",
@@ -29677,12 +30966,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE ALMOND IVORY 1 KG",
@@ -29700,12 +30990,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE ALMOND IVORY 500 GM",
@@ -29723,12 +31014,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE MIDNIGHT BLACK J.F 500 GM",
@@ -29746,12 +31038,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE CANYON RED 500 GM",
@@ -29769,12 +31062,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE SIERRA PINK 500 GM J.F",
@@ -29792,12 +31086,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE BURGANDY COFFEE RED J.F 500 GM",
@@ -29815,12 +31110,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY IMPERIAL 600 BASIN C897A46",
@@ -29843,7 +31139,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY ULTRA HFLOW DIVERTER BODY G4887A1",
@@ -29866,7 +31163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY G3102A1 CRUST PILLAR COCK",
@@ -29889,7 +31187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY PRIME SINGLE S-220 WHITE C885346",
@@ -29907,12 +31206,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY E8383A1 PRIMO HEALTH FAUCET",
@@ -29935,7 +31235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY ALPHA ULTRA HIGH FLOW G2785A1",
@@ -29958,7 +31259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "SOLOGRES NANO BANKTO 2X2",
@@ -29972,7 +31274,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -29981,7 +31283,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": "MUGAL MARKETING"
+      "seller": "MUGAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "EXXARO CORAL WHITE 2400X800",
@@ -29995,7 +31298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 8.75,
       "breadth": 2.63,
@@ -30004,7 +31307,8 @@ const data = {
       "actLength": 22.385,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "VARMORA"
+      "seller": "VARMORA",
+      "hsnCode": ""
     },
     {
       "name": "VLWB -6012 W/B LINCO",
@@ -30027,7 +31331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLWB- 6020 W/B",
@@ -30050,7 +31355,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLOC -1022 P ONE PC CLOSET LINCO",
@@ -30073,7 +31379,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 6086 2X2 STANZA",
@@ -30087,7 +31394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30096,7 +31403,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 6084 2X2 STANZA",
@@ -30110,7 +31418,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30119,7 +31427,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8043 D 15X10",
@@ -30133,7 +31442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30142,7 +31451,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8043 F 15X10",
@@ -30156,7 +31466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30165,7 +31475,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8043 HL 15X10",
@@ -30179,7 +31490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30188,7 +31499,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8043 L 15X10",
@@ -30202,7 +31514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30211,7 +31523,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8048 D 15X10",
@@ -30225,7 +31538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30234,7 +31547,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8048 F 15X10",
@@ -30248,7 +31562,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30257,7 +31571,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8048 HL 15X10",
@@ -30271,7 +31586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30280,7 +31595,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8048 L 15X10",
@@ -30294,7 +31610,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30303,7 +31619,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8061 D 15X10",
@@ -30317,7 +31634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30326,7 +31643,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8061 F 15X10",
@@ -30340,7 +31658,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30349,7 +31667,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8061 HL 15X10",
@@ -30363,7 +31682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30372,7 +31691,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8061 L 15X10",
@@ -30386,7 +31706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30395,7 +31715,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8070 D 15X10",
@@ -30409,7 +31730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30418,7 +31739,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "D",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8070 F 15X10",
@@ -30432,7 +31754,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30441,7 +31763,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8070 HL 15X10",
@@ -30455,7 +31778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30464,7 +31787,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "HL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 8070 L 15X10",
@@ -30478,7 +31802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30487,7 +31811,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "L",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 1156 EL 15X10",
@@ -30501,7 +31826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30510,7 +31835,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 801 EL 15X10",
@@ -30524,7 +31850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30533,7 +31859,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CEBON 917 EL 15X10",
@@ -30547,7 +31874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1.25,
       "breadth": 0.832,
@@ -30556,7 +31883,8 @@ const data = {
       "actLength": 1.04,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM 5235 2X2 PUNCH SERIES STANZA",
@@ -30570,7 +31898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30579,7 +31907,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM 5236 2X2 PUNCH SERIES STANZA",
@@ -30593,7 +31922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30602,7 +31931,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM 5240 2X2 PUNCH SEREIS STANZA",
@@ -30616,7 +31946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30625,7 +31955,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ITATECH 91021 PUNCH 2X2 STANZA",
@@ -30639,7 +31970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30648,7 +31979,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ITATECH 91022 PUNCH 2X2 STANZA",
@@ -30662,7 +31994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30671,7 +32003,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM 91041 PUNCH SERIES 2X2 STANZA",
@@ -30685,7 +32018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30694,7 +32027,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM 91042 PUNCH 2X2 STANZA",
@@ -30708,7 +32042,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -30717,7 +32051,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 18X16X10 BLACK",
@@ -30740,7 +32075,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH HAND MADE 18X16X10 SILVER",
@@ -30763,7 +32099,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "CAPTIVA 1279 FLOOR 1X1",
@@ -30777,7 +32114,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -30786,7 +32123,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CUBICA WALL HUNG EWC CERA (S1043140)",
@@ -30809,7 +32147,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VICTOR BATH SPOUT CERA (F1015661)",
@@ -30832,7 +32171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BATH SPOUT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FLUSH PLATE H KNOB CERA (B1120101)",
@@ -30855,7 +32195,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FOUNTAIN EXPOSED PART CERA (F2013721)",
@@ -30878,7 +32219,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET SS HOSE CERA (F8030108)",
@@ -30901,7 +32243,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "WASHING MACHINE TAP PVC ELEGANT",
@@ -30924,7 +32267,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "COUNSEL WASH BASIN CERA (S2040101)",
@@ -30947,7 +32291,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CLEA HALF PEDESTAL CERA (S2090102)",
@@ -30970,7 +32315,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SONET LEO W/B WHITE PARRY",
@@ -30993,7 +32339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "PARRY T3201 BOTTLE TRAP LIGHT",
@@ -31016,7 +32363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "VARLET EWC 1005 - 225MM",
@@ -31034,12 +32382,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "WALNET"
+      "seller": "WALNET",
+      "hsnCode": ""
     },
     {
       "name": "SS GRATINGS GLOSSY 6X6",
@@ -31062,7 +32411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "ORRISAPAN LIFON WT",
@@ -31085,7 +32435,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "P TRAP LIFON ADDITIONAL",
@@ -31108,7 +32459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LIVOXY 561 STANZA 2X2",
@@ -31122,7 +32474,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -31131,7 +32483,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVOXY 572 STANZA 2X2",
@@ -31145,7 +32498,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -31154,7 +32507,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "V GUARD ETECTRIC WATER HEATER IRIS 3L",
@@ -31177,7 +32531,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WATER HEATER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VLOC -1004 S 300 MM TRAP",
@@ -31195,12 +32550,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "H BROWN GRANITE SLAB",
@@ -31216,14 +32572,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "289X94",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TIGER GRANITE SLAB",
@@ -31239,14 +32596,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "312X97",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LIVANTO 5014 2X2 STANZA",
@@ -31260,7 +32618,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -31269,7 +32627,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LONG BODY MINI OPAL",
@@ -31292,7 +32651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "GRATINGS 6X6 HEAVY MAT",
@@ -31315,7 +32675,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "SUMO BOLT 6.5 RACK BOLT",
@@ -31338,7 +32699,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "VLOC - 1014 P ONE CLOSET",
@@ -31361,7 +32723,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "NOTTO ANGELES GREY 4X2 STANZ",
@@ -31375,7 +32738,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -31384,7 +32747,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NOTTO ELITE SATUARIO 4X2 STANZA",
@@ -31398,7 +32762,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -31407,7 +32771,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SINK COCK SLEEK",
@@ -31430,7 +32795,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "BIB COCK FUSION",
@@ -31453,7 +32819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "VLTB -5004 VARLET TABLE TOP BASIN LINCO",
@@ -31476,7 +32843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO"
+      "seller": "LINCO",
+      "hsnCode": ""
     },
     {
       "name": "HVTB -5019 TABLE TOP BASIN LINCO",
@@ -31499,7 +32867,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "LEVELING QUIT EQALIZER WAGE (50 QTY)",
@@ -31522,7 +32891,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "K K HM GLASS 24X18 STEEL",
@@ -31545,7 +32915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "K K ASSOCIATES"
+      "seller": "K K ASSOCIATES",
+      "hsnCode": ""
     },
     {
       "name": "K K HM GLASS 24X18 BLACK",
@@ -31568,7 +32939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "K K ASSOCIATES"
+      "seller": "K K ASSOCIATES",
+      "hsnCode": ""
     },
     {
       "name": "K K HM GLASS 24X18 GOLD",
@@ -31591,7 +32963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "K K ASSOCIATES"
+      "seller": "K K ASSOCIATES",
+      "hsnCode": ""
     },
     {
       "name": "K K SHOWER 6X6 ULTRA",
@@ -31614,7 +32987,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "K K ASSOCIATES"
+      "seller": "K K ASSOCIATES",
+      "hsnCode": ""
     },
     {
       "name": "K K SHOWER 6X6 CURVE",
@@ -31637,7 +33011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "K K ASSOCIATES"
+      "seller": "K K ASSOCIATES",
+      "hsnCode": ""
     },
     {
       "name": "K K WASTE COUPLING GLUDE",
@@ -31660,7 +33035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "K K ASSOCIATES"
+      "seller": "K K ASSOCIATES",
+      "hsnCode": ""
     },
     {
       "name": "LEVELING JACK NEXTO 2MM",
@@ -31683,7 +33059,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NARROW STONE STEP MURKY CLAY (JET BLACK)",
@@ -31697,7 +33074,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 1,
@@ -31706,7 +33083,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "NARROW CREMENCIA AZUL 4X2 STANZA",
@@ -31720,7 +33098,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -31729,7 +33107,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ASTILA 1383 2X2",
@@ -31743,7 +33122,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -31752,7 +33131,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 15006 D 18X12",
@@ -31766,7 +33146,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -31775,7 +33155,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 15006 L 18X12",
@@ -31789,7 +33170,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -31798,7 +33179,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 15006 HL2 18X12",
@@ -31812,7 +33194,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -31821,7 +33203,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 15006 F 12X12",
@@ -31835,7 +33218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 9,
       "length": 1,
       "breadth": 1,
@@ -31844,7 +33227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 15012 D 18X12",
@@ -31858,7 +33242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -31867,7 +33251,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 15012 L 18X12",
@@ -31881,7 +33266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -31890,7 +33275,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 15012 HL2 18X12",
@@ -31904,7 +33290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -31913,7 +33299,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 4074 L 18X12",
@@ -31927,7 +33314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -31936,7 +33323,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 15012 F 12X12",
@@ -31950,7 +33338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 9,
       "length": 1,
       "breadth": 1,
@@ -31959,7 +33347,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AVENGER 4074 HL2 18X12",
@@ -31973,7 +33362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -31982,7 +33371,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 2",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON HEALTH FAUCET FUSION",
@@ -32005,7 +33395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TELEPHONIC SHOWER FISH TYPE",
@@ -32028,7 +33419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LEAF SINK COCK LS",
@@ -32051,7 +33443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY NEO SERPENGENTA NERO 4X2",
@@ -32065,7 +33458,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -32074,7 +33467,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY MAGNUS WHITE 4X2",
@@ -32088,7 +33482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -32097,7 +33491,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY MAGNUS SLATE GREY 4X2",
@@ -32111,7 +33506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -32120,7 +33515,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY MATRIX WHITE 80X80",
@@ -32134,7 +33530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 2.65,
       "breadth": 2.65,
@@ -32143,7 +33539,8 @@ const data = {
       "actLength": 6.885,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY MATRIX BEIGE 80X80",
@@ -32157,7 +33554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 2.65,
       "breadth": 2.65,
@@ -32166,7 +33563,8 @@ const data = {
       "actLength": 6.885,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY HEXON GREY 40X40",
@@ -32180,7 +33578,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -32189,7 +33587,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY KAPPA GREY NATURAL 40X40",
@@ -32203,7 +33602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -32212,7 +33611,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY TARRACO GRIS 40X40",
@@ -32226,7 +33626,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -32235,7 +33635,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "WATERTEC TAP PILLAR SQUARE WTC",
@@ -32258,7 +33659,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "WATERTEC"
+      "seller": "WATERTEC",
+      "hsnCode": ""
     },
     {
       "name": "WATERTEC TAP WALL SINK SQUARE",
@@ -32281,7 +33683,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "WATERTEC"
+      "seller": "WATERTEC",
+      "hsnCode": ""
     },
     {
       "name": "WATERTEC HEALTH FAUCET ICON PREMIUM",
@@ -32304,7 +33707,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "WATERTEC"
+      "seller": "WATERTEC",
+      "hsnCode": ""
     },
     {
       "name": "WATERTEC HEALTH FAUCET ICON BLACK 1MTR",
@@ -32327,7 +33731,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "WATERTEC"
+      "seller": "WATERTEC",
+      "hsnCode": ""
     },
     {
       "name": "STONIS MONICO 12 STANZA 2X1",
@@ -32341,7 +33746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -32350,7 +33755,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "STONIS LATVIA 09 2X1 STANZA",
@@ -32364,7 +33770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -32373,7 +33779,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ROSTO 8355 2X1 STANZA",
@@ -32387,7 +33794,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -32396,7 +33803,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ROSTO 8202 2X1 STANZ",
@@ -32410,7 +33818,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -32419,7 +33827,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SANARIA PLAINWHITE 4X2 STANZA",
@@ -32433,7 +33842,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -32442,7 +33851,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "VLOC 1005 SIPHONIC 12\" LINCO",
@@ -32460,12 +33870,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "WATERTEC TAP BIB 2 WAY",
@@ -32488,7 +33899,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "WATERTEC"
+      "seller": "WATERTEC",
+      "hsnCode": ""
     },
     {
       "name": "MYSORE 303 2X1 STANZA",
@@ -32502,7 +33914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -32511,7 +33923,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SANVIS 102 4X2 CAPITOL",
@@ -32525,7 +33938,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -32534,7 +33947,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SANVIS 164 4X2 CAPITOL",
@@ -32548,7 +33962,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -32557,7 +33971,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SANVIS 192 4X2 CAPITOL",
@@ -32571,7 +33986,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -32580,7 +33995,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1006 L 2X1",
@@ -32594,7 +34010,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -32603,7 +34019,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "L",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "TOSCANA 1006 D 2X1",
@@ -32617,7 +34034,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -32626,7 +34043,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "D",
-      "seller": "TOSCANA"
+      "seller": "TOSCANA",
+      "hsnCode": ""
     },
     {
       "name": "CLENZA T C 1 LTR",
@@ -32644,15 +34062,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 LTR",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
-      "name": "SUPERSET 300 ML LATICREATE",
+      "name": "SUPERSET  IWP 200ML WATERPROOF LATECREATE",
       "item_id": "K1558",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -32667,12 +34086,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "300 ML",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATICREATE CLENZA EG 1 LTR",
@@ -32690,12 +34110,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 LTR",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATICREATE GROUT ADMIX PLUS 400 ML 1776",
@@ -32713,12 +34134,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "400 ML",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATICREATE L 190SEALER 1 LTR",
@@ -32736,12 +34158,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 LTR",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATICREATE CLENZA TS 450 ML",
@@ -32759,12 +34182,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "450 ML",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "RTC ABS SHOWER SET SUNWAY",
@@ -32787,7 +34211,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET TUBE 1 1/2 MTR SUNWAY",
@@ -32810,7 +34235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "ITALLY BRASS TAP SUNWAY",
@@ -32833,7 +34259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET ABS SUNWAY",
@@ -32856,7 +34283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "ANGLE COCK 2 IN 1 SOLO SUNWAY",
@@ -32879,7 +34307,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX 3 D - 4524 4X2",
@@ -32893,7 +34322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -32902,7 +34331,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "L - TILE ROSE WOOD 4X2 STANZA",
@@ -32916,7 +34346,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -32925,7 +34355,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "CERA CAPSTAN MINI S 300 -5D (S1013217)",
@@ -32943,12 +34374,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA CHASER TABLE TOP BASIN (S2020168)",
@@ -32971,7 +34403,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA COLLAGE W/B (S2040170)",
@@ -32994,7 +34427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA CATTLER S220 EWC (S1013208)",
@@ -33012,12 +34446,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA COLLAGE HALF PEDESTAL (2090134)",
@@ -33040,7 +34475,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DALENA S 300",
@@ -33058,12 +34494,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ECO FLUSH S 300",
@@ -33081,12 +34518,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON FLORA P TRAP",
@@ -33109,7 +34547,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON WAVE S TRAP 220 MM",
@@ -33132,7 +34571,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON SYMPHONY S 300 MM",
@@ -33150,12 +34590,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON CROWN S 300 MM",
@@ -33173,12 +34614,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "AGL AZULATE AQUA 2X2",
@@ -33192,7 +34634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33201,7 +34643,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL AZULATE BLUE 2X2",
@@ -33215,7 +34658,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33224,7 +34667,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL DRIFT GRIGIO 2X2",
@@ -33238,7 +34682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33247,7 +34691,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL DRIFT GRIS 2X2",
@@ -33261,7 +34706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33270,7 +34715,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL CHEVRON OAK 2X2",
@@ -33284,7 +34730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33293,7 +34739,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL WOOD FUSION 2X2",
@@ -33307,7 +34754,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33316,7 +34763,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL HARMONY BLACK 2X2",
@@ -33330,7 +34778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33339,7 +34787,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL LINIOR GRIS 2X2",
@@ -33353,7 +34802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33362,7 +34811,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL LINIOR GRIS DECOR 2X2",
@@ -33376,7 +34826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33385,7 +34835,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL BOSCHI BROWN 2X2",
@@ -33399,7 +34850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33408,7 +34859,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL GREENHEART BROWN 2X2",
@@ -33422,7 +34874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33431,7 +34883,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL SUPERIO TAN DECOR (2X2)",
@@ -33445,7 +34898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -33454,7 +34907,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE 325 ADHESIVE GREY 20KG",
@@ -33472,12 +34926,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE 325 ADHESIVE WHITE 20KG",
@@ -33495,12 +34950,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "ZIBON 8163 2X1 CLADDING STANZA",
@@ -33514,7 +34970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -33523,7 +34979,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ZIBON 4213 18X12 STANZA",
@@ -33537,7 +34994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1.5,
       "breadth": 1,
@@ -33546,7 +35003,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON PEARL TALL BODY PILLAR COCK",
@@ -33569,7 +35027,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON WASTE COUPLING H/T FLAT",
@@ -33592,7 +35051,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WASTE COUPLER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO PILLAR COCK LONG 6\"",
@@ -33615,7 +35075,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO TALL BODY PILLAR COCK",
@@ -33638,7 +35099,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO SINK COCK STEEL SPOUT",
@@ -33661,7 +35123,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO S/C FLEXIBLE SPOUT NORMAL",
@@ -33684,7 +35147,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SHOWER I SQUARE 6X6",
@@ -33707,7 +35171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SHOWER ARM SLIM 15\"",
@@ -33730,7 +35195,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "MIRROR CABINET WTC",
@@ -33753,7 +35219,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "WATERTEC"
+      "seller": "WATERTEC",
+      "hsnCode": ""
     },
     {
       "name": "SELZER PLASTIC WATER SEWAGE TANK 25 (TERRA COTTA)",
@@ -33776,7 +35243,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "SELZER HDP E PLASTIC SEWAGE TANK 25-30 (BLACK)",
@@ -33799,7 +35267,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "SELZER PLASTIC WATER TANK BLUE SCPL 1000 LTR",
@@ -33822,7 +35291,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON CLASSIC LONG BODY",
@@ -33845,7 +35315,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON CLASSIC PILLAR COCK",
@@ -33868,7 +35339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DULUX PILLAR COCK",
@@ -33891,7 +35363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DULUX SINK COCK",
@@ -33914,7 +35387,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LEAF PILLAR COCK LONG",
@@ -33937,7 +35411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO SWAN NECK NUT SSP",
@@ -33960,7 +35435,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SQUARE JALLI 5\" GRATINGS",
@@ -33983,7 +35459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DULUX LONG BODY",
@@ -34006,7 +35483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TRIO PILLAR COCK",
@@ -34029,7 +35507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "SOLOGRESS DAYNA 2X2",
@@ -34043,7 +35522,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34052,7 +35531,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOGRESS GALAXY BLUE 2X2",
@@ -34066,7 +35546,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34075,7 +35555,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOGRESS IVORY 2X2 NEW",
@@ -34089,7 +35570,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34098,7 +35579,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOGRESS SOLOWOOD 2X2",
@@ -34112,7 +35594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34121,7 +35603,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LANDGARD 7009 MATT 2X2",
@@ -34135,7 +35618,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34144,7 +35627,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 5009 2X2",
@@ -34158,7 +35642,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34167,7 +35651,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 5010 2X2",
@@ -34181,7 +35666,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34190,7 +35675,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 8030 2X2",
@@ -34204,7 +35690,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34213,7 +35699,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GLEXERO LEXOLITE 8043 2X2",
@@ -34227,7 +35714,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -34236,7 +35723,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "SOLOREX LEMON YELLOW DARK 4X2",
@@ -34250,7 +35738,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -34259,7 +35747,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "SOLOREX"
+      "seller": "SOLOREX",
+      "hsnCode": ""
     },
     {
       "name": "SOLOREX RUBY 4X2",
@@ -34273,7 +35762,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -34282,7 +35771,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "SOLOREX"
+      "seller": "SOLOREX",
+      "hsnCode": ""
     },
     {
       "name": "SOLOREX ROYAL BLUE DARK 4X2",
@@ -34296,7 +35786,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -34305,7 +35795,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "SOLOREX"
+      "seller": "SOLOREX",
+      "hsnCode": ""
     },
     {
       "name": "VLOC-1005 P TRAP ONE PCE CLOSET",
@@ -34328,7 +35819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLOC-1002 ONE PCE SIPHONIC CLOSET 12\"",
@@ -34346,12 +35838,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "CAPACITI S 220 ONE PIECE EWC CERA (S1013209)",
@@ -34369,12 +35862,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CIMBA RIMLESS S 300 ONE P C EWC CERA (1013218)",
@@ -34392,12 +35886,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CORNET 22 \" WASH BASIN CERA (S2040103)",
@@ -34420,7 +35915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET SQUARE HANDLE (251801 AGL",
@@ -34443,7 +35939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER ARM 15' SS AGL (191621)",
@@ -34466,7 +35963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "SUPER BLACK DARK 2FT",
@@ -34482,14 +35980,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "309.5X76",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "STANZA MAGNUS WHITE 4X2",
@@ -34503,7 +36002,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -34512,7 +36011,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ECO4-101 NAVKAR ECO PILLAR COCK",
@@ -34535,7 +36035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "FLO3-104 NAVKAR FLT BIG PILLAR COCK",
@@ -34558,7 +36059,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "FLO3-117 NAVKAR FLT LONG BODY",
@@ -34581,7 +36083,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "FL03-135 NAVKAR FLT SINKCOCK",
@@ -34604,7 +36107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "NAVKAR CUBE PILLAR COCK",
@@ -34627,7 +36131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "NAVKAR CUBE LONGBODY",
@@ -34650,7 +36155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "NAVKAR CUBE SINK COCK",
@@ -34673,7 +36179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "HVPAV-001 HELVIT PROJECT ANGLE COCK",
@@ -34696,7 +36203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "FU02-117 NAVKAR FUSION LONG BODY",
@@ -34719,7 +36227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "FU02-135 NAVKAR FUSION SINK COCK",
@@ -34742,7 +36251,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SOAP DISH ROUND",
@@ -34765,7 +36275,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "DESIRE S/C FLEXIBLE SPOUT COLOUR",
@@ -34788,7 +36299,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "HEALTH FAUCET LUXES RUBICON",
@@ -34811,7 +36323,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FAUCET",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "DESIRE WALL MIXER BEND",
@@ -34834,7 +36347,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "LINO WALL MIXER BEND RUBICON",
@@ -34857,7 +36371,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "DESIRE SINK MIXER RUBICON",
@@ -34880,7 +36395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "NAPKIN ROD SQUARE RUBICON",
@@ -34903,7 +36419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "TOWEL RING ROUND RUBICON",
@@ -34926,7 +36443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL RING",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "CP FLANGE DOOM RUBICON",
@@ -34949,7 +36467,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "WALL HUNG WASH BASIN BOLT RUBICON",
@@ -34972,7 +36491,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "TOWEL ROD SQUARE 24 RUBICON",
@@ -34995,7 +36515,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL ROD",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "LIVOXY 1092 2X2 STANZA",
@@ -35009,7 +36530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35018,7 +36539,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "STANZA DYNA CREMA 1600X800",
@@ -35032,7 +36554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -35041,7 +36563,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SHOWER ULTRA SLIM 6X6",
@@ -35064,7 +36587,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "SHOWER ULTRA SLIM 8X8 RUBICON",
@@ -35087,7 +36611,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX CENT BLACK 4X2",
@@ -35101,7 +36626,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -35110,7 +36635,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PANARA BLOCK BLACK 2X1 CLADDING",
@@ -35124,7 +36650,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 1,
@@ -35133,7 +36659,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PANARA BRICK STONE GRAPHITE 2X1 CLADDING",
@@ -35147,7 +36674,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 1,
@@ -35156,7 +36683,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PANARA LATERITE BROWN 2X1",
@@ -35170,7 +36698,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 1,
@@ -35179,7 +36707,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PANARA MARMOTH GRAPHITE 2X1",
@@ -35193,7 +36722,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 1,
@@ -35202,7 +36731,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PANARA OLD AGE OCRE 2X1",
@@ -35216,7 +36746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 1,
@@ -35225,7 +36755,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PANARA HIGH BRICK MODA 2X1 CLADDING",
@@ -35239,7 +36770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 1,
@@ -35248,7 +36779,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "J333 BLACK GRANITE CABINET STYLX",
@@ -35271,7 +36803,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "STEP TILE CEL MAGIC ALMOND 1 MTR",
@@ -35285,7 +36818,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 3.25,
       "breadth": 1,
@@ -35294,7 +36827,8 @@ const data = {
       "actLength": 3.23,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "SONI FLOORAMIC"
+      "seller": "SONI FLOORAMIC",
+      "hsnCode": ""
     },
     {
       "name": "AGL HARLEY GRIGIO 2X2",
@@ -35308,7 +36842,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35317,7 +36851,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL HARLEY CLOUDY 2X2",
@@ -35331,7 +36866,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35340,7 +36875,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ESPERIO BROWN 2X2",
@@ -35354,7 +36890,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35363,7 +36899,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "AGL ESPERIO BEIGE 2X2",
@@ -35377,7 +36914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35386,7 +36923,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "AGL"
+      "seller": "AGL",
+      "hsnCode": ""
     },
     {
       "name": "NEXTO SPACER 3 MM",
@@ -35409,7 +36947,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": "NEXTO MARKETING"
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "TILES BEEDING",
@@ -35432,7 +36971,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TILE BEEDING",
-      "seller": "NEXTO MARKETING"
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "MIRO COPPER GLITTER POWDER 100GM (NEXTO MARKETING)",
@@ -35450,12 +36990,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "100 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "NEXTO MARKETING"
+      "type": "GLITTER",
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "MIRO SILVER GLITTER POWDER 100 GM (NEXTO MARKETING)",
@@ -35473,12 +37014,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "100 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "NEXTO MARKETING"
+      "type": "GLITTER",
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "MIRO GOLD GLITTER POWDER 100 GM (NEXTO MARKETING)",
@@ -35496,12 +37038,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "100 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "NEXTO MARKETING"
+      "type": "GLITTER",
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "MIRO BLUE GLITTER POWDER 100 GM (NEXTO MARKETING)",
@@ -35519,12 +37062,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "100 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "NEXTO MARKETING"
+      "type": "GLITTER",
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "NESTER ELITE SATUARIO GOLD 4X2",
@@ -35538,7 +37082,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -35547,7 +37091,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "HVTB-5014 MBLK TABLE TOP BASIN",
@@ -35570,7 +37115,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB-5014 MGRY TABLE TOP BASIN",
@@ -35593,7 +37139,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB-5014 MGRN TABLE TOP BASIN",
@@ -35616,7 +37163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB-5005 MBLK TABLE TOP BASIN",
@@ -35639,7 +37187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "CONNECTION TUBE UTC 18''",
@@ -35662,7 +37211,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CONNECTION TUBE",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "CONNECTION TUBE UTC 24\"\"",
@@ -35685,7 +37235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CONNECTION TUBE",
-      "seller": "UNITED TRADIN COMPANY"
+      "seller": "UNITED TRADIN COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "SP100 MIDNIGHT BLACK 5KG",
@@ -35703,12 +37254,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "G 10 GLASS SHELF 300X125 MM ASTRAL",
@@ -35731,7 +37283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHELF",
-      "seller": "ORBITAL ENTERPRISES"
+      "seller": "ORBITAL ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "G11 SOAP DISPENSER",
@@ -35754,7 +37307,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "ORBITAL ENTERPRISES"
+      "seller": "ORBITAL ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "CARVING VERSACE DARK 4X2 YEM PEE",
@@ -35768,7 +37322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -35777,7 +37331,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "CARVING VERSACE BROWN 4X2 YEM PEE",
@@ -35791,7 +37346,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -35800,7 +37355,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ONE PC DALENA OMNI SUITE S 220MM",
@@ -35818,12 +37374,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SHOWER CUBIC",
@@ -35846,7 +37403,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SHOWER ARM SLIM 18''",
@@ -35869,7 +37427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "TOWEL RING SQUARE RUBICON",
@@ -35892,7 +37451,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL RING",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "8019 CERA EMPIRE 2X2 CARVING",
@@ -35906,7 +37466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35915,7 +37475,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "8026 CERA EMPIRE 2X2 CARVING",
@@ -35929,7 +37490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35938,7 +37499,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "5071 CERA EMPIRE 2X2 PUNCH FINISH",
@@ -35952,7 +37514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35961,7 +37523,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "5072 CERA EMPIRE 2X2 PUNCH FINISH",
@@ -35975,7 +37538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -35984,7 +37547,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "5073 CERA EMPIRE 2X2 PUNCH FINISH",
@@ -35998,7 +37562,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36007,7 +37571,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "5177 LANFORD 2X2 PUNCH FINISH",
@@ -36021,7 +37586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36030,7 +37595,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "5236 LANFORD 2X2 PUNCH FINISH",
@@ -36044,7 +37610,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36053,7 +37619,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "151 CERA EMPIRE 2X2 SATIN FINISH",
@@ -36067,7 +37634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36076,7 +37643,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "169 CERA EMPIRE 2X2 SATIN FINISH",
@@ -36090,7 +37658,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36099,7 +37667,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "4519 CERA EMPIRE 2X2 SATIN FINISH",
@@ -36113,7 +37682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36122,7 +37691,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED 1200X800",
@@ -36136,7 +37706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2.625,
@@ -36145,7 +37715,8 @@ const data = {
       "actLength": 10.33,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VL W/B 6010 WASH BASIN LINCO",
@@ -36168,7 +37739,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLOC-1004 ONE PCE SIPHONIC CLOSET 12''",
@@ -36186,12 +37758,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VERA BRECCIA PARADISO 1600X800",
@@ -36205,7 +37778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -36214,7 +37787,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VERA COSTA BEIGE 1600X800",
@@ -36228,7 +37802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -36237,7 +37811,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VERA PIETRA GREY 1600X800",
@@ -36251,7 +37826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -36260,7 +37835,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VERA SATUARIO ALMOND 1600X800",
@@ -36274,7 +37850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -36283,7 +37859,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VERA VELYS CREMA 1600X800",
@@ -36297,7 +37874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -36306,7 +37883,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "VERA MAYSTONE CREMA MATT 1600X800",
@@ -36320,7 +37898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 5.3,
       "breadth": 2.642,
@@ -36329,7 +37907,8 @@ const data = {
       "actLength": 13.775,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CLAYSTONE CARVING DEVIANT GREY 4X2",
@@ -36343,7 +37922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36352,7 +37931,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CLAYSTONE CARVING SATUARIO FANTASTICO 4X2",
@@ -36366,7 +37946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36375,7 +37955,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CLAYSTONE INFINIA AGASTA BLUE 4X2",
@@ -36389,7 +37970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36398,7 +37979,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CLAYSTONE INFINIA ANTICO GREY 4X2",
@@ -36412,7 +37994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36421,7 +38003,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CLAYSTONE INFINIA INFINIX WHITE 4X2",
@@ -36435,7 +38018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36444,7 +38027,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CLAYSTONE INFINIA SPENCER NATURAL 4X2",
@@ -36458,7 +38042,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36467,7 +38051,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRESART MARVY PEARL 4X2",
@@ -36481,7 +38066,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36490,7 +38075,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "GRESART CERAMICS"
+      "seller": "GRESART CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "GRESART OXIDUM SAFARI 4X2",
@@ -36504,7 +38090,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36513,7 +38099,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "GRESART CERAMICS"
+      "seller": "GRESART CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "GRESART ASPEN GUN 4X2",
@@ -36527,7 +38114,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36536,7 +38123,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "GRESART CERAMICS"
+      "seller": "GRESART CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "GRESART ASTORIA BLUE 4X2",
@@ -36550,7 +38138,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36559,7 +38147,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "GRESART CERAMICS"
+      "seller": "GRESART CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "GRESART AUROBICO CREMA 4X2",
@@ -36573,7 +38162,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36582,7 +38171,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "GRESART CERAMICS"
+      "seller": "GRESART CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "GRESART GLORIA WHITE 4X2",
@@ -36596,7 +38186,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36605,7 +38195,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "GRESART CERAMICS"
+      "seller": "GRESART CERAMICS",
+      "hsnCode": ""
     },
     {
       "name": "ALINTA 111 NERO(WAVES) NANO 2X2",
@@ -36619,7 +38210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36628,7 +38219,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "MIRROR 16X18 (VISMAYA)",
@@ -36651,7 +38243,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "MIRROR",
-      "seller": "VISMAYA"
+      "seller": "VISMAYA",
+      "hsnCode": ""
     },
     {
       "name": "MIRROR 24X18 (VISMAYA)",
@@ -36674,7 +38267,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "MIRROR",
-      "seller": "VISMAYA"
+      "seller": "VISMAYA",
+      "hsnCode": ""
     },
     {
       "name": "SP 100 AB RESIN KIT .25KG",
@@ -36692,12 +38286,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "25 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "F P SAUTERN 0.75 KG 718",
@@ -36715,12 +38310,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "0.75 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "AARAV CAPSULE IVORY 1X1",
@@ -36734,7 +38330,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -36743,7 +38339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "AARAV CAPSULE TERACOTTA 1X1",
@@ -36757,7 +38354,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -36766,7 +38363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ICE BLACK GRANITE",
@@ -36782,14 +38380,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "STEEL GREY LAPOTHRA",
@@ -36805,14 +38404,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "298X99",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BALSAMIA GREY 4X2 CARVING YEMPEE",
@@ -36826,7 +38426,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -36835,7 +38435,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ELITE ROSSO 2X2",
@@ -36849,7 +38450,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36858,7 +38459,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "SOMANY ELITE BLANCO 2X2",
@@ -36872,7 +38474,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -36881,7 +38483,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SOMANY"
+      "seller": "SOMANY",
+      "hsnCode": ""
     },
     {
       "name": "NEXTO KIT EQUALIZER CLIP3MM",
@@ -36904,7 +38507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": "NEXTO MARKETING"
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "NEXTO LEVELING QUIT EQUALIZER YELLOW WAGE",
@@ -36927,7 +38531,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": "NEXTO MARKETING"
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "CIBELLA CAPSULE TERRACOTTA YEMPEE",
@@ -36941,7 +38546,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -36950,7 +38555,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE ALPHINE BLUE 500GM",
@@ -36968,12 +38574,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE J.F SLATE GREY 500GM",
@@ -36991,12 +38598,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "37X18X8 BHARAT SINK GLOSSY",
@@ -37019,7 +38627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "37X18X10 BHARAT SINK HAND MADE",
@@ -37042,7 +38651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "VLWB 6011 W/B LINCO",
@@ -37065,7 +38675,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB-5006 M TABLE TOP BASIN",
@@ -37088,7 +38699,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB-5005 TABLE TOP BASIN WHITE",
@@ -37111,7 +38723,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB 5010 TABLE TOP BASIN",
@@ -37134,7 +38747,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB 5009 TABLE TOP BASIN",
@@ -37157,7 +38771,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB 5011 TABLE TOP BASIN",
@@ -37180,7 +38795,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB-5007 M TABLE TOP BASIN",
@@ -37203,7 +38819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TELEPHONIC SHOWER CUBIX",
@@ -37226,7 +38843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES 1125 D 18X12",
@@ -37240,7 +38858,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37249,7 +38867,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES 1125 L 18X12",
@@ -37263,7 +38882,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37272,7 +38891,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES 1125 HL 5 18X12",
@@ -37286,7 +38906,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37295,7 +38915,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 5",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES 1125 D FLOOR 300X300",
@@ -37309,7 +38930,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -37318,7 +38939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES DIAMOND GREY D 18X12",
@@ -37332,7 +38954,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37341,7 +38963,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES DIAMOND BIANCO (L) 18X12",
@@ -37355,7 +38978,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37364,7 +38987,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES DIAMOND BIANCO HL1 18X12",
@@ -37378,7 +39002,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37387,7 +39011,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES DIAMOND D F 300X300",
@@ -37401,7 +39026,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -37410,7 +39035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES 1356 D 18X12",
@@ -37424,7 +39050,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37433,7 +39059,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES 1356 HL6 18X12",
@@ -37447,7 +39074,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37456,7 +39083,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 6",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES 1356 L 18X12",
@@ -37470,7 +39098,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -37479,7 +39107,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES 1356 DF 300X300",
@@ -37493,7 +39122,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -37502,7 +39131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "D FLOOR",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SHOWER ULTRA SLIM 6X6 (CHRY)",
@@ -37525,7 +39155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SHOWER ARM SLIM 12 '' (CHRY)",
@@ -37548,7 +39179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER ARM",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SHOWER 1 SQUARE 8X8 (CHRY)",
@@ -37571,7 +39203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DESIRE LONG BODY (CHRY)",
@@ -37594,7 +39227,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO LONG BODY (CHRY)",
@@ -37617,7 +39251,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LEAF SINK COCK LS (CHRY)",
@@ -37640,7 +39275,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DULUX SINK COCK (CHRY)",
@@ -37663,7 +39299,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO SINK COCK STEEL SPOUT (CHRY)",
@@ -37686,7 +39323,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SINK COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON PEARL SWAN NECK (CHRY)",
@@ -37709,7 +39347,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO SWAN NECK NUT SSP (CHRY)",
@@ -37732,7 +39371,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LEAF PILLAR COCK LONG (CHRY)",
@@ -37755,7 +39395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DESIRE PILLAR COCK (CHRY)",
@@ -37778,7 +39419,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PILLAR COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TURBO ANGLE COCK CHRY",
@@ -37801,7 +39443,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LEAF ANGLE COCK CHRY",
@@ -37824,7 +39467,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ANGLE COCK",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON ROUND ALTIS LONG BODY (CHRY)",
@@ -37847,7 +39491,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LEAF LONG BODY (CHRY)",
@@ -37870,7 +39515,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TOWEL ROD SQUARE (CHRY)",
@@ -37893,7 +39539,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL ROD",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TOWEL ROD ROUND (CHRY)",
@@ -37916,7 +39563,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL ROD",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON DOUBLE SOAP DISH ROUND (CHRY)",
@@ -37939,7 +39587,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SOAP DISH ROUND (CHRY)",
@@ -37962,7 +39611,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TOWEL RING ROUND (CHRY)",
@@ -37985,7 +39635,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL RING",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TUMBLER HOLDER ROUND (CHRY)",
@@ -38008,7 +39659,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON NAPKIN ROD SRUARE (CHRY)",
@@ -38031,7 +39683,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TOWEL RING SQUARE (CHRY)",
@@ -38054,7 +39707,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL RING",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SOAP DISH WITH BRUSH HOLDER ROUND (CHRY)",
@@ -38077,7 +39731,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SOAP DISH",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON NAPKIN ROD ROUND (CHRY)",
@@ -38100,7 +39755,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "ROTTO AMAZON BLUE 4X2",
@@ -38114,7 +39770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38123,7 +39779,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX CHROMA AZUL 4X2",
@@ -38137,7 +39794,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38146,7 +39803,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX MARFIL FABLIGHT 4X2",
@@ -38160,7 +39818,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38169,7 +39827,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ICOLUX NEXA GREEN 4X2",
@@ -38183,7 +39842,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38192,7 +39851,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO S/C FLEXIBLE SPOUT COLOUR (CHRY)",
@@ -38215,7 +39875,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "HVOC-1011C ONE PCE SIPHONIC CLOSET 12' (CHRY)",
@@ -38233,12 +39894,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "3G CABINET 3001 F 32'' WOOD & WHITE VELLE",
@@ -38261,7 +39923,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "3G CABINET 3001F 32'' WOOD &WHITE (CHRY)",
@@ -38284,7 +39947,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "3G CABINET 3007 F BLACK &WHITE FULL SET VELLE",
@@ -38307,7 +39971,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "3G CABINET 3007F BLACK & WHITE VELLE (CHRY)",
@@ -38330,7 +39995,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "3G CABINET 3019 LAMINATED VELLE",
@@ -38353,7 +40019,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "3G CABINET 3019 LAMINATED VELLE (CHRY)",
@@ -38376,7 +40043,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HVOC-1012 C ONE PCE SIPHONIC CLOSET 12 ' (CHRY)",
@@ -38394,12 +40062,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVOC-1010 ONE PCE CLOSET 12'' (CHRY)",
@@ -38417,12 +40086,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVOC-1004 ONE PCE SIPHONIC CLOSET 12' (CHRY)",
@@ -38440,12 +40110,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "RAK WONDER JAZZY WHITE 4X2",
@@ -38459,7 +40130,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38468,7 +40139,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FULLSET FM BT 305 CABINET BLACK STYLX",
@@ -38491,7 +40163,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "FULL SET WM BT 205 CABINET RED STYLX",
@@ -38514,7 +40187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "T31 FS CABINET BLUE STYLX",
@@ -38537,7 +40211,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "FULLSET WM BT 226 BLUE CABINET STYLX",
@@ -38560,7 +40235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "FULLSET WM BT205 CABINET GREY (CHRY)",
@@ -38583,7 +40259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "FULLSET WM BT226 CABINET BLUE (CHRY)",
@@ -38606,7 +40283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "STYLX"
+      "seller": "STYLX",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON INDIO WHITE 6X4",
@@ -38620,7 +40298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38629,7 +40307,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "",
-      "seller": "PRISM JOHNSON"
+      "seller": "PRISM JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON BRECCIA GOLD 6X4",
@@ -38643,7 +40322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38652,7 +40331,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "",
-      "seller": "PRISM JOHNSON"
+      "seller": "PRISM JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON DYNO BEIGE 6X4",
@@ -38666,7 +40346,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38675,7 +40355,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "",
-      "seller": "PRISM JOHNSON"
+      "seller": "PRISM JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ONUS LAUREL 6X4",
@@ -38689,7 +40370,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38698,7 +40379,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "",
-      "seller": "PRISM JOHNSON"
+      "seller": "PRISM JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON TANISHQ WHITE ELSARC 6X4 (CHRY)",
@@ -38712,7 +40394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38721,7 +40403,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "",
-      "seller": "PRISM JOHNSON"
+      "seller": "PRISM JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ABSOLUTE WHITE 800X2400 (CHRY)",
@@ -38735,7 +40418,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 8,
       "breadth": 2.625,
@@ -38744,7 +40427,8 @@ const data = {
       "actLength": 20.66,
       "actBreadth": 1,
       "type": "",
-      "seller": "PRISM JOHNSON"
+      "seller": "PRISM JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON ABSOLUTE BLACK 800X2400 (CHRY)",
@@ -38758,7 +40442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 8,
       "breadth": 2.625,
@@ -38767,7 +40451,8 @@ const data = {
       "actLength": 20.66,
       "actBreadth": 1,
       "type": "",
-      "seller": "PRISM JOHNSON"
+      "seller": "PRISM JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON OSLO BLUE 800X2400",
@@ -38781,7 +40466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 8,
       "breadth": 2.625,
@@ -38790,7 +40475,8 @@ const data = {
       "actLength": 20.66,
       "actBreadth": 1,
       "type": "",
-      "seller": "PRISM JOHNSON"
+      "seller": "PRISM JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "JOHNSON CADET ONYX 6X4",
@@ -38804,7 +40490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38813,7 +40499,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "RAK BASSWOOD NATURAL 4X2",
@@ -38827,7 +40514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38836,7 +40523,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RAK BEACH WOOD BEIGE 4X2",
@@ -38850,7 +40538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38859,7 +40547,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RAK WONDER KINGSTON WHITE POLISH 4X2",
@@ -38873,7 +40562,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38882,7 +40571,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RAK WONDER KINGSTON WHITE POL 4X2 (CHRY)",
@@ -38896,7 +40586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -38905,7 +40595,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BLUEGRESS CARRARA WHITE BLUEZONE 6X4",
@@ -38919,7 +40610,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38928,7 +40619,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "BLUEZONE VITRIFIED PVT.LTD"
+      "seller": "BLUEZONE VITRIFIED PVT.LTD",
+      "hsnCode": ""
     },
     {
       "name": "BLUEGRESS CASTLE GREY BLUEZONE 6X4",
@@ -38942,7 +40634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38951,7 +40643,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "BLUEZONE VITRIFIED PVT.LTD"
+      "seller": "BLUEZONE VITRIFIED PVT.LTD",
+      "hsnCode": ""
     },
     {
       "name": "BLUEGRESS GRIETTA GOLD BLUEZONE 6X4",
@@ -38965,7 +40658,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38974,7 +40667,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "BLUEZONE VITRIFIED PVT.LTD"
+      "seller": "BLUEZONE VITRIFIED PVT.LTD",
+      "hsnCode": ""
     },
     {
       "name": "BLUEGRESS INSTANBUL ARGENTA BLUEZONE 6X4",
@@ -38988,7 +40682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -38997,7 +40691,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "BLUEZONE VITRIFIED PVT.LTD"
+      "seller": "BLUEZONE VITRIFIED PVT.LTD",
+      "hsnCode": ""
     },
     {
       "name": "BLUEGRESS MARFIL BEIGE BLUEZONE 6X4",
@@ -39011,7 +40706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 6,
       "breadth": 4,
@@ -39020,7 +40715,8 @@ const data = {
       "actLength": 23.25,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "BLUEZONE VITRIFIED PVT.LTD"
+      "seller": "BLUEZONE VITRIFIED PVT.LTD",
+      "hsnCode": ""
     },
     {
       "name": "37X18X10 BLACK D BOWL SINK BHARAT( CHRY)",
@@ -39043,7 +40739,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "24X18X10 BLACK SINK BHARAT( CHRY)",
@@ -39066,7 +40763,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "HM 24X18X10 SINK BHARAT( CHRY)",
@@ -39089,7 +40787,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO PRIDE AQUA 4X2 GLOSSY",
@@ -39103,7 +40802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -39112,7 +40811,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO CINEREA RIVER 4X2 GLOSSY",
@@ -39126,7 +40826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -39135,7 +40835,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO GLIZZ NATURAL 4X2 GLOSSY",
@@ -39149,7 +40850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -39158,7 +40859,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO MASE WHITE 4X2 GLOSSY",
@@ -39172,7 +40874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -39181,7 +40883,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO MELODY BIANCO 4X2 GLOSSY",
@@ -39195,7 +40898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -39204,7 +40907,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO 1006 2X2 MATT",
@@ -39218,7 +40922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -39227,7 +40931,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO 1028 2X2 MATT",
@@ -39241,7 +40946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -39250,7 +40955,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO 1031 2X2 MATT",
@@ -39264,7 +40970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -39273,7 +40979,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO 1042 2X2 MATT",
@@ -39287,7 +40994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -39296,7 +41003,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO 1059 2X2 MATT",
@@ -39310,7 +41018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -39319,7 +41027,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "T3121C JAZZ 2 IN 1 WALLMIXER WT BEND PIPE",
@@ -39342,7 +41051,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "S1731C OPTIMA RAIN SHOWER (ROUND)200 MM",
@@ -39365,7 +41075,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "T6006C DORIS LONG BIB COCK",
@@ -39388,7 +41099,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BIB COCK",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "S1740 C OPTIMA RAIN SHOWER (SQUARE) 200 MM",
@@ -39411,7 +41123,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "JOHNSON"
+      "seller": "JOHNSON",
+      "hsnCode": ""
     },
     {
       "name": "MAKE A TOUCH EWC P TRAP (REKHA)",
@@ -39434,7 +41147,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "SLIM FLUSH TANK 2006",
@@ -39457,7 +41171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "AEROLITE SEAT COVER 3003 (REKHA)",
@@ -39480,7 +41195,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "ABROAD WAVES NANO (REKHA) 2X2",
@@ -39494,7 +41210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -39503,7 +41219,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRES DIAMOND BIANCO HL4 18X12",
@@ -39517,7 +41234,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -39526,7 +41243,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-4",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "SHANKARA 407 4X2",
@@ -39540,7 +41258,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -39549,7 +41267,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "SHANKARA 573 4X2",
@@ -39563,7 +41282,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -39572,7 +41291,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "SHANKARA 505 4X2",
@@ -39586,7 +41306,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -39595,7 +41315,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "SHANKARA 506 4X2",
@@ -39609,7 +41330,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -39618,7 +41339,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "STONIS EL 52 (2X2)",
@@ -39632,7 +41354,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -39641,7 +41363,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "HVHB - 4012 HALF PEDESTAL BASIN LINCO",
@@ -39664,7 +41387,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVPD 4011 PEDESTAL",
@@ -39687,7 +41411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLWB-6018 WASH BASIN LINCO",
@@ -39710,7 +41435,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "HVTB - 5008 M TABLE TOP BASIN",
@@ -39733,7 +41459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TABLE TOP",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLHB- 4006 HALF PEDESTAL BASIN LINCO",
@@ -39756,7 +41483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLPD -4006 PEDESTAL",
@@ -39779,7 +41507,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PEDESTAL",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "1005 SEAT COVER",
@@ -39802,7 +41531,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SEAT COVER",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "RAK WONDER HAMILTON BIANCO POLISH 4X2",
@@ -39816,7 +41546,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 4,
       "breadth": 2,
@@ -39825,7 +41555,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RAK WONDER MADAGASKAR BROWN POLISH 4X2",
@@ -39839,7 +41570,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 4,
       "breadth": 2,
@@ -39848,7 +41579,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RAK WONDER MONTEGO DGY MATT 4X2",
@@ -39862,7 +41594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -39871,7 +41603,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "119 P TRAP VARLET LINCO",
@@ -39894,7 +41627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "LINCO"
+      "seller": "LINCO",
+      "hsnCode": ""
     },
     {
       "name": "N B T NOZZEL COCK",
@@ -39917,7 +41651,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "SUNWAY"
+      "seller": "SUNWAY",
+      "hsnCode": ""
     },
     {
       "name": "NANO 1050 2X2 SONI FLOORAMICS",
@@ -39931,7 +41666,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -39940,7 +41675,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": "SONI FLOORAMIC"
+      "seller": "SONI FLOORAMIC",
+      "hsnCode": ""
     },
     {
       "name": "EWC S TRAP ",
@@ -39963,7 +41699,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "EWC P TRAP",
@@ -39986,10 +41723,11 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
-      "name": "J.F INCA GOLD (YELLOW) LATRICATE 500",
+      "name": "J.F INCA GOLD (YELLOW) LATRICATE 500 GM",
       "item_id": "K1914",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -40004,12 +41742,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "type": "J FILLER",
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
       "name": "P 31 EXPOSED SL HFLOW CONCEALED AF310321",
@@ -40032,7 +41771,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "ORBITAL ENTERPRISES"
+      "seller": "ORBITAL ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "LEAF LONG BODY RUBICON",
@@ -40055,7 +41795,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON TOWEL ROD ROUND 24",
@@ -40078,7 +41819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TOWEL ROD",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "AF110101 G11 PILLAR COCK ASTRAL",
@@ -40101,7 +41843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "ORBITAL ENTERPRISES"
+      "seller": "ORBITAL ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "JACKSON WHITE 4X2 STANZA",
@@ -40115,7 +41858,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -40124,7 +41867,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "PRIZMA SATUARIO NEW 4X2 STANZA",
@@ -40138,7 +41882,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -40147,7 +41891,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "I-STONE CARPI-26 2X1 QUIVO",
@@ -40161,7 +41906,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -40170,7 +41915,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "I-STONE FORLI-14 2X1 QUIVO",
@@ -40184,7 +41930,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -40193,7 +41939,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "I-STONE FORLI-22 2X1",
@@ -40207,7 +41954,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -40216,7 +41963,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "I-STONE FORLI-23 2X1 QUIVO",
@@ -40230,7 +41978,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -40239,7 +41987,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "I-STONE NOVARA 12 2X1 QUIVO",
@@ -40253,7 +42002,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -40262,7 +42011,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "I-STONE ROME-15 2X1 QUIVO",
@@ -40276,7 +42026,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -40285,7 +42035,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "I-STONE TOLEDO -22 2X1 QUIVO",
@@ -40299,7 +42050,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -40308,7 +42059,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "I-STONE TRENTO-22 2X1 QUIVO",
@@ -40322,7 +42074,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -40331,7 +42083,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "VARLET 1003 300MM S TRAP WASHDOWN",
@@ -40354,7 +42107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "LINCO"
+      "seller": "LINCO",
+      "hsnCode": ""
     },
     {
       "name": "QUIVO 1879 MATT HD 2X2",
@@ -40368,7 +42122,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40377,7 +42131,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "QUIVO 1880 MATT HD 2X2",
@@ -40391,7 +42146,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40400,7 +42155,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "QUIVO 1881 MATT HD QUIVO 2X2",
@@ -40414,7 +42170,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40423,7 +42179,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "QUIVO 1887 MATT HD 2X2",
@@ -40437,7 +42194,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40446,7 +42203,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "QUIVO 1888 MATT HD 2X2",
@@ -40460,7 +42218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40469,7 +42227,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "QUIVO 1889 MATT HD QUIVO 2X2",
@@ -40483,7 +42242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40492,7 +42251,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "QUIVO"
+      "seller": "QUIVO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1077 2X2 SHANKARA",
@@ -40506,7 +42266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40515,7 +42275,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1154 2X2 SHANKARA",
@@ -40529,7 +42290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40538,7 +42299,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1159 2X2 SHANKARA",
@@ -40552,7 +42314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40561,7 +42323,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 6024 2X2 SHANKARA",
@@ -40575,7 +42338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40584,7 +42347,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 6025 2X2 SHANKARA",
@@ -40598,7 +42362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40607,7 +42371,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 8075 2X2 SHANKARA",
@@ -40621,7 +42386,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40630,7 +42395,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 9095 2X2 SHANKARA",
@@ -40644,7 +42410,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40653,7 +42419,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 9097 2X2 SHANKARA",
@@ -40667,7 +42434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40676,7 +42443,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 9098 2X2 SHANKARA",
@@ -40690,7 +42458,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40699,7 +42467,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 9143 2X2 SHANKARA",
@@ -40713,7 +42482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40722,7 +42491,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA9144 2X2 SHANKARA",
@@ -40736,7 +42506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40745,7 +42515,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 9145 2X2 SHANKARA",
@@ -40759,7 +42530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40768,7 +42539,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "WELLSO AMRON CREMA 4X2 SHANKARA",
@@ -40782,7 +42554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -40791,7 +42563,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "WELLSO BRESCIA 4X2 SHANKARA",
@@ -40805,7 +42578,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -40814,7 +42587,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "WELLSO NEXA BIANCO 4X2 SHANKARA",
@@ -40828,7 +42602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -40837,7 +42611,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "Z BLACK 4X2",
@@ -40851,7 +42626,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -40860,7 +42635,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "SHANKARA 159 4X2",
@@ -40874,7 +42650,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -40883,7 +42659,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "CARAMIA 2X2 NANO",
@@ -40897,7 +42674,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -40906,7 +42683,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": "GLOBAL TILES AND GRANITES"
+      "seller": "GLOBAL TILES AND GRANITES",
+      "hsnCode": ""
     },
     {
       "name": "SELZER PLASTIC WATER TANK WHITE 2000 LTR",
@@ -40929,7 +42707,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TANK",
-      "seller": "SELZER"
+      "seller": "SELZER",
+      "hsnCode": ""
     },
     {
       "name": "HARLEM RED YEMPEE 4X2",
@@ -40943,7 +42722,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -40952,7 +42731,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "CREANZ ARKLAM SPACE 18X12",
@@ -40966,7 +42746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -40975,7 +42755,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "ABABEEL"
+      "seller": "ABABEEL",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED 1X1",
@@ -40989,7 +42770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 1,
       "breadth": 1,
@@ -40998,7 +42779,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "T5085A1 UNO ULTRA HIGHFLOW DIVERTER UPPER TRIM PARRYWARE",
@@ -41021,7 +42803,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "G5885A1 PRASEO ULTRA HIGH FLOW DIVERTER UPPER TRIM PARRYWARE",
@@ -41044,7 +42827,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "G4885A1 EDGE ULTRA HIGH FLOW DIVERTER UPPER TRIM PARRWARE",
@@ -41067,7 +42851,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HIGH FLOW",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "C8917 JOY ONE PIECE SUITE S 290 MM WHITE PARRYWARE",
@@ -41085,12 +42870,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "PARRYWARE"
+      "seller": "PARRYWARE",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA SS 143 4X2 SHANKARA",
@@ -41104,7 +42890,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -41113,7 +42899,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA SS 412 4X2 SHANKARA",
@@ -41127,7 +42914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -41136,7 +42923,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "AF 300321 P30 EXPOSED SL HFLOW CONCEALED",
@@ -41159,7 +42947,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "ORBITAL ENTERPRISES"
+      "seller": "ORBITAL ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "626 OVERHEAD SHOWER 150X150 AF900626",
@@ -41182,7 +42971,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "ORBITAL ENTERPRISES"
+      "seller": "ORBITAL ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON SQUARE JALLI 6X6 GRATINGS",
@@ -41205,7 +42995,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "VLOC 1102 P TRAP LINCO",
@@ -41228,7 +43019,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "TEAN BROWN GRANITE SLAB 2 FT (RUBY RED)",
@@ -41244,14 +43036,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": "MERAKI"
+      "seller": "MERAKI",
+      "hsnCode": ""
     },
     {
       "name": "VITERO ULTRA WHITE PLAIN POLISH 4X2",
@@ -41265,7 +43058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41274,7 +43067,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ABABEEL"
+      "seller": "ABABEEL",
+      "hsnCode": ""
     },
     {
       "name": "RED GRANITE SLAB 2FT",
@@ -41282,7 +43076,7 @@ const data = {
       "category": "GRANITE",
       "image": "/image/",
       "price": null,
-      "countInStock": 0,
+      "countInStock": 51,
       "brand": "GRANITE",
       "rating": 0,
       "numReviews": 0,
@@ -41290,14 +43084,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "STEP GRANITE NERO 1000X300",
@@ -41311,7 +43106,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 3.25,
       "breadth": 1,
@@ -41320,7 +43115,8 @@ const data = {
       "actLength": 3.23,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "GRANITE NERO 4X2",
@@ -41334,7 +43130,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41343,7 +43139,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "MAGESTIC BLACK POLISH GRANITE",
@@ -41351,7 +43148,7 @@ const data = {
       "category": "GRANITE",
       "image": "/image/",
       "price": null,
-      "countInStock": 967,
+      "countInStock": 912,
       "brand": "GRANITE",
       "rating": 0,
       "numReviews": 0,
@@ -41359,14 +43156,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "323X75.8",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH 20X17X10 HM SILVER",
@@ -41389,7 +43187,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "BHARATH SINK 22X18X10 HM SILVER",
@@ -41412,7 +43211,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "AF G110106CHBR LONG BODY ASTRAL",
@@ -41435,7 +43235,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "ASTRAL"
+      "seller": "ASTRAL",
+      "hsnCode": ""
     },
     {
       "name": "RUBICON LINO SINK NUT COCK L/S",
@@ -41458,7 +43259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "ASTRAL"
+      "seller": "ASTRAL",
+      "hsnCode": ""
     },
     {
       "name": "NANO 134 2X2 (REKHA)",
@@ -41472,7 +43274,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -41481,7 +43283,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "NANO GLOSSY",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "AF 900626CHAB 6X6 SHOWER ASTRAL",
@@ -41504,7 +43307,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SHOWER",
-      "seller": "ASTRAL"
+      "seller": "ASTRAL",
+      "hsnCode": ""
     },
     {
       "name": "GEO GRESS 1356 HL 5 (FLOWER) 300X450",
@@ -41518,7 +43322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -41527,7 +43331,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 5",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "VARLET 1022 CLOSET 300 MM LINCO",
@@ -41545,12 +43350,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "LINCO"
+      "seller": "LINCO",
+      "hsnCode": ""
     },
     {
       "name": "VARLET 1002 ONE PC SIPHONIC CLOSET 9\"",
@@ -41568,12 +43374,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO"
+      "seller": "LINCO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CARVING 5009 4X2",
@@ -41587,7 +43394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41596,7 +43403,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CARVING 5019 4X2",
@@ -41610,7 +43418,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41619,7 +43427,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA MATT 2010 4X2",
@@ -41633,7 +43442,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41642,7 +43451,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2022 MATT 4X2",
@@ -41656,7 +43466,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41665,7 +43475,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA MATT 3013 4X2",
@@ -41679,7 +43490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41688,7 +43499,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA MATT 3024 4X2",
@@ -41702,7 +43514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41711,7 +43523,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA MATT 4004 4X2",
@@ -41725,7 +43538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41734,7 +43547,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA MATT 4012 4X2",
@@ -41748,7 +43562,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41757,7 +43571,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA MATT 4022 4X2",
@@ -41771,7 +43586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -41780,7 +43595,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "MULTI RED GRANITE 3 FT",
@@ -41796,14 +43612,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "263.5X102.5",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": "BR GRANITE"
+      "seller": "BR GRANITE",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 123 F 300X300",
@@ -41817,7 +43634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -41826,7 +43643,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 15001 F 300X300",
@@ -41840,7 +43658,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -41849,7 +43667,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 153 F 300X300",
@@ -41863,7 +43682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -41872,7 +43691,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2018 F 300X300",
@@ -41886,7 +43706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -41895,7 +43715,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2020 F 300X300",
@@ -41909,7 +43730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -41918,7 +43739,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "FL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1049 D 18X12",
@@ -41932,7 +43754,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -41941,7 +43763,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1049 HL1 18X12",
@@ -41955,7 +43778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -41964,7 +43787,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1049 KC-1 18X12",
@@ -41978,7 +43802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -41987,7 +43811,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-1",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1049 L 18X12",
@@ -42001,7 +43826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42010,7 +43835,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1069 KC-1 18X12",
@@ -42024,7 +43850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42033,7 +43859,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-1",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1069 L 18X12",
@@ -42047,7 +43874,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42056,7 +43883,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1077 KC-1 18X12",
@@ -42070,7 +43898,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42079,7 +43907,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-1",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1077 L 18X12",
@@ -42093,7 +43922,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42102,7 +43931,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1079 KC-1 18X12",
@@ -42116,7 +43946,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42125,7 +43955,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-1",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1079 L 18X12",
@@ -42139,7 +43970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42148,7 +43979,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1095 D 18X12",
@@ -42162,7 +43994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42171,7 +44003,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 1095 KC-1 18X12",
@@ -42185,7 +44018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42194,7 +44027,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL-1",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 123 D 18X12",
@@ -42208,7 +44042,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42217,7 +44051,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 123 HL 18X12",
@@ -42231,7 +44066,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42240,7 +44075,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 123 L 18X12",
@@ -42254,7 +44090,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42263,7 +44099,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 15001 D 18X12",
@@ -42277,7 +44114,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42286,7 +44123,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 15001 HL 18X12",
@@ -42300,7 +44138,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42309,7 +44147,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 15001 L 18X12",
@@ -42323,7 +44162,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42332,7 +44171,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 153 D 18X12",
@@ -42346,7 +44186,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42355,7 +44195,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 153 L 18X12",
@@ -42369,7 +44210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42378,7 +44219,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2018 D 18X12",
@@ -42392,7 +44234,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42401,7 +44243,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2018 HL1A 18X12",
@@ -42415,7 +44258,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42424,7 +44267,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL 1A",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2018 L 18X12",
@@ -42438,7 +44282,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42447,7 +44291,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2020 D 18X12",
@@ -42461,7 +44306,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42470,7 +44315,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "D",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2020 HL 18X12",
@@ -42484,7 +44330,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42493,7 +44339,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 2020 L 18X12",
@@ -42507,7 +44354,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42516,7 +44363,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "L",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "ASTT1002 TWXX TABLE TOP",
@@ -42539,7 +44387,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "ORBITAL ENTERPRISES"
+      "seller": "ORBITAL ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "AP 901406 CHAB HEALTHFAUCET",
@@ -42562,7 +44411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "ORBITAL ENTERPRISES"
+      "seller": "ORBITAL ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 153 HL 18X12",
@@ -42576,7 +44426,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 6,
       "length": 1.5,
       "breadth": 1,
@@ -42585,7 +44435,8 @@ const data = {
       "actLength": 1.5,
       "actBreadth": 1,
       "type": "HL",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO 1007 2X2 MATT",
@@ -42599,7 +44450,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -42608,7 +44459,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO 3504 2X2 MATT",
@@ -42622,7 +44474,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -42631,7 +44483,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO 3507 2X2 MATT",
@@ -42645,7 +44498,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -42654,7 +44507,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO DG 1012 PARKING 16X16",
@@ -42668,7 +44522,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -42677,7 +44531,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO DG 17017 PARKING 16X16",
@@ -42691,7 +44546,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -42700,7 +44555,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO DG 2810 PARKING 16X16",
@@ -42714,7 +44570,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -42723,7 +44579,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO DG 4058 (7951) PARKING 16X16",
@@ -42737,7 +44594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -42746,7 +44603,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO DG 5017 D PARKING 16X16",
@@ -42760,7 +44618,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -42769,7 +44627,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO DG 5017 L PARKING 16X16",
@@ -42783,7 +44642,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -42792,7 +44651,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "SPIGO DG 9300 PARKING 16X16",
@@ -42806,7 +44666,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 1,
       "breadth": 1.77,
@@ -42815,7 +44675,8 @@ const data = {
       "actLength": 1.77,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "SPIGO CERAMIC"
+      "seller": "SPIGO CERAMIC",
+      "hsnCode": ""
     },
     {
       "name": "DESIRE WALL MIXER CRUTCH",
@@ -42838,10 +44699,11 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL MIXER",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
-      "name": "STARFIX GOLD 20 KG",
+      "name": "STARFIX GOLD 20KG",
       "item_id": "K2095",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -42856,12 +44718,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "NEW RV ENTERPRISES"
+      "seller": "NEW RV ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 25001 4X2",
@@ -42875,7 +44738,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -42884,7 +44747,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 25012 4X2",
@@ -42898,7 +44762,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -42907,7 +44771,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 25014 4X2",
@@ -42921,7 +44786,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -42930,7 +44795,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 25022 4X2",
@@ -42944,7 +44810,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -42953,7 +44819,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 25025 4X2",
@@ -42967,7 +44834,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -42976,7 +44843,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA PLAIN WHITE 4X2",
@@ -42990,7 +44858,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -42999,7 +44867,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "MARIO P TRAP 5020 (REKHA)",
@@ -43022,7 +44891,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "ATHOS P TRAP (REKHA)",
@@ -43045,7 +44915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "FULLSET W/M BT226 COUNTER TOP CABIN",
@@ -43068,7 +44939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "C4B SALES CORPORATION"
+      "seller": "C4B SALES CORPORATION",
+      "hsnCode": ""
     },
     {
       "name": "FULL SET WM X2 CABINET WITH MCB",
@@ -43091,7 +44963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "C4B SALES CORPORATION"
+      "seller": "C4B SALES CORPORATION",
+      "hsnCode": ""
     },
     {
       "name": "RD 36 FULLSET WOODEN CABINET STYLEX",
@@ -43114,7 +44987,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "C4B SALES CORPORATION"
+      "seller": "C4B SALES CORPORATION",
+      "hsnCode": ""
     },
     {
       "name": "RD 34 FULLSET WOODEN CABINET STYLEX",
@@ -43137,7 +45011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "C4B SALES CORPORATION"
+      "seller": "C4B SALES CORPORATION",
+      "hsnCode": ""
     },
     {
       "name": "RD 37 FULLSET WOODEN CABINET STYLEX",
@@ -43160,7 +45035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "C4B SALES CORPORATION"
+      "seller": "C4B SALES CORPORATION",
+      "hsnCode": ""
     },
     {
       "name": "RD 38 FULLSET WOODEN CABINET STYLEX",
@@ -43183,7 +45059,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "C4B SALES CORPORATION"
+      "seller": "C4B SALES CORPORATION",
+      "hsnCode": ""
     },
     {
       "name": "4 MM DESIGN MIRROR 500X400 MM (20X16)",
@@ -43206,7 +45083,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "MIRROR",
-      "seller": "C4B SALES CORPORATION"
+      "seller": "C4B SALES CORPORATION",
+      "hsnCode": ""
     },
     {
       "name": "4 MM DESIGN MIRROR 600X450 MM (18X24)",
@@ -43229,7 +45107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "MIRROR",
-      "seller": "C4B SALES CORPORATION"
+      "seller": "C4B SALES CORPORATION",
+      "hsnCode": ""
     },
     {
       "name": "PVC STRIPS BLACK 9.5 MM",
@@ -43252,7 +45131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TILE BEEDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PVC STRIPS IVORY 9.5 MM",
@@ -43275,7 +45155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TILE BEEDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "PVC STRIPS WHITE 9.5 MM",
@@ -43298,7 +45179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "TILE BEEDING",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CARVING 506 2X2",
@@ -43312,7 +45194,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43321,7 +45203,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CARVING 567 2X2",
@@ -43335,7 +45218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43344,7 +45227,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CARVING 597 2X2",
@@ -43358,7 +45242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43367,7 +45251,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CARVING 598 2X2",
@@ -43381,7 +45266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43390,7 +45275,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "CARVING",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 6003 2X2",
@@ -43404,7 +45290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43413,7 +45299,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 7002 2X2",
@@ -43427,7 +45314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43436,7 +45323,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 9146 2X2 SHANKARA",
@@ -43450,7 +45338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43459,7 +45347,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "SHANKARA 403 4X2",
@@ -43473,7 +45362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -43482,7 +45371,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "VLVB-6014 WASH BASIN",
@@ -43505,7 +45395,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "VLOC -1024 ONE PCE SIPHONIC CLOSET 12\"",
@@ -43523,12 +45414,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "LINCO BATHWARES"
+      "seller": "LINCO BATHWARES",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 299 2X2 (MARBLE SERIES)",
@@ -43542,7 +45434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43551,7 +45443,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 4004 2X2 (3D SERIES)",
@@ -43565,7 +45458,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43574,7 +45467,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "3D MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 4018 2X2 (3D SERIES)",
@@ -43588,7 +45482,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43597,7 +45491,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "3D MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 8006 2X2 (MARBLE SERIES)",
@@ -43611,7 +45506,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43620,7 +45515,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 8028 2X2 (MARBLE SERIES)",
@@ -43634,7 +45530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43643,7 +45539,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 8029 2X2 (MARBLE SERIES)",
@@ -43657,7 +45554,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43666,7 +45563,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA 8034 2X2 (MARBLE SERIES)",
@@ -43680,7 +45578,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43689,7 +45587,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CRUZO 103 2X2 (PUNCH SERIES)",
@@ -43703,7 +45602,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43712,7 +45611,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CRUZO 107 2X2 (PUNCH SERIES)",
@@ -43726,7 +45626,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43735,7 +45635,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA CRUZO 111 2X2 (PUNCH SERIES)",
@@ -43749,7 +45650,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43758,7 +45659,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA PLAIN IVORY (NANO) 2X2",
@@ -43772,7 +45674,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43781,7 +45683,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA ORIZIA 2X2 (NANO)",
@@ -43795,7 +45698,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43804,7 +45707,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA SIENNA 2X2 (NANO)",
@@ -43818,7 +45722,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43827,7 +45731,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA STRIPE 2X2 (NANO) K2139 TILES",
@@ -43841,7 +45746,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43850,7 +45755,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "FOTIA VELENCIA 2X2 (NANO) K2140 TILES",
@@ -43864,7 +45770,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -43873,7 +45779,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "ACCOLADE S 12\" 300MM WASHDOWN",
@@ -43891,12 +45798,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "GENTS URINAL P P",
@@ -43919,7 +45827,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "STONIC 2X1 CLADDING TILES (CAPITOL)",
@@ -43933,7 +45842,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -43942,7 +45851,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "CAPITOL TRADING COMPANY"
+      "seller": "CAPITOL TRADING COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA SENOR WHITE PREMIUM POLISH 4X2",
@@ -43956,7 +45866,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -43965,7 +45875,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "P POLISH",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA IRISH VERDE SUPER PREMIUM POLISH 4X2",
@@ -43979,7 +45890,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -43988,7 +45899,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "SP POLISH",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA CRAFT ASH POLISH 4X2",
@@ -44002,7 +45914,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -44011,7 +45923,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA ARANCO GREY MATT 4X2",
@@ -44025,7 +45938,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -44034,7 +45947,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA ONYX BEIGE POLISH 4X2",
@@ -44048,7 +45962,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -44057,7 +45971,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA SATUARIO AESTHETIC POLISH 4X2",
@@ -44071,7 +45986,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -44080,7 +45995,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA ALLENCO CREAMA-ENDLESS POLISH 4X2",
@@ -44094,7 +46010,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -44103,7 +46019,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA CRAFT MARFIL POLISH 4X2",
@@ -44117,7 +46034,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -44126,7 +46043,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA ALFRED SILVER SATIN MATT 4X2",
@@ -44140,7 +46058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -44149,7 +46067,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "KAJARIA LAPIS TAUPE POLISH 4X2",
@@ -44163,7 +46082,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -44172,7 +46091,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "KAJARIA CERAMICS LTD"
+      "seller": "KAJARIA CERAMICS LTD",
+      "hsnCode": ""
     },
     {
       "name": "MAGIC HERBAL CLEANER",
@@ -44195,7 +46115,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LATRICATE 315 ADHESIVE 20KG",
@@ -44213,12 +46134,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "KAILATH SANITATION &PAINTS"
+      "seller": "KAILATH SANITATION &PAINTS",
+      "hsnCode": ""
     },
     {
       "name": "MIRROR CABINET WTC PINK",
@@ -44241,12 +46163,13 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "WATERTEC"
+      "seller": "WATERTEC",
+      "hsnCode": ""
     },
     {
       "name": "LATERITE -611",
       "item_id": "K2157",
-      "category": "ADHESIVE",
+      "category": "TILES",
       "image": "/image/",
       "price": null,
       "countInStock": 87,
@@ -44254,17 +46177,18 @@ const data = {
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "NOS",
-      "sUnit": "NOS",
+      "pUnit": "BOX",
+      "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
-      "size": "",
-      "unit": "",
-      "actLength": 1,
+      "length": 2,
+      "breadth": 1,
+      "size": "2X1",
+      "unit": "FT",
+      "actLength": 1.935,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "type": "CLADDING",
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "LATICREATE GROUT ADMIX PLUS 200 ML L1776",
@@ -44282,15 +46206,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "KAILATH TRADERS"
+      "seller": "KAILATH TRADERS",
+      "hsnCode": ""
     },
     {
-      "name": "EPOXY FP SLATE GREY 3.75KG",
+      "name": "EPOXY FP SLATE GREY 3.75 KG",
       "item_id": "K2159",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -44305,12 +46230,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "3.75 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "KAILATH TRADERS"
+      "type": "EPOXY",
+      "seller": "KAILATH TRADERS",
+      "hsnCode": ""
     },
     {
       "name": "CURVED ONE PIECE W/B FLOOR MOUNT 16X16",
@@ -44333,7 +46259,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "1532 W/B (20X16)REKHA",
@@ -44356,7 +46283,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "1513 PDL (REKHA)",
@@ -44379,7 +46307,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "1533 W/B 23X19",
@@ -44402,7 +46331,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "1534 PEDASTAL (REKHA)",
@@ -44425,7 +46355,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "CUBE W/B 18X15 301",
@@ -44448,7 +46379,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "CUBE PDL 106",
@@ -44471,10 +46403,11 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
-      "name": "SP100 AB - RESINKIT 1.25KG SLATEGREY",
+      "name": "SP100 AB - RESINKIT 1.25 KG SLATEGREY",
       "item_id": "K2167",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -44489,12 +46422,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1.25 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "KAILATH TRADERS"
+      "seller": "KAILATH TRADERS",
+      "hsnCode": ""
     },
     {
       "name": "UG LVY 625 500GM( GREEN)",
@@ -44512,15 +46446,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "500 GM",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "LATRICATE"
+      "seller": "LATRICATE",
+      "hsnCode": ""
     },
     {
-      "name": "FP SLATE GREY791-0.75KG",
+      "name": "FP SLATE GREY791 0.75 KG",
       "item_id": "K2169",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -44535,12 +46470,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "0.75 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "KAILATH SANITATION &PAINTS"
+      "seller": "KAILATH SANITATION &PAINTS",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED MIXED 4X2",
@@ -44554,7 +46490,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -44563,7 +46499,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
       "name": "SP100 AB - RESINKIT 1.25 KG (BLUE)",
@@ -44581,15 +46518,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1.25 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "KAILATH TRADERS"
+      "seller": "KAILATH TRADERS",
+      "hsnCode": ""
     },
     {
-      "name": "FP ALPHINE BLUE EPOXY POWDER 3.75KG",
+      "name": "FP ALPHINE BLUE EPOXY POWDER 3.75 KG",
       "item_id": "K2173",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -44604,15 +46542,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "3.75 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "KAILATH TRADERS"
+      "type": "EPOXY",
+      "seller": "KAILATH TRADERS",
+      "hsnCode": ""
     },
     {
-      "name": "NIPPON WALTRON STYLFIX TA-1 (20KG)",
+      "name": "NIPPON WALTRON STYLFIX TA-1 20 KG",
       "item_id": "K2174",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -44627,15 +46566,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
-      "name": "NIPPON WALTRON STYLFIX TA-2(20KG)",
+      "name": "NIPPON WALTRON STYLFIX TA-2 20 KG",
       "item_id": "K2175",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -44650,15 +46590,16 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "20 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "SHANKARA BUILDPRO"
+      "seller": "SHANKARA BUILDPRO",
+      "hsnCode": ""
     },
     {
-      "name": "FP CHOCOLATE POWDER 0.75KG",
+      "name": "FP CHOCOLATE POWDER 0.75 KG",
       "item_id": "K2176",
       "category": "ADHESIVE",
       "image": "/image/",
@@ -44673,12 +46614,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "0.75 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "KAILATH TRADERS"
+      "seller": "KAILATH TRADERS",
+      "hsnCode": ""
     },
     {
       "name": "RARE MONTAGE GOLD 4X2",
@@ -44692,7 +46634,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -44701,7 +46643,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "RARE OIKOS AQUA 4X2",
@@ -44715,7 +46658,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -44724,7 +46667,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "RARE ORION BROWN 4X2",
@@ -44738,7 +46682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -44747,7 +46691,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHANKARA SUPER CEMENT",
@@ -44770,7 +46715,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "VATTATHARA AGENCIES"
+      "seller": "VATTATHARA AGENCIES",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM 5260 2X2 PUNCH SERIES STANZA",
@@ -44784,7 +46730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -44793,7 +46739,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "PUNCH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM GRANITE BLUE 4X2 STANZA",
@@ -44807,7 +46754,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -44816,7 +46763,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "CAPE TOWN 06 2X1 CLADDING (CAPITOL)",
@@ -44830,7 +46778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -44839,7 +46787,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "CAPITOL TRADING COMPANY"
+      "seller": "CAPITOL TRADING COMPANY",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM GRANITE BLACK 4X2 STANZA",
@@ -44853,7 +46802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -44862,7 +46811,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ONE PC CLOSET 107 9\"",
@@ -44880,12 +46830,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "230mm",
+      "size": "230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "HI LITE MARKETING"
+      "seller": "HI LITE MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "QT-274 BLUE&WHITE FULLSET CABINET QUTO",
@@ -44908,7 +46859,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "OSLO TRADE LINKS"
+      "seller": "OSLO TRADE LINKS",
+      "hsnCode": ""
     },
     {
       "name": "QT-277 WALL MOUNT CABINET (R&W) QUTO",
@@ -44931,7 +46883,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "OSLO TRADE LINKS"
+      "seller": "OSLO TRADE LINKS",
+      "hsnCode": ""
     },
     {
       "name": "QT-340 FLOOR MOUNT WOOD&WHITE QUTO",
@@ -44954,7 +46907,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "OSLO TRADE LINKS"
+      "seller": "OSLO TRADE LINKS",
+      "hsnCode": ""
     },
     {
       "name": "QT-348 GREY WHITE CABINET LED QUTO",
@@ -44977,7 +46931,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "OSLO TRADE LINKS"
+      "seller": "OSLO TRADE LINKS",
+      "hsnCode": ""
     },
     {
       "name": "QT-371 RED AND GREY FLOOR LED QUTO",
@@ -45000,7 +46955,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CABINET",
-      "seller": "OSLO TRADE LINKS"
+      "seller": "OSLO TRADE LINKS",
+      "hsnCode": ""
     },
     {
       "name": "SUNCORE ARMANI GREY 4X2 STANZA",
@@ -45014,7 +46970,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45023,7 +46979,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "L TILE SENTOUS BLUE 4X2 STANZA",
@@ -45037,7 +46994,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45046,7 +47003,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LIVOLLA TESLA 104 4X2 STANZA",
@@ -45060,7 +47018,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45069,7 +47027,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "800X2400 NANO WHITE GLOSSY",
@@ -45083,7 +47042,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 8,
       "breadth": 2.625,
@@ -45092,7 +47051,8 @@ const data = {
       "actLength": 20.66,
       "actBreadth": 1,
       "type": "FB GLOSSY",
-      "seller": "SONI FLOORAMIC"
+      "seller": "SONI FLOORAMIC",
+      "hsnCode": ""
     },
     {
       "name": "800X2400 NANO BLACK GLOSSY",
@@ -45106,7 +47066,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 1,
       "length": 8,
       "breadth": 2.625,
@@ -45115,7 +47075,8 @@ const data = {
       "actLength": 20.66,
       "actBreadth": 1,
       "type": "FB GLOSSY",
-      "seller": "SONI FLOORAMIC"
+      "seller": "SONI FLOORAMIC",
+      "hsnCode": ""
     },
     {
       "name": "HD MARBLE SHEET 8X4",
@@ -45138,7 +47099,8 @@ const data = {
       "actLength": 8,
       "actBreadth": 4,
       "type": "8X4 UV SHEERT",
-      "seller": "DOON INTERIOR"
+      "seller": "DOON INTERIOR",
+      "hsnCode": ""
     },
     {
       "name": "T PROFILES (MARBLE SHEET)",
@@ -45161,7 +47123,8 @@ const data = {
       "actLength": 8,
       "actBreadth": 4,
       "type": "8X4 UV SHEERT",
-      "seller": "DOON INTERIOR"
+      "seller": "DOON INTERIOR",
+      "hsnCode": ""
     },
     {
       "name": "U PROFILES (MARBLE SHEET)",
@@ -45184,7 +47147,8 @@ const data = {
       "actLength": 8,
       "actBreadth": 4,
       "type": "8X4 UV SHEERT",
-      "seller": "DOON INTERIOR"
+      "seller": "DOON INTERIOR",
+      "hsnCode": ""
     },
     {
       "name": "2571 SKYPE GLOSSY 4X2 ANDRIA",
@@ -45198,7 +47162,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45207,7 +47171,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "2574 SKYPE GLOSSY 4X2 ANDRIA",
@@ -45221,7 +47186,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45230,7 +47195,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "AGILIS OCEAN BLUE 4X2 ANDRIA",
@@ -45244,7 +47210,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45253,7 +47219,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "COLOURS AMAZING BLUE ENDLESS 4X2 YEMPEE",
@@ -45267,7 +47234,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45276,7 +47243,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "L TILE I JWEL GRIS 4X2 STANZA",
@@ -45290,7 +47258,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45299,7 +47267,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "LED MIRROR SG-112 24X18",
@@ -45322,7 +47291,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LED MIRRIOR SG-005 24X18",
@@ -45345,7 +47315,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LED MIRROR SG-364 24X30",
@@ -45368,7 +47339,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "DESIGNER MIRROR 24X18",
@@ -45391,7 +47363,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LED MIRROR SG-460 24X24",
@@ -45414,7 +47387,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LED MIRROR SG-205 24X24",
@@ -45437,7 +47411,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LED MIRROR SG-217 24X24",
@@ -45460,7 +47435,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LED MIRROR SG-451 24X24",
@@ -45483,7 +47459,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "LED MIRROR SG-368 24X30",
@@ -45506,7 +47483,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "LED MIRROR",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GRENIC KERALA STONE NATURAL",
@@ -45520,7 +47498,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 2,
       "breadth": 1,
@@ -45529,7 +47507,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "LEMSTONE 3D 106 4X2 GLOSSY",
@@ -45543,7 +47522,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45552,7 +47531,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "SPACER 5MM",
@@ -45575,7 +47555,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": "NEXTO MARKETING"
+      "seller": "NEXTO MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "STEP TILE BLACK 3 FT 1000X300 ANDRIA",
@@ -45589,7 +47570,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 3.25,
       "breadth": 1,
@@ -45598,7 +47579,8 @@ const data = {
       "actLength": 3.23,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "FAVOLOSA PULPIS GREY 4X2 YEMPEE",
@@ -45612,7 +47594,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -45621,7 +47603,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "ONE PIECE ARVIS LOTTO P TRAP WT",
@@ -45644,7 +47627,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "ONE PIECE ARVIS LOTTO S TRAP 9\" (230)",
@@ -45662,12 +47646,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "ONE PIECE ARVIS LOTTO S TRAP 12\" (300MM)",
@@ -45685,12 +47670,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "ONE PIECE 711 LAVABO S TRAP (300 MM) SYPHONIC",
@@ -45708,12 +47694,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 300mm",
+      "size": "S TRAP 300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "ONE PIECE 711 LAVABO 9\" (230) S TRAP",
@@ -45731,12 +47718,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "S TRAP 230mm",
+      "size": "S TRAP 230 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "SUNBRIGHT 300X300 PARKING TERRA CAPSULE",
@@ -45750,7 +47738,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -45759,7 +47747,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "SUNBRIGHT 300X300 PARKING IVORY CAPSULE",
@@ -45773,7 +47762,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 8,
       "length": 1,
       "breadth": 1,
@@ -45782,7 +47771,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "PARKING ",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "37X18X9 DOUBLE SINK DOUBLE",
@@ -45805,7 +47795,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "BHARATH"
+      "seller": "BHARATH",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2040106SNTA CALVIN WALL HUNG WASH BASIN S.W",
@@ -45828,7 +47819,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2040121SNTA CADAL WALL HUNG WASH BASIN SNOW",
@@ -45851,7 +47843,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2040126SNTA CHICO WALL HUNG WASH BASIN SNW",
@@ -45874,7 +47867,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2040125 CALLIS WALL HUNG WASH BASIN WHITE",
@@ -45897,7 +47891,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2040161SN CORNER THIN RIM WALL HUNG W/ B SW",
@@ -45920,7 +47915,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2040158SN CALIFORNIA WALL HUNG WASH BASIN S.W",
@@ -45943,7 +47939,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S 200174SN CLORA WALL HUNG BASIN",
@@ -45966,7 +47963,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2090136SN CLORA HALF PEDESTAL SNOW WHITE",
@@ -45989,7 +47987,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2040136 CHINO WALLHUNG WASH BASIN SNOW WHITE",
@@ -46012,7 +48011,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2090104SNMA CHINO HALF PEDESTAL SW",
@@ -46035,7 +48035,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "CERA S2090130SN CALIFORNIA HALF PEDESTAL S.W",
@@ -46058,7 +48059,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "725 P CIVIK P ONE PC CLOSET",
@@ -46081,7 +48083,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "ARVIS MARVEL HALF SET+ PEDESTAL",
@@ -46104,7 +48107,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "CERA COLLAGE WALL HUNG WASH BASIN S2040170SN NEW",
@@ -46127,7 +48131,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "WALL HUNG",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "IMP TABLE TOP 107",
@@ -46150,7 +48155,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "216 SERENA WASH BASIN",
@@ -46173,7 +48179,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "306 NANO HALF PEDESTAL",
@@ -46196,7 +48203,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "HALF",
-      "seller": "CAPITAL MARKETING"
+      "seller": "CAPITAL MARKETING",
+      "hsnCode": ""
     },
     {
       "name": "SHREEM 4501 2X2 SUGAR FINISH STANZA",
@@ -46210,7 +48218,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -46219,7 +48227,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "SUGAR FINISH",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ANDRIA ZARA WHITE GLOSSY 4X2",
@@ -46233,7 +48242,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46242,7 +48251,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "ANDRIA ZARA GOLD 4X2",
@@ -46256,7 +48266,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46265,7 +48275,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "LIVENZA FROST BROWN 4X2 ANDRIA",
@@ -46279,7 +48290,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46288,7 +48299,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "ANDRIA AREZZO AZULE 4X2",
@@ -46302,7 +48314,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46311,7 +48323,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "ANDRIA ONYX CREMA 4X2",
@@ -46325,7 +48338,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46334,7 +48347,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "ASSORTED 4X2 GRAVITO CRANITO",
@@ -46348,7 +48362,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46357,7 +48371,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "CADLAC 40002 2X2 MAT",
@@ -46371,7 +48386,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -46380,7 +48395,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TAG 38604 L 2X2 MAT",
@@ -46394,7 +48410,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -46403,7 +48419,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "TAG 38605 D 2X2",
@@ -46417,7 +48434,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -46426,7 +48443,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "H S EPOXY TILE GROUT 2 COMPONENT BLACK 1 KG BERGER",
@@ -46444,12 +48462,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "BERGER"
+      "type": "EPOXY",
+      "seller": "BERGER",
+      "hsnCode": ""
     },
     {
       "name": "H S EPOXY TILE GROUT 2 COMPONENT BLACK 5KG BERGER",
@@ -46467,12 +48486,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "BERGER"
+      "type": "EPOXY",
+      "seller": "BERGER",
+      "hsnCode": ""
     },
     {
       "name": "H S EPOXY TILE GROUT 2 COMPONENT WHITE 1KG BERGER",
@@ -46490,12 +48510,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "1 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
-      "type": "ADHESIVE",
-      "seller": "BERGER"
+      "type": "EPOXY",
+      "seller": "BERGER",
+      "hsnCode": ""
     },
     {
       "name": "SANVIS 101 4X2 GLOSSY",
@@ -46509,7 +48530,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 4,
       "breadth": 2,
@@ -46518,7 +48539,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 1 4X2 ASSORTED",
@@ -46541,7 +48563,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 2 4X2 ASSORTED",
@@ -46564,7 +48587,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 3 4X2 ASSORTED",
@@ -46587,7 +48611,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 4 4X2 ASSORTED",
@@ -46610,7 +48635,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 5 4X2 ASSORTED",
@@ -46633,7 +48659,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 6 4X2 ASSORTED",
@@ -46656,7 +48683,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 7 4X2 ASSORTED",
@@ -46679,7 +48707,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 8 4X2 ASSORTED",
@@ -46702,7 +48731,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 9 4X2 ASSORTED",
@@ -46725,7 +48755,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 10 4X2 ASSORTED",
@@ -46748,7 +48779,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 11 4X2 ASSORTED",
@@ -46771,7 +48803,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 12 4X2 ASSORTED",
@@ -46794,7 +48827,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 13 4X2 ASSORTED",
@@ -46817,7 +48851,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 14 4X2 ASSORTED",
@@ -46840,7 +48875,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 15 4X2 ASSORTED",
@@ -46863,7 +48899,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "AS GRAVITO 16 4X2 ASSORTED",
@@ -46886,7 +48923,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "ASSORTED",
-      "seller": "GRANITO GRAVITO"
+      "seller": "GRANITO GRAVITO",
+      "hsnCode": ""
     },
     {
       "name": "LINIVIA 1000X300 STEP TILE MAGIC BLACK",
@@ -46900,7 +48938,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 3.25,
       "breadth": 1,
@@ -46909,7 +48947,8 @@ const data = {
       "actLength": 3.23,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "ANDRIA 4X2 HG CASA BLACK",
@@ -46923,7 +48962,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46932,7 +48971,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "SP HG GLITTER RED 4X2 ANDRIA",
@@ -46946,7 +48986,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46955,7 +48995,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "DFT CLASSIC 1011 4X2 MARBOLUX",
@@ -46969,7 +49010,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -46978,7 +49019,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "DFT CLASSIC 1009 4X2 MARBOLUX",
@@ -46992,7 +49034,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47001,7 +49043,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "DFT GL DAHINO AZUL 4X2 MARBOLUX",
@@ -47015,7 +49058,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47024,7 +49067,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "DFT GL MARBO ONYX AQUA 4X2 MARBOLUX",
@@ -47038,7 +49082,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47047,7 +49091,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "DFT GL SPARK SKY 4X2 MARBOLUX",
@@ -47061,7 +49106,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47070,7 +49115,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "DFT GL SPARK RED 4X2 MARBOLUX",
@@ -47084,7 +49130,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47093,7 +49139,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "HIGH GLOSSY RIPPLE BLUE 4X2 LIVENZA",
@@ -47107,7 +49154,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47116,7 +49163,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "HIGH GLOSSY FROST BLUE 4X2 LIVENZA",
@@ -47130,7 +49178,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47139,7 +49187,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "HIGH GLOSSY FROST GREY 4X2 LIVENZA",
@@ -47153,7 +49202,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47162,7 +49211,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "H GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "DFT GLOSSY SLICE GREY 4X2 ANDRIA",
@@ -47176,7 +49226,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47185,7 +49235,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "CERA EMPIRE 8020 MATT 2X2",
@@ -47199,7 +49250,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -47208,7 +49259,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "CERA EMPIRE 8032 MATT 2X2",
@@ -47222,7 +49274,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -47231,7 +49283,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "CERA EMPIRE 8052 MATT 2X2",
@@ -47245,7 +49298,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -47254,7 +49307,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "CERA EMPIRE 8066 MATT 2X2",
@@ -47268,7 +49322,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -47277,7 +49331,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "CERA EMPIRE 12027 MATT 2X2",
@@ -47291,7 +49346,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -47300,7 +49355,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "CERA EMPIRE 12030 MATT 2X2",
@@ -47314,7 +49370,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -47323,7 +49379,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "VIZORA"
+      "seller": "VIZORA",
+      "hsnCode": ""
     },
     {
       "name": "LINIVIA 1000X300 STEP TILE MAGIC NERO",
@@ -47337,7 +49394,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 3,
       "length": 3.25,
       "breadth": 1,
@@ -47346,7 +49403,8 @@ const data = {
       "actLength": 3.23,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "RBOTB 1015 OPAL TALLBODY PILLARCOCK BLACK",
@@ -47369,7 +49427,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CP FITTINGS",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RBTRB 1015 TRIO TALLBODY PILLARCOCK BLACK",
@@ -47392,7 +49451,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CP FITTINGS",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RBTRDS 1032 TOWEL ROD SQUARE 24\" BLACK",
@@ -47415,7 +49475,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CP FITTINGS",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "RBTRNS 1033 TOWEL RING SQURE BLACK",
@@ -47438,7 +49499,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "CP FITTINGS",
-      "seller": "RUBICON"
+      "seller": "RUBICON",
+      "hsnCode": ""
     },
     {
       "name": "SUNSHINE SHGL 10091 4X2",
@@ -47452,7 +49514,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47461,7 +49523,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "STANZA TRADING CO"
+      "seller": "STANZA TRADING CO",
+      "hsnCode": ""
     },
     {
       "name": "ROCART 9146 2X2",
@@ -47475,7 +49538,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 2,
       "breadth": 2,
@@ -47484,7 +49547,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "SUGAR FINISH",
-      "seller": "YEM PEE ENTERPRISES COCHIN"
+      "seller": "YEM PEE ENTERPRISES COCHIN",
+      "hsnCode": ""
     },
     {
       "name": "SP GREEN GLOSSY MARBOLUX 4X2",
@@ -47498,7 +49562,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47507,7 +49571,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "ROCART JEWEL AQUA 4X2",
@@ -47521,7 +49586,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47530,7 +49595,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "",
-      "seller": ""
+      "seller": "",
+      "hsnCode": ""
     },
     {
       "name": "GOLDEN GALAXY CUT PIECE 3.5X2",
@@ -47553,7 +49619,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "STEP GRANITE",
-      "seller": "BR GRANITES"
+      "seller": "BR GRANITES",
+      "hsnCode": ""
     },
     {
       "name": "GRANITE POLISH BLACK",
@@ -47569,14 +49636,15 @@ const data = {
       "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "FT",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": "BR GRANITES"
+      "seller": "BR GRANITES",
+      "hsnCode": ""
     },
     {
       "name": "CERA 1013240SN CONA 300  MM",
@@ -47594,12 +49662,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "CLOSET",
-      "seller": "RAJ TRADERS"
+      "seller": "RAJ TRADERS",
+      "hsnCode": ""
     },
     {
       "name": "MONTELLO  AMAZONA - 005  2X1  CLADDING",
@@ -47613,7 +49682,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -47622,7 +49691,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUVO"
+      "seller": "QUVO",
+      "hsnCode": ""
     },
     {
       "name": "MONTELLO  LATERITA -005 2X1 CLADDING",
@@ -47636,7 +49706,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -47645,7 +49715,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUVO"
+      "seller": "QUVO",
+      "hsnCode": ""
     },
     {
       "name": "MONTELLO  LUNARA -009  2X1 CLADDING",
@@ -47659,7 +49730,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -47668,7 +49739,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUVO"
+      "seller": "QUVO",
+      "hsnCode": ""
     },
     {
       "name": "MONTELLO MOSAICA -009 2X1 CLADDING",
@@ -47682,7 +49754,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 5,
       "length": 2,
       "breadth": 1,
@@ -47691,7 +49763,8 @@ const data = {
       "actLength": 1.935,
       "actBreadth": 1,
       "type": "CLADDING",
-      "seller": "QUVO"
+      "seller": "QUVO",
+      "hsnCode": ""
     },
     {
       "name": "UNIXO  GIZA SILVER 4X2",
@@ -47705,7 +49778,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47714,7 +49787,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "QUVO"
+      "seller": "QUVO",
+      "hsnCode": ""
     },
     {
       "name": "UNIXO  ISWAL GREY 4X2",
@@ -47728,7 +49802,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47737,7 +49811,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "QUVO"
+      "seller": "QUVO",
+      "hsnCode": ""
     },
     {
       "name": "UNIXO  NEXA FOREST  4X2",
@@ -47751,7 +49826,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47760,7 +49835,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "QUVO"
+      "seller": "QUVO",
+      "hsnCode": ""
     },
     {
       "name": "UNIXO  SOFITA NATURAL 4X2",
@@ -47774,7 +49850,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -47783,7 +49859,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "GLOSSY",
-      "seller": "QUVO"
+      "seller": "QUVO",
+      "hsnCode": ""
     },
     {
       "name": "ICE BLUE  GRANITE",
@@ -47791,22 +49868,23 @@ const data = {
       "category": "GRANITE",
       "image": "/image/",
       "price": null,
-      "countInStock": null,
+      "countInStock": 95,
       "brand": "GRANITE",
       "rating": 0,
       "numReviews": 0,
       "description": "high quality product",
-      "pUnit": "BOX",
+      "pUnit": "SQF",
       "sUnit": "SQF",
       "psRatio": 1,
-      "length": null,
-      "breadth": null,
+      "length": 1,
+      "breadth": 1,
       "size": "",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "GRANITE",
-      "seller": "MERAKI"
+      "seller": "MERAKI",
+      "hsnCode": ""
     },
     {
       "name": "CRUISE ONE PIECE CLOSET  P TRAP",
@@ -47829,7 +49907,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "CRUISE  ONE PIECE CLOSET 225 MM",
@@ -47852,7 +49931,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "CRUISE ONE PIECE CLOSET 300 MM",
@@ -47870,12 +49950,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "300mm",
+      "size": "300 mm",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "1 PC CLOSET",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "UNIQUE 2002 W/B  17X14",
@@ -47898,7 +49979,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "IRISH 2007 W/B   20X16",
@@ -47921,7 +50003,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "CAMPA  W/B  19X15",
@@ -47944,7 +50027,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "BASIN",
-      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)"
+      "seller": "REKHA ENTERPRISES (NATURE CERAMIC)",
+      "hsnCode": ""
     },
     {
       "name": "PHOENIX 3MM SPACER",
@@ -47967,7 +50051,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": "DEEPU"
+      "seller": "DEEPU",
+      "hsnCode": ""
     },
     {
       "name": "",
@@ -47981,7 +50066,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 4,
       "breadth": 1,
@@ -47990,7 +50075,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "STANZA"
+      "seller": "STANZA",
+      "hsnCode": ""
     },
     {
       "name": "GRN JET BLACK 4X1 STEP TILE",
@@ -48004,7 +50090,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 4,
       "length": 4,
       "breadth": 1,
@@ -48013,7 +50099,8 @@ const data = {
       "actLength": 3.875,
       "actBreadth": 1,
       "type": "STEP",
-      "seller": "STANZA"
+      "seller": "STANZA",
+      "hsnCode": ""
     },
     {
       "name": "ACIDO AZUL MAT  4X2",
@@ -48027,7 +50114,7 @@ const data = {
       "numReviews": 0,
       "description": "high quality product",
       "pUnit": "BOX",
-      "sUnit": "NOS",
+      "sUnit": "SQF",
       "psRatio": 2,
       "length": 4,
       "breadth": 2,
@@ -48036,7 +50123,8 @@ const data = {
       "actLength": 7.75,
       "actBreadth": 1,
       "type": "MATT",
-      "seller": "ANDRIA"
+      "seller": "ANDRIA",
+      "hsnCode": ""
     },
     {
       "name": "STARFIX GOLD  5 KG",
@@ -48054,12 +50142,13 @@ const data = {
       "psRatio": 1,
       "length": null,
       "breadth": null,
-      "size": "",
+      "size": "5 KG",
       "unit": "",
       "actLength": 1,
       "actBreadth": 1,
       "type": "ADHESIVE",
-      "seller": "NEW RV ENTERPRISES"
+      "seller": "NEW RV ENTERPRISES",
+      "hsnCode": ""
     },
     {
       "name": "PHOENIX LEVELING KIT EQUALISER WAGE LOCK (50 NOS)",
@@ -48082,7 +50171,8 @@ const data = {
       "actLength": 1,
       "actBreadth": 1,
       "type": "SPACER",
-      "seller": "DEEPU"
+      "seller": "DEEPU",
+      "hsnCode": ""
     }
   ]
 };
