@@ -1,19 +1,25 @@
-// models/Log.js
+// models/Logmodal.js
 import mongoose from 'mongoose';
 
-const logSchema = new mongoose.Schema(
-  {
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    username: { type: String, required: true },
-    action: { type: String, required: true },
-    details: { type: String },
-    timestamp: { type: Date, default: Date.now },
+const LogSchema = new mongoose.Schema({
+  user: {
+    type: String,
+    required: false, // Allow it to be missing
+    default: 'Guest', // Optional: set a default value for logs with no user
   },
-  {
-    timestamps: true,
-  }
-);
+  username: {
+    type: String,
+    required: true,
+    default: 'Guest'
+  },
+  action: { type: String, required: true },
+  details: { type: String },
+  createdAt: { type: Date, default: Date.now },
+  timestamp: { type: Date, default: Date.now },
+},
+{
+  timestamps: true,
+});
 
-const Log = mongoose.model('Log', logSchema);
-
+const Log = mongoose.model('Log', LogSchema);
 export default Log;

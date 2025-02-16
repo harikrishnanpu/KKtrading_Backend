@@ -612,6 +612,60 @@ userRouter.post("/billing/start-delivery", async (req, res) => {
 });
 
 
+userRouter.post("/billing/cancel-delivery", async (req, res) => {
+  try {
+    const { userId, driverName, invoiceNo, deliveryId, cancelReason } = req.body;
+
+    // Validate required fields
+    if (!userId || !driverName || !invoiceNo || !deliveryId) {
+      return res.status(400).json({
+        error:
+          "Fields 'userId', 'driverName', 'invoiceNo', and 'deliveryId' are required."
+      });
+    }
+
+    // Find the Billing document by invoiceNo
+    const billing = await Billing.findOne({ invoiceNo });
+    if (!billing) {
+      return res
+        .status(404)
+        .json({ error: `Billing with invoiceNo '${invoiceNo}' not found.` });
+    }
+
+    // Find the index of the delivery record in billing.deliveries
+    const deliveryIndex = billing.deliveries.findIndex(
+      (d) => d.deliveryId === deliveryId
+    );
+    if (deliveryIndex === -1) {
+      return res.status(404).json({
+        error: `Delivery with id '${deliveryId}' not found for invoiceNo '${invoiceNo}'.`
+      });
+    }
+
+    // Optionally, if you wish to keep an audit trail, you might log the cancellation reason
+    // For now, we remove the delivery record completely.
+    billing.deliveries.splice(deliveryIndex, 1);
+
+    // Remove the deliveryId from the billing.deliveryIds array
+    billing.deliveryIds = billing.deliveryIds.filter((id) => id !== deliveryId);
+
+    await billing.save();
+
+    // Delete the associated Location document if it exists
+    await Location.deleteOne({ deliveryId });
+
+    res.status(200).json({
+      message: "Delivery cancelled and deleted successfully."
+    });
+  } catch (error) {
+    console.error("Error cancelling delivery:", error);
+    res.status(500).json({ error: "Failed to cancel delivery." });
+  }
+});
+
+
+
+
 // End Delivery Endpoint
 userRouter.post("/billing/end-delivery", async (req, res) => {
   const session = await mongoose.startSession();

@@ -8,6 +8,7 @@ import User from '../models/userModel.js';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
 import CustomerAccount from '../models/customerModal.js';
 import SupplierAccount from '../models/supplierAccountModal.js';
+import Location from '../models/locationModel.js';
 
 const billingRouter = express.Router();
 
@@ -1627,6 +1628,28 @@ billingRouter.get('/deliveries/all', async (req, res) => {
 
 
 
+billingRouter.get('/bill/profile',async (req,res)=>{
+  try {
+    const { salesmanName } = req.query;
+
+    if (!salesmanName) {
+      return res.status(400).json({ message: 'salesmanName query parameter is required' });
+    }
+
+    // Query bills that match the provided salesman name.
+    // Using trim() to remove any leading/trailing spaces.
+    const bills = await Billing.find({ salesmanName: salesmanName.trim() });
+
+    return res.status(200).json(bills);
+  } catch (error) {
+    console.error('Error fetching bills by salesman:', error);
+    return res.status(500).json({ message: 'Server error while fetching bills' });
+  }
+})
+
+
+
+
 
 // DELETE /api/billing/deliveries/:deliveryId
 billingRouter.delete('/deliveries/:deliveryId', async (req, res) => {
@@ -1653,16 +1676,12 @@ billingRouter.delete('/deliveries/:deliveryId', async (req, res) => {
       throw new Error(`Delivery with deliveryId '${deliveryId}' not found in billing.`);
     }
 
-    // 4. Delete the associated Location document (if exists)
-    if (delivery.locationId) {
-      const locationDeletionResult = await Location.deleteOne({ _id: delivery.locationId }).session(session);
-      if (locationDeletionResult.deletedCount === 0) {
-        throw new Error(`Associated location with ID '${delivery.locationId}' not found or already deleted.`);
-      }
-    }
+    // 4. Delete the associated Location document using deliveryId
+    await Location.deleteOne({ deliveryId }).session(session);
 
-    // 5. Remove the delivery from the deliveries array
+    // 5. Remove the delivery from the deliveries array and deliveryIds array
     billing.deliveries = billing.deliveries.filter(d => d.deliveryId !== deliveryId);
+    billing.deliveryIds = billing.deliveryIds.filter(id => id !== deliveryId);
 
     // 6. Recalculate deliveredQuantity and deliveryStatus for each product based on remaining deliveries
     billing.products.forEach(product => {
@@ -1686,38 +1705,27 @@ billingRouter.delete('/deliveries/:deliveryId', async (req, res) => {
     });
 
     // 7. Remove paymentsOut related to this delivery’s otherExpenses from PaymentsAccount
-    //    Since 'method' is inside each 'otherExpense', handle each expense separately
     const otherExpenses = delivery.otherExpenses || [];
-
     for (const expense of otherExpenses) {
       if (expense.method && expense.method.trim()) {
         const expenseMethod = expense.method.trim();
         const account = await PaymentsAccount.findOne({ accountId: expenseMethod }).session(session);
         if (account) {
-          // Generate the referenceId for the current otherExpense
-          // Ensure consistent formatting with how referenceIds are created elsewhere
+          // Create a reference ID consistent with your otherExpense creation logic
           const expenseRefId = `EXP-${expense._id}`;
-
-          // Log the referenceId for debugging purposes
           console.log(`Reference ID to remove: ${expenseRefId}`);
 
-          // Filter out paymentsOut that reference the deleted expense
           const originalPaymentsOutCount = account.paymentsOut.length;
           account.paymentsOut = account.paymentsOut.filter(
             pay => pay.referenceId !== expenseRefId
           );
 
-          // Calculate how many payments were removed
           const removedPaymentsCount = originalPaymentsOutCount - account.paymentsOut.length;
-
-          // Optionally, log the number of removed payments for auditing purposes
           if (removedPaymentsCount > 0) {
             console.log(`Removed ${removedPaymentsCount} payment(s) related to otherExpense ID '${expense._id}' from PaymentsAccount '${expenseMethod}'.`);
           } else {
             console.log(`No matching payments found to remove for otherExpense ID '${expense._id}' in PaymentsAccount '${expenseMethod}'.`);
           }
-
-          // Save the updated PaymentsAccount
           await account.save({ session });
         } else {
           console.warn(`PaymentsAccount with accountId '${expenseMethod}' not found. No payments removed for otherExpense ID '${expense._id}'.`);
@@ -1726,9 +1734,9 @@ billingRouter.delete('/deliveries/:deliveryId', async (req, res) => {
     }
 
     // 8. Recalculate billing-level delivery status and totals
-    // Assuming updateDeliveryStatus recalculates overall delivery statuses based on current deliveries
+    // Assuming updateDeliveryStatus() recalculates overall delivery statuses
     await billing.updateDeliveryStatus();
-    // Assuming calculateTotals recalculates totals like totalFuelCharge and totalOtherExpenses
+    // Assuming calculateTotals() recalculates totals such as totalFuelCharge and totalOtherExpenses
     billing.calculateTotals();
 
     // 9. Save the updated Billing document
@@ -1738,20 +1746,17 @@ billingRouter.delete('/deliveries/:deliveryId', async (req, res) => {
     await session.commitTransaction();
     session.endSession();
 
-    // 11. Respond with success
     res.status(200).json({ message: 'Delivery deleted successfully and related data updated.' });
   } catch (error) {
     console.error('Error deleting delivery:', error);
-    // Abort the transaction if an error occurred
     if (session.inTransaction()) {
       await session.abortTransaction();
     }
-    // End the session
     session.endSession();
-    // Respond with error
     res.status(500).json({ message: error.message || 'Error deleting delivery.' });
   }
 });
+
 
 
 
