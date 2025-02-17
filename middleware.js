@@ -20,7 +20,7 @@ const logMiddleware = async (req, res, next) => {
 
     const logEntry = new Log({
       user: user ? user._id : null,
-      username: user ? user.name : 'Guest',
+      username: user ? user.name : req.body.email || 'Guest',
       action: `${req.method} ${req.originalUrl}`,
       details: JSON.stringify({
         params: req.params,
