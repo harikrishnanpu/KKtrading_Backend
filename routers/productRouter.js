@@ -428,6 +428,12 @@ productRouter.put(
       product.type = updatedProduct.type || product.type;
       product.cashPartPrice = updatedProduct.cashPartPrice || product.cashPartPrice;
       product.billPartPrice = updatedProduct.billPartPrice || product.billPartPrice;
+      product.actLength = updatedProduct.actLength || product.actLength;
+      product.actBreadth = updatedProduct.actBreadth || product.actBreadth;
+      product.hsnCode = updatedProduct.hsnCode || product.hsnCode;
+      product.gstPercent = updatedProduct.gstPercent || product.gstPercent;
+      product.seller = updatedProduct.seller || product.seller;
+      product.sellerAddress = updatedProduct.sellerAddress || product.sellerAddress;
       
       const updated = await product.save();
       res.send({ message: 'Product Updated', product: updated });
