@@ -77,6 +77,18 @@ const BillingSchema = new mongoose.Schema(
       },
     ],
 
+    neededToPurchase: [
+      {
+        item_id: { type: String, required: true },
+        name: { type: String, required: true },
+        quantityOrdered: { type: Number, required: true },
+        quantityNeeded: { type: Number, required: true },
+        purchased: { type: Boolean, default: false },
+        verified: { type: Boolean, default: false },
+        purchaseId: { type: String }
+      },
+    ],    
+
     deliveryIds: [String],
 
     deliveries: [

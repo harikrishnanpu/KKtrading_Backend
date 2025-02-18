@@ -16,6 +16,16 @@ purchaseRouter.get('/get/:id', async (req, res) => {
     }
 });
 
+purchaseRouter.get('/bill/get/allpurchases', async (req, res) => {
+  const purchases = await Purchase.find({});
+  if (purchases) {
+    res.json(purchases);
+  } else {
+    res.status(404);
+    throw new Error("Purchase not found");
+  }
+});
+ 
 
 purchaseRouter.get("/purchase/suggestions", async (req, res) => {
   try {

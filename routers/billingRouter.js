@@ -45,6 +45,7 @@ billingRouter.post('/create', async (req, res) => {
       remark,
       showroom,
       userId,
+      isApproved,
       products, // Expected to be an array of objects with item_id and quantity
     } = req.body;
 
@@ -192,7 +193,7 @@ billingRouter.post('/create', async (req, res) => {
       unloading: parseFloat(unloading),
       transportation: parseFloat(transportation),
       payments: [], // Initialize payments as an empty array
-      isApproved: isAdmin, // Automatically approve if user is admin
+      isApproved: isAdmin && isApproved || false, // Automatically approve if user is admin
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
     });
 
@@ -298,7 +299,7 @@ billingRouter.post('/create', async (req, res) => {
     // 10. Conditionally Update Stock
     // -----------------------
     let productUpdatePromises = [];
-    if (isAdmin) {
+    if (isAdmin && isApproved) {
       // Only update stock if the user is admin during creation
       for (const item of products) {
         const { item_id, quantity } = item;
@@ -795,7 +796,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
     await session.commitTransaction();
     session.endSession();
 
-    return res.status(200).json({ message: 'Billing data updated successfully.' });
+    return res.status(200).json({ message: 'Billing data updated successfully.', existingBilling });
   } catch (error) {
     if (session.inTransaction()) {
       await session.abortTransaction();
@@ -858,6 +859,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
 
     // === 2. Fetch the Billing Record ===
     const billing = await Billing.findById(billingId).session(session);
+    
     if (!billing) {
       await session.abortTransaction();
       session.endSession();
@@ -965,7 +967,8 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     }
 
     // === 7. Remove the Billing Entry ===
-    await Billing.findOneAndDelete(billingId).session(session);
+    const deletedBill = await Billing.findOneAndDelete({ _id: billingId }).session(session);
+    console.log(deletedBill);
 
     if(customerAccount){
       // === 8. Save the Updated Customer Account ===
@@ -2164,7 +2167,21 @@ billingRouter.get('/sort/sales-report', async (req, res) => {
 });
 
 
-
+billingRouter.put('/update-needed-purchase/:id', async (req, res) => {
+  try {
+    const { neededToPurchase } = req.body; // Expect an array of items
+    const billing = await Billing.findById(req.params.id);
+    if (!billing) {
+      return res.status(404).json({ message: 'Billing not found' });
+    }
+    // Update the neededToPurchase array
+    billing.neededToPurchase = neededToPurchase;
+    await billing.save();
+    res.json({ message: 'Needed to purchase section updated successfully', billing });
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error: error.message });
+  }
+});
 
 
 
