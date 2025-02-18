@@ -59,6 +59,7 @@ const BillingSchema = new mongoose.Schema(
         size: { type: String, required: true },
         psRatio: { type: String, required: true },
         sellingPriceinQty: { type: Number, required: true },
+        selledPrice : { type: Number, required: true },
         deliveredQuantity: { type: Number, default: 0 },
         deliveryStatus: { type: String, default: "Pending" },
         gstRate: { type: Number, required: true, default: 18 },
