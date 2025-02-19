@@ -5,6 +5,7 @@ import PaymentsAccount from '../models/paymentsAccountModal.js';
 import expressAsyncHandler from 'express-async-handler';
 import SupplierAccount from '../models/supplierAccountModal.js';
 import mongoose from 'mongoose';
+import Purchase from '../models/purchasemodals.js';
 
 const sellerPaymentsRouter = express.Router();
 
@@ -22,18 +23,63 @@ sellerPaymentsRouter.get(('/suggestions'), async (req, res) => {
 });
 
 // Get seller details by ID
-sellerPaymentsRouter.get(('/get-seller/:id'), async (req, res) => {
+sellerPaymentsRouter.get("/get-seller/:id", async (req, res) => {
   try {
     const seller = await SellerPayment.findById(req.params.id);
     if (!seller) {
-      return res.status(404).json({ message: 'Seller not found' });
+      return res.status(404).json({ message: "Seller not found" });
     }
-    res.json(seller);
+
+    // Fetch all purchases for this seller
+    const purchases = await Purchase.find({ sellerId: seller.sellerId });
+
+    // Calculate total bill part and cash part from purchase totals
+    const totalBillPart = purchases.reduce(
+      (acc, purchase) => acc + (purchase.totals.billPartTotal || 0),
+      0
+    );
+    const totalCashPart = purchases.reduce(
+      (acc, purchase) => acc + (purchase.totals.cashPartTotal || 0),
+      0
+    );
+
+    // Calculate payments breakdown from seller.payments
+    const totalCashPartGiven = seller.payments.reduce((acc, payment) => {
+      if (
+        payment.remark &&
+        payment.remark.trim().toUpperCase().startsWith("CASH:")
+      ) {
+        return acc + payment.amount;
+      }
+      return acc;
+    }, 0);
+
+    const totalBillPartGiven = seller.payments.reduce((acc, payment) => {
+      if (
+        payment.remark &&
+        payment.remark.trim().toUpperCase().startsWith("BILL:")
+      ) {
+        return acc + payment.amount;
+      }
+      return acc;
+    }, 0);
+
+    // Convert seller document to a plain object
+    const sellerData = seller.toObject();
+    sellerData.totalBillPart = totalBillPart;
+    sellerData.totalCashPart = totalCashPart;
+    sellerData.totalCashPartGiven = totalCashPartGiven;
+    sellerData.totalBillPartGiven = totalBillPartGiven;
+    sellerData.totalRemaining =
+      sellerData.totalAmountBilled - sellerData.totalAmountPaid;
+
+    res.json(sellerData);
   } catch (error) {
-    console.error('Error fetching seller details:', error);
-    res.status(500).json({ message: 'Error fetching seller details' });
+    console.error("Error fetching seller details:", error);
+    res.status(500).json({ message: "Error fetching seller details" });
   }
 });
+
 
 
 sellerPaymentsRouter.get('/billpayments/all', async (req, res) => {
