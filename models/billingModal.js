@@ -120,7 +120,9 @@ const BillingSchema = new mongoose.Schema(
         kmTravelled: Number,
         startingKm: Number,
         endKm: Number,
-        fuelCharge: Number, // Fuel charge specific to this delivery
+        fuelCharge: Number,
+        bata: Number,
+        vehicleNumber: String,
         method: String,
         otherExpenses: [
           {

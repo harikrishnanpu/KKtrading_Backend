@@ -1285,6 +1285,7 @@ billingRouter.get("/billing/driver/suggestions", async (req, res) => {
       .collation({ locale: "en", numericOrdering: true })
       .limit(5); // Limit suggestions to 5
 
+
     res.status(200).json(suggestions); // Send the filtered suggestions
   } catch (error) {
     console.error("Error fetching suggestions:", error); // Log errors for debugging
@@ -1621,6 +1622,8 @@ billingRouter.get('/deliveries/all', async (req, res) => {
           fuelCharge: delivery.fuelCharge,
           otherExpenses: delivery.otherExpenses,
           productsDelivered: delivery.productsDelivered,
+          bata: delivery.bata,
+          vehicleNumber: delivery.vehicleNumber,
         }))
     );
 
@@ -1778,11 +1781,14 @@ billingRouter.put('/update-delivery/update', async (req, res) => {
       startingKm,
       endKm,
       fuelCharge,
+      bata,
+      vehicleNumber,
       method, // Payment method for other expenses (if any)
       updatedOtherExpenses = [],
       deliveredProducts = [],
       endLocation, // Assuming endLocation is needed for updating Location
     } = req.body;
+
 
     // 1. Validate required fields
     if (!deliveryId) {
@@ -1837,6 +1843,13 @@ billingRouter.put('/update-delivery/update', async (req, res) => {
       }
       delivery.fuelCharge = parsedFuelCharge;
     }
+
+    if(bata !== undefined){
+      const parsedBata = parseFloat(bata);
+         delivery.bata = parsedBata;
+    }
+
+    delivery.vehicleNumber = vehicleNumber || delivery.vehicleNumber || '';
 
     // 6. Update delivered products for this delivery
     if (!Array.isArray(deliveredProducts)) {

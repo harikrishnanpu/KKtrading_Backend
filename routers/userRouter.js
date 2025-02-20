@@ -678,6 +678,8 @@ userRouter.post("/billing/end-delivery", async (req, res) => {
       deliveredProducts = [],
       kmTravelled = 0,
       fuelCharge = 0,
+      bata = 0,
+      vehicleNumber,
       otherExpenses = [],
       startingKm = 0,
       endKm = 0,
@@ -755,6 +757,7 @@ userRouter.post("/billing/end-delivery", async (req, res) => {
     const parsedStartingKm = parseFloat(startingKm);
     const parsedEndKm = parseFloat(endKm);
     const parsedFuelCharge = parseFloat(fuelCharge);
+    const parsedBata = parseFloat(bata);
 
     if (!isNaN(parsedKmTravelled)) {
       delivery.kmTravelled = (delivery.kmTravelled || 0) + parsedKmTravelled;
@@ -771,6 +774,16 @@ userRouter.post("/billing/end-delivery", async (req, res) => {
     if (!isNaN(parsedFuelCharge)) {
       delivery.fuelCharge = (delivery.fuelCharge || 0) + parsedFuelCharge;
     }
+
+    if(!isNaN(parsedBata)){
+      delivery.bata = (delivery.bata || 0) + parsedBata;
+    }
+
+    if(vehicleNumber !== ''){
+      delivery.vehicleNumber = vehicleNumber;
+    }
+
+
 
     // 6. Handle Other Expenses for this delivery only
     //    Only update or add expenses; do not remove existing expenses not mentioned

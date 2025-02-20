@@ -452,7 +452,6 @@ transactionRouter.get('/allbill/payments', async (req, res) => {
       return res.status(400).json({ message: 'Both fromDate and toDate are required.' });
     }
 
-    // Convert to Date objects
     const start = new Date(fromDate);
     const end = new Date(toDate);
 
@@ -471,17 +470,18 @@ transactionRouter.get('/allbill/payments', async (req, res) => {
 
     // Fetch all bills
     const billings = await Billing.find()
-      .populate('products') // If products are references
-      .populate('deliveries') // If deliveries are references
-      .lean(); // Use lean() for better performance if you don't need Mongoose document methods
+      .populate('products')
+      .populate('deliveries')
+      .lean();
 
     // Initialize arrays for payments and other expenses
     const payments = [];
     const otherExpenses = [];
 
     // Iterate through billings to collect payments and other expenses within date range
-    billings.forEach(billing => {
-      (billing.payments || []).forEach(payment => {
+    billings.forEach((billing) => {
+      // Billing payments
+      (billing.payments || []).forEach((payment) => {
         const paymentDate = new Date(payment.date);
         if (paymentDate >= start && paymentDate <= end) {
           payments.push({
@@ -496,7 +496,8 @@ transactionRouter.get('/allbill/payments', async (req, res) => {
         }
       });
 
-      (billing.otherExpenses || []).forEach(expense => {
+      // Billing-level other expenses
+      (billing.otherExpenses || []).forEach((expense) => {
         const expenseDate = new Date(expense.date);
         if (expenseDate >= start && expenseDate <= end) {
           otherExpenses.push({
@@ -505,27 +506,50 @@ transactionRouter.get('/allbill/payments', async (req, res) => {
             paymentFrom: billing.customerName,
             remark: expense.remark,
             date: expense.date,
+            method: expense.method,
+            referenceId: expense.referenceId,
+            invoiceNo: billing.invoiceNo,
           });
         }
       });
+
+      // Delivery-level other expenses
+      (billing.deliveries || []).forEach((delivery) => {
+        (delivery.otherExpenses || []).forEach((deliveryExpense) => {
+          const delExpenseDate = new Date(deliveryExpense.date);
+          if (delExpenseDate >= start && delExpenseDate <= end) {
+            otherExpenses.push({
+              billingId: billing._id,
+              amount: deliveryExpense.amount,
+              paymentFrom: billing.customerName,
+              remark: deliveryExpense.remark,
+              date: deliveryExpense.date,
+              method: deliveryExpense.method,
+              invoiceNo: billing.invoiceNo,
+            });
+          }
+        });
+      });
     });
 
-    // Format the response
-    const formattedResponse = {
-      billings: billings.filter(billing => {
-        const billingDate = new Date(billing.invoiceDate);
-        return billingDate >= start && billingDate <= end;
-      }),
-      payments, // Payments filtered by date range
-      otherExpenses, // Other expenses filtered by date range
-    };
+    // Filter the billings themselves by date (invoiceDate)
+    const filteredBillings = billings.filter((billing) => {
+      const billingDate = new Date(billing.invoiceDate);
+      return billingDate >= start && billingDate <= end;
+    });
 
-    res.json(formattedResponse);
+    // Format and return
+    res.json({
+      billings: filteredBillings,
+      payments,
+      otherExpenses,
+    });
   } catch (error) {
     console.error('Error fetching billings:', error);
     res.status(500).json({ message: 'Server Error while fetching billings and payments.' });
   }
 });
+
 
 
 

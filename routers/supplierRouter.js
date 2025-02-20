@@ -6,6 +6,7 @@ import mongoose from 'mongoose';
 import SellerPayment from '../models/sellerPayments.js';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
 import expressAsyncHandler from 'express-async-handler';
+import Purchase from '../models/purchasemodals.js';
 
 const supplierRouter = express.Router();
 
@@ -297,12 +298,53 @@ supplierRouter.delete(
  */
 supplierRouter.get('/allaccounts', async (req, res) => {
   try {
-    // Optionally, implement pagination, filtering, or sorting based on query parameters
-    const accounts = await SupplierAccount.find().sort({ createdAt: -1 });
-    res.json(accounts);
+    // Fetch all supplier accounts
+    const accounts = await SupplierAccount.find({}).lean();
+
+    // Fetch all purchases
+    const purchases = await Purchase.find({}).lean();
+
+    // Aggregate Bill/Cash from purchases by sellerId
+    const purchaseAggregator = {};
+    purchases.forEach((p) => {
+      const sid = p.sellerId;
+      if (!purchaseAggregator[sid]) {
+        purchaseAggregator[sid] = { billPartTotal: 0, cashPartTotal: 0 };
+      }
+      purchaseAggregator[sid].billPartTotal += p.totals.billPartTotal || 0;
+      purchaseAggregator[sid].cashPartTotal += p.totals.cashPartTotal || 0;
+    });
+
+    // Attach per-supplier bill/cash totals
+    // Also convert Mongoose docs to plain objects if needed
+    const enrichedAccounts = accounts.map((acc) => {
+      const sid = acc.sellerId;
+      const agg = purchaseAggregator[sid] || { billPartTotal: 0, cashPartTotal: 0 };
+      return {
+        ...acc,
+        totalBillPartBilled: agg.billPartTotal,
+        totalCashPartBilled: agg.cashPartTotal
+      };
+    });
+
+    // Compute global totals across all suppliers
+    const totalBillPartAll = Object.values(purchaseAggregator).reduce(
+      (sum, obj) => sum + (obj.billPartTotal || 0),
+      0
+    );
+    const totalCashPartAll = Object.values(purchaseAggregator).reduce(
+      (sum, obj) => sum + (obj.cashPartTotal || 0),
+      0
+    );
+
+    res.json({
+      accounts: enrichedAccounts,
+      totalBillPartAll,
+      totalCashPartAll
+    });
   } catch (error) {
-    console.error('Error fetching supplier accounts:', error);
-    res.status(500).json({ message: 'Server Error' });
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
   }
 });
 
@@ -866,6 +908,7 @@ supplierRouter.put(
 
 
 
+// GET /api/seller/daily/payments
 supplierRouter.get('/daily/payments', async (req, res) => {
   try {
     const { fromDate, toDate } = req.query;
@@ -893,6 +936,7 @@ supplierRouter.get('/daily/payments', async (req, res) => {
     end.setHours(23, 59, 59, 999);
 
     // Fetch supplier payments within the date range
+    // Using MongoDB aggregate to group payments by each seller
     const suppliers = await SupplierAccount.aggregate([
       { $unwind: '$payments' },
       {
@@ -904,26 +948,28 @@ supplierRouter.get('/daily/payments', async (req, res) => {
         $group: {
           _id: '$sellerId',
           sellerName: { $first: '$sellerName' },
-          payments: { $push: {
-            amount: '$payments.amount',
-            date: '$payments.date',
-            method: '$payments.method',
-            submittedBy: '$payments.submittedBy',
-            remark: '$payments.remark',
-          }},
+          payments: {
+            $push: {
+              amount: '$payments.amount',
+              date: '$payments.date',
+              method: '$payments.method',
+              submittedBy: '$payments.submittedBy',
+              remark: '$payments.remark',
+            },
+          },
         },
       },
-      {
-        $sort: { sellerName: 1 }, // Optional: Sort suppliers alphabetically
-      },
+      { $sort: { sellerName: 1 } }, // Optional: Sort suppliers alphabetically
     ]);
 
+    // Respond with an array of suppliers, each containing payments[]
     res.json(suppliers);
   } catch (error) {
     console.error('Error fetching supplier payments:', error);
     res.status(500).json({ message: 'Internal Server Error while fetching supplier payments.' });
   }
 });
+
 
 
 
