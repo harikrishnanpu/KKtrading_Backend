@@ -194,7 +194,7 @@ billingRouter.post('/create', async (req, res) => {
       unloading: parseFloat(unloading),
       transportation: parseFloat(transportation),
       payments: [], // Initialize payments as an empty array
-      isApproved: isAdmin && isApproved || false, // Automatically approve if user is admin
+      isApproved: isAdmin && isApproved ? true : false, // Automatically approve if user is admin
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
       isneededToPurchase: isneededToPurchase
     });
