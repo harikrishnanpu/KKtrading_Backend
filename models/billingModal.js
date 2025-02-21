@@ -6,7 +6,7 @@ const BillingSchema = new mongoose.Schema(
   {
     invoiceNo: { type: String, required: true, unique: true },
     isApproved: { type: Boolean, default: false },
-    neededToPurchase: { type: Boolean, default: false },
+    isneededToPurchase: { type: Boolean, default: false },
     approvedBy: { type: String },
     submittedBy: { type: String },
     invoiceDate: { type: Date, required: true },

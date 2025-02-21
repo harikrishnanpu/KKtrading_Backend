@@ -46,7 +46,7 @@ billingRouter.post('/create', async (req, res) => {
       showroom,
       userId,
       isApproved,
-      neededToPurchase,
+      isneededToPurchase,
       products, // Expected to be an array of objects with item_id and quantity
     } = req.body;
 
@@ -196,7 +196,7 @@ billingRouter.post('/create', async (req, res) => {
       payments: [], // Initialize payments as an empty array
       isApproved: isAdmin && isApproved || false, // Automatically approve if user is admin
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
-      neededToPurchase: neededToPurchase
+      isneededToPurchase: isneededToPurchase
     });
 
     // -----------------------
@@ -416,7 +416,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       userId,
       showroom,
       salesmanPhoneNumber,
-      neededToPurchase
+      isneededToPurchase
     } = req.body;
 
     // === Basic Validation ===
@@ -777,7 +777,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       deliveryStatus: deliveryStatus || existingBilling.deliveryStatus,
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
       roundOff: parseFloat(roundOff) || 0,
-      neededToPurchase: neededToPurchase || existingBilling.neededToPurchase,
+      isneededToPurchase: isneededToPurchase || existingBilling.isneededToPurchase,
     });
 
     // === Update Salesman Phone Number ===
