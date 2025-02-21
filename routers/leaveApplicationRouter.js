@@ -38,6 +38,32 @@ leaveApplicationRouter.put('/:id/approve', asyncHandler(async (req, res) => {
     return res.status(404).json({ message: 'Leave not found.' });
   }
   leave.status = 'Approved';
+
+
+      const eventTitle = `Approved Leave: ${leave.userName} (From: ${leave.startDate.toISOString().split('T')[0]} To: ${leave.endDate.toISOString().split('T')[0]})`;
+  
+      // Check if an event already exists for this leave
+      let event = await Event.findOne({ title: eventTitle });
+  
+      if (event) {
+        // Update the existing event
+        event.start = leave.startDate;
+        event.end = leave.endDate;
+        event.color = "#ff9800"; // Orange color for approved leave
+        event.textColor = "#ffffff"; // White text
+        await event.save();
+      } else {
+        // Create a new event
+        event = new Event({
+          title: eventTitle,
+          start: leave.startDate,
+          end: leave.endDate,
+          color: "#ff9800", // Orange color for approved leave
+          textColor: "#ffffff", // White text
+          allDay: false // Allows specific start & end times
+        });
+        await event.save();
+      }
   await leave.save();
   res.json(leave);
 }));
