@@ -787,41 +787,53 @@ userRouter.post("/billing/end-delivery", async (req, res) => {
 
     // 6. Handle Other Expenses for this delivery only
     //    Only update or add expenses; do not remove existing expenses not mentioned
-    const existingExpensesMap = new Map(delivery.otherExpenses.map(e => [e._id.toString(), e]));
+   // 6. Handle Other Expenses for this delivery only
+//    Only update or add expenses; if an expense’s amount is 0, remove it from the delivery.
+const existingExpensesMap = new Map(delivery.otherExpenses.map(e => [e._id.toString(), e]));
 
-    for (const expense of otherExpenses) {
-      const { id, amount, remark } = expense;
-      const parsedAmount = parseFloat(amount);
+for (const expense of otherExpenses) {
+  const { id, amount, remark } = expense;
+  const parsedAmount = parseFloat(amount);
 
-      if (isNaN(parsedAmount) || parsedAmount < 0) {
-        throw new Error("Expense amount must be a non-negative number.");
-      }
+  if (isNaN(parsedAmount) || parsedAmount < 0) {
+    throw new Error("Expense amount must be a non-negative number.");
+  }
 
-      if (id) {
-        // Update existing expense in the delivery
-        const existingExpense = delivery.otherExpenses.find((e) => e._id.toString() === id.toString());
-        if (!existingExpense) {
-          throw new Error(`Expense with id '${id}' not found in this delivery.`);
-        }
-        existingExpense.amount = parsedAmount;
-        existingExpense.remark = remark || existingExpense.remark;
-        if (method && method.trim()) {
-          existingExpense.method = method.trim();
-        }
-      } else {
-        // Add new expense to the delivery
-        const newExpenseId = new mongoose.Types.ObjectId();
-        const newExpense = {
-          _id: newExpenseId,
-          amount: parsedAmount,
-          remark: remark || "",
-          date: new Date(),
-          method: method && method.trim() ? method.trim() : undefined,
-        };
-        delivery.otherExpenses.push(newExpense);
-        existingExpensesMap.set(newExpenseId.toString(), newExpense);
-      }
+  if (parsedAmount === 0) {
+    // If amount is 0, remove the expense if it exists.
+    if (id) {
+      delivery.otherExpenses = delivery.otherExpenses.filter(e => e._id.toString() !== id.toString());
+      existingExpensesMap.delete(id.toString());
     }
+    // For new expense with 0 amount, do nothing.
+  } else {
+    if (id) {
+      // Update existing expense in the delivery
+      const existingExpense = delivery.otherExpenses.find((e) => e._id.toString() === id.toString());
+      if (!existingExpense) {
+        throw new Error(`Expense with id '${id}' not found in this delivery.`);
+      }
+      existingExpense.amount = parsedAmount;
+      existingExpense.remark = remark || existingExpense.remark;
+      if (method && method.trim()) {
+        existingExpense.method = method.trim();
+      }
+    } else {
+      // Add new expense to the delivery with amount greater than 0
+      const newExpenseId = new mongoose.Types.ObjectId();
+      const newExpense = {
+        _id: newExpenseId,
+        amount: parsedAmount,
+        remark: remark || "",
+        date: new Date(),
+        method: method && method.trim() ? method.trim() : undefined,
+      };
+      delivery.otherExpenses.push(newExpense);
+      existingExpensesMap.set(newExpenseId.toString(), newExpense);
+    }
+  }
+}
+
 
     // 7. Update billing-level deliveryStatus based on all products
     await billing.updateDeliveryStatus();

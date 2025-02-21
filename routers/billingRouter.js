@@ -46,6 +46,7 @@ billingRouter.post('/create', async (req, res) => {
       showroom,
       userId,
       isApproved,
+      neededToPurchase,
       products, // Expected to be an array of objects with item_id and quantity
     } = req.body;
 
@@ -195,6 +196,7 @@ billingRouter.post('/create', async (req, res) => {
       payments: [], // Initialize payments as an empty array
       isApproved: isAdmin && isApproved || false, // Automatically approve if user is admin
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
+      neededToPurchase: neededToPurchase
     });
 
     // -----------------------
@@ -414,6 +416,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       userId,
       showroom,
       salesmanPhoneNumber,
+      neededToPurchase
     } = req.body;
 
     // === Basic Validation ===
@@ -774,6 +777,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       deliveryStatus: deliveryStatus || existingBilling.deliveryStatus,
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
       roundOff: parseFloat(roundOff) || 0,
+      neededToPurchase: neededToPurchase || existingBilling.neededToPurchase,
     });
 
     // === Update Salesman Phone Number ===
@@ -1906,42 +1910,53 @@ billingRouter.put('/update-delivery/update', async (req, res) => {
 
     // 8. Handle updatedOtherExpenses at the delivery level
     //    Only update or add expenses; do not remove existing expenses not mentioned
-    const existingExpensesMap = new Map(delivery.otherExpenses.map(e => [e._id.toString(), e]));
+ // 8. Handle updatedOtherExpenses at the delivery level
+//    Only update or add expenses; if an expense’s amount is 0, remove it from the delivery.
+const existingExpensesMap = new Map(delivery.otherExpenses.map(e => [e._id.toString(), e]));
 
-    for (const expense of updatedOtherExpenses) {
-      const { id, amount, remark } = expense;
+for (const expense of updatedOtherExpenses) {
+  const { id, amount, remark } = expense;
+  const parsedAmount = parseFloat(amount);
+  if (isNaN(parsedAmount) || parsedAmount < 0) {
+    throw new Error("Expense amount must be a non-negative number.");
+  }
 
-      const parsedAmount = parseFloat(amount);
-      if (isNaN(parsedAmount) || parsedAmount < 0) {
-        throw new Error("Expense amount must be a non-negative number.");
-      }
-
-      if (id) {
-        // Update existing expense if it exists
-        const existingExpense = existingExpensesMap.get(id.toString());
-        if (existingExpense) {
-          existingExpense.amount = parsedAmount;
-          existingExpense.remark = remark || existingExpense.remark;
-          if (method && method.trim()) {
-            existingExpense.method = method.trim();
-          }
-        } else {
-          throw new Error(`Expense with id '${id}' not found in this delivery.`);
+  if (parsedAmount === 0) {
+    // If amount is 0, remove the expense if it exists.
+    if (id) {
+      delivery.otherExpenses = delivery.otherExpenses.filter(e => e._id.toString() !== id.toString());
+      existingExpensesMap.delete(id.toString());
+    }
+    // For a new expense (with no id) and amount 0, we do nothing.
+  } else {
+    if (id) {
+      // Update existing expense if it exists.
+      const existingExpense = existingExpensesMap.get(id.toString());
+      if (existingExpense) {
+        existingExpense.amount = parsedAmount;
+        existingExpense.remark = remark || existingExpense.remark;
+        if (method && method.trim()) {
+          existingExpense.method = method.trim();
         }
       } else {
-        // Add new expense
-        const newExpenseId = new mongoose.Types.ObjectId();
-        const newExpense = {
-          _id: newExpenseId,
-          amount: parsedAmount,
-          remark: remark || "",
-          date: new Date(),
-          method: method && method.trim() ? method.trim() : undefined,
-        };
-        delivery.otherExpenses.push(newExpense);
-        existingExpensesMap.set(newExpenseId.toString(), newExpense);
+        throw new Error(`Expense with id '${id}' not found in this delivery.`);
       }
+    } else {
+      // Add new expense with amount greater than 0.
+      const newExpenseId = new mongoose.Types.ObjectId();
+      const newExpense = {
+        _id: newExpenseId,
+        amount: parsedAmount,
+        remark: remark || "",
+        date: new Date(),
+        method: method && method.trim() ? method.trim() : undefined,
+      };
+      delivery.otherExpenses.push(newExpense);
+      existingExpensesMap.set(newExpenseId.toString(), newExpense);
     }
+  }
+}
+
 
     // 9. Update overall billing delivery status
     await billing.updateDeliveryStatus();
@@ -1954,6 +1969,15 @@ billingRouter.put('/update-delivery/update', async (req, res) => {
       if (!account) {
         throw new Error(`Payment account with accountId '${expenseMethod}' not found.`);
       }
+
+      const currentExpenseRefIds = new Set(delivery.otherExpenses.map(exp => `EXP-${exp._id}`));
+
+      account.paymentsOut = account.paymentsOut.filter(pay => {
+        if (pay.referenceId && pay.referenceId.startsWith("EXP-")) {
+          return currentExpenseRefIds.has(pay.referenceId);
+        }
+        return true; // keep unrelated payment entries
+      });
 
       for (const exp of delivery.otherExpenses) {
         if (exp.amount > 0) {

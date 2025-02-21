@@ -1389,6 +1389,39 @@ productRouter.get('/items/low-stock-limited', async (req, res) => {
 });
 
 
+productRouter.get('/items/need-to-purchase', async (req, res) => {
+  try {
+    // Find Billing documents that have at least one needed-to-purchase item,
+    // and sort them by expectedDeliveryDate (ascending)
+    const billings = await Billing.find({ "neededToPurchase.0": { $exists: true } })
+      .sort({ expectedDeliveryDate: 1 });
+
+    // Flatten the neededToPurchase items from each billing,
+    // while preserving contextual fields (e.g., invoiceNo and expectedDeliveryDate)
+    let neededItems = [];
+    billings.forEach((billing) => {
+      if (billing.neededToPurchase && billing.neededToPurchase.length > 0) {
+        billing.neededToPurchase.forEach((item) => {
+          neededItems.push({
+            ...item._doc, // use _doc if using Mongoose documents
+            invoiceNo: billing.invoiceNo,
+            expectedDeliveryDate: billing.expectedDeliveryDate
+          });
+        });
+      }
+    });
+
+    // Optionally, if you want to limit the number of items returned (similar to .slice(0, 1) in your original code)
+    // you can adjust the slice here:
+    const sortedLimitedItems = neededItems.slice(0, 1); // Change limit as needed
+
+    res.json(sortedLimitedItems);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching needed to purchase items', error });
+  }
+});
+
+
 productRouter.get('/low-stock/all', async (req, res) => {
   try {
     const products = await Product.find({ countInStock: { $lt: 10 } })
