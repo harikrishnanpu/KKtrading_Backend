@@ -1,5 +1,6 @@
 // models/Billing.js
 import mongoose from "mongoose";
+import Event from "./calendarModal.js";
 
 const BillingSchema = new mongoose.Schema(
   {
@@ -222,8 +223,10 @@ BillingSchema.methods.calculateTotals = function () {
 };
 
 // Pre-save hook to update billingAmountReceived, payment status, and totals
-BillingSchema.pre("save", function (next) {
-  // Calculate total received from payments
+BillingSchema.pre("save", async function (next) {
+    const { invoiceNo, customerName, deliveryStatus, expectedDeliveryDate } = this;
+
+      // Calculate total received from payments
   this.billingAmountReceived = this.payments.reduce(
     (total, payment) => total + (payment.amount || 0),
     0
@@ -244,8 +247,49 @@ BillingSchema.pre("save", function (next) {
   // Recalculate totals for fuel charge and other expenses
   this.calculateTotals();
 
-  next();
+    // Determine event title and colors based on delivery status
+    const eventTitle =
+      deliveryStatus === "Delivered"
+        ? `Delivered to customer ${customerName} with Invoice No: ${invoiceNo}`
+        : `Delivery pending for ${customerName} with Invoice No: ${invoiceNo}`;
+
+    // Choose cool colors (avoiding green and red)
+    const eventColor = deliveryStatus === "Delivered" ? "#722ed1" : "#faad14";
+    const eventTextColor = "#fff";
+
+    // Search for an existing event using the invoiceNo within the title
+    let event = await Event.findOne({ title: { $regex: invoiceNo } });
+
+    if (event) {
+      // Update the event details
+      event.title = eventTitle;
+      event.color = eventColor;
+      event.textColor = eventTextColor;
+      event.start = expectedDeliveryDate;
+      event.end = expectedDeliveryDate;
+      await event.save();
+    } else {
+      // Create a new calendar event
+      event = new Event({
+        title: eventTitle,
+        color: eventColor,
+        textColor: eventTextColor,
+        start: expectedDeliveryDate,
+        end: expectedDeliveryDate,
+        allDay: false,
+      });
+      await event.save();
+    }
+
+    next();
 });
+
+
+
+
+
+
+
 
 // Method to update delivery status based on product delivery quantities
 BillingSchema.methods.updateDeliveryStatus = function () {
