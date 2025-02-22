@@ -1398,18 +1398,24 @@ productRouter.get('/items/need-to-purchase', async (req, res) => {
 
     // Flatten the neededToPurchase items from each billing,
     // while preserving contextual fields (e.g., invoiceNo and expectedDeliveryDate)
-    let neededItems = [];
-    billings.forEach((billing) => {
-      if (billing.neededToPurchase && billing.neededToPurchase.length > 0) {
-        billing.neededToPurchase.forEach((item) => {
-          neededItems.push({
-            ...item._doc, // use _doc if using Mongoose documents
-            invoiceNo: billing.invoiceNo,
-            expectedDeliveryDate: billing.expectedDeliveryDate
-          });
+// Flatten the neededToPurchase items from each billing,
+// while preserving contextual fields (e.g., invoiceNo and expectedDeliveryDate)
+let neededItems = [];
+billings.forEach((billing) => {
+  if (billing.neededToPurchase && billing.neededToPurchase.length > 0) {
+    billing.neededToPurchase.forEach((item) => {
+      // Only include items that are not purchased or not verified
+      if (!item.purchased || !item.verified) {
+        neededItems.push({
+          ...item._doc, // use _doc if using Mongoose documents
+          invoiceNo: billing.invoiceNo,
+          expectedDeliveryDate: billing.expectedDeliveryDate
         });
       }
     });
+  }
+});
+
 
     // Optionally, if you want to limit the number of items returned (similar to .slice(0, 1) in your original code)
     // you can adjust the slice here:

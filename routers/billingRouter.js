@@ -485,7 +485,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       const productInDB = await Product.findOne({ item_id: product.item_id }).session(session);
       if (productInDB) {
         // Return stock if bill is approved or user is admin
-        if (isBillApproved || isAdmin) {
+        if (isBillApproved && isAdmin) {
           productInDB.countInStock += parseFloat(product.quantity);
           await productInDB.save({ session });
         }
@@ -534,7 +534,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
         const previousQuantity = parseFloat(existingProductInBilling.quantity);
         const quantityDifference = newQuantity - previousQuantity;
 
-        if (isBillApproved || isAdmin) {
+        if (isBillApproved && isAdmin) {
           const newStockCount = productInDB.countInStock - quantityDifference;
           if (newStockCount < 0) {
             await session.abortTransaction();
@@ -567,7 +567,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
         });
       } else {
         // New product to add
-        if (isBillApproved || isAdmin) {
+        if (isBillApproved && isAdmin) {
           if (productInDB.countInStock < newQuantity) {
             await session.abortTransaction();
             session.endSession();
@@ -779,6 +779,8 @@ billingRouter.post('/edit/:id', async (req, res) => {
       roundOff: parseFloat(roundOff) || 0,
       isneededToPurchase: isneededToPurchase || existingBilling.isneededToPurchase,
     });
+
+    console.log(isneededToPurchase)
 
     // === Update Salesman Phone Number ===
     const salesmanUser = await User.findOne({ name: salesmanName.trim() }).session(session);
