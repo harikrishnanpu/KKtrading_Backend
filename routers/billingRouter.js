@@ -1304,52 +1304,47 @@ billingRouter.get("/billing/driver/suggestions", async (req, res) => {
 
 billingRouter.get('/lastOrder/id', async (req, res) => {
   try {
-    // Fetch the invoice with the highest sequence number starting with 'K'
-    const billing = await Billing.findOne({ invoiceNo: /^KK\d+$/ })
-      .sort({ invoiceNo: -1 })
-      .collation({ locale: "en", numericOrdering: true });
-
-    let lastGeneratedCustomer = null;
-
-      lastGeneratedCustomer = await CustomerAccount.aggregate([
+    // Execute both queries concurrently for better performance.
+    const [billing, customers] = await Promise.all([
+      Billing.findOne({ invoiceNo: /^KK\d+$/ })
+        .sort({ invoiceNo: -1 })
+        .collation({ locale: "en", numericOrdering: true }),
+      CustomerAccount.aggregate([
         {
           $addFields: {
             numericId: {
-              $toInt: {
-                $cond: {
-                  if: { $regexMatch: { input: "$customerId", regex: /^CUS\d+$/ } }, // Check if format matches
-                  then: { $substr: ["$customerId", 3, -1] }, // Extract numeric part (corrected index)
-                  else: "0" // Default to 0 for invalid or missing customerId
-                }
+              $convert: {
+                input: {
+                  $cond: {
+                    if: { $regexMatch: { input: "$customerId", regex: /^CUS\d+$/ } },
+                    then: { $substr: ["$customerId", 3, -15] },
+                    else: "0"
+                  }
+                },
+                to: "long",   // Convert to a 64-bit integer
+                onError: 0,   // In case of conversion errors, default to 0
+                onNull: 0     // If the input is null, default to 0
               }
             }
           }
         },
-        {
-          $sort: { numericId: -1 } // Sort by numericId in descending order
-        },
-        {
-          $limit: 1 // Get the record with the highest numericId
-        }
-      ]);
+        { $sort: { numericId: -1 } },
+        { $limit: 1 }
+      ])
+    ]);
 
-    let lastInvoice = 'KK0';
-    let lastCustomerId = 'CUS0';
+    // Use optional chaining to safely access the invoice and customerId fields.
+    const lastInvoice = billing?.invoiceNo || 'KK0';
+    const lastCustomerId = (customers.length > 0 && customers[0].customerId) || 'CUS0';
 
-    if (billing) {
-      lastInvoice = billing.invoiceNo;
-    }
-
-    if (lastGeneratedCustomer && lastGeneratedCustomer.length > 0) {
-      lastCustomerId = lastGeneratedCustomer[0].customerId;
-    }
-
-    res.json({ lastInvoice, lastCustomerId });
+    return res.json({ lastInvoice, lastCustomerId });
   } catch (error) {
     console.error('Error fetching last order details:', error);
-    res.status(500).json({ message: 'Internal Server Error' });
+    return res.status(500).json({ message: 'Internal Server Error' });
   }
 });
+
+
 
 
 

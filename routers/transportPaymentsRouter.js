@@ -613,6 +613,7 @@ transportPaymentsRouter.post('/create', async (req, res) => {
             invoiceNo: billing.invoiceNo.trim(),
             amount: parseFloat(billing.amount),
             date: billing.date ? new Date(billing.date) : new Date(),
+            remark: billing.remark
           });
         }
 

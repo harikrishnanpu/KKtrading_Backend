@@ -16,6 +16,7 @@ const transportBillingSchema = new mongoose.Schema({
   invoiceNo: { type: String, required: true },
   amount: { type: Number, required: true },
   date: { type: Date, default: Date.now },
+  remark: { type: String },
 });
 
 const transportPaymentAggregateSchema = new mongoose.Schema(

@@ -5,6 +5,7 @@ const billSchema = new mongoose.Schema({
   invoiceNo: { type: String, required: true },
   billAmount: { type: Number, required: true },
   invoiceDate: { type: Date, required: true, default: Date.now },
+  remark: { type: String },
 });
 
 const paymentSchema = new mongoose.Schema({

@@ -63,6 +63,8 @@ customerRouter.post(
           invoiceNo: bill.invoiceNo.trim(),
           billAmount: parseFloat(bill.billAmount),
           invoiceDate: bill.invoiceDate ? new Date(bill.invoiceDate) : undefined,
+          deliveryStatus: bill.deliveryStatus || 'Delivered',
+          remark: bill.remark? bill.remark.trim() : ''
         }))
       });
 
@@ -347,6 +349,7 @@ customerRouter.put(
             billAmount: parseFloat(bill.billAmount),
             invoiceDate: bill.invoiceDate ? new Date(bill.invoiceDate) : new Date(),
             deliveryStatus: bill.deliveryStatus || (existingBill ? existingBill.deliveryStatus : 'Pending'),
+            remark: bill.remark || (existingBill ? existingBill.remark : ''),
           };
 
           if (existingBill) {
@@ -354,6 +357,7 @@ customerRouter.put(
             existingBill.billAmount = updatedBillData.billAmount;
             existingBill.invoiceDate = updatedBillData.invoiceDate;
             existingBill.deliveryStatus = updatedBillData.deliveryStatus;
+            existingBill.remark = updatedBillData.remark;
             updatedBills.push(existingBill);
 
             // Also update billing doc if it exists
@@ -362,6 +366,7 @@ customerRouter.put(
               existingBilling.grandTotal = updatedBillData.billAmount;
               existingBilling.invoiceDate = updatedBillData.invoiceDate;
               existingBilling.deliveryStatus = updatedBillData.deliveryStatus;
+              existingBilling.remark = updatedBillData.remark;
               await existingBilling.save({ session });
             }
 
@@ -376,6 +381,7 @@ customerRouter.put(
               existingBilling.grandTotal = updatedBillData.billAmount;
               existingBilling.invoiceDate = updatedBillData.invoiceDate;
               existingBilling.deliveryStatus = updatedBillData.deliveryStatus;
+              existingBilling.remark = updatedBillData.remark;
               await existingBilling.save({ session });
             }
           }

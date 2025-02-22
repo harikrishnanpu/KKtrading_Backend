@@ -20,8 +20,12 @@ const billSchema = new mongoose.Schema({
   },
   deliveryStatus: {
     type: String,
-    default: "Pending",
+    default: "Delivered",
   },
+  remark:{
+    type: String,
+    trim: true,
+  }
 });
 
 // Sub-schema for payments

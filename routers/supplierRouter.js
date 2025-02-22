@@ -64,6 +64,7 @@ supplierRouter.post('/create', async (req, res) => {
         invoiceNo: bill.invoiceNo.trim(),
         billAmount: parseFloat(bill.billAmount),
         invoiceDate: bill.invoiceDate ? new Date(bill.invoiceDate) : undefined,
+        remark: bill.remark || ''
       })),
       payments: [], // Initialize as empty; will add payments below if any
     });
@@ -89,6 +90,7 @@ supplierRouter.post('/create', async (req, res) => {
       amount: parseFloat(bill.billAmount),
       date: bill.invoiceDate ? new Date(bill.invoiceDate) : new Date(),
       invoiceNo: bill.invoiceNo.trim(),
+      remark: bill.remark || ''
     }));
     sellerPayment.billings.push(...billingEntries);
 
@@ -521,6 +523,7 @@ supplierRouter.put(
           invoiceNo: bill.invoiceNo.trim(),
           billAmount: parseFloat(bill.billAmount),
           invoiceDate: bill.invoiceDate ? new Date(bill.invoiceDate) : undefined,
+          remark: bill.remark || ''
         }));
 
         // Update billings in SellerPayment
@@ -538,6 +541,7 @@ supplierRouter.put(
               amount: parseFloat(bill.billAmount),
               date: bill.invoiceDate ? new Date(bill.invoiceDate) : new Date(),
               invoiceNo: bill.invoiceNo.trim(),
+              remark: bill.remark || '',
             });
           }
         }
