@@ -64,6 +64,12 @@ const purchaseSchema = new mongoose.Schema(
     invoiceDate: { type: Date, required: true },
     totals: totalsSchema,
     transportationDetails: { type: Object }, // Include transportationDetails
+    otherExpenses: [
+      {
+        amount: { type: Number, default: 0 },
+        remark: { type: String, default: '' },
+      },
+    ],
   },
   { timestamps: true }
 );

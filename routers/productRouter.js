@@ -510,6 +510,7 @@ productRouter.post(
         invoiceDate,
         totals,
         transportationDetails,
+        otherExpenses
       } = req.body;
 
       let { purchaseId } = req.body;
@@ -581,6 +582,7 @@ productRouter.post(
         invoiceDate,
         totals,
         transportationDetails,
+        otherExpenses
       });
 
       await purchase.save();
@@ -784,6 +786,7 @@ productRouter.put(
         invoiceDate,
         totals,
         transportationDetails,
+        otherExpenses
       } = req.body;
 
       const existingPurchase = await Purchase.findOne({ purchaseId });
@@ -845,6 +848,8 @@ productRouter.put(
       existingPurchase.billingDate = billingDate || existingPurchase.billingDate;
       existingPurchase.invoiceDate = invoiceDate || existingPurchase.invoiceDate;
       existingPurchase.totals = totals;
+      existingPurchase.otherExpenses = otherExpenses;
+
 
       // 3. Update SupplierAccount
       if (oldSellerId !== sellerId) {
