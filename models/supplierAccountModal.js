@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 const billSchema = new mongoose.Schema({
   invoiceNo: { type: String, required: true },
   billAmount: { type: Number, required: true },
+  cashPart: {type: Number},
   invoiceDate: { type: Date, required: true, default: Date.now },
   remark: { type: String },
 });
@@ -26,8 +27,9 @@ const supplierAccountSchema = new mongoose.Schema(
     bills: [billSchema], // Array of bills
     payments: [paymentSchema], // Array of payments
     totalBillAmount: { type: Number, default: 0 },
+    totalCashPart: { type: Number, default: 0 },
     paidAmount: { type: Number, default: 0 },
-    pendingAmount: { type: Number, default: 0 },
+    totalPendingAmount: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
@@ -35,8 +37,9 @@ const supplierAccountSchema = new mongoose.Schema(
 // Middleware to calculate totalBillAmount, paidAmount, and pendingAmount before saving
 supplierAccountSchema.pre('save', function (next) {
   this.totalBillAmount = this.bills.reduce((sum, bill) => sum + bill.billAmount, 0);
+  this.totalCashPart = this.bills.reduce((sum, bill) => sum + bill.cashPart, 0);
   this.paidAmount = this.payments.reduce((sum, payment) => sum + payment.amount, 0);
-  this.pendingAmount = this.totalBillAmount - this.paidAmount;
+  this.totalPendingAmount = this.totalBillAmount + this.totalCashPart - this.paidAmount;
   next();
 });
 

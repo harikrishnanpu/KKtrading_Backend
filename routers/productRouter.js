@@ -735,7 +735,8 @@ productRouter.post(
 
       const billEntry = {
         invoiceNo,
-        billAmount: totals.totalPurchaseAmount,
+        billAmount: totals.billPartTotal,
+        cashPart: totals.cashPartTotal,
         invoiceDate: invoiceDate || Date.now(),
       };
 
@@ -872,7 +873,8 @@ productRouter.put(
         let newSupplierAccount = await SupplierAccount.findOne({ sellerId });
         const billEntry = {
           invoiceNo,
-          billAmount: totals.totalPurchaseAmount,
+          billAmount: totals.billPartTotal,
+          cashPart: totals.cashPartTotal,
           invoiceDate: invoiceDate || Date.now(),
         };
 
@@ -908,13 +910,15 @@ productRouter.put(
             supplierAccount.bills[billIndex] = {
               ...supplierAccount.bills[billIndex],
               invoiceNo,
-              billAmount: totals.totalPurchaseAmount,
+              billAmount: totals.billPartTotal,
+              cashPart: totals.cashPartTotal,
               invoiceDate: invoiceDate || Date.now(),
             };
           } else {
             supplierAccount.bills.push({
               invoiceNo,
-              billAmount: totals.totalPurchaseAmount,
+              billAmount: totals.billPartTotal,
+              cashPart: totals.cashPartTotal,
               invoiceDate: invoiceDate || Date.now(),
             });
           }

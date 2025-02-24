@@ -63,6 +63,7 @@ supplierRouter.post('/create', async (req, res) => {
       bills: bills.map((bill) => ({
         invoiceNo: bill.invoiceNo.trim(),
         billAmount: parseFloat(bill.billAmount),
+        cashPart: parseFloat(bill.cashPart),
         invoiceDate: bill.invoiceDate ? new Date(bill.invoiceDate) : undefined,
         remark: bill.remark || ''
       })),
@@ -300,55 +301,36 @@ supplierRouter.delete(
  */
 supplierRouter.get('/allaccounts', async (req, res) => {
   try {
-    // Fetch all supplier accounts
+    // 1. Fetch all supplier accounts
     const accounts = await SupplierAccount.find({}).lean();
 
-    // Fetch all purchases
-    const purchases = await Purchase.find({}).lean();
+    // 2. Compute global totals across all supplier accounts
+    let totalBillAmountAll = 0;
+    let totalCashPartAll = 0;
+    let totalPaidAmountAll = 0;
+    let totalPendingAmountAll = 0;
 
-    // Aggregate Bill/Cash from purchases by sellerId
-    const purchaseAggregator = {};
-    purchases.forEach((p) => {
-      const sid = p.sellerId;
-      if (!purchaseAggregator[sid]) {
-        purchaseAggregator[sid] = { billPartTotal: 0, cashPartTotal: 0 };
-      }
-      purchaseAggregator[sid].billPartTotal += p.totals.billPartTotal || 0;
-      purchaseAggregator[sid].cashPartTotal += p.totals.cashPartTotal || 0;
+    accounts.forEach((acc) => {
+      totalBillAmountAll += acc.totalBillAmount || 0;
+      totalCashPartAll += acc.totalCashPart || 0;
+      totalPaidAmountAll += acc.paidAmount || 0;
+      totalPendingAmountAll += acc.totalPendingAmount || 0;
     });
 
-    // Attach per-supplier bill/cash totals
-    // Also convert Mongoose docs to plain objects if needed
-    const enrichedAccounts = accounts.map((acc) => {
-      const sid = acc.sellerId;
-      const agg = purchaseAggregator[sid] || { billPartTotal: 0, cashPartTotal: 0 };
-      return {
-        ...acc,
-        totalBillPartBilled: agg.billPartTotal,
-        totalCashPartBilled: agg.cashPartTotal
-      };
-    });
-
-    // Compute global totals across all suppliers
-    const totalBillPartAll = Object.values(purchaseAggregator).reduce(
-      (sum, obj) => sum + (obj.billPartTotal || 0),
-      0
-    );
-    const totalCashPartAll = Object.values(purchaseAggregator).reduce(
-      (sum, obj) => sum + (obj.cashPartTotal || 0),
-      0
-    );
-
+    // 3. Return results
     res.json({
-      accounts: enrichedAccounts,
-      totalBillPartAll,
-      totalCashPartAll
+      accounts,
+      totalBillAmountAll,
+      totalCashPartAll,
+      totalPaidAmountAll,
+      totalPendingAmountAll,
     });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Server error' });
   }
 });
+
 
 /**
  * @route   GET /api/suppliers/get/:id
@@ -522,6 +504,7 @@ supplierRouter.put(
         supplierAccount.bills = bills.map((bill) => ({
           invoiceNo: bill.invoiceNo.trim(),
           billAmount: parseFloat(bill.billAmount),
+          cashPart: parseFloat(bill.cashPart),
           invoiceDate: bill.invoiceDate ? new Date(bill.invoiceDate) : undefined,
           remark: bill.remark || ''
         }));
