@@ -25,61 +25,67 @@ sellerPaymentsRouter.get(('/suggestions'), async (req, res) => {
 // Get seller details by ID
 sellerPaymentsRouter.get("/get-seller/:id", async (req, res) => {
   try {
-    const seller = await SellerPayment.findById(req.params.id);
-    if (!seller) {
-      return res.status(404).json({ message: "Seller not found" });
+    const seller   = await SellerPayment.findById(req.params.id);
+    const supplier = await SupplierAccount.findOne({sellerId: seller.sellerId});
+    if (!supplier) {
+      return res.status(404).json({ message: "Supplier not found" });
     }
 
-    // Fetch all purchases for this seller
-    const purchases = await Purchase.find({ sellerId: seller.sellerId });
-
-    // Calculate total bill part and cash part from purchase totals
-    const totalBillPart = purchases.reduce(
-      (acc, purchase) => acc + (purchase.totals.billPartTotal || 0),
+    // Recalculate totals using the bills array
+    const totalBillPart = supplier.bills.reduce(
+      (sum, bill) => sum + (bill.billAmount || 0),
       0
     );
-    const totalCashPart = purchases.reduce(
-      (acc, purchase) => acc + (purchase.totals.cashPartTotal || 0),
+    const totalCashPart = supplier.bills.reduce(
+      (sum, bill) => sum + (bill.cashPart || 0),
       0
     );
+    
+    // Calculate the paid amount from payments
+    const paidAmount = supplier.payments.reduce(
+      (sum, payment) => sum + (payment.amount || 0),
+      0
+    );
+    
+    // Total pending amount is the sum of the bill and cash parts minus what has been paid
+    const totalPendingAmount = totalBillPart + totalCashPart - paidAmount;
 
-    // Calculate payments breakdown from seller.payments
-    const totalCashPartGiven = seller.payments.reduce((acc, payment) => {
+    // Breakdown payments based on their remarks
+    const totalCashPartGiven = supplier.payments.reduce((sum, payment) => {
       if (
         payment.remark &&
         payment.remark.trim().toUpperCase().startsWith("CASH:")
       ) {
-        return acc + payment.amount;
+        return sum + payment.amount;
       }
-      return acc;
+      return sum;
     }, 0);
 
-    const totalBillPartGiven = seller.payments.reduce((acc, payment) => {
+    const totalBillPartGiven = supplier.payments.reduce((sum, payment) => {
       if (
         payment.remark &&
         payment.remark.trim().toUpperCase().startsWith("BILL:")
       ) {
-        return acc + payment.amount;
+        return sum + payment.amount;
       }
-      return acc;
+      return sum;
     }, 0);
 
-    // Convert seller document to a plain object
-    const sellerData = seller.toObject();
-    sellerData.totalBillPart = totalBillPart;
-    sellerData.totalCashPart = totalCashPart;
-    sellerData.totalCashPartGiven = totalCashPartGiven;
-    sellerData.totalBillPartGiven = totalBillPartGiven;
-    sellerData.totalRemaining =
-      sellerData.totalAmountBilled - sellerData.totalAmountPaid;
+    // Convert the Mongoose document to a plain object
+    const supplierData = supplier.toObject();
+    supplierData.totalBillPart = totalBillPart;
+    supplierData.totalCashPart = totalCashPart;
+    supplierData.paidAmount = paidAmount;
+    supplierData.totalPendingAmount = totalPendingAmount;
+    supplierData.totalCashPartGiven = totalCashPartGiven;
+    supplierData.totalBillPartGiven = totalBillPartGiven;
 
-    res.json(sellerData);
+    res.json(supplierData);
   } catch (error) {
-    console.error("Error fetching seller details:", error);
-    res.status(500).json({ message: "Error fetching seller details" });
+    console.error("Error fetching supplier details:", error);
+    res.status(500).json({ message: "Error fetching supplier details" });
   }
 });
-
 
 
 sellerPaymentsRouter.get('/billpayments/all', async (req, res) => {
