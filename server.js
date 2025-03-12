@@ -45,7 +45,7 @@ app.use(bodyParser.json({ limit: '10mb' }));
 
 
 
-mongoose.connect('mongodb+srv://tradeinkk:RahulWins$2025$@kktdb.nat4t.mongodb.net/?retryWrites=true&w=majority&appName=KKTDB');
+mongoose.connect('mongodb+srv://tradeinkk:RahulWins$2025$@kktflex.x4emqco.mongodb.net/?retryWrites=true&w=majority&appName=KKTFlex');
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
