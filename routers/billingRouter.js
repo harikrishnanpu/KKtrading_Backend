@@ -18,7 +18,6 @@ const billingRouter = express.Router();
 // =========================
 billingRouter.post('/create', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const {
@@ -69,7 +68,6 @@ billingRouter.post('/create', async (req, res) => {
       !Array.isArray(products) ||
       products.length === 0
     ) {
-      await session.abortTransaction();
       session.endSession();
       return res.status(400).json({ message: 'Missing required fields' });
     }
@@ -87,7 +85,6 @@ billingRouter.post('/create', async (req, res) => {
         const lastInvoiceNumber = parseInt(billing.invoiceNo.slice(2), 10) || 0; // Extract the number part after "KK"
         invoiceNo = "KK" + (lastInvoiceNumber + 1).toString().padStart(2, '0'); // Ensures at least two digits
       } else {
-        await session.abortTransaction();
         session.endSession();
         return res.status(500).json({ message: "Error generating new invoice number" });
       }
@@ -101,20 +98,17 @@ billingRouter.post('/create', async (req, res) => {
     const parsedDiscount = parseFloat(discount);
 
     if (isNaN(parsedBillingAmount) || parsedBillingAmount <= 0) {
-      await session.abortTransaction();
       session.endSession();
       return res.status(400).json({ message: 'Invalid billing amount' });
     }
 
     if (isNaN(parsedDiscount) || parsedDiscount < 0) {
-      await session.abortTransaction();
       session.endSession();
       return res.status(400).json({ message: 'Invalid discount amount' });
     }
 
     const totalAmount = parsedBillingAmount - parsedDiscount;
     if (totalAmount < 0) {
-      await session.abortTransaction();
       session.endSession();
       return res
         .status(400)
@@ -126,7 +120,6 @@ billingRouter.post('/create', async (req, res) => {
     // -----------------------
     const user = await User.findById(userId).session(session);
     if (!user) {
-      await session.abortTransaction();
       session.endSession();
       return res.status(404).json({ message: 'User not found' });
     }
@@ -161,7 +154,6 @@ billingRouter.post('/create', async (req, res) => {
     );
 
     if (existingBillInCustomer) {
-      await session.abortTransaction();
       session.endSession();
       return res.status(400).json({
         message: `Invoice number ${invoiceNo} already exists for this customer`,
@@ -217,14 +209,12 @@ billingRouter.post('/create', async (req, res) => {
 
       // Validate payment amount
       if (isNaN(parsedPaymentAmount) || parsedPaymentAmount <= 0) {
-        await session.abortTransaction();
         session.endSession();
         return res.status(400).json({ message: 'Invalid payment amount' });
       }
 
       // Ensure paymentAmount does not exceed totalAmount
       // if (parsedPaymentAmount > totalAmount) {
-      //   await session.abortTransaction();
       //   session.endSession();
       //   return res.status(400).json({
       //     message:
@@ -259,7 +249,7 @@ billingRouter.post('/create', async (req, res) => {
       }).session(session);
 
       if (!account) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: 'Payment account not found' });
       }
@@ -292,7 +282,7 @@ billingRouter.post('/create', async (req, res) => {
       salesmanUser.contactNumber = salesmanPhoneNumber.trim();
       await salesmanUser.save({ session });
     } else {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'Salesman user not found' });
     }
@@ -308,7 +298,7 @@ billingRouter.post('/create', async (req, res) => {
 
         // Validate individual product details
         if (!item_id || isNaN(quantity) || quantity <= 0) {
-          await session.abortTransaction();
+          
           session.endSession();
           return res.status(400).json({ message: 'Invalid product details' });
         }
@@ -318,7 +308,7 @@ billingRouter.post('/create', async (req, res) => {
           item_id: item_id.trim(),
         }).session(session);
         if (!product) {
-          await session.abortTransaction();
+          
           session.endSession();
           return res
             .status(404)
@@ -327,7 +317,7 @@ billingRouter.post('/create', async (req, res) => {
 
         // Check if there is enough stock
         if (product.countInStock < quantity) {
-          await session.abortTransaction();
+          
           session.endSession();
           return res.status(400).json({
             message: `Insufficient stock for product ID ${item_id}`,
@@ -353,7 +343,6 @@ billingRouter.post('/create', async (req, res) => {
     // -----------------------
     // 12. Commit the Transaction
     // -----------------------
-    await session.commitTransaction();
     session.endSession();
 
     // -----------------------
@@ -367,7 +356,7 @@ billingRouter.post('/create', async (req, res) => {
     console.log('Error saving billing data:', error);
     // Attempt to abort the transaction if it's still active
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     session.endSession();
     res.status(500).json({
@@ -385,7 +374,6 @@ billingRouter.post('/create', async (req, res) => {
 billingRouter.post('/edit/:id', async (req, res) => {
   const billingId = req.params.id;
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     // === Extract fields from request body ===
@@ -434,7 +422,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       !Array.isArray(products) ||
       products.length === 0
     ) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(400).json({
         message: 'Missing required fields. Ensure all mandatory fields are provided.',
@@ -444,7 +432,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
     // === Fetch Billing Record ===
     const existingBilling = await Billing.findById(billingId).session(session);
     if (!existingBilling) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'Billing record not found.' });
     }
@@ -452,7 +440,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
     // === Fetch User Performing the Operation ===
     const user = await User.findById(userId).session(session);
     if (!user) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'User not found.' });
     }
@@ -520,7 +508,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
 
       const productInDB = productMap[trimmedItemId];
       if (!productInDB) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: `Product with ID ${trimmedItemId} not found.` });
       }
@@ -537,7 +525,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
         if (isBillApproved && isAdmin) {
           const newStockCount = productInDB.countInStock - quantityDifference;
           if (newStockCount < 0) {
-            await session.abortTransaction();
+            
             session.endSession();
             return res.status(400).json({
               message: `Insufficient stock for product ID ${trimmedItemId}. Only ${
@@ -569,7 +557,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
         // New product to add
         if (isBillApproved && isAdmin) {
           if (productInDB.countInStock < newQuantity) {
-            await session.abortTransaction();
+            
             session.endSession();
             return res.status(400).json({
               message: `Insufficient stock for product ID ${trimmedItemId}. Only ${productInDB.countInStock} available.`,
@@ -695,14 +683,14 @@ billingRouter.post('/edit/:id', async (req, res) => {
     if (paymentAmount && paymentMethod) {
       const parsedPaymentAmount = parseFloat(paymentAmount);
       if (isNaN(parsedPaymentAmount) || parsedPaymentAmount <= 0) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(400).json({ message: 'Invalid payment amount.' });
       }
 
       const totalAmount = parseFloat(billingAmount) - parseFloat(discount || 0);
       // if (parsedPaymentAmount > totalAmount) {
-      //   await session.abortTransaction();
+      //   
       //   session.endSession();
       //   return res.status(400).json({
       //     message: 'Payment amount cannot exceed the total amount after discount.',
@@ -739,7 +727,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       // Update Payment Account
       const account = await PaymentsAccount.findOne({ accountId: paymentMethod.trim() }).session(session);
       if (!account) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: 'Payment account not found.' });
       }
@@ -785,7 +773,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
     // === Update Salesman Phone Number ===
     const salesmanUser = await User.findOne({ name: salesmanName.trim() }).session(session);
     if (!salesmanUser) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'Salesman user not found' });
     }
@@ -802,13 +790,12 @@ billingRouter.post('/edit/:id', async (req, res) => {
     await customerAccount.save({ session });
 
     // === Commit Transaction ===
-    await session.commitTransaction();
     session.endSession();
 
     return res.status(200).json({ message: 'Billing data updated successfully.', existingBilling });
   } catch (error) {
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     session.endSession();
 
@@ -833,7 +820,6 @@ billingRouter.post('/edit/:id', async (req, res) => {
 billingRouter.delete('/billings/delete/:id', async (req, res) => {
   // Start a MongoDB session for transaction
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const billingId = req.params.id;
@@ -843,7 +829,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
 
     // Ensure userId is sent in the request body
     if (!userId) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res
         .status(400)
@@ -852,14 +838,14 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
 
     const user = await User.findById(userId).session(session);
     if (!user) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'User not found.' });
     }
 
     const isAdmin = user.isAdmin;
     if (!isAdmin) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res
         .status(403)
@@ -870,7 +856,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     const billing = await Billing.findById(billingId).session(session);
     
     if (!billing) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'Billing record not found.' });
     }
@@ -889,7 +875,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     }).session(session);
 
     // if (!customerAccount) {
-    //   await session.abortTransaction();
+    //   
     //   session.endSession();
     //   return res.status(404).json({ message: 'Customer account not found.' });
     // }
@@ -948,7 +934,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
 
         // Validate product details
         if (!item_id || isNaN(quantity) || quantity <= 0) {
-          await session.abortTransaction();
+          
           session.endSession();
           return res.status(400).json({
             message: 'Invalid product details in billing.',
@@ -966,7 +952,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
             await product.save({ session });
           }
         } else {
-          await session.abortTransaction();
+          
           session.endSession();
           return res.status(404).json({
             message: `Product with ID ${item_id.trim()} not found.`,
@@ -985,7 +971,6 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     }
       
     // === 9. Commit the Transaction ===
-    await session.commitTransaction();
     session.endSession();
 
     // === 10. Respond to the Client ===
@@ -995,7 +980,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
 
     // Attempt to abort the transaction if it's still active
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     session.endSession();
     res.status(500).json({
@@ -1014,7 +999,6 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
 // =========================
 billingRouter.put('/bill/approve/:billId', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const { billId } = req.params;
@@ -1023,13 +1007,13 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
     // Fetch the user performing the approval
     const approvingUser = await User.findById(userId).session(session);
     if (!approvingUser) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ error: 'Approving user not found' });
     }
 
     if (!approvingUser.isAdmin) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(403).json({ error: 'Only admins can approve bills' });
     }
@@ -1037,14 +1021,14 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
     // Find the existing bill
     const existingBill = await Billing.findById(billId).session(session);
     if (!existingBill) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ error: 'Bill not found' });
     }
 
     // Check if the bill is already approved
     if (existingBill.isApproved) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(400).json({ error: 'Bill is already approved' });
     }
@@ -1063,14 +1047,14 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
       // Fetch product using item_id
       const product = await Product.findOne({ item_id }).session(session);
       if (!product) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: `Product with ID ${item_id} not found` });
       }
 
       // Check if there is enough stock
       if (product.countInStock < quantity) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(400).json({ message: `Insufficient stock for product ID ${item_id}` });
       }
@@ -1087,7 +1071,6 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
     await Promise.all(productUpdatePromises);
 
     // Commit the transaction
-    await session.commitTransaction();
     session.endSession();
 
     res.json({ message: 'Bill approved successfully', bill: existingBill });
@@ -1096,7 +1079,7 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
 
     // Abort transaction on error
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     session.endSession();
 
@@ -1664,7 +1647,6 @@ billingRouter.get('/bill/profile',async (req,res)=>{
 // DELETE /api/billing/deliveries/:deliveryId
 billingRouter.delete('/deliveries/:deliveryId', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const { deliveryId } = req.params;
@@ -1753,14 +1735,13 @@ billingRouter.delete('/deliveries/:deliveryId', async (req, res) => {
     await billing.save({ session });
 
     // 10. Commit the transaction and end the session
-    await session.commitTransaction();
     session.endSession();
 
     res.status(200).json({ message: 'Delivery deleted successfully and related data updated.' });
   } catch (error) {
     console.error('Error deleting delivery:', error);
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     session.endSession();
     res.status(500).json({ message: error.message || 'Error deleting delivery.' });
@@ -1774,7 +1755,6 @@ billingRouter.delete('/deliveries/:deliveryId', async (req, res) => {
 // PUT /api/users/billing/update-delivery
 billingRouter.put('/update-delivery/update', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const {
@@ -2032,7 +2012,6 @@ for (const expense of updatedOtherExpenses) {
     }
 
     // 14. Commit the transaction and end the session
-    await session.commitTransaction();
     session.endSession();
 
     // 15. Respond with success
@@ -2041,7 +2020,7 @@ for (const expense of updatedOtherExpenses) {
     console.error('Error updating delivery and billing:', error);
     // Abort the transaction if an error occurred
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     // End the session
     session.endSession();

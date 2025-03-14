@@ -17,7 +17,6 @@ const supplierRouter = express.Router();
  */
 supplierRouter.post('/create', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const {
@@ -38,7 +37,7 @@ supplierRouter.post('/create', async (req, res) => {
       !Array.isArray(bills) ||
       bills.length === 0
     ) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(400).json({ message: 'Missing required fields.' });
     }
@@ -47,7 +46,7 @@ supplierRouter.post('/create', async (req, res) => {
     const invoiceNos = bills.map((bill) => bill.invoiceNo.trim());
     const uniqueInvoiceNos = new Set(invoiceNos);
     if (invoiceNos.length !== uniqueInvoiceNos.size) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res
         .status(400)
@@ -106,7 +105,7 @@ supplierRouter.post('/create', async (req, res) => {
           !payment.method ||
           !payment.submittedBy
         ) {
-          await session.abortTransaction();
+          
           session.endSession();
           return res.status(400).json({ message: 'Invalid payment details provided.' });
         }
@@ -130,7 +129,7 @@ supplierRouter.post('/create', async (req, res) => {
         // Update PaymentsAccount
         const paymentsAccount = await PaymentsAccount.findOne({ accountId: payment.method.trim() }).session(session);
         if (!paymentsAccount) {
-          await session.abortTransaction();
+          
           session.endSession();
           return res.status(404).json({ message: `Payment account ${payment.method.trim()} not found.` });
         }
@@ -170,14 +169,13 @@ supplierRouter.post('/create', async (req, res) => {
     await sellerPayment.save({ session });
 
     // Commit the transaction
-    await session.commitTransaction();
     session.endSession();
 
     // Respond with the saved SupplierAccount
     res.status(201).json(savedSupplierAccount);
   } catch (error) {
     // Abort the transaction in case of error
-    await session.abortTransaction();
+    
     session.endSession();
 
     console.error('Error creating supplier account:', error);
@@ -201,13 +199,12 @@ supplierRouter.delete(
   '/:id/delete',
   expressAsyncHandler(async (req, res) => {
     const session = await mongoose.startSession();
-    session.startTransaction();
 
     try {
       // Handle validation errors
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(400).json({ errors: errors.array() });
       }
@@ -217,7 +214,7 @@ supplierRouter.delete(
       // Find the SupplierAccount document
       const supplierAccount = await SupplierAccount.findById(id).session(session);
       if (!supplierAccount) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: 'Supplier Account not found' });
       }
@@ -265,7 +262,6 @@ supplierRouter.delete(
       // Assuming bills are embedded within SupplierAccount, deleting SupplierAccount removes them
 
       // Commit the transaction
-      await session.commitTransaction();
       session.endSession();
 
       res.status(200).json({ message: 'Supplier Account and associated data deleted successfully' });
@@ -274,7 +270,7 @@ supplierRouter.delete(
 
       // Abort the transaction on error
       if (session.inTransaction()) {
-        await session.abortTransaction();
+        
       }
       session.endSession();
 
@@ -433,13 +429,12 @@ supplierRouter.put(
   ],
   async (req, res) => {
     const session = await mongoose.startSession();
-    session.startTransaction();
 
     try {
       // Handle validation errors
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(400).json({ errors: errors.array() });
       }
@@ -818,7 +813,6 @@ supplierRouter.put(
         await sellerPayment.save({ session });
 
         // === Commit Transaction ===
-        await session.commitTransaction();
         session.endSession();
 
         res.status(200).json({ message: 'Supplier account updated successfully.', account: supplierAccount });
@@ -859,7 +853,6 @@ supplierRouter.put(
         await sellerPayment.save({ session });
 
         // === Commit Transaction ===
-        await session.commitTransaction();
         session.endSession();
 
         res.status(200).json({ message: 'Supplier account updated successfully.', account: supplierAccount });
@@ -869,7 +862,7 @@ supplierRouter.put(
 
       // Abort the transaction on error
       if (session.inTransaction()) {
-        await session.abortTransaction();
+        
       }
       session.endSession();
 

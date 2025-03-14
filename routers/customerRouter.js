@@ -103,7 +103,6 @@ customerRouter.post(
 
 customerRouter.delete('/:id/delete', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const customerId = req.params.id;
@@ -111,7 +110,7 @@ customerRouter.delete('/:id/delete', async (req, res) => {
     // 1. Retrieve the Customer Account
     const account = await CustomerAccount.findById(customerId).session(session);
     if (!account) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'Customer Account not found' });
     }
@@ -187,7 +186,6 @@ customerRouter.delete('/:id/delete', async (req, res) => {
     }
 
     // 8. Commit the transaction
-    await session.commitTransaction();
     session.endSession();
 
     res.status(200).json({ message: 'Customer Account and related payments deleted successfully' });
@@ -196,7 +194,7 @@ customerRouter.delete('/:id/delete', async (req, res) => {
 
     // Abort the transaction in case of error
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     session.endSession();
 
@@ -294,13 +292,12 @@ customerRouter.put(
   ],
   async (req, res) => {
     const session = await mongoose.startSession();
-    session.startTransaction();
 
     try {
       // Handle validation errors
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(400).json({ message: errors.array()[0].msg });
       }
@@ -310,7 +307,7 @@ customerRouter.put(
       // Find the customer account by ID
       const account = await CustomerAccount.findById(req.params.id).session(session);
       if (!account) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: 'Customer Account not found' });
       }
@@ -326,7 +323,7 @@ customerRouter.put(
         const invoiceNos = bills.map((bill) => bill.invoiceNo.trim());
         const uniqueInvoiceNos = new Set(invoiceNos);
         if (invoiceNos.length !== uniqueInvoiceNos.size) {
-          await session.abortTransaction();
+          
           session.endSession();
           return res.status(400).json({
             message: 'Duplicate invoice numbers are not allowed.'
@@ -631,7 +628,7 @@ const paymentAccount = await PaymentsAccount.findOne({ accountId: sanitizedMetho
       account.pendingAmount = account.totalBillAmount - account.paidAmount;
 
       if (account.pendingAmount < 0) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(400).json({ message: 'Paid amount exceeds total bill amount' });
       }
@@ -673,7 +670,6 @@ const paymentAccount = await PaymentsAccount.findOne({ accountId: sanitizedMetho
       await account.save({ session });
 
       // Commit transaction
-      await session.commitTransaction();
       session.endSession();
 
       res.status(200).json({ message: 'Customer account updated successfully.' });
@@ -682,7 +678,7 @@ const paymentAccount = await PaymentsAccount.findOne({ accountId: sanitizedMetho
 
       // Abort the transaction on error
       if (session.inTransaction()) {
-        await session.abortTransaction();
+        
       }
       session.endSession();
 

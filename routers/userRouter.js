@@ -669,7 +669,6 @@ userRouter.post("/billing/cancel-delivery", async (req, res) => {
 // End Delivery Endpoint
 userRouter.post("/billing/end-delivery", async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
   try {
     const {
       userId,
@@ -923,7 +922,6 @@ for (const expense of otherExpenses) {
     }
 
     // 12. Commit the transaction and end the session
-    await session.commitTransaction();
     session.endSession();
 
     // 13. Respond with success
@@ -932,7 +930,7 @@ for (const expense of otherExpenses) {
     console.error("Error processing end-delivery request:", error);
     // Abort the transaction if an error occurred
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     // End the session
     session.endSession();
@@ -955,14 +953,13 @@ for (const expense of otherExpenses) {
 // =========================
 userRouter.post("/billing/update-payment", async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const { invoiceNo, paymentAmount, paymentMethod,paymentRemark, userId, date } = req.body;
 
     // Validate required fields
     if (!invoiceNo || !paymentAmount || !paymentMethod || !userId) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(400).json({ error: "All fields are required." });
     }
@@ -976,7 +973,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
     // Find the billing record
     const billing = await Billing.findOne({ invoiceNo: invoiceNo.trim() }).session(session);
     if (!billing) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ error: "Billing not found" });
     }
@@ -984,14 +981,14 @@ userRouter.post("/billing/update-payment", async (req, res) => {
     // Find the user
     const user = await User.findById(userId).session(session);
     if (!user) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ error: "User not found." });
     }
 
     const parsedPaymentAmount = parseFloat(paymentAmount);
     if (isNaN(parsedPaymentAmount) || parsedPaymentAmount <= 0) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(400).json({ error: "Invalid payment amount." });
     }
@@ -1030,7 +1027,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
     // Update PaymentsAccount
     const account = await PaymentsAccount.findOne({ accountId: paymentMethod.trim() }).session(session);
     if (!account) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'Payment account not found' });
     }
@@ -1091,7 +1088,6 @@ userRouter.post("/billing/update-payment", async (req, res) => {
     await customerAccount.save({ session });
 
     // Commit the transaction
-    await session.commitTransaction();
     session.endSession();
 
     res.status(200).json({
@@ -1103,7 +1099,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
 
     // Abort transaction on error
     if (session.inTransaction()) {
-      await session.abortTransaction();
+      
     }
     session.endSession();
 

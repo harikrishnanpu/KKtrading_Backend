@@ -21,7 +21,6 @@ returnRouter.get('/',async (req,res)=>{
 // Create new return
 returnRouter.post('/create', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const {
@@ -212,14 +211,13 @@ returnRouter.post('/create', async (req, res) => {
     await relatedDoc.save({ session });
 
     // --- 8. Commit the Transaction ---
-    await session.commitTransaction();
     session.endSession();
 
     // --- 9. Respond to Client ---
     res.status(201).json({ success: true, returnNo: finalReturnNo });
   } catch (error) {
     // --- 10. Rollback Transaction in case of error ---
-    await session.abortTransaction();
+    
     session.endSession();
     console.error('Error creating return:', error);
     return res.status(400).json({ success: false, message: error.message });
@@ -324,7 +322,6 @@ returnRouter.get('/damage/getDamagedData', async (req, res) => {
 
   returnRouter.delete('/return/delete/:id', async (req, res) => {
     const session = await mongoose.startSession();
-    session.startTransaction();
   
     try {
       const returnId = req.params.id;
@@ -333,7 +330,7 @@ returnRouter.get('/damage/getDamagedData', async (req, res) => {
       const returnEntry = await Return.findById(returnId).session(session);
   
       if (!returnEntry) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ success: false, message: 'Return entry not found.' });
       }
@@ -412,14 +409,13 @@ returnRouter.get('/damage/getDamagedData', async (req, res) => {
       await returnEntry.deleteOne({ session });
   
       // 6. Commit the Transaction
-      await session.commitTransaction();
       session.endSession();
   
       // 7. Respond to Client
       res.status(200).json({ success: true, message: 'Return entry deleted successfully.' });
     } catch (error) {
       // 8. Abort the Transaction in Case of Error
-      await session.abortTransaction();
+      
       session.endSession();
   
       console.error('Error deleting return entry:', error);

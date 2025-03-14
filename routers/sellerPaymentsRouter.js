@@ -142,13 +142,12 @@ sellerPaymentsRouter.post(
   '/add-payments/:id',
   expressAsyncHandler(async (req, res) => {
     const session = await mongoose.startSession();
-    session.startTransaction();
 
     try {
       // Handle validation errors
       // const errors = validationResult(req);
       // if (!errors.isEmpty()) {
-      //   await session.abortTransaction();
+      //   
       //   session.endSession();
       //   return res.status(400).json({ errors: errors.array() });
       // }
@@ -167,7 +166,7 @@ sellerPaymentsRouter.post(
       // Find the SellerPayment document
       const sellerPayment = await SellerPayment.findOne({ sellerId }).session(session);
       if (!sellerPayment) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: 'Seller payment account not found' });
       }
@@ -175,7 +174,7 @@ sellerPaymentsRouter.post(
       // Find the SupplierAccount document
       const supplierAccount = await SupplierAccount.findOne({ sellerId }).session(session);
       if (!supplierAccount) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: 'Supplier account not found' });
       }
@@ -183,7 +182,7 @@ sellerPaymentsRouter.post(
       // Find the PaymentsAccount by accountId (method)
       const paymentsAccount = await PaymentsAccount.findOne({ accountId: method }).session(session);
       if (!paymentsAccount) {
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: `PaymentsAccount with accountId ${method} not found` });
       }
@@ -248,7 +247,6 @@ sellerPaymentsRouter.post(
       }
 
       // Commit the transaction
-      await session.commitTransaction();
       session.endSession();
 
       res.status(200).json({ message: 'Payment added successfully', referenceId: paymentReferenceId });
@@ -257,7 +255,7 @@ sellerPaymentsRouter.post(
 
       // Abort the transaction on error
       if (session.inTransaction()) {
-        await session.abortTransaction();
+        
       }
       session.endSession();
 

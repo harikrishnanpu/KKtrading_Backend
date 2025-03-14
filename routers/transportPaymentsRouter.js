@@ -88,7 +88,7 @@ transportPaymentsRouter.post('/add-payments/:id', async (req, res) => {
     
       if (!account) {
         console.log(`No account found for accountId: ${method}`);
-        await session.abortTransaction();
+        
         session.endSession();
         return res.status(404).json({ message: 'Payment account not found' });
       }
@@ -235,7 +235,6 @@ transportPaymentsRouter.get('/name/:name', async (req, res) => {
 
 transportPaymentsRouter.put('/:id/update', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const transportPaymentId = req.params.id;
@@ -251,7 +250,7 @@ transportPaymentsRouter.put('/:id/update', async (req, res) => {
     const existingTransportPayment = await TransportPayment.findById(transportPaymentId).session(session);
 
     if (!existingTransportPayment) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'Transport payment not found.' });
     }
@@ -464,14 +463,13 @@ transportPaymentsRouter.put('/:id/update', async (req, res) => {
     // ensure they are also updated accordingly.
 
     // 12. Commit the transaction
-    await session.commitTransaction();
     session.endSession();
 
     // 13. Return the updated TransportPayment document
     res.json(updatedTransportPayment);
   } catch (error) {
     // Abort the transaction in case of error
-    await session.abortTransaction();
+    
     session.endSession();
 
     console.error('Error updating transport payment:', error);
@@ -485,7 +483,6 @@ transportPaymentsRouter.put('/:id/update', async (req, res) => {
 
 transportPaymentsRouter.delete('/:id/delete', async (req, res) => {
   const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     const transportPaymentId = req.params.id;
@@ -494,7 +491,7 @@ transportPaymentsRouter.delete('/:id/delete', async (req, res) => {
     const transportPayment = await TransportPayment.findById(transportPaymentId).session(session);
 
     if (!transportPayment) {
-      await session.abortTransaction();
+      
       session.endSession();
       return res.status(404).json({ message: 'Transport payment not found.' });
     }
@@ -545,14 +542,13 @@ transportPaymentsRouter.delete('/:id/delete', async (req, res) => {
     );
 
     // 5. Commit the transaction
-    await session.commitTransaction();
     session.endSession();
 
     // 6. Send success response
     res.json({ message: 'Transport payment record and associated payments deleted successfully.' });
   } catch (error) {
     // Abort the transaction in case of error
-    await session.abortTransaction();
+    
     session.endSession();
 
     console.error('Error deleting transport payment:', error);
