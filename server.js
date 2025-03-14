@@ -32,6 +32,7 @@ import taskRouter from './routers/taskBoardRouter.js';
 import calendarRouter from './routers/calendarRouter.js';
 import chatRouter from './routers/chatRouter.js';
 import notificationRouter from './routers/notificationRouter.js';
+import ContactRouter from './routers/contactsRouter.js';
 
 
 dotenv.config();
@@ -69,6 +70,7 @@ app.use('/api/taskboard', taskRouter)
 app.use('/api/calendar', calendarRouter);
 app.use('/api/chat', chatRouter);
 app.use('/api/notifications', notificationRouter);
+app.use('/api/contacts', ContactRouter);
 
 
 
