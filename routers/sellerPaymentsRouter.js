@@ -5,7 +5,6 @@ import PaymentsAccount from '../models/paymentsAccountModal.js';
 import expressAsyncHandler from 'express-async-handler';
 import SupplierAccount from '../models/supplierAccountModal.js';
 import mongoose from 'mongoose';
-import Purchase from '../models/purchasemodals.js';
 
 const sellerPaymentsRouter = express.Router();
 
