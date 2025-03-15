@@ -317,37 +317,48 @@ productRouter.get(
 productRouter.post(
   '/',
   expressAsyncHandler(async (req, res) => {
+    try {
+      // Find the latest product based on item_id
+      const lastProduct = await Product.findOne().sort({ item_id: -1 });
 
-    try{
-    const product = new Product({
-      name: 'Sample name ' + Date.now().toString(),
-      item_id: Date.now(),
-      seller: 'Supplier',
-      image: '/images/',
-      price: 0,
-      category: 'Category',
-      brand: 'Brand',
-      countInStock: 0,
-      psRatio: 0,
-      pUnit: 'BOX',
-      sUnit: 'NOS',
-      length: 0,
-      breadth: 0,
-      size: 'size',
-      unit: 'unit',
-      rating: 0,
-      numReviews: 0,
-      description: 'Sample description',
-    });
-    const createdProduct = await product.save();
-    res.status(201).send(createdProduct);
+      let nextItemId = 'K1000'; // Default starting ID
 
-  }catch (error){
-    console.log("error creating product", error)
-    res.status(500).json({ message: 'Error creating product' });
-  }
+      if (lastProduct && lastProduct.item_id) {
+        const lastItemId = lastProduct.item_id.replace('K', ''); // Remove 'K' prefix
+        const nextNumber = parseInt(lastItemId, 10) + 1; // Increment number
+        nextItemId = 'K' + nextNumber; // Form new item_id
+      }
+
+      const product = new Product({
+        name: 'Sample name ' + Date.now().toString(),
+        item_id: nextItemId,
+        seller: 'Supplier',
+        image: '/images/',
+        price: 0,
+        category: 'Category',
+        brand: 'Brand',
+        countInStock: 0,
+        psRatio: 0,
+        pUnit: 'BOX',
+        sUnit: 'NOS',
+        length: 0,
+        breadth: 0,
+        size: 'size',
+        unit: 'unit',
+        rating: 0,
+        numReviews: 0,
+        description: 'Sample description',
+      });
+
+      const createdProduct = await product.save();
+      res.status(201).send(createdProduct);
+    } catch (error) {
+      console.log("error creating product", error);
+      res.status(500).json({ message: 'Error creating product' });
+    }
   })
 );
+
 
 
 // Update a product
