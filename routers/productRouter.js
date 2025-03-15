@@ -319,14 +319,16 @@ productRouter.post(
   expressAsyncHandler(async (req, res) => {
     try {
       // Find the latest product based on item_id
-      const lastProduct = await Product.findOne().sort({ item_id: -1 });
+      const lastProduct = await Product.findOne({ item_id: /^K\d+$/ }).sort({ item_id: -1 });
 
       let nextItemId = 'K1000'; // Default starting ID
 
       if (lastProduct && lastProduct.item_id) {
-        const lastItemId = lastProduct.item_id.replace('K', ''); // Remove 'K' prefix
-        const nextNumber = parseInt(lastItemId, 10) + 1; // Increment number
-        nextItemId = 'K' + nextNumber; // Form new item_id
+        const lastItemId = lastProduct.item_id.match(/\d+/); // Extract numeric part
+        if (lastItemId) {
+          const nextNumber = parseInt(lastItemId[0], 10) + 1; // Increment number
+          nextItemId = 'K' + nextNumber; // Form new item_id
+        }
       }
 
       const product = new Product({
@@ -358,6 +360,7 @@ productRouter.post(
     }
   })
 );
+
 
 
 
