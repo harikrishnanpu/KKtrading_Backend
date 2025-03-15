@@ -318,44 +318,53 @@ productRouter.post(
   '/',
   expressAsyncHandler(async (req, res) => {
     try {
-      // Find the latest product based on item_id
-      const lastProduct = await Product.findOne({ item_id: /^K\d+$/ }).sort({ item_id: -1 });
+      const lastProduct = await Product.findOne({ item_id: /^K\d+$/ })
+      .sort({ item_id: -1 })
+      .collation({ locale: "en", numericOrdering: true });
 
-      let nextItemId = 'K1000'; // Default starting ID
+      let nextItemId = 'K1'; // Default starting item_id
 
       if (lastProduct && lastProduct.item_id) {
-        const lastItemId = lastProduct.item_id.match(/\d+/); // Extract numeric part
-        if (lastItemId) {
-          const nextNumber = parseInt(lastItemId[0], 10) + 1; // Increment number
-          nextItemId = 'K' + nextNumber; // Form new item_id
-        }
+        // Extract the numeric part from item_id (e.g., "K2354" → 2354)
+        const lastItemNumber = parseInt(lastProduct.item_id.substring(1), 10); // Remove 'K' and convert to number
+        nextItemId = `K${lastItemNumber + 1}`; // Increment and generate next item_id
       }
 
+      // Create a new product
       const product = new Product({
-        name: 'Sample name ' + Date.now().toString(),
+        name: `Sample name ${Date.now()}`,
         item_id: nextItemId,
         seller: 'Supplier',
         image: '/images/',
-        price: 0,
-        category: 'Category',
         brand: 'Brand',
-        countInStock: 0,
-        psRatio: 0,
+        category: 'Category',
+        description: 'Sample description',
         pUnit: 'BOX',
         sUnit: 'NOS',
-        length: 0,
-        breadth: 0,
+        psRatio: '0',
+        length: '0',
+        breadth: '0',
+        actLength: '0',
+        actBreadth: '0',
         size: 'size',
         unit: 'unit',
+        price: '0',
+        hsnCode: '0',
+        billPartPrice: 0,
+        cashPartPrice: 0,
+        sellerAddress: 'Supplier Address',
+        type: 'Product Type',
+        countInStock: 0,
         rating: 0,
         numReviews: 0,
-        description: 'Sample description',
+        gstPercent: 0,
+        reviews: [],
       });
 
       const createdProduct = await product.save();
-      res.status(201).send(createdProduct);
+      res.status(201).json(createdProduct);
     } catch (error) {
-      console.log("error creating product", error);
+      console.error('Error creating product:', error);
       res.status(500).json({ message: 'Error creating product' });
     }
   })
