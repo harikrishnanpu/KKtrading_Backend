@@ -24,62 +24,55 @@ sellerPaymentsRouter.get(('/suggestions'), async (req, res) => {
 // Get seller details by ID
 sellerPaymentsRouter.get("/get-seller/:id", async (req, res) => {
   try {
-    const seller   = await SellerPayment.findById(req.params.id);
-    const supplier = await SupplierAccount.findOne({sellerId: seller.sellerId});
-    if (!supplier) {
+    let seller;
+    let supplier;
+
+    // 1. First try to find SupplierAccount by sellerId
+    supplier = await SupplierAccount.findOne({ sellerId: req.params.id });
+
+    // 2. If SupplierAccount found, get its SellerPayment
+    if (supplier) {
+      seller = await SellerPayment.findOne({ sellerId: req.params.id });
+    } else {
+      // 3. Fallback: Try to find SellerPayment by _id
+      seller = await SellerPayment.findById(req.params.id);
+      if (seller) {
+        supplier = await SupplierAccount.findOne({ sellerId: seller.sellerId });
+      }
+    }
+
+    // 4. If neither exists, return 404
+    if (!supplier || !seller) {
       return res.status(404).json({ message: "Supplier not found" });
     }
 
-    // Recalculate totals using the bills array
-    const totalBillPart = supplier.bills.reduce(
-      (sum, bill) => sum + (bill.billAmount || 0),
-      0
-    );
-    const totalCashPart = supplier.bills.reduce(
-      (sum, bill) => sum + (bill.cashPart || 0),
-      0
-    );
-    
-    // Calculate the paid amount from payments
-    const paidAmount = supplier.payments.reduce(
-      (sum, payment) => sum + (payment.amount || 0),
-      0
-    );
-    
-    // Total pending amount is the sum of the bill and cash parts minus what has been paid
+    // 5. Recalculate totals (existing logic remains)
+    const totalBillPart = supplier.bills.reduce((sum, bill) => sum + (bill.billAmount || 0), 0);
+    const totalCashPart = supplier.bills.reduce((sum, bill) => sum + (bill.cashPart || 0), 0);
+    const paidAmount = supplier.payments.reduce((sum, payment) => sum + (payment.amount || 0), 0);
     const totalPendingAmount = totalBillPart + totalCashPart - paidAmount;
 
-    // Breakdown payments based on their remarks
-    const totalCashPartGiven = supplier.payments.reduce((sum, payment) => {
-      if (
-        payment.remark &&
-        payment.remark.trim().toUpperCase().startsWith("CASH:")
-      ) {
-        return sum + payment.amount;
-      }
-      return sum;
-    }, 0);
+    const totalCashPartGiven = supplier.payments.reduce((sum, payment) => (
+      payment.remark?.trim().toUpperCase().startsWith("CASH:") ? sum + payment.amount : sum
+    ), 0);
 
-    const totalBillPartGiven = supplier.payments.reduce((sum, payment) => {
-      if (
-        payment.remark &&
-        payment.remark.trim().toUpperCase().startsWith("BILL:")
-      ) {
-        return sum + payment.amount;
-      }
-      return sum;
-    }, 0);
+    const totalBillPartGiven = supplier.payments.reduce((sum, payment) => (
+      payment.remark?.trim().toUpperCase().startsWith("BILL:") ? sum + payment.amount : sum
+    ), 0);
 
-    // Convert the Mongoose document to a plain object
-    const supplierData = supplier.toObject();
-    supplierData.totalBillPart = totalBillPart;
-    supplierData.totalCashPart = totalCashPart;
-    supplierData.paidAmount = paidAmount;
-    supplierData.totalPendingAmount = totalPendingAmount;
-    supplierData.totalCashPartGiven = totalCashPartGiven;
-    supplierData.totalBillPartGiven = totalBillPartGiven;
+    // 6. Return combined data
+    res.json({
+      ...supplier.toObject(),
+      totalBillPart,
+      totalCashPart,
+      paidAmount,
+      totalPendingAmount,
+      totalCashPartGiven,
+      totalBillPartGiven,
+      sellerId: supplier.sellerId, // Ensure consistent sellerId
+      _id: seller._id // Include SellerPayment _id if needed
+    });
 
-    res.json(supplierData);
   } catch (error) {
     console.error("Error fetching supplier details:", error);
     res.status(500).json({ message: "Error fetching supplier details" });
