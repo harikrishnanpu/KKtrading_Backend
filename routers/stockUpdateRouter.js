@@ -2,6 +2,7 @@ import express from 'express';
 import asyncHandler from 'express-async-handler';
 import Product from '../models/productModel.js';
 import StockOpening from '../models/stockOpeningModal.js';
+import StockRegistry from '../models/StockregistryModel.js';
 
 const stockUpdateRouter = express.Router();
 
@@ -69,6 +70,22 @@ stockUpdateRouter.post('/create', asyncHandler(async (req, res) => {
     date: new Date(),
   });
   await logEntry.save();
+
+    // --- 📌 Add StockRegistry Entry ---
+    const stockEntry = new StockRegistry({
+      date: new Date(),
+      updatedBy: submittedBy,
+      itemId: product.item_id,
+      name: product.name,
+      brand: product.brand,
+      category: product.category,
+      changeType: parsedQuantity > 0 ? 'Manual Addition' : 'Manual Reduction',
+      invoiceNo: 'N/A', // No invoice for manual updates
+      quantityChange: parsedQuantity,
+      finalStock: product.countInStock,
+    });
+  
+    await stockEntry.save();
 
   res.json({ message: 'Stock updated successfully.', log: logEntry });
 }));
@@ -154,8 +171,24 @@ stockUpdateRouter.delete('/:id', asyncHandler(async (req, res) => {
   product.countInStock -= logEntry.quantity; // If the log was +10, we do -10 now
   await product.save();
 
+  
+  // --- 📌 Add StockRegistry Entry ---
+  const stockEntry = new StockRegistry({
+    date: new Date(),
+    updatedBy: 'System', // Deletion is usually system-triggered
+    itemId: product.item_id,
+    name: product.name,
+    brand: product.brand,
+    category: product.category,
+    changeType: 'Reverted Stock Update (Deletion)',
+    invoiceNo: 'N/A', // No invoice involved
+    quantityChange: -logEntry.quantity, // Reversing the previous change
+    finalStock: product.countInStock,
+  });
+  
+  await stockEntry.save();
+  
   await logEntry.deleteOne();
-
   res.json({ message: 'Stock update log deleted and stock reverted successfully.' });
 }));
 

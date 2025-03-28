@@ -9,6 +9,7 @@ import PaymentsAccount from '../models/paymentsAccountModal.js';
 import CustomerAccount from '../models/customerModal.js';
 import SupplierAccount from '../models/supplierAccountModal.js';
 import Location from '../models/locationModel.js';
+import StockRegistry from '../models/StockregistryModel.js';
 
 const billingRouter = express.Router();
 
@@ -327,6 +328,23 @@ billingRouter.post('/create', async (req, res) => {
         // Deduct the stock
         product.countInStock -= parseFloat(quantity);
         productUpdatePromises.push(product.save({ session }));
+
+
+  // **Log stock change in StockRegistry**
+  const stockEntry = new StockRegistry({
+    date: new Date(),
+    updatedBy: userId, // Capture who made the change
+    itemId: item.item_id,
+    name: product.name,
+    brand: product.brand,
+    category: product.category,
+    changeType: 'Sales (Billing)',
+    invoiceNo: invoiceNo.trim(),
+    quantityChange: -Math.abs(quantity), // Deducted quantity
+    finalStock: product.countInStock,
+  });
+
+    await stockEntry.save({ session });
       }
     }
 
@@ -476,6 +494,22 @@ billingRouter.post('/edit/:id', async (req, res) => {
         if (isBillApproved && isAdmin) {
           productInDB.countInStock += parseFloat(product.quantity);
           await productInDB.save({ session });
+
+                // Log Stock Restoration in StockRegistry
+      const stockEntry = new StockRegistry({
+        date: new Date(),
+        updatedBy: userId,
+        itemId: product.item_id,
+        name: product.name,
+        brand: product.brand,
+        category: product.category,
+        changeType: 'Sales (Billing)',
+        invoiceNo: invoiceNo.trim(),
+        quantityChange: parseFloat(product.quantity),
+        finalStock: productInDB.countInStock,
+      });
+      await stockEntry.save({ session });
+
         }
       }
       existingBilling.products.pull(product._id);
@@ -536,6 +570,21 @@ billingRouter.post('/edit/:id', async (req, res) => {
 
           productInDB.countInStock = newStockCount;
           productUpdatePromises.push(productInDB.save({ session }));
+
+                // Log Stock Change in StockRegistry
+      const stockEntry = new StockRegistry({
+        date: new Date(),
+        updatedBy: userId,
+        itemId: trimmedItemId,
+        name: productInDB.name,
+        brand: productInDB.brand,
+        category: productInDB.category,
+        changeType: 'Sales (Billing)',
+        invoiceNo: invoiceNo.trim(),
+        quantityChange: -quantityDifference, // Deducted quantity
+        finalStock: productInDB.countInStock,
+      });
+      await stockEntry.save({ session });
         }
 
         // Update product details in billing
@@ -566,6 +615,23 @@ billingRouter.post('/edit/:id', async (req, res) => {
 
           productInDB.countInStock -= newQuantity;
           productUpdatePromises.push(productInDB.save({ session }));
+
+
+
+      // Log New Product Sale in StockRegistry
+      const stockEntry = new StockRegistry({
+        date: new Date(),
+        updatedBy: userId,
+        itemId: trimmedItemId,
+        name: productInDB.name,
+        brand: productInDB.brand,
+        category: productInDB.category,
+        changeType: 'Sales (Billing)',
+        invoiceNo: invoiceNo.trim(),
+        quantityChange: -Math.abs(newQuantity), // Deducted quantity
+        finalStock: productInDB.countInStock,
+      });
+      await stockEntry.save({ session });
         }
 
         existingBilling.products.push({
@@ -827,9 +893,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     // === 1. Authenticate and Authorize User ===
     const { userId } = req.query;
 
-    // Ensure userId is sent in the request body
     if (!userId) {
-      
       session.endSession();
       return res
         .status(400)
@@ -838,14 +902,12 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
 
     const user = await User.findById(userId).session(session);
     if (!user) {
-      
       session.endSession();
       return res.status(404).json({ message: 'User not found.' });
     }
 
     const isAdmin = user.isAdmin;
     if (!isAdmin) {
-      
       session.endSession();
       return res
         .status(403)
@@ -856,7 +918,6 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     const billing = await Billing.findById(billingId).session(session);
     
     if (!billing) {
-      
       session.endSession();
       return res.status(404).json({ message: 'Billing record not found.' });
     }
@@ -874,85 +935,91 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
       customerId: customerId.trim(),
     }).session(session);
 
-    // if (!customerAccount) {
-    //   
-    //   session.endSession();
-    //   return res.status(404).json({ message: 'Customer account not found.' });
-    // }
+    if (customerAccount) {
+      // === 4. Remove the Billing from Customer's Bills ===
+      const billIndex = customerAccount.bills.findIndex(
+        (bill) => bill.invoiceNo === invoiceNo.trim()
+      );
+      if (billIndex !== -1) {
+        customerAccount.bills.splice(billIndex, 1);
+      }
 
-    if(customerAccount){
+      // === 5. Handle Associated Payments ===
+      if (payments && payments.length > 0) {
+        for (const payment of payments) {
+          const { amount, method, date, submittedBy, referenceId } = payment;
 
-    // === 4. Remove the Billing from Customer's Bills ===
-    const billIndex = customerAccount.bills.findIndex(
-      (bill) => bill.invoiceNo === invoiceNo.trim()
-    );
-    if (billIndex !== -1) {
-      customerAccount.bills.splice(billIndex, 1);
-    }
+          // a. Remove Payment from PaymentsAccount
+          const paymentsAccount = await PaymentsAccount.findOne({
+            accountId: method.trim(),
+          }).session(session);
+          if (paymentsAccount) {
+            const paymentIndex = paymentsAccount.paymentsIn.findIndex(
+              (p) =>
+                p.referenceId === referenceId &&
+                p.amount === amount &&
+                p.submittedBy === submittedBy &&
+                new Date(p.date).getTime() === new Date(date).getTime()
+            );
 
-    // === 5. Handle Associated Payments ===
-    if (payments && payments.length > 0) {
-      for (const payment of payments) {
-        const { amount, method, date, submittedBy, referenceId } = payment;
+            if (paymentIndex !== -1) {
+              paymentsAccount.paymentsIn.splice(paymentIndex, 1);
+              await paymentsAccount.save({ session });
+            }
+          }
 
-        // a. Remove Payment from PaymentsAccount
-        const paymentsAccount = await PaymentsAccount.findOne({
-          accountId: method.trim(),
-        }).session(session);
-        if (paymentsAccount) {
-          const paymentIndex = paymentsAccount.paymentsIn.findIndex(
-            (p) =>
-              p.referenceId === referenceId &&
-              p.amount === amount &&
-              p.submittedBy === submittedBy &&
-              new Date(p.date).getTime() === new Date(date).getTime()
+          // b. Remove Payment from CustomerAccount's Payments
+          const customerPaymentIndex = customerAccount.payments.findIndex(
+            (p) => p.referenceId === referenceId
           );
 
-          if (paymentIndex !== -1) {
-            paymentsAccount.paymentsIn.splice(paymentIndex, 1);
-            await paymentsAccount.save({ session });
+          if (customerPaymentIndex !== -1) {
+            customerAccount.payments.splice(customerPaymentIndex, 1);
           }
-        }
-
-        // b. Remove Payment from CustomerAccount's Payments
-        const customerPaymentIndex = customerAccount.payments.findIndex(
-          (p) => p.referenceId === referenceId
-        );
-
-        if (customerPaymentIndex !== -1) {
-          customerAccount.payments.splice(customerPaymentIndex, 1);
         }
       }
     }
-
-  }
 
     // === 6. Restore Product Stock ===
     if (products && products.length > 0) {
       for (const item of products) {
         const { item_id, quantity } = item;
 
-        // Validate product details
         if (!item_id || isNaN(quantity) || quantity <= 0) {
-          
           session.endSession();
           return res.status(400).json({
             message: 'Invalid product details in billing.',
           });
         }
 
-        // Fetch the product
         const product = await Product.findOne({
           item_id: item_id.trim(),
         }).session(session);
+
         if (product) {
-          // Restore the stock only if the billing was approved or the user is admin
           if (isApproved || isAdmin) {
-            product.countInStock += parseFloat(quantity);
+            const restoredQuantity = parseFloat(quantity);
+            product.countInStock += restoredQuantity;
+
+            // --- 📌 Add StockRegistry Entry ---
+            const stockEntry = new StockRegistry({
+              date: new Date(),
+              updatedBy: userId, // Admin or authorized user
+              itemId: product.item_id,
+              name: product.name,
+              brand: product.brand,
+              category: product.category,
+              changeType: 'Sales Billing (Delete)',
+              invoiceNo: invoiceNo,
+              quantityChange: restoredQuantity,
+              finalStock: product.countInStock,
+            });
+
+            await stockEntry.save();
+
             await product.save({ session });
           }
         } else {
-          
           session.endSession();
           return res.status(404).json({
             message: `Product with ID ${item_id.trim()} not found.`,
@@ -965,7 +1032,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     const deletedBill = await Billing.findOneAndDelete({ _id: billingId }).session(session);
     console.log(deletedBill);
 
-    if(customerAccount){
+    if (customerAccount) {
       // === 8. Save the Updated Customer Account ===
       await customerAccount.save({ session });
     }
@@ -977,11 +1044,6 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     res.status(200).json({ message: 'Billing record deleted successfully.' });
   } catch (error) {
     console.log('Error deleting billing record:', error);
-
-    // Attempt to abort the transaction if it's still active
-    if (session.inTransaction()) {
-      
-    }
     session.endSession();
     res.status(500).json({
       message: 'Error deleting billing record.',
@@ -989,6 +1051,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
     });
   }
 });
+
 
 
 
@@ -1041,6 +1104,8 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
     // 1. Update Stock During Approval
     // -----------------------
     const productUpdatePromises = [];
+    const stockRegistryEntries = [];
+
     for (const item of existingBill.products) {
       const { item_id, quantity } = item;
 
@@ -1062,7 +1127,23 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
       // Deduct the stock
       product.countInStock -= parseFloat(quantity);
       productUpdatePromises.push(product.save({ session }));
+
+            // Add stock registry entry
+            stockRegistryEntries.push({
+              updatedBy: userId,
+              itemId: product.item_id,
+              name: product.name,
+              brand: product.brand,
+              category: product.category,
+              changeType: 'Sales (Billing)',
+              invoiceNo: existingBill.invoiceNo,
+              quantityChange: -parseFloat(quantity),
+              finalStock: product.countInStock,
+            });
     }
+
+
+    await StockRegistry.insertMany(stockRegistryEntries, { session });
 
     // Save the updated bill
     await existingBill.save({ session });

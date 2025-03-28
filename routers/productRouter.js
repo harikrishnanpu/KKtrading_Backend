@@ -14,6 +14,7 @@ import Billing from '../models/billingModal.js';
 import Return from '../models/returnModal.js';
 import Damage from '../models/damageModal.js';
 import StockOpening from '../models/stockOpeningModal.js';
+import StockRegistry from '../models/StockregistryModel.js';
 
 
 const productRouter = express.Router();
@@ -580,6 +581,22 @@ productRouter.post(
           product.gstPercent = item.gstPercent,
           Object.assign(product, item);
           await product.save();
+
+              // --- 📌 Add StockRegistry Entry Here ---
+    const stockEntry = new StockRegistry({
+      date: new Date(),
+      updatedBy: 'user', // Assuming userId comes from authenticated request
+      itemId: product.item_id,
+      name: product.name,
+      brand: product.brand,
+      category: product.category,
+      changeType: 'Purchase',
+      invoiceNo: invoiceNo.trim(),
+      quantityChange: Math.abs(quantityInNumbers), // Stock increase
+      finalStock: product.countInStock,
+    });
+
+    await stockEntry.save();
         } else {
           const newProduct = new Product({
             item_id: item.itemId,
@@ -589,6 +606,23 @@ productRouter.post(
             gstPercent: item.gstPercent,
           });
           await newProduct.save();
+
+
+          // --- 📌 Add StockRegistry Entry for New Product ---
+    const stockEntry = new StockRegistry({
+      date: new Date(),
+      updatedBy: 'user',
+      itemId: newProduct.item_id,
+      name: newProduct.name,
+      brand: newProduct.brand,
+      category: newProduct.category,
+      changeType: 'Purchase (New Product)',
+      invoiceNo: invoiceNo.trim(),
+      quantityChange: Math.abs(quantityInNumbers),
+      finalStock: newProduct.countInStock,
+    });
+
+    await stockEntry.save();
         }
       }
 
@@ -831,6 +865,8 @@ productRouter.put(
         const product = await Product.findOne({ item_id: item.itemId });
         const oldQuantity = oldItemMap.get(item.itemId) || 0;
         const newQuantity = parseFloat(item.quantityInNumbers);
+        const quantityDifference = newQuantity - oldQuantity;
+
 
         if (product) {
           product.countInStock += newQuantity - oldQuantity;
@@ -859,6 +895,24 @@ productRouter.put(
             gstPercent: item.gstPercent,
           });
           await newProduct.save();
+        }
+
+
+        // Stock Registry Entry
+        if (quantityDifference !== 0) {
+          const stockEntry = new StockRegistry({
+            updatedBy: 'user',
+            itemId: item.itemId,
+            name: item.name,
+            brand: item.brand,
+            category: item.category,
+            changeType: 'Purchase',
+            invoiceNo,
+            quantityChange: quantityDifference,
+            finalStock: product ? product.countInStock : newQuantity,
+          });
+
+          await stockEntry.save();
         }
       }
 
@@ -1266,6 +1320,23 @@ productRouter.delete(
             product.countInStock = 0; // Ensure stock doesn't go below zero
           }
 
+
+          // --- 📌 Add StockRegistry Entry ---
+          const stockEntry = new StockRegistry({
+            date: new Date(),
+            updatedBy: 'System', // Deletion is usually system-triggered
+            itemId: product.item_id,
+            name: product.name,
+            brand: product.brand,
+            category: product.category,
+            changeType: 'Purchase Deletion',
+            invoiceNo: purchase.invoiceNo,
+            quantityChange: -deductedQuantity, // Reverse the stock addition
+            finalStock: product.countInStock,
+          });
+
+          await stockEntry.save();
+
           await product.save();
         }
       }
@@ -1512,139 +1583,11 @@ productRouter.get('/product/all', async (req, res) => {
 
 
 
-
 productRouter.get(
   '/stock/stock-logs',
   asyncHandler(async (req, res) => {
     try {
-      // Fetch all related data in parallel
-      const [billings, purchases, returns, damages, openings, products] = await Promise.all([
-        Billing.find({ isApproved: true }).lean(),
-        Purchase.find().lean(),
-        Return.find().lean(),
-        Damage.find().lean(),
-        StockOpening.find().lean(),
-        Product.find().lean(),
-      ]);
-
-      // Create a quick-lookup map for product details
-      const productMap = {};
-      for (const p of products) {
-        productMap[p.item_id] = p;
-      }
-
-      // Each log entry structure:
-      // {
-      //   date: Date,
-      //   itemId: String,
-      //   name: String,
-      //   brand: String,
-      //   category: String,
-      //   changeType: "Sales (Billing)" | "Purchase" | "Return" | "Damage" | "Opening Stock",
-      //   invoiceNo: String or null,
-      //   quantityChange: Number,
-      //   finalStock: Number (current countInStock)
-      // }
-
-      // Billing (Sales) Logs: products sold reduce stock
-      const billingLogs = billings.flatMap((b) =>
-        b.products.map((prod) => {
-          const pInfo = productMap[prod.item_id] || {};
-          return {
-            date: b.createdAt,
-            itemId: prod.item_id,
-            name: pInfo.name || prod.name,
-            brand: pInfo.brand || prod.brand,
-            category: pInfo.category || prod.category,
-            changeType: 'Sales (Billing)',
-            invoiceNo: b.invoiceNo,
-            quantityChange: -Math.abs(prod.quantity),
-            finalStock: pInfo.countInStock || 0,
-          };
-        })
-      );
-
-      // Purchase Logs: purchased items increase stock
-      const purchaseLogs = purchases.flatMap((pur) =>
-        pur.items.map((item) => {
-          const pInfo = productMap[item.itemId] || {};
-          return {
-            date: pur.createdAt,
-            itemId: item.itemId,
-            name: pInfo.name || item.name,
-            brand: pInfo.brand || item.brand,
-            category: pInfo.category || item.category,
-            changeType: 'Purchase',
-            invoiceNo: pur.invoiceNo,
-            quantityChange: Math.abs(item.quantityInNumbers),
-            finalStock: pInfo.countInStock || 0,
-          };
-        })
-      );
-
-      // Return Logs: returned items add back to stock
-      const returnLogs = returns.flatMap((r) =>
-        r.products.map((prod) => {
-          const pInfo = productMap[prod.item_id] || {};
-          return {
-            date: r.createdAt,
-            itemId: prod.item_id,
-            name: pInfo.name || prod.name,
-            brand: pInfo.brand || '',
-            category: pInfo.category || '',
-            changeType: 'Return',
-            invoiceNo: r.returnNo,
-            quantityChange: Math.abs(prod.quantity),
-            finalStock: pInfo.countInStock || 0,
-          };
-        })
-      );
-
-      // Damage Logs: damaged items reduce stock
-      const damageLogs = damages.flatMap((d) =>
-        d.damagedItems.map((item) => {
-          const pInfo = productMap[item.item_id] || {};
-          return {
-            date: d.createdAt,
-            itemId: item.item_id,
-            name: pInfo.name || item.name,
-            brand: pInfo.brand || '',
-            category: pInfo.category || '',
-            changeType: 'Damage',
-            invoiceNo: null,
-            quantityChange: -Math.abs(item.quantity),
-            finalStock: pInfo.countInStock || 0,
-          };
-        })
-      );
-
-      // Opening Stock Logs: initial or manually added opening stocks
-      const openingLogs = openings.map((o) => {
-        const pInfo = productMap[o.item_id] || {};
-        return {
-          date: o.createdAt,
-          itemId: o.item_id,
-          name: pInfo.name || o.name,
-          brand: pInfo.brand || '',
-          category: pInfo.category || '',
-          changeType: 'Opening Stock',
-          invoiceNo: null,
-          quantityChange: Math.abs(o.quantity),
-          finalStock: pInfo.countInStock || 0,
-        };
-      });
-
-      let logs = [
-        ...billingLogs,
-        ...purchaseLogs,
-        ...returnLogs,
-        ...damageLogs,
-        ...openingLogs,
-      ];
-
-      // Sort logs by date ascending by default
-      logs = logs.sort((a, b) => new Date(a.date) - new Date(b.date));
-
+      const logs = await StockRegistry.find().sort({ date: 1 }).lean();
       res.json(logs);
     } catch (error) {
       console.error(error);
@@ -1652,6 +1595,148 @@ productRouter.get(
     }
   })
 );
+
+
+
+// productRouter.get(
+//   '/stock/stock-logs',
+//   asyncHandler(async (req, res) => {
+//     try {
+//       // Fetch all related data in parallel
+//       const [billings, purchases, returns, damages, openings, products] = await Promise.all([
+//         Billing.find({ isApproved: true }).lean(),
+//         Purchase.find().lean(),
+//         Return.find().lean(),
+//         Damage.find().lean(),
+//         StockOpening.find().lean(),
+//         Product.find().lean(),
+//       ]);
+
+//       // Create a quick-lookup map for product details
+//       const productMap = {};
+//       for (const p of products) {
+//         productMap[p.item_id] = p;
+//       }
+
+//       // Each log entry structure:
+//       // {
+//       //   date: Date,
+//       //   itemId: String,
+//       //   name: String,
+//       //   brand: String,
+//       //   category: String,
+//       //   changeType: "Sales (Billing)" | "Purchase" | "Return" | "Damage" | "Opening Stock",
+//       //   invoiceNo: String or null,
+//       //   quantityChange: Number,
+//       //   finalStock: Number (current countInStock)
+//       // }
+
+//       // Billing (Sales) Logs: products sold reduce stock
+//       const billingLogs = billings.flatMap((b) =>
+//         b.products.map((prod) => {
+//           const pInfo = productMap[prod.item_id] || {};
+//           return {
+//             date: b.createdAt,
+//             itemId: prod.item_id,
+//             name: pInfo.name || prod.name,
+//             brand: pInfo.brand || prod.brand,
+//             category: pInfo.category || prod.category,
+//             changeType: 'Sales (Billing)',
+//             invoiceNo: b.invoiceNo,
+//             quantityChange: -Math.abs(prod.quantity),
+//             finalStock: pInfo.countInStock || 0,
+//           };
+//         })
+//       );
+
+//       // Purchase Logs: purchased items increase stock
+//       const purchaseLogs = purchases.flatMap((pur) =>
+//         pur.items.map((item) => {
+//           const pInfo = productMap[item.itemId] || {};
+//           return {
+//             date: pur.createdAt,
+//             itemId: item.itemId,
+//             name: pInfo.name || item.name,
+//             brand: pInfo.brand || item.brand,
+//             category: pInfo.category || item.category,
+//             changeType: 'Purchase',
+//             invoiceNo: pur.invoiceNo,
+//             quantityChange: Math.abs(item.quantityInNumbers),
+//             finalStock: pInfo.countInStock || 0,
+//           };
+//         })
+//       );
+
+//       // Return Logs: returned items add back to stock
+//       const returnLogs = returns.flatMap((r) =>
+//         r.products.map((prod) => {
+//           const pInfo = productMap[prod.item_id] || {};
+//           return {
+//             date: r.createdAt,
+//             itemId: prod.item_id,
+//             name: pInfo.name || prod.name,
+//             brand: pInfo.brand || '',
+//             category: pInfo.category || '',
+//             changeType: 'Return',
+//             invoiceNo: r.returnNo,
+//             quantityChange: Math.abs(prod.quantity),
+//             finalStock: pInfo.countInStock || 0,
+//           };
+//         })
+//       );
+
+//       // Damage Logs: damaged items reduce stock
+//       const damageLogs = damages.flatMap((d) =>
+//         d.damagedItems.map((item) => {
+//           const pInfo = productMap[item.item_id] || {};
+//           return {
+//             date: d.createdAt,
+//             itemId: item.item_id,
+//             name: pInfo.name || item.name,
+//             brand: pInfo.brand || '',
+//             category: pInfo.category || '',
+//             changeType: 'Damage',
+//             invoiceNo: null,
+//             quantityChange: -Math.abs(item.quantity),
+//             finalStock: pInfo.countInStock || 0,
+//           };
+//         })
+//       );
+
+//       // Opening Stock Logs: initial or manually added opening stocks
+//       const openingLogs = openings.map((o) => {
+//         const pInfo = productMap[o.item_id] || {};
+//         return {
+//           date: o.createdAt,
+//           itemId: o.item_id,
+//           name: pInfo.name || o.name,
+//           brand: pInfo.brand || '',
+//           category: pInfo.category || '',
+//           changeType: 'Opening Stock',
+//           invoiceNo: null,
+//           quantityChange: Math.abs(o.quantity),
+//           finalStock: pInfo.countInStock || 0,
+//         };
+//       });
+
+//       let logs = [
+//         ...billingLogs,
+//         ...purchaseLogs,
+//         ...returnLogs,
+//         ...damageLogs,
+//         ...openingLogs,
+//       ];
+
+//       // Sort logs by date ascending by default
+//       logs = logs.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+//       res.json(logs);
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).json({ message: 'Failed to fetch stock logs.' });
+//     }
+//   })
+// );
 
 
 

@@ -7,6 +7,7 @@ const returnRouter = express.Router();
 import mongoose from "mongoose";
 import Billing from "../models/billingModal.js";
 import Purchase from "../models/purchasemodals.js";
+import StockRegistry from "../models/StockregistryModel.js";
 
 
 returnRouter.get('/',async (req,res)=>{
@@ -181,6 +182,22 @@ returnRouter.post('/create', async (req, res) => {
       // Save updated product
       await dbProduct.save({ session });
 
+
+  const stockEntry = new StockRegistry({
+    date: new Date(),
+    updatedBy: 'user', // Assuming userId comes from authenticated request
+    itemId: dbProduct.item_id,
+    name: dbProduct.name,
+    brand: dbProduct.brand,
+    category: dbProduct.category,
+    changeType: returnType === 'bill' ? 'Return (Billing)' : 'Return (Purchase)',
+    invoiceNo: returnType === 'bill' ? billingNo.trim() : purchaseNo.trim(),
+    quantityChange: returnType === 'bill' ? Math.abs(rProd.quantity) : -Math.abs(rProd.quantity), // +ve for Bill Return, -ve for Purchase Return
+    finalStock: dbProduct.countInStock,
+  });
+
+  await stockEntry.save({ session });
+
       // Update returnedQuantity in Billing or Purchase
       if (returnType === 'bill') {
         const billProd = relatedDoc.products.find(
@@ -246,11 +263,28 @@ returnRouter.post('/damage/create', async (req, res) => {
   
       // Reduce the countInStock for each damaged item
       for (const damagedItem of damagedItems) {
-        await Product.findOneAndUpdate(
+        const updatedProduct = await Product.findOneAndUpdate(
           { item_id: damagedItem.item_id },
           { $inc: { countInStock: -parseFloat(damagedItem.quantity) } },
           { new: true }
-        );
+      );
+
+      if (updatedProduct) {
+          // Log the stock change in StockRegistry
+          const stockEntry = new StockRegistry({
+              date: new Date(),
+              updatedBy: userName,  // Storing user who reported the damage
+              itemId: damagedItem.item_id,
+              name: updatedProduct.name,
+              brand: updatedProduct.brand,
+              category: updatedProduct.category,
+              changeType: 'Stock Damage',
+              invoiceNo: 'N/A',  // No invoice, since it's a damage report
+              quantityChange: -parseFloat(damagedItem.quantity), // Negative value for stock deduction
+              finalStock: updatedProduct.countInStock
+          });
+          await stockEntry.save();
+      }
       }
   
       res.status(201).json({ message: 'Damage bill created successfully and stock updated.' });
@@ -274,49 +308,84 @@ returnRouter.get('/damage/getDamagedData', async (req, res) => {
 
   returnRouter.delete('/damage/delete/:damageId/:itemId', async (req, res) => {
     try {
-      const { damageId, itemId } = req.params;
-  
-      // Find the specific damage record by ID
-      const damage = await Damage.findById(damageId);
-  
-      if (!damage) {
-        return res.status(404).json({ message: 'Damage record not found' });
-      }
-  
-      // Find the specific item within the damaged items array
-      const itemIndex = damage.damagedItems.findIndex(item => item.item_id === itemId);
-  
-      if (itemIndex === -1) {
-        return res.status(404).json({ message: 'Item not found in the damage bill' });
-      }
-  
-      const item = damage.damagedItems[itemIndex];
-  
-      // Update the product stock for the item
-      const product = await Product.findOne({ item_id: item.item_id });
-  
-      if (product) {
+        const { damageId, itemId } = req.params;
+
+        console.log("Damage ID:", damageId);
+        console.log("Item ID:", itemId);
+
+        // Find the specific damage record by ID
+        const damage = await Damage.findById(damageId);
+
+        if (!damage) {
+            return res.status(404).json({ message: 'Damage record not found' });
+        }
+
+        console.log("Damage Record Found:", damage);
+
+        // Find the specific item within the damaged items array
+        const itemIndex = damage.damagedItems.findIndex(item => item.item_id.toString() === itemId);
+
+        if (itemIndex === -1) {
+            return res.status(404).json({ message: 'Item not found in the damage bill' });
+        }
+
+        const item = damage.damagedItems[itemIndex];
+        console.log("Item Found in Damage Bill:", item);
+
+        // Update the product stock for the item
+        const product = await Product.findOne({ item_id: item.item_id.toString() });
+
+        if (!product) {
+            return res.status(404).json({ message: `Product with ID ${item.item_id} not found` });
+        }
+
+        console.log("Product Found:", product);
+
         product.countInStock += parseFloat(item.quantity);
         await product.save();
-      }
-  
-      // Remove the specific item from the damaged items array
-      damage.damagedItems.splice(itemIndex, 1);
-  
-      // If there are no items left in the damage bill, remove the entire document
-      if (damage.damagedItems.length === 0) {
-        await damage.remove();
-        return res.send({ message: 'All items removed. Damage bill deleted.' });
-      }
-  
-      // Otherwise, save the updated damage document
-      await damage.save();
-      res.send({ message: 'Item removed from the damage bill', updatedDamage: damage });
-  
+
+        console.log("Updated Product Stock:", product.countInStock);
+
+        // Log the stock addition in Stock Registry
+        try {
+            const stockEntry = new StockRegistry({
+                date: new Date(),
+                updatedBy: 'System',  // Modify this if a user is performing the action
+                itemId: item.item_id,
+                name: product.name,
+                brand: product.brand,
+                category: product.category,
+                changeType: 'Stock Restored (Damage Reversed)',
+                invoiceNo: 'N/A',
+                quantityChange: parseFloat(item.quantity),
+                finalStock: product.countInStock
+            });
+            await stockEntry.save();
+            console.log("Stock entry saved:", stockEntry);
+        } catch (err) {
+            console.error("Error saving stock entry:", err);
+        }
+
+        // Remove the specific item from the damaged items array
+        damage.damagedItems.splice(itemIndex, 1);
+
+        // If there are no items left in the damage bill, remove the entire document
+        if (damage.damagedItems.length === 0) {
+            await Damage.findByIdAndDelete(damageId);
+            return res.send({ message: 'All items removed. Damage bill deleted.' });
+        }
+
+        // Otherwise, save the updated damage document
+        await damage.save();
+        res.send({ message: 'Item removed from the damage bill', updatedDamage: damage });
+
     } catch (error) {
-      res.status(500).send({ message: 'Error occurred', error });
+        console.error("Error in Deletion:", error);
+        res.status(500).send({ message: 'Error occurred', error });
     }
-  });
+});
+
+
   
 
 
@@ -362,44 +431,42 @@ returnRouter.get('/damage/getDamagedData', async (req, res) => {
         if (!product) {
           throw new Error(`Product with ID ${item_id} not found in Product collection.`);
         }
+
+        let quantityChange;
+        let changeType;
   
-        // 3.2. Adjust countInStock Based on returnType
-        if (returnType === 'purchase') {
-          // Original Return Against Purchase decreased stock, so deleting it should increase stock
-          product.countInStock += Number(quantity);
+          // 3.2. Adjust countInStock Based on returnType
+          if (returnType === 'purchase') {
+            product.countInStock += Number(quantity);
+            quantityChange = Number(quantity);
+            changeType = 'Stock Restored (Return Deleted - Purchase)';
         } else if (returnType === 'bill') {
-          // Original Return Against Bill increased stock, so deleting it should decrease stock
-          product.countInStock -= Number(quantity);
-          if (product.countInStock < 0) {
-            product.countInStock = 0; // Prevent negative stock
-          }
+            product.countInStock -= Number(quantity);
+            if (product.countInStock < 0) {
+                product.countInStock = 0; // Prevent negative stock
+            }
+            quantityChange = -Number(quantity);
+            changeType = 'Stock Reduced (Return Deleted - Billing)';
         }
   
         // Save the updated Product
         await product.save({ session });
-  
-        // 3.3. Update returnedQuantity in Related Document
-        if (returnType === 'bill') {
-          const billProduct = relatedDoc.products.find((bp) => bp.item_id === item_id);
-          if (billProduct) {
-            billProduct.returnedQuantity = (billProduct.returnedQuantity || 0) - Number(quantity);
-            if (billProduct.returnedQuantity < 0) {
-              billProduct.returnedQuantity = 0; // Prevent negative returnedQuantity
-            }
-          } else {
-            throw new Error(`Product ${item_id} not found in Billing document for update.`);
-          }
-        } else if (returnType === 'purchase') {
-          const purchaseItem = relatedDoc.items.find((pi) => pi.itemId === item_id);
-          if (purchaseItem) {
-            purchaseItem.returnedQuantity = (purchaseItem.returnedQuantity || 0) - Number(quantity);
-            if (purchaseItem.returnedQuantity < 0) {
-              purchaseItem.returnedQuantity = 0; // Prevent negative returnedQuantity
-            }
-          } else {
-            throw new Error(`Item ${item_id} not found in Purchase document for update.`);
-          }
-        }
+
+
+                   // Log the stock change in Stock Registry
+                   const stockEntry = new StockRegistry({
+                    date: new Date(),
+                    updatedBy: 'System',  // Modify this if a user is performing the action
+                    itemId: item.item_id,
+                    name: product.name,
+                    brand: product.brand,
+                    category: product.category,
+                    changeType,
+                    invoiceNo: returnType === 'bill' ? billingNo : purchaseNo,
+                    quantityChange,
+                    finalStock: product.countInStock
+                });
+                await stockEntry.save({ session });
       }
   
       // 4. Save the Updated Related Document
