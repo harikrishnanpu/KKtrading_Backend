@@ -5,22 +5,30 @@ import {
   updateUpdate,
   deleteUpdate,
   addComment,
+  editComment,
+  deleteComment,
+  addReply,
   changeStatus,
-} from './updatesInfo.js';
-
+} from './updatesInfo.js'
 const router = express.Router();
 
-router
-  .route('/')
-  .get( getUpdates)
-  .post( createUpdate);
+/* update list & create */
+router.route('/').get(getUpdates).post(createUpdate);
 
-router
-  .route('/:id')
-  .put( updateUpdate)
-  .delete( deleteUpdate);
+/* single update */
+router.route('/:id').put(updateUpdate).delete(deleteUpdate);
 
-router.post('/:id/comment', addComment);
+/* status */
 router.patch('/:id/status', changeStatus);
+
+/* comments */
+router.post('/:id/comment', addComment);
+router
+  .route('/:id/comment/:commentId')
+  .patch(editComment)   // edit comment
+  .delete(deleteComment);
+
+/* replies (one-level) */
+router.post('/:id/comment/:commentId/reply', addReply);
 
 export default router;
