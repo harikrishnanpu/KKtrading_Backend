@@ -253,8 +253,7 @@ BillingSchema.pre("save", async function (next) {
         ? `Delivered to customer ${customerName} with Invoice No: ${invoiceNo}`
         : `Delivery pending for ${customerName} with Invoice No: ${invoiceNo}`;
 
-    // Choose cool colors (avoiding green and red)
-    const eventColor = deliveryStatus === "Delivered" ? "#722ed1" : "#faad14";
+    const eventColor = deliveryStatus === "Delivered" ? "#006400" : "#ff0000";
     const eventTextColor = "#fff";
 
     // Search for an existing event using the invoiceNo within the title
@@ -270,15 +269,17 @@ BillingSchema.pre("save", async function (next) {
       await event.save();
     } else {
       // Create a new calendar event
-      event = new Event({
-        title: eventTitle,
-        color: eventColor,
-        textColor: eventTextColor,
-        start: expectedDeliveryDate,
-        end: expectedDeliveryDate,
-        allDay: false,
-      });
-      await event.save();
+      if(this.isApproved) {
+        event = new Event({
+          title: eventTitle,
+          color: eventColor,
+          textColor: eventTextColor,
+          start: expectedDeliveryDate,
+          end: expectedDeliveryDate,
+          allDay: false,
+        });
+        await event.save();
+      }
     }
 
     next();

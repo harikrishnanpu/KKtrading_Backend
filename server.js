@@ -33,7 +33,7 @@ import calendarRouter from './routers/calendarRouter.js';
 import chatRouter from './routers/chatRouter.js';
 import notificationRouter from './routers/notificationRouter.js';
 import ContactRouter from './routers/contactsRouter.js';
-
+import updateInfoRouter from './routers/updatesInfoRouter.js';
 
 dotenv.config();
 
@@ -71,6 +71,8 @@ app.use('/api/calendar', calendarRouter);
 app.use('/api/chat', chatRouter);
 app.use('/api/notifications', notificationRouter);
 app.use('/api/contacts', ContactRouter);
+app.use('/api/updates', updateInfoRouter);
+
 
 
 

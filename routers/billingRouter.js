@@ -1,9 +1,7 @@
 import express from 'express';
 import Billing from '../models/billingModal.js';
 import Product from '../models/productModel.js';
-import Log from '../models/Logmodal.js';
 import mongoose from 'mongoose';
-import Purchase from '../models/purchasemodals.js';
 import User from '../models/userModel.js';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
 import CustomerAccount from '../models/customerModal.js';
@@ -1194,9 +1192,9 @@ billingRouter.get('/driver/', async (req, res) => {
   const limit = parseFloat(req.query.limit) || 3; // Default to 10 items per page
 
   try {
-    const totalBillings = await Billing.find({ deliveryStatus: 'Pending' }).countDocuments(); // Get total billing count
+    const totalBillings = await Billing.find({ deliveryStatus: 'Pending', isApproved: {$eq: true}  }).countDocuments(); // Get total billing count
     
-    const billings = await Billing.find({ deliveryStatus: 'Pending' }) // Filter by deliveryStatus
+    const billings = await Billing.find({ deliveryStatus: 'Pending' , isApproved: {$eq: true}  }) // Filter by deliveryStatus
     .sort({ invoiceNo: -1 }) // Sort by invoiceNo in descending order // Skip documents for pagination
     .limit(limit); // Limit to 'limit' number of documents
   
@@ -1292,7 +1290,8 @@ billingRouter.get('/deliveries/expected-delivery', async (req, res) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Set the time to the start of today (00:00:00)
 
-    const billings = await Billing.find({expectedDeliveryDate: { $gte: today },deliveryStatus: { $ne: 'Delivered' }}).sort({ expectedDeliveryDate: 1 }).limit(1); // Limit to 3 products
+    const billings = await Billing.find({expectedDeliveryDate: { $gte: today },deliveryStatus: { $ne: 'Delivered' }, isApproved: { $eq: true  } }).sort({ expectedDeliveryDate: 1 }).limit(1); // Limit to 3 products
+    
     // console.log(billings)
     res.json(billings);
   } catch (error) {
@@ -1304,7 +1303,7 @@ billingRouter.get('/alldelivery/all', async (req, res) => {
   try {
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Set the time to the start of today (00:00:00)
-    const billings = await Billing.find({expectedDeliveryDate: {$gte: today}, deliveryStatus: { $ne: 'Delivered' }}).sort({ expectedDeliveryDate: 1 }) // Limit to 3 products
+    const billings = await Billing.find({expectedDeliveryDate: {$gte: today}, deliveryStatus: { $ne: 'Delivered' }, isApproved: { $eq: true}}).sort({ expectedDeliveryDate: 1 }) // Limit to 3 products
     // console.log(billings)
     res.json(billings);
   } catch (error) {
@@ -1348,7 +1347,8 @@ billingRouter.get("/billing/driver/suggestions", async (req, res) => {
             { customerName: { $regex: search, $options: "i" } },
           ]
         },
-        { deliveryStatus: { $nin: ["Delivered"] } } // Exclude 'Delivered' status
+        { deliveryStatus: { $nin: ["Delivered"] } }, // Exclude 'Delivered' status
+        { isApproved: {$eq: true} }
       ]
     })
       .sort({ invoiceNo: -1 })
