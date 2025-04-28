@@ -8,19 +8,19 @@ import {
   changeStatus,
 } from './updatesInfo.js';
 
-const updateInfoRouter = express.Router();
+const router = express.Router();
 
-updateInfoRouter
+router
   .route('/')
-  .get(getUpdates)
-  .post(createUpdate);
+  .get( getUpdates)
+  .post( createUpdate);
 
-  updateInfoRouter
+router
   .route('/:id')
-  .put(updateUpdate)
-  .delete(deleteUpdate);
+  .put( updateUpdate)
+  .delete( deleteUpdate);
 
-  updateInfoRouter.post('/:id/comment', addComment);
-  updateInfoRouter.patch('/:id/status', changeStatus);
+router.post('/:id/comment', addComment);
+router.patch('/:id/status', changeStatus);
 
-export default updateInfoRouter;
+export default router;
