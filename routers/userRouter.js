@@ -371,22 +371,32 @@ userRouter.get('/notify/all', async (req, res) => {
   }
 });
 
+
 userRouter.delete(
   '/:id',
   expressAsyncHandler(async (req, res) => {
+    // Look up the user
     const user = await User.findById(req.params.id);
-    if (user) {
-      if (user.email === 'admin@example.com') {
-        res.status(400).send({ message: 'Can Not Delete Admin User' });
-        return;
-      }
-      const deleteUser = await user.remove();
-      res.send({ message: 'User Deleted', user: deleteUser });
-    } else {
-      res.status(404).send({ message: 'User Not Found' });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
     }
+
+    // Prevent deleting the super-admin
+    if (user.email === 'admin@example.com') {
+      return res.status(400).json({ message: 'Cannot delete admin user' });
+    }
+
+    // Perform deletion
+    await User.findByIdAndDelete(req.params.id);
+
+    res.json({
+      message: 'User deleted successfully',
+      userId: req.params.id
+    });
   })
 );
+
+
 
 userRouter.get('/:id',
   expressAsyncHandler(async (req,res)=>{

@@ -910,6 +910,183 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
 });
 
 
+printRouter.post('/generate-request-letter', async (req, res) => {
+  try {
+    const requestData =
+      req.body._id ? req.body : await PurchaseRequest.findById(req.body.id);
+
+    if (!requestData) {
+      return res.status(404).json({ error: 'Request not found' });
+    }
+
+    // Build table rows
+    const rows = requestData.items
+      .map((it, idx) => `
+        <tr>
+          <td>${idx + 1}</td>
+          <td>${it.itemId}</td>
+          <td>${it.name}</td>
+          <td style="text-align:center;">${it.quantity}</td>
+          <td style="text-align:center;">${it.pUnit}</td>
+        </tr>
+      `).join('');
+
+    const html = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <title>Purchase Request ${requestData._id}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <style>
+          @page { margin: 40px; }
+          body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+          }
+          header {
+            text-align: center;
+            border-bottom: 2px solid #960101;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+          }
+          header h1 {
+            margin: 0;
+            font-size: 30px;
+            font-weight: 600;
+            color: #960101;
+          }
+          header p {
+            margin: 4px 0;
+            font-size: 12px;
+            font-weight: 300;
+          }
+          .greeting {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 16px;
+            font-weight: 400;
+          }
+          .meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            font-size: 13px;
+          }
+          .meta .col {
+            width: 48%;
+          }
+          .meta div {
+            margin-bottom: 8px;
+          }
+          .meta strong {
+            display: inline-block;
+            width: 110px;
+            color: #960101;
+            font-weight: 600;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+          }
+          th, td {
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+          }
+          th {
+            background: #f4cccc;
+            color: #960101;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+          }
+          td {
+            font-size: 13px;
+            font-weight: 300;
+          }
+          .signature {
+            margin-top: 60px;
+            text-align: right;
+            font-size: 13px;
+          }
+          .signature p {
+            display: inline-block;
+            border-top: 1px solid #333;
+            padding-top: 6px;
+            font-weight: 400;
+            margin: 0;
+          }
+          footer {
+            text-align: center;
+            margin-top: 80px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #960101;
+          }
+          @media print {
+            header, footer, .signature { page-break-inside: avoid; }
+          }
+        </style>
+        <script>window.onload = () => window.print();</script>
+      </head>
+      <body>
+        <header>
+          <h1>KK TRADING</h1>
+          <p>Tiles · Granites · Sanitary Wares · UV Sheets</p>
+          <p>Moncompu, Chambakulam, Alappuzha, 688503 | +91-477-2080282 | tradeinkk@gmail.com</p>
+        </header>
+
+        <p class="greeting">To Whom It May Concern,</p>
+
+        <section class="meta">
+          <div class="col">
+            <div><strong>Request ID:</strong> ${requestData._id}</div>
+            <div><strong>Date:</strong> ${new Date(requestData.requestDate).toLocaleDateString()}</div>
+            <div><strong>Status:</strong> ${requestData.status}</div>
+          </div>
+          <div class="col">
+            <div><strong>From:</strong> ${requestData.requestFrom.name}</div>
+            <div><strong>Address:</strong> ${requestData.requestFrom.address || '—'}</div>
+            <div><strong>To:</strong> ${requestData.requestTo.name}</div>
+            <div><strong>Address:</strong> ${requestData.requestTo.address || '—'}</div>
+          </div>
+        </section>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="width:5%;">#</th>
+              <th style="width:15%;">Item ID</th>
+              <th>Name</th>
+              <th style="width:10%;">Qty</th>
+              <th style="width:10%;">Unit</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+
+        <div class="signature">
+          <p>Authorized Signature</p>
+        </div>
+
+        <footer>KK TRADING</footer>
+      </body>
+      </html>
+    `;
+
+    res.setHeader('Content-Type', 'text/html');
+    res.send(html);
+
+  } catch (e) {
+    console.error('Error generating request letter:', e);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+
 
 
 
