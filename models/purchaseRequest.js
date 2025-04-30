@@ -1,17 +1,17 @@
 import mongoose from 'mongoose';
 
-/** ➟ One line per item in the request */
+/* — single item — */
 const requestItemSchema = new mongoose.Schema(
   {
-    itemId:          { type: String, required: true },
+    itemId:          { type: String },                // optional
     name:            { type: String, required: true },
     brand:           { type: String },
     category:        { type: String },
     quantity:        { type: Number, required: true },
-    quantityInUnits: { type: Number, required: true },    // ← NOS after BOX/SQFT math
-    pUnit:           { type: String, required: true },    // SQFT | BOX | NOS | …
-    sUnit:           { type: String, required: true },    // NOS | SQFT | …
-    psRatio:         { type: Number },                    // P-unit ⇢ S-unit ratio
+    quantityInUnits: { type: Number, required: true },
+    pUnit:           { type: String, required: true },
+    sUnit:           { type: String, required: true },
+    psRatio:         { type: Number },
     length:          { type: Number },
     breadth:         { type: Number },
     actLength:       { type: Number },
@@ -21,35 +21,33 @@ const requestItemSchema = new mongoose.Schema(
   { _id: false }
 );
 
-/** ➟ Whole request */
+/* — whole request — */
 const purchaseRequestSchema = new mongoose.Schema(
   {
-    /** Who is requesting? */
     requestFrom: {
       name:    { type: String, required: true },
       address: { type: String, required: true },
     },
-
-    /** Who will receive / approve the request? */
     requestTo: {
       name:    { type: String, required: true },
       address: { type: String, required: true },
     },
-
     requestDate: { type: Date, default: Date.now },
+    items:       [requestItemSchema],
 
-    /** Items wanted (NO price fields) */
-    items: [requestItemSchema],
-
-    /** Optional status for approval workflow */
+    /* workflow */
     status: {
       type: String,
       enum: ['pending', 'received', 'not-submitted'],
       default: 'pending',
     },
+
+    /* when received, link to a real purchase */
+    linkedPurchaseId: { type: String },
+
+    submittedBy: { type: String },
   },
   { timestamps: true }
 );
 
-const PurchaseRequest = mongoose.model('PurchaseRequest', purchaseRequestSchema);
-export default PurchaseRequest;
+export default mongoose.model('PurchaseRequest', purchaseRequestSchema);

@@ -910,8 +910,12 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
 });
 
 
+/* ----------------------------------------------------------------
+   Purchase-Request → Printable HTML Letter
+-----------------------------------------------------------------*/
 printRouter.post('/generate-request-letter', async (req, res) => {
   try {
+    // 1. Get data (body may already contain the full doc)
     const requestData =
       req.body._id ? req.body : await PurchaseRequest.findById(req.body.id);
 
@@ -919,166 +923,126 @@ printRouter.post('/generate-request-letter', async (req, res) => {
       return res.status(404).json({ error: 'Request not found' });
     }
 
-    // Build table rows
+    // 2. Build table rows
     const rows = requestData.items
-      .map((it, idx) => `
-        <tr>
-          <td>${idx + 1}</td>
-          <td>${it.itemId}</td>
-          <td>${it.name}</td>
-          <td style="text-align:center;">${it.quantity}</td>
-          <td style="text-align:center;">${it.pUnit}</td>
-        </tr>
-      `).join('');
+      .map((it, idx) => {
+        const size =
+          it.size ||
+          (it.length && it.breadth ? `${it.length}×${it.breadth}` : '—');
+        return `
+          <tr>
+            <td>${idx + 1}</td>
+            <td>${it.itemId || '—'}</td>
+            <td>${it.name}</td>
+            <td style="text-align:center;">${size}</td>
+            <td style="text-align:center;">${it.quantity}</td>
+            <td style="text-align:center;">${it.pUnit}</td>
+          </tr>
+        `;
+      })
+      .join('');
 
+    // 3. Pretty-print status
+    const niceStatus = requestData.status
+      .replace('-', ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+
+    // 4. HTML template
     const html = `
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>Purchase Request ${requestData._id}</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
         <style>
           @page { margin: 40px; }
-          body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            line-height: 1.6;
-          }
+          *      { box-sizing: border-box; }
+          body   { font-family: 'Poppins', sans-serif; color:#333; line-height:1.55; }
+          
           header {
-            text-align: center;
-            border-bottom: 2px solid #960101;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
+            text-align:center; border-bottom:2px solid #960101; padding-bottom:10px; margin-bottom:30px;
           }
-          header h1 {
-            margin: 0;
-            font-size: 30px;
-            font-weight: 600;
-            color: #960101;
-          }
-          header p {
-            margin: 4px 0;
-            font-size: 12px;
-            font-weight: 300;
-          }
-          .greeting {
-            margin-top: 20px;
-            margin-bottom: 30px;
-            font-size: 16px;
-            font-weight: 400;
-          }
-          .meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-            font-size: 13px;
-          }
-          .meta .col {
-            width: 48%;
-          }
-          .meta div {
-            margin-bottom: 8px;
-          }
-          .meta strong {
-            display: inline-block;
-            width: 110px;
-            color: #960101;
-            font-weight: 600;
-          }
-          table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 50px;
-          }
-          th, td {
-            border: 1px solid #ddd;
-            padding: 8px 10px;
-          }
-          th {
-            background: #f4cccc;
-            color: #960101;
-            font-size: 14px;
-            font-weight: 600;
-            text-align: left;
-          }
-          td {
-            font-size: 13px;
-            font-weight: 300;
-          }
-          .signature {
-            margin-top: 60px;
-            text-align: right;
-            font-size: 13px;
-          }
-          .signature p {
-            display: inline-block;
-            border-top: 1px solid #333;
-            padding-top: 6px;
-            font-weight: 400;
-            margin: 0;
-          }
-          footer {
-            text-align: center;
-            margin-top: 80px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #960101;
-          }
-          @media print {
-            header, footer, .signature { page-break-inside: avoid; }
-          }
+          header h1 { margin:0; font-size:28px; font-weight:600; color:#960101; letter-spacing:1px; }
+          header p  { margin:2px 0; font-size:11px; font-weight:300; }
+
+          .meta      { display:flex; justify-content:space-between; margin-bottom:28px; font-size:12px; }
+          .meta .col { width:48%; }
+          .meta div  { margin-bottom:6px; }
+          .meta strong { width:105px; display:inline-block; color:#960101; font-weight:600; }
+
+          table      { width:100%; border-collapse:collapse; margin-bottom:50px; }
+          th,td      { border:1px solid #ddd; padding:6px 8px; }
+          th         { background:#f4cccc; color:#960101; font-weight:600; font-size:13px; }
+          td         { font-size:12px; font-weight:300; }
+
+          .signature { text-align:right; margin-top:60px; font-size:12px; }
+          .signature p { display:inline-block; border-top:1px solid #333; padding-top:5px; margin:0; }
+
+          footer { text-align:center; margin-top:80px; font-size:13px; font-weight:600; color:#960101; }
+
+          /* avoid page-breaks in header/footer/signature */
+          @media print { header, footer, .signature { page-break-inside:avoid; } }
         </style>
         <script>window.onload = () => window.print();</script>
       </head>
       <body>
+
+        <!-- ——— Header ——— -->
         <header>
-          <h1>KK TRADING</h1>
+          <h1>KK&nbsp;TRADING</h1>
           <p>Tiles · Granites · Sanitary Wares · UV Sheets</p>
-          <p>Moncompu, Chambakulam, Alappuzha, 688503 | +91-477-2080282 | tradeinkk@gmail.com</p>
+          <p>Moncompu, Chambakulam, Alappuzha 688503 | +91-477-2080282 | tradeinkk@gmail.com</p>
         </header>
 
-        <p class="greeting">To Whom It May Concern,</p>
-
+        <!-- ——— Meta ——— -->
         <section class="meta">
           <div class="col">
             <div><strong>Request ID:</strong> ${requestData._id}</div>
-            <div><strong>Date:</strong> ${new Date(requestData.requestDate).toLocaleDateString()}</div>
-            <div><strong>Status:</strong> ${requestData.status}</div>
+            <div><strong>Date:</strong> ${new Date(
+              requestData.requestDate
+            ).toLocaleDateString()}</div>
+            <div><strong>Status:</strong> ${niceStatus}</div>
           </div>
           <div class="col">
             <div><strong>From:</strong> ${requestData.requestFrom.name}</div>
-            <div><strong>Address:</strong> ${requestData.requestFrom.address || '—'}</div>
+            <div><strong>Address:</strong> ${
+              requestData.requestFrom.address || '—'
+            }</div>
             <div><strong>To:</strong> ${requestData.requestTo.name}</div>
-            <div><strong>Address:</strong> ${requestData.requestTo.address || '—'}</div>
+            <div><strong>Address:</strong> ${
+              requestData.requestTo.address || '—'
+            }</div>
           </div>
         </section>
 
+        <!-- ——— Items ——— -->
         <table>
           <thead>
             <tr>
               <th style="width:5%;">#</th>
-              <th style="width:15%;">Item ID</th>
+              <th style="width:12%;">Item ID</th>
               <th>Name</th>
-              <th style="width:10%;">Qty</th>
-              <th style="width:10%;">Unit</th>
+              <th style="width:12%;">Size</th>
+              <th style="width:8%;">Qty</th>
+              <th style="width:8%;">Unit</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
         </table>
 
+        <!-- ——— Signature ——— -->
         <div class="signature">
           <p>Authorized Signature</p>
         </div>
 
-        <footer>KK TRADING</footer>
+        <footer>KK&nbsp;TRADING</footer>
       </body>
       </html>
     `;
 
     res.setHeader('Content-Type', 'text/html');
     res.send(html);
-
   } catch (e) {
     console.error('Error generating request letter:', e);
     res.status(500).json({ error: 'Internal Server Error' });

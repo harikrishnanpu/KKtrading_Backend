@@ -56,6 +56,7 @@ const purchaseSchema = new mongoose.Schema(
     sellerName: { type: String, required: true },
     sellerId: { type: String, required: true },
     invoiceNo: { type: String, required: true },
+    submittedBy: { type: String },
     items: [itemSchema],
     purchaseId: { type: String, unique: true, required: true },
     sellerAddress: { type: String },
