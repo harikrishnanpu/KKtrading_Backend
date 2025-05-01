@@ -739,7 +739,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
           <!-- Invoice Info -->
           <div class="invoice-info">
             <div class="info-left">
-              <p><strong>Invoice No:</strong> ${invoiceNo}</p>
+              <p><strong>Estimate No:</strong> ${invoiceNo}</p>
               <p><strong>Invoice Date:</strong> ${
                 finalInvoiceDate ? new Date(finalInvoiceDate).toLocaleDateString() : '-'
               }</p>
@@ -799,8 +799,8 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
           <footer>Page ${pageNumber} of ${totalPages}</footer>
           <footer class="footer-note">
             <p style="font-size:12px; color:#444; text-align:center; margin-top:10px;">
-              45 ദിവസത്തിന് ശേഷം ഉൽപ്പന്നങ്ങൾ മാറ്റസ്ഥാനുവാനോ തിരികെ നൽകാനോ കഴിയില്ല. <br>
-              30 ദിവസത്തിനുള്ളിൽ പകരം വയ്ക്കുന്നവർക്ക് മാത്രം ജിഎസ്ടി ഉൾപ്പെടെയുള്ള റീഫണ്ടുകൾ.
+              45 ദിവസത്തിന് ശേഷം ഉൽപ്പന്നങ്ങൾ മാറ്റി വാങ്ങാനും തിരികെ നൽകാനും കഴിയില്ല തിരികെ നൽകാനോ കഴിയില്ല. <br>
+              30 ദിവസത്തിനുള്ളിൽ ഉൽപ്പന്നങ്ങൾ തിരികേനൽകുന്നവർക്ക് മാത്രം ജിഎസ്ടി ഉൾപ്പെടെയുള്ള റീഫണ്ടുകൾ.
             </p>
           </footer>
         </div>
@@ -824,7 +824,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
       <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KK INVOICE</title>
+        <title>KK Estimate</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <style>
           * {
