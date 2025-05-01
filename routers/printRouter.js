@@ -16,7 +16,7 @@ const printRouter = express.Router();
 
 
 // Helper function to safely get values or return "N/A" if undefined
-const safeGet = (value) => (value ? value : 'N/A');
+const safeGet = (value) => (value ? value : ' ');
 
 printRouter.post('/generate-pdf', async (req, res) => {
   const {
@@ -481,6 +481,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
       showSgst: true,
       showDiscount: true,
       showNetAmount: true,
+      showPaymentDetails: true,
     };
 
     // 7. Helper to compute per-product fields
@@ -581,7 +582,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
       // Combine item name + remark in one column
       if (printOptions.showItemName || printOptions.showItemRemark) {
         const itemNameText = safeGet(product.name);
-        const itemRemarkText = safeGet(product.itemRemark);
+        const itemRemarkText = safeGet(product.itemRemark, '');  
         let nameCell = '';
 
         // If showItemName is true and there's a name, show it in bold
@@ -713,7 +714,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
               <td>₹${finalUnloading.toFixed(2)}</td>
               <td>₹${finalHandling.toFixed(2)}</td>
               <td>₹${finalRoundOff.toFixed(2)}</td>
-              <td>₹${grandTotal.toFixed(2)}</td>
+              <td style="font-weight:bold;font-size: 14px;">₹${grandTotal.toFixed(2)}</td>
             </tr>
           </tbody>
         </table>
@@ -773,7 +774,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
               <p><strong>Contact:</strong> ${finalCustomerContactNumber || '-'}</p>
             </div>
             <div class="payment-delivery-info" style="text-align:right;">
-              ${paymentInfoTable}
+              ${printOptions.showPaymentDetails ? paymentInfoTable : ''}
               ${deliveryStatusSection}
             </div>
           </div>

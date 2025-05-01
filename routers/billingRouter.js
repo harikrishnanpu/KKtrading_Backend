@@ -2235,15 +2235,19 @@ billingRouter.get('/sort/sales-report', async (req, res) => {
       filter.deliveryStatus = deliveryStatus;
     }
 
+    
     // Filter by item name
     if (itemName) {
       filter['products.name'] = { $regex: itemName, $options: 'i' };
     }
-
+    
     // Filter by amount threshold
     if (amountThreshold) {
       filter.billingAmount = { $gte: parseFloat(amountThreshold) };
     }
+    
+    
+    filter.isApproved = true;
 
     // Sorting
     let sort = {};
