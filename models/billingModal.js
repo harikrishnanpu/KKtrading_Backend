@@ -282,6 +282,26 @@ BillingSchema.pre("save", async function (next) {
       }
     }
 
+    this.billingAmountReceived = this.payments.reduce(
+      (sum, p) => sum + (p.amount || 0),
+      0
+    );
+  
+    // ➋ **Validate against grandTotal**
+    if (this.billingAmountReceived > this.grandTotal) {
+      return next(
+        new Error(
+          `Total payments (${this.billingAmountReceived}) cannot exceed grandTotal (${this.grandTotal}).`
+        )
+      );
+    }
+  
+    // ➌ Update paymentStatus (unchanged)
+    if (this.billingAmountReceived >= this.grandTotal) this.paymentStatus = "Paid";
+    else if (this.billingAmountReceived > 0)              this.paymentStatus = "Partial";
+    else                                                  this.paymentStatus = "Unpaid";
+
+
     next();
 });
 

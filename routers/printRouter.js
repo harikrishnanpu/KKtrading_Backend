@@ -799,7 +799,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
           <footer>Page ${pageNumber} of ${totalPages}</footer>
           <footer class="footer-note">
             <p style="font-size:12px; color:#444; text-align:center; margin-top:10px;">
-              45 ദിവസത്തിന് ശേഷം ഉൽപ്പന്നങ്ങൾ മാറ്റി വാങ്ങാനും തിരികെ നൽകാനും കഴിയില്ല തിരികെ നൽകാനോ കഴിയില്ല. <br>
+              45 ദിവസത്തിന് ശേഷം ഉൽപ്പന്നങ്ങൾ മാറ്റി വാങ്ങാനും തിരികെ നൽകാനും കഴിയില്ല.<br>
               30 ദിവസത്തിനുള്ളിൽ ഉൽപ്പന്നങ്ങൾ തിരികേനൽകുന്നവർക്ക് മാത്രം ജിഎസ്ടി ഉൾപ്പെടെയുള്ള റീഫണ്ടുകൾ.
             </p>
           </footer>
@@ -2149,8 +2149,8 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
         <!-- Delivery & Payment Info -->
         <div class="info-section">
           <div class="left-info">
-            <p><strong>Loading Slip For Invoice:</strong> ${safeGet(invoiceNo)}</p>
-            <p><strong>Invoice Date:</strong> ${new Date(invoiceDate).toLocaleDateString()}</p>
+            <p><strong>Loading Slip For Estimate:</strong> ${safeGet(invoiceNo)}</p>
+            <p><strong>Estimate Date:</strong> ${new Date(invoiceDate).toLocaleDateString()}</p>
             <p><strong>Expected Delivery:</strong> ${new Date(expectedDeliveryDate).toLocaleDateString()}</p>
             <p><strong>Salesman:</strong> ${safeGet(salesmanName)}</p>
             <p><strong>Marketed By:</strong> ${safeGet(marketedBy)}</p>
@@ -2170,14 +2170,7 @@ printRouter.post('/generate-loading-slip-pdf', async (req, res) => {
         </div>
 
         <!-- Payment Details Section -->
-        <div class="payment-details">
-          <p><strong>Payment Details:</strong></p>
-          ${
-            paymentDetails.length > 0
-              ? paymentDetails.map(pd => `<p>${pd}</p>`).join('')
-              : '<p>No payment details available.</p>'
-          }
-        </div>
+
 
         <!-- Products Table -->
         <table class="products-table">

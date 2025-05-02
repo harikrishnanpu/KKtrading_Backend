@@ -212,16 +212,9 @@ billingRouter.post('/create', async (req, res) => {
         return res.status(400).json({ message: 'Invalid payment amount' });
       }
 
-      // Ensure paymentAmount does not exceed totalAmount
-      // if (parsedPaymentAmount > totalAmount) {
-      //   session.endSession();
-      //   return res.status(400).json({
-      //     message:
-      //       'Payment amount cannot exceed total amount after discount',
-      //   });
-      // }
-
-      const currentDate = new Date(paymentReceivedDate || Date.now());
+      const currentDate = paymentReceivedDate
+      ? new Date(paymentReceivedDate) // parse manually with IST
+      : new Date(); 
 
       const paymentReferenceId = 'PAY' + Date.now().toString();
 
@@ -331,7 +324,7 @@ billingRouter.post('/create', async (req, res) => {
   // **Log stock change in StockRegistry**
   const stockEntry = new StockRegistry({
     date: new Date(),
-    updatedBy: userId, // Capture who made the change
+    updatedBy: user.name, // Capture who made the change
     itemId: item.item_id,
     name: product.name,
     brand: product.brand,
@@ -496,7 +489,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
                 // Log Stock Restoration in StockRegistry
       const stockEntry = new StockRegistry({
         date: new Date(),
-        updatedBy: userId,
+        updatedBy: user.name,
         itemId: product.item_id,
         name: product.name,
         brand: product.brand,
@@ -572,7 +565,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
                 // Log Stock Change in StockRegistry
       const stockEntry = new StockRegistry({
         date: new Date(),
-        updatedBy: userId,
+        updatedBy: user.name,
         itemId: trimmedItemId,
         name: productInDB.name,
         brand: productInDB.brand,
@@ -619,7 +612,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       // Log New Product Sale in StockRegistry
       const stockEntry = new StockRegistry({
         date: new Date(),
-        updatedBy: userId,
+        updatedBy: user.name,
         itemId: trimmedItemId,
         name: productInDB.name,
         brand: productInDB.brand,
@@ -745,24 +738,27 @@ billingRouter.post('/edit/:id', async (req, res) => {
 
     // === Payment Handling ===
     if (paymentAmount && paymentMethod) {
+
       const parsedPaymentAmount = parseFloat(paymentAmount);
       if (isNaN(parsedPaymentAmount) || parsedPaymentAmount <= 0) {
-        
         session.endSession();
         return res.status(400).json({ message: 'Invalid payment amount.' });
       }
 
-      const totalAmount = parseFloat(billingAmount) - parseFloat(discount || 0);
-      // if (parsedPaymentAmount > totalAmount) {
-      //   
-      //   session.endSession();
-      //   return res.status(400).json({
-      //     message: 'Payment amount cannot exceed the total amount after discount.',
-      //   });
-      // }
+    const outstanding =
+      existingBilling.grandTotal - existingBilling.billingAmountReceived;
+  
+    if (parsedPaymentAmount > outstanding) {
+      session.endSession();
+      return res.status(400).json({
+        message: `Only ${outstanding} remains on this bill; payment exceeds grand total.`,
+      });
+    }
 
       const paymentReferenceId = 'PAY' + Date.now().toString();
-      const currentDate = new Date(paymentReceivedDate || Date.now());
+      const currentDate = paymentReceivedDate
+      ? new Date(paymentReceivedDate) // parse manually with IST
+      : new Date(); 
 
       // Create a payment entry
       const paymentEntry = {
@@ -805,9 +801,12 @@ billingRouter.post('/edit/:id', async (req, res) => {
         referenceId: paymentReferenceId,
       };
 
+
+    if (parsedPaymentAmount >! outstanding) {
       account.paymentsIn.push(accountPaymentEntry);
       account.markModified('paymentsIn');
       await account.save({ session });
+    }
     }
 
     // === Update Billing Details ===
@@ -1002,7 +1001,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
             // --- 📌 Add StockRegistry Entry ---
             const stockEntry = new StockRegistry({
               date: new Date(),
-              updatedBy: userId, // Admin or authorized user
+              updatedBy: user.name, // Admin or authorized user
               itemId: product.item_id,
               name: product.name,
               brand: product.brand,
@@ -1122,13 +1121,20 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
         return res.status(400).json({ message: `Insufficient stock for product ID ${item_id}` });
       }
 
+
+      const user = await User.findById(userId)
+
+      if(!user){
+       return res.status(404).json({ message: "User Not Found" })
+      }
+
       // Deduct the stock
       product.countInStock -= parseFloat(quantity);
       productUpdatePromises.push(product.save({ session }));
 
             // Add stock registry entry
             stockRegistryEntries.push({
-              updatedBy: userId,
+              updatedBy: user.name,
               itemId: product.item_id,
               name: product.name,
               brand: product.brand,
