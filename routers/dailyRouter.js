@@ -223,7 +223,7 @@ transactionRouter.post('/transactions', async (req, res) => {
       const transferOutEntry = {
         amount: parsedAmount,
         method: method,
-        remark: `Transferred to ${paymentTo}`,
+        remark: `Transferred to ${toAccount.accountName} (Internal Transfer)`,
         referenceId: referenceIdOut,
         submittedBy: userId,
         date: new Date(date),
@@ -232,7 +232,7 @@ transactionRouter.post('/transactions', async (req, res) => {
       const transferInEntry = {
         amount: parsedAmount,
         method: method,
-        remark: `Transferred from ${paymentFrom}`,
+        remark: `Transferred from ${fromAccount.accountName} (Internal Transfer)`,
         referenceId: referenceIdIn,
         submittedBy: userId,
         date: new Date(date),
@@ -603,7 +603,7 @@ transactionRouter.post('/trans/transfer', async (req, res) => {
     const accountFromPaymentEntry = {
       amount: parsedPaymentAmount,
       method,
-      remark: `Transferred to ${paymentTo}`,
+      remark: `Transferred to ${toAccount.accountName} (Internal Transfer)`,
       referenceId: referenceIdOut,
       submittedBy: userId,
       date: new Date(date),
@@ -612,7 +612,7 @@ transactionRouter.post('/trans/transfer', async (req, res) => {
     const accountToPaymentEntry = {
       amount: parsedPaymentAmount,
       method,
-      remark: `Transferred from ${paymentFrom}`,
+      remark: `Transferred from ${fromAccount.accountName} (Internal Transfer)`,
       referenceId: referenceIdIn,
       submittedBy: userId,
       date: new Date(date),
