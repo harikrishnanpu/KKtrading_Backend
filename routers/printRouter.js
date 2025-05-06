@@ -713,7 +713,7 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
               <td>₹${finalTransportation.toFixed(2)}</td>
               <td>₹${finalUnloading.toFixed(2)}</td>
               <td>₹${finalHandling.toFixed(2)}</td>
-              <td>₹${finalRoundOff.toFixed(2)}</td>
+              <td>${finalRoundOff.toFixed(2)}</td>
               <td style="font-weight:bold;font-size: 14px;">₹${grandTotal.toFixed(2)}</td>
             </tr>
           </tbody>

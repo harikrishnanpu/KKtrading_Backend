@@ -37,6 +37,7 @@ billingRouter.post('/create', async (req, res) => {
       paymentReceivedDate,
       salesmanPhoneNumber,
       roundOff,
+      roundOffMode,
       unloading = 0,
       transportation = 0,
       handlingcharge = 0,
@@ -187,7 +188,8 @@ billingRouter.post('/create', async (req, res) => {
       payments: [], // Initialize payments as an empty array
       isApproved: isAdmin && isApproved ? true : false, // Automatically approve if user is admin
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
-      isneededToPurchase: isneededToPurchase
+      isneededToPurchase: isneededToPurchase,
+      roundOffMode: roundOffMode
     });
 
     // -----------------------
@@ -410,6 +412,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       paymentReceivedDate,
       marketedBy,
       roundOff,
+      roundOffMode,
       userId,
       showroom,
       salesmanPhoneNumber,
@@ -828,6 +831,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       deliveryStatus: deliveryStatus || existingBilling.deliveryStatus,
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
       roundOff: parseFloat(roundOff) || 0,
+      roundOffMode: roundOffMode,
       isneededToPurchase: isneededToPurchase || existingBilling.isneededToPurchase,
     });
 
