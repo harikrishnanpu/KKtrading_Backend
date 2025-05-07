@@ -12,7 +12,6 @@ import billingRouter from './routers/billingRouter.js';
 import cors from 'cors';
 import Location from './models/locationModel.js';
 import returnRouter from './routers/returnRouter.js';
-import xlsx from 'xlsx'; // Use 'xlsx' import for ES modules
 import logMiddleware from './middleware.js';
 import bodyParser from 'body-parser';
 import transactionRouter from './routers/dailyRouter.js';
@@ -104,40 +103,7 @@ app.use((err, req, res, next) => {
 });
 
 
-app.get('/export', async (req, res) => {
-    try {
-      const collections = await mongoose.connection.db.listCollections().toArray();
 
-      // Create a new workbook
-      const workbook = xlsx.utils.book_new();
-
-      for (const collection of collections) {
-          const collectionName = collection.name;
-
-          // Fetch all data from the current collection
-          const data = await mongoose.connection.db.collection(collectionName).find({}).toArray();
-
-          // Convert data to a worksheet
-          const worksheet = xlsx.utils.json_to_sheet(data);
-
-          // Append the worksheet to the workbook with the collection name as the sheet name
-          xlsx.utils.book_append_sheet(workbook, worksheet, collectionName);
-      }
-
-      // Write to a buffer instead of a file
-      const buffer = xlsx.write(workbook, { bookType: 'xlsx', type: 'buffer' });
-
-      // Set response headers to prompt file download
-      res.setHeader('Content-Disposition', 'attachment; filename=all_data.xlsx');
-      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-
-      // Send the buffer as the response
-      res.send(buffer);
-  } catch (error) {
-      console.error('Error exporting data:', error);
-      res.status(500).send('Internal Server Error');
-  }
-});
 
 
 const port = process.env.PORT || 4000;

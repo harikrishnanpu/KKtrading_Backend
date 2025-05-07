@@ -1356,7 +1356,6 @@ billingRouter.get("/billing/driver/suggestions", async (req, res) => {
           ]
         },
         { deliveryStatus: { $nin: ["Delivered"] } }, // Exclude 'Delivered' status
-        { isApproved: {$eq: true} }
       ]
     })
       .sort({ invoiceNo: -1 })

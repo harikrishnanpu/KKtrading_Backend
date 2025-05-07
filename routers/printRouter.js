@@ -10,6 +10,9 @@ import CustomerAccount from '../models/customerModal.js';
 import SupplierAccount from '../models/supplierAccountModal.js';
 import TransportPayment from '../models/transportPayments.js';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
+import xlsx from 'xlsx'; // Use 'xlsx' import for ES modules
+
+import mongoose from 'mongoose';
 
 const printRouter = express.Router();
 
@@ -2494,6 +2497,42 @@ printRouter.post('/generate-leave-application-pdf', async (req, res) => {
   // Return the HTML directly
   res.setHeader('Content-Type', 'text/html');
   res.send(htmlContent);
+});
+
+
+printRouter.get('/export', async (req, res) => {
+    try {
+      const collections = await mongoose.connection.db.listCollections().toArray();
+
+      // Create a new workbook
+      const workbook = xlsx.utils.book_new();
+
+      for (const collection of collections) {
+          const collectionName = collection.name;
+
+          // Fetch all data from the current collection
+          const data = await mongoose.connection.db.collection(collectionName).find({}).toArray();
+
+          // Convert data to a worksheet
+          const worksheet = xlsx.utils.json_to_sheet(data);
+
+          // Append the worksheet to the workbook with the collection name as the sheet name
+          xlsx.utils.book_append_sheet(workbook, worksheet, collectionName);
+      }
+
+      // Write to a buffer instead of a file
+      const buffer = xlsx.write(workbook, { bookType: 'xlsx', type: 'buffer' });
+
+      // Set response headers to prompt file download
+      res.setHeader('Content-Disposition', 'attachment; filename=all_data.xlsx');
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+
+      // Send the buffer as the response
+      res.send(buffer);
+  } catch (error) {
+      console.error('Error exporting data:', error);
+      res.status(500).send('Internal Server Error');
+  }
 });
 
 

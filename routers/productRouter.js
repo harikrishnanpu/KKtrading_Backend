@@ -318,55 +318,143 @@ productRouter.get(
 productRouter.post(
   '/',
   expressAsyncHandler(async (req, res) => {
-    try {
-      const lastProduct = await Product.findOne({ item_id: /^K\d+$/ })
-      .sort({ item_id: -1 })
-      .collation({ locale: "en", numericOrdering: true });
+    /* -----------------------------------------------------------
+       1.  Pull out request fields
+    ----------------------------------------------------------- */
+    const {
+      name,
+      item_id,
+      brand,
+      category,
+      price,
+      countInStock,
+      pUnit,
+      sUnit,
+      hsnCode,
+      seller = '',
+      sellerAddress = '',
+      image = '',
+      description = '',
+      psRatio = '',
+      length = '',
+      breadth = '',
+      actLength = '',
+      actBreadth = '',
+      size = '',
+      unit = '',
+      billPartPrice = 0,
+      cashPartPrice = 0,
+      type = '',
+      rating = 0,
+      numReviews = 0,
+      gstPercent = 0
+    } = req.body;
 
-      let nextItemId = 'K1'; // Default starting item_id
-
-      if (lastProduct && lastProduct.item_id) {
-        // Extract the numeric part from item_id (e.g., "K2354" → 2354)
-        const lastItemNumber = parseInt(lastProduct.item_id.substring(1), 10); // Remove 'K' and convert to number
-        nextItemId = `K${lastItemNumber + 1}`; // Increment and generate next item_id
+    /* -----------------------------------------------------------
+       2.  Manual field validation with if / else
+    ----------------------------------------------------------- */
+    const requiredStr = (field, value) => {
+      if (!value || typeof value !== 'string' || !value.trim()) {
+        res.status(422).json({ message: `${field} is required` });
+        return false;
       }
+      return true;
+    };
 
-      // Create a new product
+    // Required string fields
+    if (
+      !requiredStr('name', name) ||
+      !requiredStr('item_id', item_id) ||
+      !requiredStr('brand', brand) ||
+      !requiredStr('category', category) ||
+      !requiredStr('hsnCode', hsnCode)
+    ) {
+      return;
+    }
+
+    // Required numeric fields
+    if (price === undefined || isNaN(price) || Number(price) < 0) {
+      return res
+        .status(422)
+        .json({ message: 'Price is required and must be ≥ 0' });
+    }
+    if (
+      countInStock === undefined ||
+      isNaN(countInStock) ||
+      Number(countInStock) < 0
+    ) {
+      return res
+        .status(422)
+        .json({ message: 'countInStock is required and must be ≥ 0' });
+    }
+
+    // Required enum fields
+    const units = ['NOS', 'SQFT', 'GSQFT', 'BOX'];
+    if (!units.includes(pUnit)) {
+      return res
+        .status(422)
+        .json({ message: 'pUnit must be NOS, SQFT, GSQFT or BOX' });
+    }
+    if (!units.includes(sUnit)) {
+      return res
+        .status(422)
+        .json({ message: 'sUnit must be NOS, SQFT, GSQFT or BOX' });
+    }
+
+    /* -----------------------------------------------------------
+       3.  Duplicate checks
+    ----------------------------------------------------------- */
+    const nameExists = await Product.findOne({ name });
+    if (nameExists) {
+      return res.status(409).json({ message: 'Product name already exists' });
+    }
+
+    const idExists = await Product.findOne({ item_id });
+    if (idExists) {
+      return res.status(409).json({ message: 'Item ID already exists' });
+    }
+
+    /* -----------------------------------------------------------
+       4.  Persist
+    ----------------------------------------------------------- */
+    try {
       const product = new Product({
-        name: `Sample name ${Date.now()}`,
-        item_id: nextItemId,
-        seller: 'Supplier',
-        image: '/images/',
-        brand: 'Brand',
-        category: 'Category',
-        description: 'Sample description',
-        pUnit: 'BOX',
-        sUnit: 'NOS',
-        psRatio: '0',
-        length: '0',
-        breadth: '0',
-        actLength: '0',
-        actBreadth: '0',
-        size: 'size',
-        unit: 'unit',
-        price: '0',
-        hsnCode: '0',
-        billPartPrice: 0,
-        cashPartPrice: 0,
-        sellerAddress: 'Supplier Address',
-        type: 'Product Type',
-        countInStock: 0,
-        rating: 0,
-        numReviews: 0,
-        gstPercent: 0,
-        reviews: [],
+        name: name.trim(),
+        item_id: item_id.trim(),
+        brand: brand.trim(),
+        category: category.trim(),
+        price: Number(price),
+        countInStock: Number(countInStock),
+        pUnit,
+        sUnit,
+        hsnCode: hsnCode.trim(),
+        seller: seller.trim(),
+        sellerAddress: sellerAddress.trim(),
+        image,
+        description: description.trim(),
+        psRatio,
+        length,
+        breadth,
+        actLength,
+        actBreadth,
+        size,
+        unit,
+        billPartPrice: Number(billPartPrice) || 0,
+        cashPartPrice: Number(cashPartPrice) || 0,
+        type,
+        rating: Number(rating) || 0,
+        numReviews: Number(numReviews) || 0,
+        gstPercent: Number(gstPercent) || 0,
+        reviews: []
       });
 
-      const createdProduct = await product.save();
-      res.status(201).json(createdProduct);
-    } catch (error) {
-      console.error('Error creating product:', error);
-      res.status(500).json({ message: 'Error creating product' });
+      const created = await product.save();
+      return res.status(201).json(created);
+    } catch (err) {
+      console.error('Error creating product:', err);
+      return res
+        .status(500)
+        .json({ message: 'Server error while creating product' });
     }
   })
 );
