@@ -111,6 +111,14 @@ productRouter.get(
 );
 
 productRouter.get(
+  '/allbrands',
+  expressAsyncHandler(async (req, res) => {
+    const categories = await Product.find().distinct('brand');
+    res.send(categories);
+  })
+);
+
+productRouter.get(
   '/brands',
   expressAsyncHandler(async (req, res) => {
     const brands = await Product.find().distinct('brand');
