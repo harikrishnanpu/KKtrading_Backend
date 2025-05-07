@@ -11,7 +11,6 @@ import StockRegistry from '../models/StockregistryModel.js';
 
 const billingRouter = express.Router();
 
-
 // =========================
 // Route: Create Billing Entry
 // =========================
@@ -225,7 +224,6 @@ billingRouter.post('/create', async (req, res) => {
         method: paymentMethod.trim(),
         date: currentDate,
         referenceId: paymentReferenceId,
-        method: paymentMethod.trim(),
         invoiceNo: invoiceNo.trim(), // Link payment to billing
       };
 
@@ -805,7 +803,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       };
 
 
-    if (parsedPaymentAmount >! outstanding) {
+    if (parsedPaymentAmount > outstanding) {
       account.paymentsIn.push(accountPaymentEntry);
       account.markModified('paymentsIn');
       await account.save({ session });
