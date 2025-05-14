@@ -34,6 +34,7 @@ import notificationRouter from './routers/notificationRouter.js';
 import ContactRouter from './routers/contactsRouter.js';
 import updateInfoRouter from './routers/updatesInfoRouter.js';
 import purchaseRequestRouter from './routers/purchaseRequestRouter.js';
+import needToPurchaseRouter from './routers/needToPurchaseRouter.js';
 
 dotenv.config();
 
@@ -73,6 +74,8 @@ app.use('/api/notifications', notificationRouter);
 app.use('/api/contacts', ContactRouter);
 app.use('/api/updates', updateInfoRouter);
 app.use('/api/purchase-requests', purchaseRequestRouter);
+app.use("/api/needtopurchase", needToPurchaseRouter);
+
 
 
 

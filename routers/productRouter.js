@@ -15,6 +15,7 @@ import Return from '../models/returnModal.js';
 import Damage from '../models/damageModal.js';
 import StockOpening from '../models/stockOpeningModal.js';
 import StockRegistry from '../models/StockregistryModel.js';
+import NeedToPurchase from '../models/needToPurchase.js';
 
 
 const productRouter = express.Router();
@@ -480,44 +481,118 @@ productRouter.put('/get-item/:id', async (req, res) => {
   }
 });
 
+
 productRouter.put('/update-stock/:id', async (req, res) => {
-  const { countInStock, userName } = req.body; // Extract countInStock from the request body
+  const {
+    newQty,
+    userName            = 'unknown',
+    needToPurchase      = false,
+    invoiceNo           = '',
+  } = req.body;
+
+  /* 1️⃣  validate input --------------------------------------------------- */
+  const qty = Number(newQty);
+  if (Number.isNaN(qty) || qty <= 0) {
+    return res.status(400).json({ message: 'Invalid newQty value' });
+  }
 
   try {
-    // Check if countInStock is a valid number (float or integer)
-    if (typeof countInStock !== 'number' || isNaN(countInStock)) {
-      return res.status(400).json({ message: 'Invalid countInStock value' });
+    /* 2️⃣  fetch product -------------------------------------------------- */
+    const product = await Product.findById(req.params.id).lean(); // lean → plain JS obj
+    if (!product) return res.status(404).json({ message: 'Product not found' });
+
+    /* 3️⃣  optionally fetch billing doc (once) --------------------------- */
+    let billDoc = null;
+    if (invoiceNo.trim()) {
+      billDoc = await Billing.findOne({ invoiceNo }).select('_id invoiceNo');
     }
 
-    // Use $inc to add the countInStock value (can be a float)
-    const product = await Product.findByIdAndUpdate(
+    /* 4️⃣  NEED-TO-PURCHASE branch --------------------------------------- */
+    if (needToPurchase) {
+      await NeedToPurchase.create({
+        item_id:  product.item_id,
+        name:     product.name,
+        quantity: qty,
+        quantityNeeded: qty,
+        requestedBy: userName,
+        invoiceNo: billDoc ? billDoc.invoiceNo : '--',
+      });
+
+      if (billDoc) {
+        await Billing.updateOne(
+          { _id: billDoc._id },
+          {
+            $push: {
+              neededToPurchase: {
+                item_id: product.item_id,
+                name:    product.name,
+                quantityOrdered: qty,
+                quantityNeeded:  qty,
+              },
+            },
+          }
+        );
+
+        await billDoc.save();
+      }
+
+      return res.json({
+        message: 'Recorded as need-to-purchase; stock unchanged.',
+        product,
+      });
+    }
+
+    /* 5️⃣  NORMAL STOCK UPDATE branch ------------------------------------ */
+    const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
-      { $inc: { countInStock } },
-      { new: true }
+      { $inc: { countInStock: qty } },
+      { new: true, lean: true }
     );
 
-    // Check if the product was found
-    if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
+    if (billDoc) {
+      await Billing.updateOne(
+        { _id: billDoc._id },
+        {
+          $push: {
+            neededToPurchase: {
+              item_id: product.item_id,
+              name:    product.name,
+              quantityOrdered: qty,
+              quantityNeeded:  qty,
+            },
+          },
+        }
+      );
     }
 
+    // log stock-opening
+    await StockOpening.create({
+      item_id:    product.item_id,
+      name:       product.name,
+      quantity:   qty,
+      submittedBy:userName,
+      remark:     'Bill Opening',
+      date:       new Date(),
+    });
 
-      // Create log entry
-  const logEntry = new StockOpening({
-    item_id: product.item_id,
-    name: product.name,
-    quantity: countInStock,
-    submittedBy: userName,
-    remark: 'Bill Opening',
-    date: new Date(),
-  });
+    // registry entry
+    await StockRegistry.create({
+      date:           new Date(),
+      updatedBy:      userName,
+      itemId:         product.item_id,
+      name:           product.name,
+      brand:          product.brand,
+      category:       product.category,
+      changeType:     'Sales Billing (Update Stock)',
+      invoiceNo:      billDoc ? billDoc.invoiceNo : '',
+      quantityChange: qty,
+      finalStock:     updatedProduct.countInStock,
+    });
 
-  await logEntry.save();
-
-    res.json(product);
-  } catch (error) {
-    console.log(error)
-    res.status(500).json({ message: 'Error updating product stock' });
+    return res.json(updatedProduct);
+  } catch (err) {
+    console.error('update-stock error:', err);
+    res.status(500).json({ message: 'Error updating product stock', error: err.message });
   }
 });
 

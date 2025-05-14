@@ -83,7 +83,7 @@ const BillingSchema = new mongoose.Schema(
 
     neededToPurchase: [
       {
-        item_id: { type: String, required: true },
+        item_id: { type: String, required: true, unique: true },
         name: { type: String, required: true },
         quantityOrdered: { type: Number, required: true },
         quantityNeeded: { type: Number, required: true },
@@ -225,7 +225,10 @@ BillingSchema.methods.calculateTotals = function () {
 
 // Pre-save hook to update billingAmountReceived, payment status, and totals
 BillingSchema.pre("save", async function (next) {
-    const { invoiceNo, customerName, deliveryStatus, expectedDeliveryDate } = this;
+    const { invoiceNo, customerName, deliveryStatus, expectedDeliveryDate, neededToPurchase } = this;
+
+     this.isneededToPurchase =
+    Array.isArray(neededToPurchase) && neededToPurchase.length > 0;
 
       // Calculate total received from payments
   this.billingAmountReceived = this.payments.reduce(

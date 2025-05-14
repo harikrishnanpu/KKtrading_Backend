@@ -8,6 +8,7 @@ import CustomerAccount from '../models/customerModal.js';
 import SupplierAccount from '../models/supplierAccountModal.js';
 import Location from '../models/locationModel.js';
 import StockRegistry from '../models/StockregistryModel.js';
+import NeedToPurchase from '../models/needToPurchase.js';
 
 const billingRouter = express.Router();
 
@@ -18,6 +19,7 @@ billingRouter.post('/create', async (req, res) => {
   const session = await mongoose.startSession();
 
   try {
+
     const {
       invoiceDate,
       salesmanName,
@@ -44,7 +46,6 @@ billingRouter.post('/create', async (req, res) => {
       showroom,
       userId,
       isApproved,
-      isneededToPurchase,
       products, // Expected to be an array of objects with item_id and quantity
     } = req.body;
 
@@ -187,7 +188,6 @@ billingRouter.post('/create', async (req, res) => {
       payments: [], // Initialize payments as an empty array
       isApproved: isAdmin && isApproved ? true : false, // Automatically approve if user is admin
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
-      isneededToPurchase: isneededToPurchase,
       roundOffMode: roundOffMode
     });
 
@@ -356,22 +356,20 @@ billingRouter.post('/create', async (req, res) => {
 
     // -----------------------
     // 13. Respond to Client
-    res.status(201).json({
-      message: 'Billing data saved successfully',
-      billingData,
-    });
 
+  res.status(201).json({
+    message: 'Billing data saved successfully',
+    billingData,
+  });
+  
   } catch (error) {
     console.log('Error saving billing data:', error);
-    // Attempt to abort the transaction if it's still active
-    if (session.inTransaction()) {
-      
-    }
-    session.endSession();
     res.status(500).json({
       message: 'Error saving billing data',
       error: error.message,
     });
+  }finally{
+    session.endSession();
   }
 });
 
@@ -414,7 +412,6 @@ billingRouter.post('/edit/:id', async (req, res) => {
       userId,
       showroom,
       salesmanPhoneNumber,
-      isneededToPurchase
     } = req.body;
 
     // === Basic Validation ===
@@ -830,10 +827,8 @@ billingRouter.post('/edit/:id', async (req, res) => {
       salesmanPhoneNumber: salesmanPhoneNumber.trim(),
       roundOff: parseFloat(roundOff) || 0,
       roundOffMode: roundOffMode,
-      isneededToPurchase: isneededToPurchase || existingBilling.isneededToPurchase,
     });
 
-    console.log(isneededToPurchase)
 
     // === Update Salesman Phone Number ===
     const salesmanUser = await User.findOne({ name: salesmanName.trim() }).session(session);
@@ -855,21 +850,18 @@ billingRouter.post('/edit/:id', async (req, res) => {
     await customerAccount.save({ session });
 
     // === Commit Transaction ===
-    session.endSession();
 
     return res.status(200).json({ message: 'Billing data updated successfully.', existingBilling });
   } catch (error) {
-    if (session.inTransaction()) {
-      
-    }
-    session.endSession();
-
+    
     console.error('Error updating billing data:', error);
 
     return res.status(500).json({
       message: 'Error updating billing data.',
       error: error.message,
     });
+  }finally{
+    await session.endSession();
   }
 });
 
@@ -1014,7 +1006,7 @@ billingRouter.delete('/billings/delete/:id', async (req, res) => {
               finalStock: product.countInStock,
             });
 
-            await stockEntry.save();
+            await stockEntry.save({ session });
 
             await product.save({ session });
           }
@@ -2277,17 +2269,120 @@ billingRouter.get('/sort/sales-report', async (req, res) => {
 
 billingRouter.put('/update-needed-purchase/:id', async (req, res) => {
   try {
-    const { neededToPurchase } = req.body; // Expect an array of items
+    const incoming = Array.isArray(req.body.neededToPurchase)
+      ? req.body.neededToPurchase
+      : [];
+
+    /* ──────────────────────────────────────────────────────────
+       1)  Fetch the billing first
+    ────────────────────────────────────────────────────────── */
     const billing = await Billing.findById(req.params.id);
     if (!billing) {
       return res.status(404).json({ message: 'Billing not found' });
     }
-    // Update the neededToPurchase array
-    billing.neededToPurchase = neededToPurchase;
-    await billing.save();
-    res.json({ message: 'Needed to purchase section updated successfully', billing });
+
+    /* ──────────────────────────────────────────────────────────
+       2)  Build a quick lookup of existing rows (by item_id)
+    ────────────────────────────────────────────────────────── */
+    const existingMap = new Map();
+    billing.neededToPurchase.forEach((row) =>
+      existingMap.set(row.item_id, row)
+    );
+
+    /* ──────────────────────────────────────────────────────────
+       3)  Process each incoming item
+    ────────────────────────────────────────────────────────── */
+    const bulkNeedOps = [];              // ops for NeedToPurchase collection
+    const newArray    = [];              // rebuilt Billing array
+
+    for (const item of incoming) {
+      const {
+        item_id,
+        name,
+        quantityOrdered  = 0,
+        quantityNeeded   = 0,
+        purchased        = false,
+        verified         = false,
+        purchaseId
+      } = item;
+
+      // ---------- a)  update / insert inside Billing ----------
+      const existing = existingMap.get(item_id);
+      if (existing) {
+        existing.quantityOrdered = quantityOrdered;
+        existing.quantityNeeded  = quantityNeeded;
+        existing.purchased       = purchased;
+        existing.verified        = verified;
+        newArray.push(existing);         // keep it
+        existingMap.delete(item_id);     // mark as processed
+      } else {
+        newArray.push({
+          item_id,
+          name,
+          quantityOrdered,
+          quantityNeeded,
+          purchased,
+          verified,
+        });
+      }
+
+      // ---------- b)  up-sert into NeedToPurchase -------------
+      bulkNeedOps.push({
+        updateOne: {
+          filter: { invoiceNo: billing.invoiceNo, item_id },
+          update: {
+            $set: {
+              name,
+              quantity: quantityOrdered,
+              quantityNeeded,
+              requestedBy: billing.salesmanName || 'system',
+              purchased,
+              verified,
+              invoiceNo: billing.invoiceNo,
+              billingId: billing._id,
+              purchaseId: purchaseId || ''
+            },
+          },
+          upsert: true,
+        },
+      });
+    }
+
+    /* ──────────────────────────────────────────────────────────
+       4)  Any rows left in existingMap were *removed* by client
+           → pull them from NeedToPurchase + ignore in Billing
+    ────────────────────────────────────────────────────────── */
+    if (existingMap.size) {
+      const idsToRemove = Array.from(existingMap.keys());
+      bulkNeedOps.push({
+        deleteMany: {
+          filter: { invoiceNo: billing.invoiceNo, item_id: { $in: idsToRemove } },
+        },
+      });
+    }
+
+    /* ──────────────────────────────────────────────────────────
+       5)  Commit both data-stores in parallel
+    ────────────────────────────────────────────────────────── */
+    billing.neededToPurchase = newArray;          // overwrite array
+    // flag is handled automatically by your pre-save hook,
+    // but we set it here for clarity/readability
+    billing.isneededToPurchase = newArray.length > 0;
+
+    await Promise.all([
+      billing.save(),                            // 💾 Billing
+      bulkNeedOps.length ? NeedToPurchase.bulkWrite(bulkNeedOps) : null,
+    ]);
+
+    res.json({
+      message: 'Needed-to-purchase section synchronised successfully',
+      billing,
+    });
   } catch (error) {
-    res.status(500).json({ message: 'Server error', error: error.message });
+    console.error(error);
+    res
+      .status(500)
+      .json({ message: 'Server error while updating need-to-purchase', error: error.message });
   }
 });
 
