@@ -1,6 +1,7 @@
 import express from "express";
 import NeedToPurchase from "../models/needToPurchase.js";
 import Billing from "../models/billingModal.js";
+import mongoose from "mongoose";
 
 const needToPurchaseRouter = express.Router();
 
@@ -8,7 +9,7 @@ const needToPurchaseRouter = express.Router();
 needToPurchaseRouter.get("/", async (req, res) => {
   try {
     const items = await NeedToPurchase.find().sort({ createdAt: -1 });
-    res.json(items);
+    res.json(items || []);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Error fetching need-to-purchase items" });
@@ -17,59 +18,110 @@ needToPurchaseRouter.get("/", async (req, res) => {
 
 /* ---------- PUT single (toggle purchased / verified / qty change) ---------- */
 needToPurchaseRouter.put('/:id', async (req, res) => {
+  /* ---------- 0.  Optional: wrap in a transaction  ---------------- */
+  const session = await mongoose.startSession();
+
   try {
-    /* 1️⃣  update / return the stand-alone doc --------------------------- */
-    const update = { $set: {} };
-
-    // allow either field name
-    if (req.body.quantityOrdered !== undefined) {
-      update.$set.quantity = req.body.quantityOrdered;            //  <-- doc field
+    /* ---------- 1. fetch the original document  ------------------- */
+    const original = await NeedToPurchase.findById(req.params.id).session(session);
+    if (!original) {
+      return res.status(404).json({ message: 'Need-to-Purchase item not found' });
     }
-    if (req.body.quantityNeeded !== undefined) {
-      update.$set.quantityNeeded = req.body.quantityNeeded;
-    }
-    if (req.body.purchased  !== undefined) update.$set.purchased  = req.body.purchased;
-    if (req.body.verified   !== undefined) update.$set.verified   = req.body.verified;
-    if (req.body.purchaseId !== undefined) update.$set.purchaseId = req.body.purchaseId;
 
+    const oldInvoice = (original.invoiceNo || '').trim();
+
+    /* ---------- 2. build a clean $set ----------------------------- */
+    const set = {};
+    if (req.body.invoiceNo        !== undefined) set.invoiceNo        = req.body.invoiceNo.trim();
+    if (req.body.quantityOrdered  !== undefined) set.quantity         = req.body.quantityOrdered;   // maps to schema field `quantity`
+    if (req.body.quantityNeeded   !== undefined) set.quantityNeeded   = req.body.quantityNeeded;
+    if (req.body.purchased        !== undefined) set.purchased        = req.body.purchased;
+    if (req.body.verified         !== undefined) set.verified         = req.body.verified;
+    if (req.body.purchaseId       !== undefined) set.purchaseId       = req.body.purchaseId;
+
+    if (Object.keys(set).length === 0) {
+      return res.status(400).json({ message: 'No valid fields supplied' });
+    }
+
+    /* ---------- 3. update and get the fresh copy ------------------ */
     const item = await NeedToPurchase.findByIdAndUpdate(
       req.params.id,
-      update,
-      { new: true }
+      { $set: set },
+      { new: true, session }
     );
-    if (!item) return res.status(404).json({ message: 'Item not found' });
 
-    /* 2️⃣  mirror the change inside Billing ----------------------------- */
-    if (item.invoiceNo && item.invoiceNo.trim() !== '--') {
-      const bill = await Billing.findOne({ invoiceNo: item.invoiceNo });
-      if (bill) {
-        let row = bill.neededToPurchase.find(r => r.item_id === item.item_id);
-        if (!row) {                       // create if absent
-          row = { item_id: item.item_id, name: item.name };
-          bill.neededToPurchase.push(row);
+    const newInvoice = (item.invoiceNo || '').trim();
+
+    /* ---------- 4. helper to upsert / patch a billing row --------- */
+    const upsertRow = (billDoc) => {
+      let row = billDoc.neededToPurchase.find(r => r.item_id === item.item_id);
+      if (!row) {
+        row = {
+          item_id: item.item_id,
+          name:    item.name,
+          quantityOrdered : 0,
+          quantityNeeded  : 0,
+          purchased       : false,
+          verified        : false,
+          purchaseId      : ''
+        };
+        billDoc.neededToPurchase.push(row);
+      }
+      // copy only present fields
+      if (set.quantity           !== undefined) row.quantityOrdered = set.quantity;
+      if (set.quantityNeeded     !== undefined) row.quantityNeeded  = set.quantityNeeded;
+      if (set.purchased          !== undefined) row.purchased       = set.purchased;
+      if (set.verified           !== undefined) row.verified        = set.verified;
+      if (set.purchaseId         !== undefined) row.purchaseId      = set.purchaseId;
+    };
+
+    /* ---------- 5. if invoiceNo DID change ------------------------ */
+    if (oldInvoice !== newInvoice) {
+      /* ---- 5a. remove from the old bill (if any) --------------- */
+      if (oldInvoice && oldInvoice !== '--') {
+        const oldBill = await Billing.findOne({ invoiceNo: oldInvoice }).session(session);
+        if (oldBill) {
+          oldBill.neededToPurchase = oldBill.neededToPurchase
+            .filter(r => r.item_id !== item.item_id);
+          oldBill.isneededToPurchase = oldBill.neededToPurchase.length > 0;
+          await oldBill.save({ session });
         }
+      }
 
-        // copy only what was provided
-        if (req.body.quantityOrdered !== undefined)
-          row.quantityOrdered = req.body.quantityOrdered;
-        if (req.body.quantityNeeded  !== undefined)
-          row.quantityNeeded  = req.body.quantityNeeded;
-        if (req.body.purchased !== undefined)
-          row.purchased = req.body.purchased;
-        if (req.body.verified !== undefined)
-          row.verified  = req.body.verified;
-        if (req.body.purchaseId !== undefined)
-          row.purchaseId = req.body.purchaseId;
-
-        await bill.save();                // fires hooks → keeps flags accurate
+      /* ---- 5b. add / update inside the NEW bill ---------------- */
+      if (newInvoice && newInvoice !== '--') {
+        const newBill = await Billing.findOne({ invoiceNo: newInvoice }).session(session);
+        if (!newBill) {
+          return res.status(404).json({
+            message: `Billing invoice '${newInvoice}' not found`
+          });
+        }
+        upsertRow(newBill);
+        newBill.isneededToPurchase = true;
+        await newBill.save({ session });
+      }
+    } else {
+      /* ---------- 6. invoiceNo unchanged: just patch the same bill */
+      if (newInvoice && newInvoice !== '--') {
+        const bill = await Billing.findOne({ invoiceNo: newInvoice }).session(session);
+        if (!bill) {
+          return res.status(404).json({
+            message: `Billing invoice '${newInvoice}' not found`
+          });
+        }
+        upsertRow(bill);
+        bill.isneededToPurchase = true;
+        await bill.save({ session });
       }
     }
 
-    /* 3️⃣  done ---------------------------------------------------------- */
+    /* ---------- 7. commit & respond ------------------------------ */
     res.json(item);
   } catch (err) {
-    console.error(err);
+    console.error('NeedToPurchase PUT error:', err);
     res.status(500).json({ message: 'Error updating item', error: err.message });
+  } finally {
+    session.endSession();
   }
 });
 
