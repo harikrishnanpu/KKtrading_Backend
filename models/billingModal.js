@@ -202,19 +202,26 @@ BillingSchema.statics.getTotalQuantitySold = async function (itemId) {
 // Method to recalculate totalFuelCharge and totalOtherExpenses
 BillingSchema.methods.calculateTotals = function () {
   // Sum top-level other expenses
-  const topLevelOtherExpenses = this.otherExpenses.reduce((acc, expense) => acc + (expense.amount || 0), 0);
+const topLevelOtherExpenses = Array.isArray(this.otherExpenses)
+  ? this.otherExpenses.reduce((acc, expense) => acc + (expense.amount || 0), 0)
+  : 0;
 
   // Sum deliveries' fuel charges and other expenses
   let deliveryFuelTotal = 0;
   let deliveryOtherExpenseTotal = 0;
 
-  for (const delivery of this.deliveries) {
-    if (delivery.fuelCharge) {
-      deliveryFuelTotal += delivery.fuelCharge;
-    }
+ if (Array.isArray(this.deliveries)) {
+    for (const delivery of this.deliveries) {
+      if (typeof delivery.fuelCharge === "number") {
+        deliveryFuelTotal += delivery.fuelCharge;
+      }
 
-    if (delivery.otherExpenses && delivery.otherExpenses.length > 0) {
-      deliveryOtherExpenseTotal += delivery.otherExpenses.reduce((sum, exp) => sum + (exp.amount || 0), 0);
+      if (Array.isArray(delivery.otherExpenses)) {
+        deliveryOtherExpenseTotal += delivery.otherExpenses.reduce(
+          (sum, exp) => sum + (exp.amount || 0),
+          0
+        );
+      }
     }
   }
 
@@ -231,10 +238,10 @@ BillingSchema.pre("save", async function (next) {
     Array.isArray(neededToPurchase) && neededToPurchase.length > 0;
 
       // Calculate total received from payments
-  this.billingAmountReceived = this.payments.reduce(
-    (total, payment) => total + (payment.amount || 0),
-    0
-  );
+this.billingAmountReceived = Array.isArray(this.payments)
+  ? this.payments.reduce((total, payment) => total + (payment.amount || 0), 0)
+  : 0;
+
 
   // Calculate net amount after discount
   const netAmount = this.grandTotal || 0;
@@ -285,11 +292,6 @@ BillingSchema.pre("save", async function (next) {
         await event.save();
       }
     }
-
-    this.billingAmountReceived = this.payments.reduce(
-      (sum, p) => sum + (p.amount || 0),
-      0
-    );
   
     // ➋ **Validate against grandTotal**
     if (this.billingAmountReceived > this.grandTotal) {
