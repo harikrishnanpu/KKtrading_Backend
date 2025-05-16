@@ -100,54 +100,54 @@ stockUpdateRouter.post('/create', asyncHandler(async (req, res) => {
  *  - sortField (date, name, quantity)
  *  - sortDirection (asc, desc)
  */
-stockUpdateRouter.get('/logs', asyncHandler(async (req, res) => {
-  const { fromDate, toDate, name, brand, category, sortField = 'date', sortDirection = 'desc' } = req.query;
+stockUpdateRouter.get(
+  '/logs',
+  asyncHandler(async (req, res) => {
+    const {
+      fromDate,
+      toDate,
+      name,
+      brand,
+      category,
+      sortField = 'date',
+      sortDirection = 'desc',
+      page = 1,
+      limit = 15
+    } = req.query;
 
-  const query = {};
+    /* ───── filters ─────────────────────────────────────────── */
+    const query = {};
 
-  if (fromDate || toDate) {
-    query.date = {};
-    if (fromDate) {
-      query.date.$gte = new Date(fromDate);
+    if (fromDate || toDate) {
+      query.date = {};
+      if (fromDate) query.date.$gte = new Date(fromDate);
+      if (toDate) {
+        const end = new Date(toDate);
+        end.setHours(23, 59, 59, 999);
+        query.date.$lte = end;
+      }
     }
-    if (toDate) {
-      // To include the entire day, set time to end of the day
-      const endDate = new Date(toDate);
-      endDate.setHours(23, 59, 59, 999);
-      query.date.$lte = endDate;
-    }
-  }
 
-  if (name && name.trim() !== '') {
-    query.name = { $regex: name, $options: 'i' };
-  }
+    if (name)      query.name     = { $regex: name,     $options: 'i' };
+    if (brand)     query.brand    = { $regex: brand,    $options: 'i' };
+    if (category)  query.category = { $regex: category, $options: 'i' };
 
-  // Since brand and category are not stored in StockOpening, 
-  // you'd either need to store them in StockOpening as well,
-  // or fetch product details. For simplicity, let's store brand and category in StockOpening.
-  if (brand && brand.trim() !== '') {
-    query.brand = { $regex: brand, $options: 'i' };
-  }
+    /* ───── sort ────────────────────────────────────────────── */
+    const sort = { [sortField]: sortDirection === 'asc' ? 1 : -1 };
 
-  if (category && category.trim() !== '') {
-    query.category = { $regex: category, $options: 'i' };
-  }
+    /* ───── pagination ─────────────────────────────────────── */
+    const skip  = (Number(page) - 1) * Number(limit);
+    const total = await StockOpening.countDocuments(query);
 
-  // We'll assume brand & category fields are added to StockOpening at creation time by looking up the product once.
+    const logs = await StockOpening.find(query)
+      .sort(sort)
+      .skip(skip)
+      .limit(Number(limit))
+      .lean();
 
-  let sort = {};
-  if (sortField) {
-    sort[sortField] = sortDirection === 'asc' ? 1 : -1;
-  } else {
-    sort = { date: -1 };
-  }
-
-  // If brand/category is not stored in StockOpening model currently,
-  // you need to modify the creation logic in POST /create to also fetch and store brand/category.
-
-  const logs = await StockOpening.find(query).sort(sort).lean();
-  res.json(logs);
-}));
+    res.json({ logs, total });
+  })
+);
 
 /**
  * DELETE /api/stock-update/:id

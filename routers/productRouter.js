@@ -1761,13 +1761,49 @@ productRouter.get('/product/all', async (req, res) => {
 productRouter.get(
   '/stock/stock-logs',
   asyncHandler(async (req, res) => {
-    try {
-      const logs = await StockRegistry.find().sort({ date: 1 }).lean();
-      res.json(logs);
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: 'Failed to fetch stock logs.' });
+    const page  = Number(req.query.page)  || 1;
+    const limit = Number(req.query.limit) || 15;
+    const skip  = (page - 1) * limit;
+
+    /* ───── filters ─────────────────────────────────────────────── */
+    const filter = {};
+
+    if (req.query.fromDate) {
+      filter.date = { ...filter.date, $gte: new Date(req.query.fromDate) };
     }
+    if (req.query.toDate) {
+      filter.date = { ...filter.date, $lte: new Date(req.query.toDate) };
+    }
+    if (req.query.itemName) {
+      filter.name = { $regex: req.query.itemName, $options: 'i' };
+    }
+    if (req.query.brand) {
+      filter.brand = { $regex: req.query.brand, $options: 'i' };
+    }
+    if (req.query.category) {
+      filter.category = { $regex: req.query.category, $options: 'i' };
+    }
+    if (req.query.invoiceNo) {
+      filter.invoiceNo = { $regex: req.query.invoiceNo, $options: 'i' };
+    }
+    if (req.query.changeType) {
+      filter.changeType = req.query.changeType;
+    }
+
+    /* ───── sorting ─────────────────────────────────────────────── */
+    const sortField      = req.query.sortField     || 'date';
+    const sortDirection  = req.query.sortDirection === 'desc' ? -1 : 1;
+    const sort           = { [sortField]: sortDirection };
+
+    const total = await StockRegistry.countDocuments(filter);
+
+    const logs = await StockRegistry.find(filter)
+      .sort(sort)
+      .skip(skip)
+      .limit(limit)
+      .lean();
+
+    res.json({ logs, total });
   })
 );
 
