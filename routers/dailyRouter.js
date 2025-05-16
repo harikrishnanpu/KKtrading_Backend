@@ -2,6 +2,11 @@ import express from 'express';
 import { DailyTransaction, TransactionCategory } from '../models/dailyTransactionsModal.js';
 import Billing from '../models/billingModal.js';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
+import Damage from '../models/damageModal.js';
+import Return from '../models/returnModal.js';
+import Purchase from '../models/purchasemodals.js';
+import LeaveApplication from '../models/leaveApplicationModal.js';
+import expressAsyncHandler from 'express-async-handler';
 
 const transactionRouter = express.Router();
 
@@ -281,6 +286,103 @@ transactionRouter.post('/transactions', async (req, res) => {
     res.status(500).json({ message: 'Server Error while creating transaction.' });
   }
 });
+
+
+
+transactionRouter.get(
+  '/daily/report',
+  expressAsyncHandler(async (req, res) => {
+    const dateStr = req.query.date || new Date().toISOString().slice(0, 10);
+    const start   = new Date(`${dateStr}T00:00:00.000Z`);
+    const end     = new Date(`${dateStr}T23:59:59.999Z`);
+
+    /* ── Sales (approved bills) ─────────────────────────────── */
+    const [{ totalBills = 0 } = {}] = await Billing.aggregate([
+      { $match: { isApproved: true, invoiceDate: { $gte: start, $lte: end } } },
+      { $group: { _id: null, totalBills: { $sum: '$grandTotal' } } }
+    ]);
+
+    /* ── Purchases ──────────────────────────────────────────── */
+    const [{ totalPurchases = 0 } = {}] = await Purchase.aggregate([
+      { $match: { invoiceDate: { $gte: start, $lte: end } } },
+      { $group: { _id: null, totalPurchases: { $sum: '$totals.grandTotalPurchaseAmount' } } }
+    ]);
+
+    /* ── Returns (any type) ─────────────────────────────────── */
+    const [{ totalReturns = 0 } = {}] = await Return.aggregate([
+      { $match: { returnDate: { $gte: start, $lte: end } } },
+      { $group: { _id: null, totalReturns: { $sum: '$netReturnAmount' } } }
+    ]);
+
+    /* ── Damages (sum price * qty) ──────────────────────────── */
+    const [{ totalDamages = 0 } = {}] = await Damage.aggregate([
+      { $match: { date: { $gte: start, $lte: end } } },
+      { $unwind: '$damagedItems' },
+      {
+        $group: {
+          _id: null,
+          totalDamages: {
+            $sum: { $multiply: ['$damagedItems.price', '$damagedItems.quantity'] }
+          }
+        }
+      }
+    ]);
+
+    /* ── Deliveries performed today (by timestamp) ──────────── */
+    const [{ deliveryCount = 0 } = {}] = await Billing.aggregate([
+      { $unwind: '$deliveries' },
+      {
+        $match: {
+          'deliveries.startLocations.0.timestamp': { $gte: start, $lte: end }
+        }
+      },
+      { $group: { _id: null, deliveryCount: { $sum: 1 } } }
+    ]);
+
+    /* ── Accounts – balance + today’s movements ─────────────── */
+    const accounts = await PaymentsAccount.find({}).lean();
+
+    const accountsBalance = accounts.reduce(
+      (s, a) => s + (a.balanceAmount || 0),
+      0
+    );
+
+    const paymentsIn = accounts.reduce((s, a) => {
+      const sub = a.paymentsIn.filter(
+        (p) => p.date >= start && p.date <= end
+      );
+      return s + sub.reduce((x, p) => x + p.amount, 0);
+    }, 0);
+
+    const paymentsOut = accounts.reduce((s, a) => {
+      const sub = a.paymentsOut.filter(
+        (p) => p.date >= start && p.date <= end
+      );
+      return s + sub.reduce((x, p) => x + p.amount, 0);
+    }, 0);
+
+    /* ── Leaves starting today ──────────────────────────────── */
+    const todaysLeaves = await LeaveApplication.find({
+      startDate: { $lte: end },
+      endDate:   { $gte: start }
+    })
+      .select('userId userName reason')
+      .lean();
+
+    res.json({
+      date           : dateStr,
+      totalBills     : +totalBills.toFixed(2),
+      totalPurchases : +totalPurchases.toFixed(2),
+      totalReturns   : +totalReturns.toFixed(2),
+      totalDamages   : +totalDamages.toFixed(2),
+      deliveryCount,
+      accountsBalance: +accountsBalance.toFixed(2),
+      paymentsIn     : +paymentsIn.toFixed(2),
+      paymentsOut    : +paymentsOut.toFixed(2),
+      todaysLeaves
+    });
+  })
+);
 
 
 

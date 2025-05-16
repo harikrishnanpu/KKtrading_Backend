@@ -9,6 +9,7 @@ import SupplierAccount from '../models/supplierAccountModal.js';
 import Location from '../models/locationModel.js';
 import StockRegistry from '../models/StockregistryModel.js';
 import NeedToPurchase from '../models/needToPurchase.js';
+import expressAsyncHandler from 'express-async-handler';
 
 const billingRouter = express.Router();
 
@@ -2274,8 +2275,8 @@ billingRouter.get('/customer/suggestions', async (req, res) => {
 });
 
 
-billingRouter.get('/sort/sales-report', async (req, res) => {
-  try {
+billingRouter.get('/sort/sales-report',
+  expressAsyncHandler(async (req, res) => {
     const {
       fromDate,
       toDate,
@@ -2286,79 +2287,44 @@ billingRouter.get('/sort/sales-report', async (req, res) => {
       deliveryStatus,
       itemName,
       amountThreshold,
-      sortField,
-      sortDirection,
+      sortField = 'invoiceDate',
+      sortDirection = 'asc',
+      page = 1,
+      limit = 15
     } = req.query;
 
-    let filter = {};
+    /* ───── filters ─────────────────────────────────────────── */
+    const filter = { isApproved: true };
 
-    // Filter by date range
     if (fromDate || toDate) {
       filter.invoiceDate = {};
-      if (fromDate) {
-        filter.invoiceDate.$gte = new Date(fromDate);
-      }
-      if (toDate) {
-        filter.invoiceDate.$lte = new Date(toDate);
-      }
+      if (fromDate) filter.invoiceDate.$gte = new Date(fromDate);
+      if (toDate)   filter.invoiceDate.$lte = new Date(toDate);
     }
 
-    // Filter by customer name
-    if (customerName) {
-      filter.customerName = { $regex: customerName, $options: 'i' };
-    }
-
-    // Filter by salesman name
-    if (salesmanName) {
-      filter.salesmanName = { $regex: salesmanName, $options: 'i' };
-    }
-
-    // Filter by invoice number
-    if (invoiceNo) {
-      filter.invoiceNo = { $regex: invoiceNo, $options: 'i' };
-    }
-
-    // Filter by payment status
-    if (paymentStatus) {
-      filter.paymentStatus = paymentStatus;
-    }
-
-    // Filter by delivery status
-    if (deliveryStatus) {
-      filter.deliveryStatus = deliveryStatus;
-    }
-
-    
-    // Filter by item name
-    if (itemName) {
-      filter['products.name'] = { $regex: itemName, $options: 'i' };
-    }
-    
-    // Filter by amount threshold
-    if (amountThreshold) {
+    if (customerName)  filter.customerName  = { $regex: customerName,  $options: 'i' };
+    if (salesmanName)  filter.salesmanName  = { $regex: salesmanName,  $options: 'i' };
+    if (invoiceNo)     filter.invoiceNo     = { $regex: invoiceNo,     $options: 'i' };
+    if (paymentStatus) filter.paymentStatus = paymentStatus;
+    if (deliveryStatus) filter.deliveryStatus = deliveryStatus;
+    if (itemName)      filter['products.name'] = { $regex: itemName,   $options: 'i' };
+    if (amountThreshold)
       filter.billingAmount = { $gte: parseFloat(amountThreshold) };
-    }
-    
-    
-    filter.isApproved = true;
 
-    // Sorting
-    let sort = {};
-    if (sortField) {
-      sort[sortField] = sortDirection === 'asc' ? 1 : -1;
-    } else {
-      sort = { invoiceDate: -1 }; // Default sorting
-    }
+    /* ───── sort & pagination ───────────────────────────────── */
+    const sort = { [sortField]: sortDirection === 'asc' ? 1 : -1 };
+    const skip = (Number(page) - 1) * Number(limit);
 
-    // Fetch billings with filters and sorting
-    const billings = await Billing.find(filter).sort(sort);
+    const total    = await Billing.countDocuments(filter);
+    const billings = await Billing.find(filter)
+      .sort(sort)
+      .skip(skip)
+      .limit(Number(limit))
+      .lean();
 
-    res.json(billings);
-  } catch (error) {
-    console.error('Error fetching billings:', error);
-    res.status(500).json({ message: 'Server error' });
-  }
-});
+    res.json({ billings, total });
+  })
+);
 
 
 billingRouter.put('/update-needed-purchase/:id', async (req, res) => {
