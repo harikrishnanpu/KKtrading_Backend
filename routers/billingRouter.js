@@ -1088,7 +1088,7 @@ if (product.countInStock < quantity) {
 
 
 // Get all billings
-  billingRouter.get('/', async (req, res) => {
+billingRouter.get('/', async (req, res) => {
     try {
       // Fetch and sort billing records by createdAt field in descending order (newest first)
       const billings = await Billing.find().sort({ createdAt: -1 });
@@ -1101,7 +1101,183 @@ if (product.countInStock < quantity) {
       console.error('Error fetching billings:', error);
       res.status(500).json({ message: 'Error fetching billings', error: error.message });
     }
-  });
+});
+
+
+// routes/billingRouter.js
+billingRouter.get('/list/pagenated', async (req, res) => {
+  try {
+    // ── query params ─────────────────────────────────────────────
+    const {
+      page = 1,
+      limit = 15,
+
+      search = '',
+      invoiceStartDate,
+      invoiceEndDate,
+      deliveryStartDate,
+      deliveryEndDate,
+      status = 'All',
+
+      // sent by the front-end so we can reuse the same route
+      userId,
+      isAdmin,
+    } = req.query;
+
+    const skip = (+page - 1) * +limit;
+
+    // ── build the Mongo filter object exactly once ───────────────
+    const q = {};
+
+    // non-admin users: only their un-approved bills
+    if (!JSON.parse(isAdmin) && userId) {
+      q.submittedBy = userId;
+      q.isApproved  = false;
+    }
+
+    // free-text search
+    if (search) {
+      const r = new RegExp(search, 'i');
+      q.$or = [
+        { invoiceNo: r },
+        { customerName: r },
+        { salesmanName: r },
+        { marketedBy: r },
+        { showroom: r },
+      ];
+    }
+
+    // date filters
+    const dateRange = (field, start, end) => {
+      if (start || end) {
+        q[field] = {};
+        if (start) q[field].$gte = new Date(start);
+        if (end)   q[field].$lte = new Date(end);
+      }
+    };
+
+    dateRange('invoiceDate',        invoiceStartDate,  invoiceEndDate);
+    dateRange('expectedDeliveryDate', deliveryStartDate, deliveryEndDate);
+
+    // status filter
+    switch (status) {
+      case 'Paid':
+        q.paymentStatus = 'Paid';
+        break;
+      case 'Pending':
+        q.paymentStatus = { $ne: 'Paid' };
+        q.isApproved    = true;
+        break;
+      case 'Unapproved':
+        q.isApproved = false;
+        break;
+      case 'Need to Purchase':
+        q.neededToPurchase = {
+          $elemMatch: {
+            $or: [ { purchased: false }, { verified: false } ],
+          },
+        };
+        break;
+      // 'All' → no extra filter
+    }
+
+    // ── run the 3 queries in parallel ────────────────────────────
+    const [billings, totalCount, statsRaw] = await Promise.all([
+      Billing.find(q)
+             .sort({ createdAt: -1 })
+             .skip(skip)
+             .limit(+limit),
+
+      Billing.countDocuments(q),
+
+      // lightweight aggregate for the header cards
+Billing.aggregate([
+  { $match: q },
+  {
+    $project: {
+      grandTotal: 1,
+      billingAmount: 1,
+      billingAmountReceived: 1,
+      paymentStatus: 1,
+      products: 1,
+      totalFuelCharge: {
+        $toDouble: "$totalFuelCharge"
+      },
+      otherExpenses: 1,
+      deliveries: 1
+    }
+  },
+  {
+    $addFields: {
+      totalOtherExpense: {
+        $sum: [
+          { $sum: "$otherExpenses.amount" },
+          {
+            $sum: {
+              $map: {
+                input: "$deliveries",
+                as: "d",
+                in: {
+                  $sum: [
+                    { $sum: "$$d.otherExpenses.amount" },
+                    { $toDouble: "$$d.bata" }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      totalRevenue: {
+        $sum: {
+          $map: {
+            input: "$products",
+            as: "p",
+            in: {
+              $multiply: [
+                "$$p.quantity",
+                { $toDouble: "$$p.selledPrice" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      totalInvoices: { $sum: 1 },
+      totalRevenue: { $sum: "$totalRevenue" },
+      totalOtherExpense: { $sum: "$totalOtherExpense" },
+      totalFuelCharge: { $sum: "$totalFuelCharge" },
+      totalPending: {
+        $sum: {
+          $cond: [
+            { $eq: ["$paymentStatus", "Paid"] },
+            0,
+            { $subtract: ["$billingAmount", "$billingAmountReceived"] }
+          ]
+        }
+      }
+    }
+  }
+])
+
+    ]);
+
+    res.json({
+      billings,
+      totalCount,
+      stats: statsRaw[0] || { totalInvoices: 0, totalRevenue: 0, totalPending: 0 },
+    });
+
+  } catch (err) {
+    console.error('Error fetching billings:', err);
+    res.status(500).json({ message: 'Error fetching billings', error: err.message });
+  }
+});
+
   
 
 

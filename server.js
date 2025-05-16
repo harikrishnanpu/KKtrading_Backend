@@ -2,7 +2,7 @@ import http from 'http';
 import { Server } from 'socket.io';
 import express from 'express';
 import mongoose from 'mongoose';
-import dotenv, { parse } from 'dotenv';
+import dotenv from 'dotenv';
 import path from 'path';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
