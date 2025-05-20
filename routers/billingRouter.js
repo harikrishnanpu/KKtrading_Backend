@@ -77,7 +77,7 @@ billingRouter.post('/create', async (req, res) => {
     // -----------------------
     // 2. Check for Existing Invoice
     // -----------------------
-    const existingBill = await Billing.findOne({ invoiceNo }).session(session);
+    const existingBill = await Billing.findOne({}).sort({ createdAt: -1  }).session(session);
     if (existingBill) {
       const billing = await Billing.findOne({ invoiceNo: /^KK\d+$/ })
       .sort({ invoiceNo: -1 })
@@ -283,74 +283,83 @@ billingRouter.post('/create', async (req, res) => {
     }
 
     // -----------------------
-    // 10. Conditionally Update Stock
-    // -----------------------
-    let productUpdatePromises = [];
-    if (isAdmin && isApproved) {
-      // Only update stock if the user is admin during creation
-      for (const item of products) {
-        const { item_id, quantity } = item;
+// 10. Identify Out of Stock Products Instead of Updating Stock
+// -----------------------
+const neededToPurchaseItems = [];
 
-        // Validate individual product details
-        if (!item_id || isNaN(quantity) || quantity <= 0) {
-          
-          session.endSession();
-          return res.status(400).json({ message: 'Invalid product details' });
-        }
+for (const item of products) {
+  const { item_id, quantity } = item;
 
-        // Fetch product using item_id
-        const product = await Product.findOne({
-          item_id: item_id.trim(),
-        }).session(session);
-        if (!product) {
-          
-          session.endSession();
-          return res
-            .status(404)
-            .json({ message: `Product with ID ${item_id} not found` });
-        }
+  // Validate individual product details
+  if (!item_id || isNaN(quantity) || quantity <= 0) {
+    session.endSession();
+    return res.status(400).json({ message: 'Invalid product details' });
+  }
 
-        // Check if there is enough stock
-        if (product.countInStock < quantity) {
-          
-          session.endSession();
-          return res.status(400).json({
-            message: `Insufficient stock for product ID ${item_id}`,
-          });
-        }
+  // Fetch product using item_id
+  const product = await Product.findOne({ item_id: item_id.trim() }).session(session);
+  if (!product) {
+    session.endSession();
+    return res
+      .status(404)
+      .json({ message: `Product with ID ${item_id} not found` });
+  }
 
-        // Deduct the stock
-        product.countInStock -= parseFloat(quantity);
-        productUpdatePromises.push(product.save({ session }));
+  // Check stock level
+  if (product.countInStock < quantity) {
+    const quantityNeeded = quantity - product.countInStock;
+
+    neededToPurchaseItems.push({
+      item_id: item_id.trim(),
+      name: product.name,
+      quantityOrdered: quantity,
+      quantityNeeded,
+      purchased: false,
+      verified: false,
+      purchaseId: null,
+    });
+
+  }
+
+}
 
 
-  // **Log stock change in StockRegistry**
-  const stockEntry = new StockRegistry({
-    date: new Date(),
-    updatedBy: user.name, // Capture who made the change
-    itemId: item.item_id,
-    name: product.name,
-    brand: product.brand,
-    category: product.category,
-    changeType: 'Sales (Billing)',
-    invoiceNo: invoiceNo.trim(),
-    quantityChange: -Math.abs(quantity), // Deducted quantity
-    finalStock: product.countInStock,
-  });
 
-    await stockEntry.save({ session });
-      }
+if (neededToPurchaseItems.length > 0) {
+  billingData.neededToPurchase = neededToPurchaseItems;
+
+  for (const item of neededToPurchaseItems) {
+    const existingNeed = await NeedToPurchase.findOne({
+      item_id: item.item_id,
+      purchased: false,
+    }).session(session);
+  
+    if (existingNeed) {
+      existingNeed.quantityNeeded += item.quantityNeeded;
+      await existingNeed.save({ session });
+    } else {
+      await NeedToPurchase.create([{
+        item_id: item.item_id,
+        name: item.name,
+        quantity: item.quantityOrdered,
+        quantityNeeded: item.quantityNeeded,
+        requestedBy: billingData.customerName || 'Unknown', // optional
+        invoiceNo: billingData.invoiceNo || '',             // optional
+        purchased: false,
+        verified: false,
+        purchaseId: null,
+      }], { session });
     }
+  }
+}
+
+
 
     // -----------------------
     // 11. Save Billing Data and Update Products
     // -----------------------
     await customerAccount.save({ session });
     await billingData.save({ session });
-
-    if (isAdmin) {
-      await Promise.all(productUpdatePromises);
-    }
 
     // -----------------------
     // 12. Commit the Transaction
@@ -486,7 +495,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
       );
       for (const prod of removed) {
         const dbProd = productMap[prod.item_id] ||
-                       await Product.findOne({ item_id: prod.item_id }).session(session);
+        await Product.findOne({ item_id: prod.item_id }).session(session);
         if (dbProd && isBillApproved && isAdmin) {
           dbProd.countInStock += num(prod.quantity);
           await dbProd.save({ session });
@@ -609,6 +618,75 @@ billingRouter.post('/edit/:id', async (req, res) => {
         }
       }
       existingBilling.markModified('products');
+
+
+// === 5.1 Track neededToPurchase items (optimized logic) ===
+const updatedNeededToPurchase = [];
+
+for (const p of products) {
+  const idTrim = p.item_id.trim();
+  const orderedQty = num(p.quantity);
+  const dbProd = productMap[idTrim];
+
+  const qtyInStock = dbProd.countInStock;
+  const qtyNeeded = orderedQty - qtyInStock;
+
+  // Only track if stock is insufficient and bill is not admin-approved
+  if (qtyNeeded > 0 && (!isBillApproved || !isAdmin)) {
+    const existingInBill = existingBilling.neededToPurchase?.find(item => item.item_id === idTrim);
+
+    if (existingInBill) {
+      // Update the existing entry
+      existingInBill.quantityOrdered = orderedQty;
+      existingInBill.quantityNeeded = qtyNeeded;
+    } else {
+      // Add new entry to billing doc
+      updatedNeededToPurchase.push({
+        item_id: idTrim,
+        name: dbProd.name,
+        quantityOrdered: orderedQty,
+        quantityNeeded: qtyNeeded,
+        purchased: false,
+        verified: false,
+        purchaseId: null,
+      });
+    }
+
+    // Update NeedToPurchase collection
+    const existingInNeedToPurchase = await NeedToPurchase.findOne({
+      item_id: idTrim
+    }).session(session);
+
+    if (existingInNeedToPurchase) {
+      existingInNeedToPurchase.quantityNeeded = qtyNeeded;
+      existingInNeedToPurchase.quantity = orderedQty;
+      existingInNeedToPurchase.requestedBy = customerName || 'Unknown';
+      existingInNeedToPurchase.invoiceNo = invoiceNo.trim();
+      await existingInNeedToPurchase.save({ session });
+    } else {
+      await NeedToPurchase.create([{
+        item_id: idTrim,
+        name: dbProd.name,
+        quantity: orderedQty,
+        quantityNeeded: qtyNeeded,
+        requestedBy: customerName || 'Unknown',
+        invoiceNo: invoiceNo.trim(),
+        purchased: false,
+        verified: false,
+        purchaseId: null,
+      }], { session });
+    }
+  }
+}
+
+// Merge into billing.neededToPurchase cleanly
+existingBilling.neededToPurchase = [
+  ...(existingBilling.neededToPurchase || []).filter(p => 
+    !updatedNeededToPurchase.find(n => n.item_id === p.item_id)
+  ),
+  ...updatedNeededToPurchase
+];
+
 
       /* === 6. Customer account handling === */
       const oldCustomerId = existingBilling.customerId;
@@ -973,115 +1051,94 @@ billingRouter.put('/bill/approve/:billId', async (req, res) => {
 
   try {
     const { billId } = req.params;
-    const { userId } = req.body; // Assuming the approving userId is sent in the body
+    const { userId } = req.body;
 
-    // Fetch the user performing the approval
     const approvingUser = await User.findById(userId).session(session);
     if (!approvingUser) {
-      
-      session.endSession();
       return res.status(404).json({ error: 'Approving user not found' });
     }
 
     if (!approvingUser.isAdmin) {
-      
-      session.endSession();
       return res.status(403).json({ error: 'Only admins can approve bills' });
     }
 
-    // Find the existing bill
     const existingBill = await Billing.findById(billId).session(session);
     if (!existingBill) {
-      
-      session.endSession();
       return res.status(404).json({ error: 'Bill not found' });
     }
 
-    // Check if the bill is already approved
     if (existingBill.isApproved) {
-      
-      session.endSession();
       return res.status(400).json({ error: 'Bill is already approved' });
     }
 
-    // Update bill status to 'approved'
-    existingBill.isApproved = true;
-    existingBill.approvedBy = userId;
+    const outOfStockItems = [];
+    const productMap = new Map();
 
-    // -----------------------
-    // 1. Update Stock During Approval
-    // -----------------------
-    const productUpdatePromises = [];
+    // Step 1: Validate all products
+    for (const item of existingBill.products) {
+      const { item_id, quantity } = item;
+      const product = await Product.findOne({ item_id }).session(session);
+
+      if (!product) {
+        return res.status(404).json({ error: `Product with ID ${item_id} not found` });
+      }
+
+      if (product.countInStock < quantity) {
+        outOfStockItems.push({
+          name: product.name,
+          item_id: product.item_id,
+          available: product.countInStock,
+          requested: quantity,
+        });
+      }
+
+      productMap.set(item_id, product);
+    }
+
+    // Step 2: If any item is out of stock, return detailed error
+    if (outOfStockItems.length > 0) {
+      return res.status(400).json({
+        error: 'Some products are out of stock',
+        outOfStock: outOfStockItems,
+      });
+    }
+
+    // Step 3: Proceed with approval and stock update
     const stockRegistryEntries = [];
 
     for (const item of existingBill.products) {
       const { item_id, quantity } = item;
+      const product = productMap.get(item_id);
 
-      // Fetch product using item_id
-      const product = await Product.findOne({ item_id }).session(session);
-      if (!product) {
-        
-        session.endSession();
-        return res.status(404).json({ message: `Product with ID ${item_id} not found` });
-      }
-
-      // Check if there is enough stock
-if (product.countInStock < quantity) {
-  session.endSession();
-  return res.status(400).json({
-    message: `Insufficient stock for product '${product.name}' (ID: ${item_id}). Available: ${product.countInStock}, Requested: ${quantity}.`
-  });
-}
-
-
-
-
-      const user = await User.findById(userId)
-
-      if(!user){
-       return res.status(404).json({ message: "User Not Found" })
-      }
-
-      // Deduct the stock
       product.countInStock -= parseFloat(quantity);
-      productUpdatePromises.push(product.save({ session }));
+      await product.save({ session });
 
-            // Add stock registry entry
-            stockRegistryEntries.push({
-              updatedBy: user.name,
-              itemId: product.item_id,
-              name: product.name,
-              brand: product.brand,
-              category: product.category,
-              changeType: 'Sales (Billing)',
-              invoiceNo: existingBill.invoiceNo,
-              quantityChange: -parseFloat(quantity),
-              finalStock: product.countInStock,
-            });
+      stockRegistryEntries.push({
+        updatedBy: approvingUser.name,
+        itemId: product.item_id,
+        name: product.name,
+        brand: product.brand,
+        category: product.category,
+        changeType: 'Sales (Billing)',
+        invoiceNo: existingBill.invoiceNo,
+        quantityChange: -parseFloat(quantity),
+        finalStock: product.countInStock,
+      });
     }
-
 
     await StockRegistry.insertMany(stockRegistryEntries, { session });
 
-    // Save the updated bill
+    existingBill.isApproved = true;
+    existingBill.approvedBy = userId;
     await existingBill.save({ session });
 
-    // Update all product stock counts
-    await Promise.all(productUpdatePromises);
-
-
     res.json({ message: 'Bill approved successfully', bill: existingBill });
+
   } catch (error) {
     console.error('Error approving bill:', error);
-
-    // Abort transaction on error
-    if (session.inTransaction()) {
-      
-    }
-
     res.status(500).json({ error: 'Internal server error', details: error.message });
-  }finally{
-        session.endSession();
+  } finally {
+    session.endSession();
   }
 });
 
