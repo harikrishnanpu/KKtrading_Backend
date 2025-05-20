@@ -298,25 +298,25 @@ transactionRouter.get(
 
     /* ── Sales (approved bills) ─────────────────────────────── */
     const [{ totalBills = 0 } = {}] = await Billing.aggregate([
-      { $match: { isApproved: true, invoiceDate: { $gte: start, $lte: end } } },
+      { $match: { createdAt: { $gte: start, $lte: end } } },
       { $group: { _id: null, totalBills: { $sum: '$grandTotal' } } }
     ]);
 
     /* ── Purchases ──────────────────────────────────────────── */
     const [{ totalPurchases = 0 } = {}] = await Purchase.aggregate([
-      { $match: { invoiceDate: { $gte: start, $lte: end } } },
+      { $match: { createdAt: { $gte: start, $lte: end } } },
       { $group: { _id: null, totalPurchases: { $sum: '$totals.grandTotalPurchaseAmount' } } }
     ]);
 
     /* ── Returns (any type) ─────────────────────────────────── */
     const [{ totalReturns = 0 } = {}] = await Return.aggregate([
-      { $match: { returnDate: { $gte: start, $lte: end } } },
+      { $match: { createdAt: { $gte: start, $lte: end } } },
       { $group: { _id: null, totalReturns: { $sum: '$netReturnAmount' } } }
     ]);
 
     /* ── Damages (sum price * qty) ──────────────────────────── */
     const [{ totalDamages = 0 } = {}] = await Damage.aggregate([
-      { $match: { date: { $gte: start, $lte: end } } },
+      { $match: { createdAt: { $gte: start, $lte: end } } },
       { $unwind: '$damagedItems' },
       {
         $group: {
@@ -349,17 +349,29 @@ transactionRouter.get(
 
     const paymentsIn = accounts.reduce((s, a) => {
       const sub = a.paymentsIn.filter(
-        (p) => p.date >= start && p.date <= end
+        (p) => p.date >= start && p.date <= end && p.method !== 'Internal Transfer'
       );
       return s + sub.reduce((x, p) => x + p.amount, 0);
     }, 0);
 
     const paymentsOut = accounts.reduce((s, a) => {
       const sub = a.paymentsOut.filter(
-        (p) => p.date >= start && p.date <= end
+        (p) => p.date >= start && p.date <= end && p.method !== 'Internal Transfer'
       );
       return s + sub.reduce((x, p) => x + p.amount, 0);
     }, 0);
+
+    const paymentsTransfer = accounts.reduce((s,a) =>{
+     
+     const sub = a.paymentsIn.filter(
+        (p) => p.date >= start && p.date <= end && p.method == 'Internal Transfer'
+      )
+      
+      return s + sub.reduce((x,p)=> x + p.amount, 0)
+
+    },0)
+
+
 
     /* ── Leaves starting today ──────────────────────────────── */
     const todaysLeaves = await LeaveApplication.find({
@@ -379,6 +391,7 @@ transactionRouter.get(
       accountsBalance: +accountsBalance.toFixed(2),
       paymentsIn     : +paymentsIn.toFixed(2),
       paymentsOut    : +paymentsOut.toFixed(2),
+      paymentsTransfer : +paymentsTransfer.toFixed(2),
       todaysLeaves
     });
   })
