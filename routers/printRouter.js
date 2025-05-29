@@ -730,46 +730,37 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
         </div>
       `;
 
-      // Return the page HTML
-      return `
-        <div class="invoice">
-          <!-- Header -->
-          <div class="header">
-            <p>KK TRADING</p>
-            <p style="font-size:14px; margin-top:10px;">Tiles, Granites, Sanitary Wares, UV Sheets</p>
-          </div>
-
-          <!-- Invoice Info -->
-          <div class="invoice-info">
-            <div class="info-left">
-              <p><strong>Estimate No:</strong> ${invoiceNo}</p>
-              <p><strong>Invoice Date:</strong> ${
-                finalInvoiceDate ? new Date(finalInvoiceDate).toLocaleDateString() : '-'
-              }</p>
-              <p><strong>Expected Delivery:</strong> ${
-                finalExpectedDeliveryDate ? new Date(finalExpectedDeliveryDate).toLocaleDateString() : '-'
-              }</p>
-              <p><strong>Salesman:</strong> ${finalSalesmanName || '-'}</p>
-              <p><strong>Salesman Contact:</strong> ${finalSalesmanPhoneNumber || '-'}</p>
-              <p><strong>Marketed By:</strong> ${finalMarketedBy || '-'}</p>
-            </div>
-            <div class="info-right" style="text-align:right;">
-              <p><strong>From:</strong></p>
-              <p>KK TRADING</p>
-              <p>Moncompu, Chambakulam, Alappuzha</p>
-              <p>Alappuzha, 688503</p>
-              <p><strong>Contact:</strong> 0477 2080282</p>
-              <p><strong>Email:</strong> tradeinkk@gmail.com</p>
-              <img
-                src="${qrCodeDataURL}"
-                alt="QR Code"
-                style="width:60px; height:60px; margin-top:10px;"
-              />
-            </div>
-          </div>
-
-          <!-- Customer, Payment & Delivery Info -->
-          <div class="invoice-info">
+      const invoiceInfoBlock = pageNumber === 1
+    ? `
+    <div class="invoice-info">
+      <div class="info-left">
+        <p><strong>Est no.:</strong> ${invoiceNo}</p>
+        <p><strong>Invoice Date:</strong> ${
+          finalInvoiceDate ? new Date(finalInvoiceDate).toLocaleDateString() : '-'
+        }</p>
+        <p><strong>Expected Delivery:</strong> ${
+          finalExpectedDeliveryDate ? new Date(finalExpectedDeliveryDate).toLocaleDateString() : '-'
+        }</p>
+        <p><strong>Salesman:</strong> ${finalSalesmanName || '-'}</p>
+        <p><strong>Salesman Contact:</strong> ${finalSalesmanPhoneNumber || '-'}</p>
+        <p><strong>Marketed By:</strong> ${finalMarketedBy || '-'}</p>
+      </div>
+      <div class="info-right" style="text-align:right;">
+        <p><strong>From:</strong></p>
+        <p>KK TRADING</p>
+        <p>Moncompu, Chambakulam, Alappuzha</p>
+        <p>Alappuzha, 688503</p>
+        <p><strong>Contact:</strong> 0477 2080282</p>
+        <p><strong>Email:</strong> tradeinkk@gmail.com</p>
+        <img
+          src="${qrCodeDataURL}"
+          alt="QR Code"
+          style="width:60px; height:60px; margin-top:10px;"
+        />
+      </div>
+    </div>
+    
+              <div class="invoice-info">
             <div class="customer-info">
               <p><strong>Bill To:</strong></p>
               <p><strong>Name:</strong> ${finalCustomerName || '-'}</p>
@@ -781,6 +772,26 @@ printRouter.post('/generate-invoice-html', async (req, res) => {
               ${deliveryStatusSection}
             </div>
           </div>
+    
+    `
+    : '';  
+
+      // Return the page HTML
+      return `
+        <div class="invoice">
+          <!-- Header -->
+          <div class="header">
+            <p>KK TRADING</p>
+            <p style="font-size:14px; margin-top:10px;">Tiles, Granites, Sanitary Wares, UV Sheets</p>
+          </div>
+
+          <p style="font-size:14px;margin-top:10px;text-align:center;"><strong>Estimate No:</strong> ${invoiceNo}</p>
+
+          <!-- Invoice Info -->
+       ${invoiceInfoBlock}
+
+          <!-- Customer, Payment & Delivery Info -->
+
 
           <!-- Products Table -->
           <table class="invoice-table">

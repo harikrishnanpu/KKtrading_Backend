@@ -23,3 +23,6 @@ yarn-error.log*
 .env
 /uploads/*.jpg
 .vercel
+
+
+/sockets/errorlogs.txt
