@@ -2,6 +2,7 @@
 
 import express from 'express';
 import Notification from '../models/notificationModal.js';
+import { emitNotificationEvent } from '../socket/socketService.js';
 
 const notificationRouter = express.Router();
 
@@ -31,8 +32,8 @@ notificationRouter.get('/', async (req, res) => {
   // CREATE a notification
   notificationRouter.post('/', async (req, res) => {
     try {
-      const { title, message, type, extraInfo, assignTo } = req.body;
-      const newNotification = new Notification({ title, message, type, extraInfo, assignTo });
+      const { title, message, type, extraInfo, assignTo, assignedBy } = req.body;
+      const newNotification = new Notification({ title, message, type, extraInfo, assignTo, assignedBy });
       const savedNotification = await newNotification.save();
       return res.status(201).json(savedNotification);
     } catch (error) {
@@ -43,10 +44,10 @@ notificationRouter.get('/', async (req, res) => {
   // UPDATE a notification
   notificationRouter.put('/:id', async (req, res) => {
     try {
-      const { title, message, type, extraInfo, assignTo, read } = req.body;
+      const { title, message, type, extraInfo, assignTo, read , assignedBy} = req.body;
       const updatedNotification = await Notification.findByIdAndUpdate(
         req.params.id,
-        { title, message, type, extraInfo, assignTo, read },
+        { title, message, type, extraInfo, assignTo, read , assignedBy},
         { new: true }
       );
       if (!updatedNotification) {
@@ -57,6 +58,19 @@ notificationRouter.get('/', async (req, res) => {
       return res.status(400).json({ message: error.message });
     }
   });
+
+  notificationRouter.put('/markasread/:id',async (req,res)=>{
+    try{
+      const updatedNotification = await Notification.updateMany({assignTo: { $in:[ req.params.id ]}, read: false },{$set: { read: true  }});
+      if (!updatedNotification) {
+        return res.status(404).json({ message: 'No Notifications not found' });
+      }
+      emitNotificationEvent(req.params.id)
+      return res.json(updatedNotification);
+    }catch(err){
+      return res.status(400).json({ message: 'error occured:'+err })
+    }
+  })
   
   // DELETE a notification
   notificationRouter.delete('/:id', async (req, res) => {

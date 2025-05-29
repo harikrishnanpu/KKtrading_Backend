@@ -168,6 +168,10 @@ transactionRouter.post('/transactions', async (req, res) => {
       return res.status(404).json({ message: 'Payment account not found.' });
     }
 
+    if(myAccount.balanceAmount < parsedAmount){
+      return res.status(400).json({message: `Amount exceeds balance amount ${myAccount.balanceAmount}`})
+    }
+
     let referenceId; 
     let referenceIdOut;
     let referenceIdIn;
@@ -706,9 +710,9 @@ transactionRouter.post('/trans/transfer', async (req, res) => {
     }
 
     // Check if the `fromAccount` has sufficient balance
-    // if (fromAccount.balanceAmount < parsedPaymentAmount) {
-    //   return res.status(400).json({ message: 'Insufficient funds in the source account.' });
-    // }
+    if (fromAccount.balanceAmount < parsedPaymentAmount) {
+      return res.status(400).json({ message: `Insufficient funds in the source account. balance amount: ${fromAccount.balanceAmount}` });
+    }
 
     // Generate unique reference IDs for each payment entry
     const referenceIdOut = 'OUT' + Date.now().toString();

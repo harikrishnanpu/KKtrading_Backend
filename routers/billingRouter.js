@@ -1303,12 +1303,57 @@ Billing.aggregate([
     }
   },
   {
+  $lookup: {
+    from: 'products',
+    localField: 'products.item_id',
+    foreignField: 'item_id',
+    as: 'productCosts'
+  }
+},
+{
+  $addFields: {
+    totalCost: {
+      $sum: {
+        $map: {
+          input: "$products",
+          as: "p",
+          in: {
+            $let: {
+              vars: {
+                matchingCost: {
+                  $arrayElemAt: [
+                    {
+                      $filter: {
+                        input: "$productCosts",
+                        as: "pc",
+                        cond: { $eq: ["$$pc.item_id", "$$p.item_id"] }
+                      }
+                    },
+                    0
+                  ]
+                }
+              },
+              in: {
+                $multiply: [
+                  "$$p.quantity",
+                  { $toDouble: "$$matchingCost.price" }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+  {
     $group: {
       _id: null,
       totalInvoices: { $sum: 1 },
       totalRevenue: { $sum: "$totalRevenue" },
       totalOtherExpense: { $sum: "$totalOtherExpense" },
       totalFuelCharge: { $sum: "$totalFuelCharge" },
+      totalCost: { $sum: "$totalCost" },
       totalPending: {
         $sum: {
           $cond: [
@@ -1327,7 +1372,7 @@ Billing.aggregate([
     res.json({
       billings,
       totalCount,
-      stats: statsRaw[0] || { totalInvoices: 0, totalRevenue: 0, totalPending: 0 },
+      stats: statsRaw[0] || { totalInvoices: 0, totalRevenue: 0, totalPending: 0 , totalCost: 0},
     });
 
   } catch (err) {
