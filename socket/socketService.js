@@ -2,7 +2,6 @@ import Notification from "../models/notificationModal.js";
 import Users from '../models/userModel.js';
 
 let io = null;
-const userSocketMap = new Map(); // Moved here
 
 export function setSocketIO(ioInstance) {
   io = ioInstance;
@@ -10,10 +9,9 @@ export function setSocketIO(ioInstance) {
 
 export async function registerUser(userId, socketId) {
   try {
-    userSocketMap.set(userId, socketId);
     await Users.updateOne(
       { _id: userId },
-      { $set: { online_status: 'online' } }
+      { $set: { online_status: 'online' , socketId: socketId, lastCheckInTime: new Date() } }
     );
 
   } catch (err) {
@@ -23,33 +21,18 @@ export async function registerUser(userId, socketId) {
 
 
 export async function removeUserBySocket(socketId) {
-  try{
-  for (let [userId, id] of userSocketMap.entries()) {
-    if (id === socketId) {
-      userSocketMap.delete(userId);
-
-      await Users.updateOne(
-      { _id: userId },
-      { $set: { online_status: 'offline' } }
-    );
-
-      break;
-    }
+  // console.log("errror in socket pending");
+  let user = await Users.findOne({ socketId })
+  if(user){
+    user.online_status = 'offline';
+    user.socketId = 'offline';
+    await user.save();
   }
-}catch(err){
-  console.log("errror in socket"+err);
-}
 }
 
-export async function emitFirstNotificationEvent(userId) {
+export async function emitFirstNotificationEvent(userId,socketId) {
   if (!io) {
     console.error("Socket.io not initialized.");
-    return;
-  }
-
-  const socketId = userSocketMap.get(userId);
-  if (!socketId) {
-    console.error("Socket ID not found for user:", userId);
     return;
   }
 
@@ -80,21 +63,19 @@ export async function emitNotificationEvent(userIds) {
   const targets = Array.isArray(userIds) ? userIds : [userIds];
 
   for (const userId of targets) {
-    const socketId = userSocketMap.get(userId);
-    if (!socketId) {
-      console.log(`No active socket for user ${socketId}`);
-      continue;
-    }
 
     try {
+ 
+      let user = await Users.findById(userId);
       // fetch latest 5 unread + total count
       const [ notifications, totalCount ] = await Promise.all([
         Notification.find({ read: false, assignTo: userId })
                     .sort({ createdAt: -1 }).limit(5),
         Notification.countDocuments({ read: false, assignTo: userId })
       ]);
-
-      io.to(socketId).emit("notification", { notifications, count: totalCount });
+      if(user && user.socketId !== 'offline'){
+        io.to(user.socketId).emit("notification", { notifications, count: totalCount });
+      }
     } catch (err) {
       console.error(`Error emitting notification to ${userId}:`, err);
     }

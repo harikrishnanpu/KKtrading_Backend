@@ -25,4 +25,4 @@ yarn-error.log*
 .vercel
 
 
-/sockets/errorlogs.txt
+/logs

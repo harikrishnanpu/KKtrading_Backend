@@ -35,8 +35,8 @@ const NotificationSchema = new mongoose.Schema({
     }
   });
 
-  NotificationSchema.post('save', function (doc) {
-    emitNotificationEvent(doc.assignTo)
+  NotificationSchema.post('save', async function (doc) {
+    await emitNotificationEvent(doc.assignTo)
   });
 
 const Notification = mongoose.model('Notification', NotificationSchema);

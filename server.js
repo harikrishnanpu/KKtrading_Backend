@@ -121,7 +121,7 @@ io.on('connection', (socket) => {
 
   socket.on('register-user', async (userId) => {    
     await registerUser(userId, socket.id);
-    await emitFirstNotificationEvent(userId);
+    await emitFirstNotificationEvent(userId,socket.id);
   });
 
   socket.on('disconnect', () => {

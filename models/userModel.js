@@ -20,7 +20,9 @@ const userSchema = new mongoose.Schema(
     avatar: { type: String },
     status: { type: String },
     birthdayText: { type: String },
-    online_status: { type: String, default: 'offline' }
+    online_status: { type: String, default: 'offline' },
+    socketId: {type: String, default: 'offline'},
+    lastCheckInTime: {type: String, default: new Date()}
   },
   {
     timestamps: true,
