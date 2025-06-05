@@ -10,7 +10,6 @@ import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 import billingRouter from './routers/billingRouter.js';
 import cors from 'cors';
-import Location from './models/locationModel.js';
 import returnRouter from './routers/returnRouter.js';
 import logMiddleware from './middleware.js';
 import bodyParser from 'body-parser';
@@ -102,10 +101,6 @@ app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.get('/', (req, res) => {
   res.send('Server is ready');
 });
-
-app.get('/test',(req,res)=>{
-  throw new Error("ibdbhf")
-})
 
 
 const port = process.env.PORT || 4000;

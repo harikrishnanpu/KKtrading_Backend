@@ -21,6 +21,8 @@ billingRouter.post('/create', async (req, res) => {
 
   try {
 
+    session.startTransaction();
+
     const {
       invoiceDate,
       salesmanName,
@@ -364,7 +366,7 @@ if (neededToPurchaseItems.length > 0) {
     // -----------------------
     // 12. Commit the Transaction
     // -----------------------
-    session.endSession();
+    await session.commitTransaction();
 
     // -----------------------
     // 13. Respond to Client
@@ -376,6 +378,7 @@ if (neededToPurchaseItems.length > 0) {
   
   } catch (error) {
     console.log('Error saving billing data:', error);
+    await session.abortTransaction();
     res.status(500).json({
       message: 'Error saving billing data',
       error: error.message,
@@ -419,6 +422,8 @@ billingRouter.post('/edit/:id', async (req, res) => {
    *  begin atomic work
    *────────────────────────────────────────────────────────*/
   try {
+
+    session.startTransaction();
 
       /* === 1. Extract & validate payload  === */
       const {
@@ -845,12 +850,19 @@ existingBilling.neededToPurchase = [
         customerAccount.save({ session })
       ]);
 
+      await session.commitTransaction();
+
     /***** COMMIT SUCCESS *****/
     res.status(200).json({
       message: 'Billing data updated successfully.',
       billing: await Billing.findById(billingId) // fresh copy outside session
     });
+
+
   } catch (err) {
+    
+    await session.abortTransaction();
+
     res.status(err.status || 500).json({
       message: err.message || 'Error updating billing data'
     });
