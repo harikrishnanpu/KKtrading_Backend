@@ -7,6 +7,7 @@ import Return from '../models/returnModal.js';
 import Purchase from '../models/purchasemodals.js';
 import LeaveApplication from '../models/leaveApplicationModal.js';
 import expressAsyncHandler from 'express-async-handler';
+import mongoose from 'mongoose';
 
 const transactionRouter = express.Router();
 
@@ -120,7 +121,13 @@ transactionRouter.get('/transactions', async (req, res) => {
 
 // POST /api/daily/transactions
 transactionRouter.post('/transactions', async (req, res) => {
-  try {
+      const session = await mongoose.startSession();  
+      let savedTransaction = null;
+      
+      try {
+
+          await session.withTransaction(async () => {
+
     const {
       date,
       amount,
@@ -138,38 +145,38 @@ transactionRouter.post('/transactions', async (req, res) => {
 
     // Validate required fields
     if (!date || !amount || !category || !method || !userId || !type) {
-      return res.status(400).json({ message: 'Missing required fields.' });
+      throw new Error('Missing required fields.' );
     }
 
     // Validate transaction type
     const validTypes = ['in', 'out', 'transfer'];
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ message: 'Invalid transaction type.' });
+      throw new Error('Invalid transaction type.' );
     }
 
     // Additional validations based on transaction type
     if ((type === 'in' || type === 'transfer') && !paymentFrom) {
-      return res.status(400).json({ message: 'paymentFrom is required for this transaction type.' });
+      throw new Error('paymentFrom is required for this transaction type.' );
     }
 
     if ((type === 'out' || type === 'transfer') && !paymentTo) {
-      return res.status(400).json({ message: 'paymentTo is required for this transaction type.' });
+      throw new Error('paymentTo is required for this transaction type.' );
     }
 
     // Parse and validate amount
     const parsedAmount = parseFloat(amount);
     if (isNaN(parsedAmount) || parsedAmount <= 0) {
-      return res.status(400).json({ message: 'Invalid amount.' });
+      throw new Error('Invalid amount.' );
     }
 
     // Fetch the payment account by method (accountId)
     const myAccount = await PaymentsAccount.findOne({ accountId: method });
     if (!myAccount) {
-      return res.status(404).json({ message: 'Payment account not found.' });
+      throw new Error('Payment account not found.' );
     }
 
-    if(myAccount.balanceAmount < parsedAmount){
-      return res.status(400).json({message: `Amount exceeds balance amount ${myAccount.balanceAmount}`})
+    if(myAccount.balanceAmount < parsedAmount && type != 'in'){
+      throw new Error(`Amount exceeds balance amount ${myAccount.balanceAmount}`)
     }
 
     let referenceId; 
@@ -219,11 +226,11 @@ transactionRouter.post('/transactions', async (req, res) => {
       const toAccount = await PaymentsAccount.findOne({ accountId: paymentTo });
 
       if (!fromAccount || !toAccount) {
-        return res.status(404).json({ message: 'One or both payment accounts not found.' });
+        throw new Error('One or both payment accounts not found.' );
       }
 
       if (fromAccount.balanceAmount < parsedAmount) {
-        return res.status(400).json({ message: 'Insufficient funds in the source account.' });
+        throw new Error('Insufficient funds in the source account.' );
       }
 
       referenceIdOut = 'OUT' + Date.now().toString();
@@ -282,12 +289,16 @@ transactionRouter.post('/transactions', async (req, res) => {
     }
 
     const newTransaction = new DailyTransaction(newTransactionData);
-    const savedTransaction = await newTransaction.save();
+     savedTransaction = await newTransaction.save();
+
+  });
 
     res.status(201).json(savedTransaction);
   } catch (error) {
     console.error('Error creating transaction:', error);
-    res.status(500).json({ message: 'Server Error while creating transaction.' });
+    res.status(500).json({ message:  error.message || 'Server Error while creating transaction.' });
+  }finally{
+    await session.endSession();
   }
 });
 

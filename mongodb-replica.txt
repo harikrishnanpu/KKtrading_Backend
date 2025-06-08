@@ -1,0 +1,4 @@
+#!/bin/bash
+mongod --replSet rs0 --port 27017 --dbpath ~/mongo-replica/rs1 --bind_ip localhost --fork --logpath ~/mongo-replica/rs1/mongo.log
+mongod --replSet rs0 --port 27018 --dbpath ~/mongo-replica/rs2 --bind_ip localhost --fork --logpath ~/mongo-replica/rs2/mongo.log
+mongod --replSet rs0 --port 27019 --dbpath ~/mongo-replica/rs3 --bind_ip localhost --fork --logpath ~/mongo-replica/rs3/mongo.log

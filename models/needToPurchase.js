@@ -1,21 +1,17 @@
 // models/NeedToPurchase.js
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const schema = new mongoose.Schema(
-  {
-    item_id: { type: String, required: true },
-    name:    { type: String, required: true },
-    quantity: { type: Number, required: true },
-    requestedBy: String,
-    purchased:  { type: Boolean, default: false },
-    verified:   { type: Boolean, default: false },
-    invoiceNo: { type: String },
-    quantityNeeded:  { type: Number, default: 0 },     
-    purchaseId:      { type: String },  
-  },
-  { timestamps: true }
-);
+const NeedToPurchaseSchema = new mongoose.Schema({
+  item_id:        { type: String, required: true, trim: true },
+  name:           { type: String, required: true, trim: true },
+  salesmanName:   { type: String, default: '', trim: true },    // NEW
+  remark:         { type: String, default: '', trim: true },    // NEW
+  quantity:       { type: Number, required: true },
+  quantityNeeded: { type: Number, default: 0 },
+  purchased:      { type: Boolean, default: false },
+  verified:       { type: Boolean, default: false },
+  invoiceNo:      { type: String, default: '', trim: true },
+  purchaseId:     { type: String, default: '', trim: true }
+}, { timestamps: true });
 
-
-const NeedToPurchase =  mongoose.model("NeedToPurchase", schema);
-export default NeedToPurchase;
+export default mongoose.model('NeedToPurchase', NeedToPurchaseSchema);

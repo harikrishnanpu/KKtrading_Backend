@@ -6,7 +6,7 @@ const ChatMessageSchema = new mongoose.Schema(
     to: { type: String, required: true },
     text: { type: String, default: '' },
     time: { type: String }, // Or store Date, up to you.
-
+    status: {type: String, default: 'sent'},
     // If you want to store the file URL (image/audio/video), you can do:
     fileUrl: { type: String }
   },

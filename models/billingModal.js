@@ -89,7 +89,8 @@ const BillingSchema = new mongoose.Schema(
         quantityNeeded: { type: Number, required: true },
         purchased: { type: Boolean, default: false },
         verified: { type: Boolean, default: false },
-        purchaseId: { type: String }
+        purchaseId: { type: String ,trim: true},
+        salesmanName: {type: String, trim: true}
       },
     ],    
 

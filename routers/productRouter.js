@@ -283,7 +283,7 @@ productRouter.get(
     }
 
     // Log valid products for debugging
-    console.log('Products to insert:', validProducts);
+    // console.log('Products to insert:', validProducts);
 
     // Insert only the valid products into the database
     const createdProducts = await Product.insertMany(validProducts);
@@ -1299,9 +1299,9 @@ productRouter.put(
             transportType: 'logistic',
           });
           
-          console.log(oldLogistic)
+          // console.log(oldLogistic)
           if (transportPayment) {
-            console.log(transportPayment)
+            // console.log(transportPayment)
             transportPayment.billings = transportPayment.billings.filter(
               (billing) => billing.billId !== oldLogistic.billId
             );

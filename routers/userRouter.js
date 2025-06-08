@@ -1162,14 +1162,43 @@ userRouter.get('/salesmen/all', async (req, res) => {
 });
 
 
-userRouter.get('/alllogs/all', async (req,res)=>{
-  try{
-      const allLogs = await Log.find().sort({createdAt: -1})
-      res.status(200).json(allLogs)
-  }catch (error){
-      res.status(500).json({message: "Error Fetching"})
+userRouter.get('/alllogs/all', async (req, res) => {
+  try {
+    const {
+      dateFrom,
+      dateTo,
+      username,
+      action,
+      sortField = 'createdAt',
+      sortOrder = 'desc'
+    } = req.query;
+
+    // Build filter object
+    const filter = {};
+    if (dateFrom || dateTo) {
+      filter.createdAt = {};
+      if (dateFrom) filter.createdAt.$gte = new Date(dateFrom);
+      if (dateTo) {
+        const dt = new Date(dateTo);
+        dt.setHours(23, 59, 59, 999);
+        filter.createdAt.$lte = dt;
+      }
+    }
+    if (username) filter.username = { $regex: username.trim(), $options: 'i' };
+    if (action)   filter.action   = { $regex: action.trim(),   $options: 'i' };
+
+    // Build sort object
+    const sort = {};
+    sort[sortField] = sortOrder === 'asc' ? 1 : -1;
+
+    // Query
+    const logs = await Log.find(filter).sort(sort).lean();
+    res.status(200).json(logs);
+  } catch (err) {
+    console.error('Error fetching logs:', err);
+    res.status(500).json({ message: 'Error fetching logs' });
   }
-})
+});
 
 userRouter.post('/alllogs/all', async (req,res)=>{
   try{
