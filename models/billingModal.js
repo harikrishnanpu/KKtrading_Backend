@@ -25,10 +25,7 @@ const BillingSchema = new mongoose.Schema(
     customerAddress: { type: String, required: true },
     customerContactNumber: { type: String },
     roundOff: { type: Number, default: 0 },
-    roundoffMode: {type: String, default: 'add'},
-
-    // Removed kmTravelled, startingKm, endKm, fuelCharge fields from the main level
-
+    roundOffMode: {type: String, default: 'add'},
     marketedBy: { type: String },
     unloading: { type: Number, default: 0 },
     transportation: { type: Number, default: 0 },

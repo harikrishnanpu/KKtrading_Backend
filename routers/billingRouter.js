@@ -435,6 +435,8 @@ billingRouter.post('/edit/:id', async (req, res) => {
         isneededToPurchase
       } = req.body;
 
+      
+
       const required = [
         invoiceNo, invoiceDate, salesmanName,
         expectedDeliveryDate, billingAmount,
@@ -821,7 +823,7 @@ billingRouter.post('/edit/:id', async (req, res) => {
         deliveryStatus,
         salesmanPhoneNumber: salesmanPhoneNumber.trim(),
         roundOff: num(roundOff),
-        roundOffMode,
+        roundOffMode: roundOffMode || existingBilling.roundOffMode,
         isneededToPurchase: !!isneededToPurchase
       });
 

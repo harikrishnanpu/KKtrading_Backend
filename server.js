@@ -48,7 +48,7 @@ app.use(bodyParser.json({ limit: '10mb' }));
 
 
 
-mongoose.connect('mongodb://localhost:27017,localhost:27018,localhost:27019/kktdb?replicaSet=rs0',);
+mongoose.connect('mongodb://localhost:27017,localhost:27018,localhost:27019/kktdb?replicaSet=rs0&retryWrites=true&w=majority');
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
