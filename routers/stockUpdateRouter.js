@@ -3,6 +3,7 @@ import asyncHandler from 'express-async-handler';
 import Product from '../models/productModel.js';
 import StockOpening from '../models/stockOpeningModal.js';
 import StockRegistry from '../models/StockregistryModel.js';
+import mongoose from 'mongoose';
 
 const stockUpdateRouter = express.Router();
 
@@ -35,15 +36,11 @@ stockUpdateRouter.get('/search-products', asyncHandler(async (req, res) => {
  * quantityChange can be + or - number.
  */
 stockUpdateRouter.post('/create', asyncHandler(async (req, res) => {
+  const session = await mongoose.startSession();
   const { item_id, quantityChange, submittedBy, remark } = req.body;
 
   if (!item_id || !quantityChange || !submittedBy) {
     return res.status(400).json({ message: 'Missing required fields.' });
-  }
-
-  const product = await Product.findOne({ item_id });
-  if (!product) {
-    return res.status(404).json({ message: 'Product not found.' });
   }
 
   const parsedQuantity = parseFloat(quantityChange);
@@ -51,44 +48,77 @@ stockUpdateRouter.post('/create', asyncHandler(async (req, res) => {
     return res.status(400).json({ message: 'Invalid quantity change.' });
   }
 
-  // Check if subtracting more than in stock
-  if (parsedQuantity < 0 && product.countInStock < Math.abs(parsedQuantity)) {
-    return res.status(400).json({ message: 'Not enough stock to subtract.' });
-  }
+  let responsePayload = null;
 
-  // Update product stock
-  product.countInStock += parsedQuantity;
-  await product.save();
+  try {
+    await session.withTransaction(async () => {
+      const product = await Product.findOne({ item_id }).session(session);
+      if (!product) {
+        throw new Error('NOT_FOUND');
+      }
 
-  // Create log entry
-  const logEntry = new StockOpening({
-    item_id: product.item_id,
-    name: product.name,
-    quantity: parsedQuantity,
-    submittedBy,
-    remark: remark || '',
-    date: new Date(),
-  });
-  await logEntry.save();
+      // Prevent negative stock
+      if (parsedQuantity < 0 && product.countInStock < Math.abs(parsedQuantity)) {
+        throw new Error('INSUFFICIENT_STOCK');
+      }
 
-    // --- 📌 Add StockRegistry Entry ---
-    const stockEntry = new StockRegistry({
-      date: new Date(),
-      updatedBy: submittedBy,
-      itemId: product.item_id,
-      name: product.name,
-      brand: product.brand,
-      category: product.category,
-      changeType: parsedQuantity > 0 ? 'Manual Addition' : 'Manual Reduction',
-      invoiceNo: 'N/A', // No invoice for manual updates
-      quantityChange: parsedQuantity,
-      finalStock: product.countInStock,
+      // Update stock
+      product.countInStock += parsedQuantity;
+      await product.save({ session });
+
+      // Log entry
+      const logEntry = new StockOpening({
+        item_id: product.item_id,
+        name: product.name,
+        quantity: parsedQuantity,
+        submittedBy,
+        remark: remark || '',
+        date: new Date(),
+      });
+
+      await logEntry.save({ session });
+
+      // StockRegistry entry
+      const stockEntry = new StockRegistry({
+        date: new Date(),
+        updatedBy: submittedBy,
+        itemId: product.item_id,
+        name: product.name,
+        brand: product.brand,
+        category: product.category,
+        changeType: parsedQuantity > 0 ? 'Manual Addition' : 'Manual Reduction',
+        invoiceNo: 'N/A',
+        quantityChange: parsedQuantity,
+        finalStock: product.countInStock,
+      });
+
+      await stockEntry.save({ session });
+
+      responsePayload = {
+        message: 'Stock updated successfully.',
+        log: logEntry,
+      };
     });
-  
-    await stockEntry.save();
 
-  res.json({ message: 'Stock updated successfully.', log: logEntry });
+    if (responsePayload) {
+      res.status(200).json(responsePayload);
+    } else {
+      res.status(500).json({ message: 'Transaction completed, but no response generated.' });
+    }
+  } catch (err) {
+    console.error(err);
+    if (err.message === 'NOT_FOUND') {
+      res.status(404).json({ message: 'Product not found.' });
+    } else if (err.message === 'INSUFFICIENT_STOCK') {
+      res.status(400).json({ message: 'Not enough stock to subtract.' });
+    } else {
+      res.status(500).json({ message: 'Stock update failed.' });
+    }
+  } finally {
+    await session.endSession();
+  }
 }));
+
 
 /**
  * GET /api/stock-update/logs
@@ -154,42 +184,63 @@ stockUpdateRouter.get(
  * Delete a stock update log and revert product stock.
  */
 stockUpdateRouter.delete('/:id', asyncHandler(async (req, res) => {
+  const session = await mongoose.startSession();
   const { id } = req.params;
-  const logEntry = await StockOpening.findById(id);
-  if (!logEntry) {
-    return res.status(404).json({ message: 'Log entry not found.' });
+  let responseData = null;
+
+  try {
+    await session.withTransaction(async () => {
+      const logEntry = await StockOpening.findById(id).session(session);
+      if (!logEntry) {
+        throw new Error('NOT_FOUND'); // Use custom error string
+      }
+
+      const product = await Product.findOne({ item_id: logEntry.item_id }).session(session);
+      if (!product) {
+        await logEntry.deleteOne({ session });
+        responseData = { message: 'Log deleted, but product not found. Stock not reverted.' };
+        return;
+      }
+
+      product.countInStock -= logEntry.quantity;
+      await product.save({ session });
+
+      const stockEntry = new StockRegistry({
+        date: new Date(),
+        updatedBy: 'System',
+        itemId: product.item_id,
+        name: product.name,
+        brand: product.brand,
+        category: product.category,
+        changeType: 'Reverted Stock Update (Deletion)',
+        invoiceNo: 'N/A',
+        quantityChange: -logEntry.quantity,
+        finalStock: product.countInStock,
+      });
+
+      await stockEntry.save({ session });
+      await logEntry.deleteOne({ session });
+
+      responseData = { message: 'Stock update log deleted and stock reverted successfully.' };
+    });
+
+    if (responseData) {
+      res.status(200).json(responseData);
+    } else {
+      res.status(500).json({ message: 'Transaction completed, but no response generated.' });
+    }
+  } catch (err) {
+    console.error(err);
+    if (err.message === 'NOT_FOUND') {
+      res.status(404).json({ message: 'Log entry not found.' });
+    } else {
+      res.status(500).json({ message: 'Stock update unsuccessful.' });
+    }
+  } finally {
+    await session.endSession();
   }
-
-  const product = await Product.findOne({ item_id: logEntry.item_id });
-  if (!product) {
-    // Product not found, just delete the log?
-    await logEntry.deleteOne();
-    return res.json({ message: 'Log deleted, but product not found. Stock not reverted.' });
-  }
-
-  // Revert stock
-  product.countInStock -= logEntry.quantity; // If the log was +10, we do -10 now
-  await product.save();
-
-  
-  // --- 📌 Add StockRegistry Entry ---
-  const stockEntry = new StockRegistry({
-    date: new Date(),
-    updatedBy: 'System', // Deletion is usually system-triggered
-    itemId: product.item_id,
-    name: product.name,
-    brand: product.brand,
-    category: product.category,
-    changeType: 'Reverted Stock Update (Deletion)',
-    invoiceNo: 'N/A', // No invoice involved
-    quantityChange: -logEntry.quantity, // Reversing the previous change
-    finalStock: product.countInStock,
-  });
-  
-  await stockEntry.save();
-  
-  await logEntry.deleteOne();
-  res.json({ message: 'Stock update log deleted and stock reverted successfully.' });
 }));
+
+
 
 export default stockUpdateRouter;
