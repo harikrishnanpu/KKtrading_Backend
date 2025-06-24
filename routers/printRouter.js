@@ -2511,38 +2511,76 @@ printRouter.post('/generate-leave-application-pdf', async (req, res) => {
 });
 
 
-printRouter.get('/export', async (req, res) => {
-    try {
-      const collections = await mongoose.connection.db.listCollections().toArray();
 
-      // Create a new workbook
-      const workbook = xlsx.utils.book_new();
+const flattenDocuments = (docs) => {
+  const flat = [];
 
-      for (const collection of collections) {
-          const collectionName = collection.name;
+  for (const doc of docs) {
+    const { _id, ...rest } = doc;
 
-          // Fetch all data from the current collection
-          const data = await mongoose.connection.db.collection(collectionName).find({}).toArray();
+    let hasArray = false;
 
-          // Convert data to a worksheet
-          const worksheet = xlsx.utils.json_to_sheet(data);
+    for (const key in rest) {
+      if (Array.isArray(rest[key])) {
+        hasArray = true;
+        const arrayField = rest[key];
 
-          // Append the worksheet to the workbook with the collection name as the sheet name
-          xlsx.utils.book_append_sheet(workbook, worksheet, collectionName);
+        for (const item of arrayField) {
+          flat.push({
+            _id: _id.toString(),
+            ...rest,
+            ...item,
+            __arrayField: key // optional: to keep track of source array
+          });
+        }
+
+        break; // flatten only the first array field
       }
+    }
 
-      // Write to a buffer instead of a file
-      const buffer = xlsx.write(workbook, { bookType: 'xlsx', type: 'buffer' });
+    if (!hasArray) {
+      flat.push({
+        _id: _id.toString(),
+        ...rest
+      });
+    }
+  }
 
-      // Set response headers to prompt file download
-      res.setHeader('Content-Disposition', 'attachment; filename=all_data.xlsx');
-      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+  return flat;
+};
 
-      // Send the buffer as the response
-      res.send(buffer);
+printRouter.get('/export', async (req, res) => {
+  try {
+    const collections = await mongoose.connection.db.listCollections().toArray();
+    const workbook = xlsx.utils.book_new();
+
+    for (const collection of collections) {
+      const collectionName = collection.name;
+
+      const rawData = await mongoose.connection.db
+        .collection(collectionName)
+        .find({})
+        .toArray();
+
+      // Convert ObjectIds and Dates to strings for readability
+      const sanitizedData = rawData.map(doc => {
+        return JSON.parse(JSON.stringify(doc));
+      });
+
+      const flattened = flattenDocuments(sanitizedData);
+
+      const worksheet = xlsx.utils.json_to_sheet(flattened);
+      xlsx.utils.book_append_sheet(workbook, worksheet, collectionName);
+    }
+
+    const buffer = xlsx.write(workbook, { bookType: 'xlsx', type: 'buffer' });
+
+    res.setHeader('Content-Disposition', 'attachment; filename=all_data.xlsx');
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    res.send(buffer);
   } catch (error) {
-      console.error('Error exporting data:', error);
-      res.status(500).send('Internal Server Error');
+    console.error('Error exporting data:', error);
+    res.status(500).send('Internal Server Error');
   }
 });
 
