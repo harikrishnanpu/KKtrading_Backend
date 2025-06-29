@@ -11,6 +11,7 @@ import mongoose from 'mongoose';
 
 const transactionRouter = express.Router();
 
+
 // Middleware to protect routes (ensure user is authenticated)
 
 // GET /api/daily/transactions?date=YYYY-MM-DD
@@ -307,9 +308,12 @@ transactionRouter.post('/transactions', async (req, res) => {
 transactionRouter.get(
   '/daily/report',
   expressAsyncHandler(async (req, res) => {
-    const dateStr = req.query.date || new Date().toISOString().slice(0, 10);
-    const start   = new Date(`${dateStr}T00:00:00.000Z`);
-    const end     = new Date(`${dateStr}T23:59:59.999Z`);
+    const fromStr = req.query.from || req.query.date || new Date().toISOString().slice(0, 10);
+    const toStr   = req.query.to   || req.query.date || new Date().toISOString().slice(0, 10);
+    
+
+    const start = new Date(`${fromStr}T00:00:00.000Z`);
+    const end   = new Date(`${toStr}T23:59:59.999Z`);
 
     /* ── Sales (approved bills) ─────────────────────────────── */
     const [{ totalBills = 0 } = {}] = await Billing.aggregate([
@@ -396,8 +400,9 @@ transactionRouter.get(
       .select('userId userName reason')
       .lean();
 
-    res.json({
-      date           : dateStr,
+ res.json({
+      fromDate       : fromStr,
+      toDate         : toStr,
       totalBills     : +totalBills.toFixed(2),
       totalPurchases : +totalPurchases.toFixed(2),
       totalReturns   : +totalReturns.toFixed(2),
@@ -406,7 +411,7 @@ transactionRouter.get(
       accountsBalance: +accountsBalance.toFixed(2),
       paymentsIn     : +paymentsIn.toFixed(2),
       paymentsOut    : +paymentsOut.toFixed(2),
-      paymentsTransfer : +paymentsTransfer.toFixed(2),
+      paymentsTransfer: +paymentsTransfer.toFixed(2),
       todaysLeaves
     });
   })

@@ -1,18 +1,118 @@
-import http from 'http';
-import { Server } from 'socket.io';
+// /server/server.js  (ES-module syntax)
+
 import express from 'express';
-import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+import mongoSanitize from 'express-mongo-sanitize';
+import xssClean from 'xss-clean';
+import hpp from 'hpp';
 import path from 'path';
+import fs from 'fs';
+import morgan from 'morgan';
+import { fileURLToPath } from 'url';
+import http from 'http';
+import { Server as SocketIO } from 'socket.io';
+
+/* ------------- load env vars ------------- */
+dotenv.config();
+const {
+  NODE_ENV,
+  PORT = 4000,
+  FRONTEND_URL = 'https://office.vrkkt.com',
+  MONGODB_URI,
+} = process.env;
+
+/* ------------- DB connection ------------- */
+mongoose
+  .connect(MONGODB_URI, { autoIndex: NODE_ENV === 'development' })
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => {
+    console.error('MongoDB connection error:', err);
+    process.exit(1);
+  });
+
+/* ------------- app + middleware ------------- */
+const app = express();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+/* ---------- security headers (Helmet) ---------- */
+app.use(
+  helmet({
+    crossOriginEmbedderPolicy: false,
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com'],
+        styleSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com', "'unsafe-inline'"],
+        imgSrc: ["'self'", 'data:', 'blob:'],
+        connectSrc: ["'self'", FRONTEND_URL, 'wss://office.vrkkt.com'],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: [],
+      },
+    },
+  })
+);
+
+/* ---------- CORS ---------- */
+
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:4000', 'http://192.168.1.50:4000' , FRONTEND_URL];
+
+app.use(
+  cors({
+    origin(origin, cb) {
+      if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
+      return cb(new Error('CORS – origin not allowed'));
+    },
+    credentials: true,
+  })
+);
+
+/* ---------- body parsers ---------- */
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+/* ---------- payload sanitizers ---------- */
+app.use(mongoSanitize()); // prevent NoSQL injection
+app.use(xssClean());      // prevent XSS
+app.use(hpp());           // prevent HTTP param pollution
+
+/* ---------- rate limiter ---------- */
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 min
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.use('/api/', apiLimiter);
+
+/* ---------- request logging ---------- */
+if (NODE_ENV !== 'test') {
+  app.use(
+    morgan('combined', {
+      stream: fs.createWriteStream(
+        path.join(__dirname, 'logs', `access-${new Date().toISOString().slice(0, 10)}.log`),
+        { flags: 'a' }
+      ),
+    })
+  );
+  app.use(morgan('dev')); // console
+}
+
+/* ---------- custom middleware ---------- */
+import logMiddleware, { useAdminAuth, useAuth } from './middleware.js';
+app.use(logMiddleware);
+
+/* ---------- routers ---------- */
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 import billingRouter from './routers/billingRouter.js';
-import cors from 'cors';
 import returnRouter from './routers/returnRouter.js';
-import logMiddleware from './middleware.js';
-import bodyParser from 'body-parser';
 import transactionRouter from './routers/dailyRouter.js';
 import purchaseRouter from './routers/purchaseRouter.js';
 import printRouter from './routers/printRouter.js';
@@ -34,125 +134,95 @@ import ContactRouter from './routers/contactsRouter.js';
 import updateInfoRouter from './routers/updatesInfoRouter.js';
 import purchaseRequestRouter from './routers/purchaseRequestRouter.js';
 import needToPurchaseRouter from './routers/needToPurchaseRouter.js';
-import fs from 'node:fs';
-import { emitFirstNotificationEvent, registerUser, removeUserBySocket, setSocketIO } from './socket/socketService.js';
 
-dotenv.config();
-
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cors());
-app.use(logMiddleware);
-app.use(bodyParser.json({ limit: '10mb' }));
-
-
-
-mongoose.connect('mongodb://localhost:27017,localhost:27018,localhost:27019/kktdb?replicaSet=rs0&retryWrites=true&w=majority');
-app.use('/api/uploads', uploadRouter);
+/* --- mount routers --- */
+app.use('/api/uploads', useAuth, uploadRouter);
 app.use('/api/users', userRouter);
-app.use('/api/products', productRouter);
-app.use('/api/orders', orderRouter);
-app.use('/api/billing', billingRouter); // Use the billing routes under the /api/billing path
-app.use('/api/returns',returnRouter);
-app.use('/api/daily',transactionRouter); 
-app.use('/api/purchases',purchaseRouter);
-app.use('/api/print',printRouter);
-app.use('/api/accounts',accountRouter);
-app.use('/api/sellerPayments',sellerPaymentsRouter);
-app.use('/api/transportpayments', transportPaymentsRouter);
-app.use('/api/site-report', siteReportRouter);
-app.use('/api/customer', customerRouter);
-app.use('/api/seller', supplierRouter);
-app.use('/api/stock-update', stockUpdateRouter);
-app.use('/api/leaves', leaveApplicationRouter);
-app.use('/api/chart', dashboardRouter); 
-app.use('/api/announcements', announcementRouter);
-app.use('/api/taskboard', taskRouter)
-app.use('/api/calendar', calendarRouter);
-app.use('/api/chat', chatRouter);
-app.use('/api/notifications', notificationRouter);
-app.use('/api/contacts', ContactRouter);
-app.use('/api/updates', updateInfoRouter);
-app.use('/api/purchase-requests', purchaseRequestRouter);
-app.use("/api/needtopurchase", needToPurchaseRouter);
+app.use('/api/products', useAuth, productRouter);
+app.use('/api/orders', useAuth, orderRouter);
+app.use('/api/billing', useAuth, billingRouter);
+app.use('/api/returns', useAuth, returnRouter);
+app.use('/api/daily', useAdminAuth, transactionRouter);
+app.use('/api/purchases', useAdminAuth , purchaseRouter);
+app.use('/api/print' , useAdminAuth , printRouter);
+app.use('/api/accounts', useAuth ,  accountRouter);
+app.use('/api/sellerPayments', useAdminAuth , sellerPaymentsRouter);
+app.use('/api/transportpayments', useAdminAuth , transportPaymentsRouter);
+app.use('/api/site-report', useAdminAuth , siteReportRouter);
+app.use('/api/customer', useAdminAuth , customerRouter);
+app.use('/api/seller', useAdminAuth , supplierRouter);
+app.use('/api/stock-update', useAuth , stockUpdateRouter);
+app.use('/api/leaves', useAuth , leaveApplicationRouter);
+app.use('/api/chart' , useAuth , dashboardRouter);
+app.use('/api/announcements' , useAuth , announcementRouter);
+app.use('/api/taskboard', useAuth , taskRouter);
+app.use('/api/calendar',useAuth, calendarRouter);
+app.use('/api/chat',useAuth, chatRouter);
+app.use('/api/notifications', useAuth, notificationRouter);
+app.use('/api/contacts', useAuth, ContactRouter);
+app.use('/api/updates', useAuth , updateInfoRouter);
+app.use('/api/purchase-requests', useAuth,  purchaseRequestRouter);
+app.use('/api/needtopurchase', useAuth, needToPurchaseRouter);
 
+/* ---------- static files ---------- */
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+const buildPath = path.join(__dirname, 'frontend', 'dist');
+app.use(express.static(buildPath));
 
-
-
-
-
-
-
-app.get('/api/config/paypal', (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
-});
-app.get('/api/config/google', (req, res) => {
-  res.send(process.env.GOOGLE_API_KEY || '');
-});
-const __dirname = path.resolve();
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
-app.use(express.static(path.join(__dirname, '/frontend/build')));
-// app.get('*', (req, res) =>
-//   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
-// );
-
-
-app.get('/', (req, res) => {
-  res.send('Server is ready');
+/* ⚠️  SPA catch-all (safe alt to app.use('*')) */
+app.get(/^\/(?!api\/).*/, (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'));
 });
 
+/* ---------- basic health route ---------- */
+app.get('/status', (_, res) => res.json({ ok: true, timestamp: Date.now() }));
 
-const port = process.env.PORT || 4000;
+/* ---------- HTTP + Socket.IO ---------- */
+const httpServer = http.createServer(app);
 
-const httpServer = http.Server(app);
-export const io = new Server(httpServer, { cors: { origin: '*' } });
-setSocketIO(io); // pass socket instance globally
+const io = new SocketIO(httpServer, {
+  cors: {
+    origin: allowedOrigins,
+    methods: ['GET', 'POST'],
+    credentials: true,
+  },
+});
 
-
+import { registerUser, emitFirstNotificationEvent, removeUserBySocket, setSocketIO } from './socket/socketService.js';
+setSocketIO(io);
 
 io.on('connection', (socket) => {
   console.log('Socket connected:', socket.id);
 
-  socket.on('register-user', async (userId) => {    
+  socket.on('register-user', async (userId) => {
     await registerUser(userId, socket.id);
-    await emitFirstNotificationEvent(userId,socket.id);
+    await emitFirstNotificationEvent(userId, socket.id);
   });
 
-  socket.on('disconnect', () => {
-    removeUserBySocket(socket.id);
-  });
-
+  socket.on('disconnect', () => removeUserBySocket(socket.id));
 });
 
+/* ---------- central error handler ---------- */
 app.use((err, req, res, next) => {
+  const logLine = `[${new Date().toISOString()}] ${req.method} ${
+    req.originalUrl
+  } - ${err.stack || err.message}\n`;
 
-  // Prepare log message
-  const errorLog = `[${new Date().toISOString()}] ${req.method} ${req.originalUrl} - ${err.stack || err.message}\n`;
-
-  // Ensure logs directory exists
   const logDir = path.join(__dirname, 'logs');
+  fs.mkdirSync(logDir, { recursive: true });
+  fs.appendFileSync(
+    path.join(logDir, `error-${new Date().toISOString().slice(0, 10)}.log`),
+    logLine
+  );
 
-  // Append to error log file
-  fs.appendFile(path.join(logDir, 'errorlogs.txt'), errorLog, (fsErr) => {
-    if (fsErr) {
-      console.error('Failed to write to log file:', fsErr);
-    }
+  res.status(err.status || 500).json({
+    message: 'Error From Server: report the issue !',
+    error: NODE_ENV === 'development' ? err.message : undefined,
   });
 
-  // Respond to the client
-  res.status(500).json({
-    message: 'Internal Server Error',
-    error: process.env.NODE_ENV === 'development' ? err.message : undefined,
-  });
 });
 
-
-httpServer.listen(port,'0.0.0.0', () => {
-  console.log(`Serve at http://localhost:${port}`);
-});
-
-
-
-
-
+/* ---------- start server ---------- */
+httpServer.listen(PORT, '0.0.0.0', () =>
+  console.log(`API server running successfully ➜`)
+);

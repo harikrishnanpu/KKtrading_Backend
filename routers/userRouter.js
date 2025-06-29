@@ -13,6 +13,7 @@ import PaymentsAccount from '../models/paymentsAccountModal.js';
 import CustomerAccount from '../models/customerModal.js';
 import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
+import { useAdminAuth, useAuth } from '../middleware.js';
 
 
 const userRouter = express.Router();
@@ -41,6 +42,9 @@ userRouter.post(
   expressAsyncHandler(async (req, res) => {
     const { email, password } = req.body;
 
+
+    try{
+
     // Check if both email and password are provided
     if (!email || !password) {
       return res.status(400).json({ message: 'Email and password are required' });
@@ -63,20 +67,37 @@ userRouter.post(
       { expiresIn: '1 days' }
     );
 
-    return res.status(200).json({
-      serviceToken,
-      user: {
-        _id: user._id,
-        id: user._id,
-        email: user.email,
-        name: user.name,
-        role: user.role,
-        isAdmin: user.isAdmin,
-        isEmployee: user.isEmployee,
-        isSuper: user.isSuper
-      }
-    });
+
+res
+  .cookie('token', serviceToken, {
+    httpOnly: true,             
+    secure: true,
+    sameSite: 'strict',       
+    maxAge: 24 * 60 * 60 * 1000   
   })
+  .status(200)
+  .json({
+    message: 'Login successful',
+    serviceToken,
+    user: {
+      _id: user._id,
+      email: user.email,
+      name: user.name,
+      role: user.role,
+      isAdmin: user.isAdmin,
+      isEmployee: user.isEmployee,
+      isSuper: user.isSuper
+    }
+  });
+
+
+  }catch(err){
+    res.status(500).json({message: err.message})
+  }
+
+
+  })
+
 );
 
 
@@ -143,8 +164,29 @@ userRouter.post(
           isSuper: createdUser.isSuper
         };
         
-      return res.status(200).json({ serviceToken, user }); // Use 201 for successful creation
-      }
+res
+  .cookie('token', serviceToken, {
+    httpOnly: true,             
+    secure: true,
+    sameSite: 'strict',       
+    maxAge: 24 * 60 * 60 * 1000   
+  })
+  .status(200)
+  .json({
+    message: 'register successful',
+    serviceToken,
+    user: {
+      _id: user._id,
+      email: user.email,
+      name: user.name,
+      role: user.role,
+      isAdmin: user.isAdmin,
+      isEmployee: user.isEmployee,
+      isSuper: user.isSuper
+    }
+  });
+
+}
     } catch (error) {
       console.error("Error during user registration:", error); // Log the error
       return res.status(500).json({ message: "Internal server error" });
@@ -185,7 +227,7 @@ userRouter.get(
       // Fetch the user from the database
       const user = await User.findById(userId); // Ensure this is awaited
 
-      if (!user) {
+      if (!user || !user.isEmployee) {
         console.log('User not found for given token');
         return res.status(401).json({ message: 'Invalid Token' });
       }
@@ -203,6 +245,8 @@ userRouter.get(
           isSuper: user.isSuper
         },
       });
+
+
     } catch (err) {
       console.error('Unexpected Error:', err.message);
       return res.status(500).json({ message: 'Internal Server Error' });
@@ -265,6 +309,7 @@ userRouter.post('/logout/:userId', async (req, res) => {
 
 
 userRouter.put("/user/edit/:id",  
+  useAdminAuth,
   expressAsyncHandler(async (req, res) => {
     const userId = req.params.id;
     
@@ -374,6 +419,8 @@ userRouter.get('/notify/all', async (req, res) => {
 
 userRouter.delete(
   '/:id',
+  useAdminAuth
+  ,
   expressAsyncHandler(async (req, res) => {
     // Look up the user
     const user = await User.findById(req.params.id);
@@ -401,7 +448,7 @@ userRouter.delete(
 userRouter.get('/:id',
   expressAsyncHandler(async (req,res)=>{
     try{
-      const user = await User.findById(req.params.id)
+      const user = await User.findById(req.params.id).lean().select('-password')
       if(user){
         res.json(user)
       }else{
@@ -416,7 +463,7 @@ userRouter.get('/:id',
 userRouter.get('/user/:id',
   expressAsyncHandler(async (req,res)=>{
     try{
-      const user = await User.findById(req.params.id)
+      const user = await User.findById(req.params.id).lean().select('-password')
       if(user){
         res.json(user)
       }else{
@@ -430,6 +477,7 @@ userRouter.get('/user/:id',
 
 userRouter.put(
   '/:id',
+  useAdminAuth,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
@@ -540,7 +588,7 @@ userRouter.get('/location/users', async (req, res) => {
 
 
 // Start Delivery Endpoint
-userRouter.post("/billing/start-delivery", async (req, res) => {
+userRouter.post("/billing/start-delivery", useAuth ,  async (req, res) => {
   try {
     const { userId, driverName, invoiceNo, startLocation, deliveryId } = req.body;
 
@@ -622,7 +670,7 @@ userRouter.post("/billing/start-delivery", async (req, res) => {
 });
 
 
-userRouter.post("/billing/cancel-delivery", async (req, res) => {
+userRouter.post("/billing/cancel-delivery", useAuth, async (req, res) => {
   try {
     const { userId, driverName, invoiceNo, deliveryId, cancelReason } = req.body;
 
@@ -677,7 +725,7 @@ userRouter.post("/billing/cancel-delivery", async (req, res) => {
 
 
 // End Delivery Endpoint
-userRouter.post("/billing/end-delivery", async (req, res) => {
+userRouter.post("/billing/end-delivery", useAuth, async (req, res) => {
   const session = await mongoose.startSession();
   try {
     const {
@@ -961,17 +1009,18 @@ for (const expense of otherExpenses) {
 // =========================
 // Route: Update Payment for a Billing Entry
 // =========================
-userRouter.post("/billing/update-payment", async (req, res) => {
+userRouter.post("/billing/update-payment", useAdminAuth , async (req, res) => {
   const session = await mongoose.startSession();
 
   try {
+
+    await session.withTransaction(async () => { 
+
     const { invoiceNo, paymentAmount, paymentMethod,paymentRemark, userId, date } = req.body;
 
     // Validate required fields
     if (!invoiceNo || !paymentAmount || !paymentMethod || !userId) {
-      
-      session.endSession();
-      return res.status(400).json({ error: "All fields are required." });
+     throw new Error("All fields are required." );
     }
 
     // Parse payment date, default to now if invalid
@@ -983,24 +1032,19 @@ userRouter.post("/billing/update-payment", async (req, res) => {
     // Find the billing record
     const billing = await Billing.findOne({ invoiceNo: invoiceNo.trim() }).session(session);
     if (!billing) {
-      
-      session.endSession();
-      return res.status(404).json({ error: "Billing not found" });
+      throw new Error( "Billing not found");
     }
 
     // Find the user
     const user = await User.findById(userId).session(session);
     if (!user) {
       
-      session.endSession();
-      return res.status(404).json({ error: "User not found." });
+      throw new Error("User not found." );
     }
 
     const parsedPaymentAmount = parseFloat(paymentAmount);
     if (isNaN(parsedPaymentAmount) || parsedPaymentAmount <= 0) {
-      
-      session.endSession();
-      return res.status(400).json({ error: "Invalid payment amount." });
+      throw new Error( "Invalid payment amount.");
     }
 
     const referenceId = "PAY" + Date.now().toString();
@@ -1037,9 +1081,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
     // Update PaymentsAccount
     const account = await PaymentsAccount.findOne({ accountId: paymentMethod.trim() }).session(session);
     if (!account) {
-      
-      session.endSession();
-      return res.status(404).json({ message: 'Payment account not found' });
+      throw new Error('payment account not found');
     }
 
     account.paymentsIn.push(accountPaymentEntry);
@@ -1097,23 +1139,17 @@ userRouter.post("/billing/update-payment", async (req, res) => {
 
     await customerAccount.save({ session });
 
-    // Commit the transaction
-    session.endSession();
+  })
 
     res.status(200).json({
       message: "Payment updated successfully.",
-      paymentStatus: billing.paymentStatus,
+      paymentStatus: true,
     });
+
   } catch (error) {
-    console.error("Error updating payment:", error);
-
-    // Abort transaction on error
-    if (session.inTransaction()) {
-      
-    }
-    session.endSession();
-
     res.status(500).json({ error: error.message || "Failed to update payment." });
+  }finally{
+    await session.endSession();
   }
 });
 
@@ -1122,7 +1158,7 @@ userRouter.post("/billing/update-payment", async (req, res) => {
 
 
 // Update the route to fetch all locations for a given invoice number
-userRouter.get('/locations/invoice/:invoiceNo', async (req, res) => {
+userRouter.get('/locations/invoice/:invoiceNo', useAuth, async (req, res) => {
   try {
     const invoiceNo = req.params.invoiceNo;
 
@@ -1200,7 +1236,7 @@ userRouter.get('/alllogs/all', async (req, res) => {
   }
 });
 
-userRouter.post('/alllogs/all', async (req,res)=>{
+userRouter.post('/alllogs/all', useAdminAuth , async (req,res)=>{
   try{
       const allLogs = await Log.deleteMany()
       res.status(200).json(allLogs)

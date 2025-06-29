@@ -16,6 +16,7 @@ import Damage from '../models/damageModal.js';
 import StockOpening from '../models/stockOpeningModal.js';
 import StockRegistry from '../models/StockregistryModel.js';
 import NeedToPurchase from '../models/needToPurchase.js';
+import mongoose from 'mongoose';
 
 
 const productRouter = express.Router();
@@ -118,6 +119,18 @@ productRouter.get(
     res.send(categories);
   })
 );
+
+productRouter.get(
+  '/alltypes',
+  expressAsyncHandler(async (req, res) => {
+    const types = await Product.aggregate([
+      { $group:  { _id: '$type', lengths: { $addToSet: '$length' }, breadths: { $addToSet: '$breadth' }, actLengths: { $addToSet: '$actLength' } , actBreadths: { $addToSet: '$actBreadth' } , sizes: { $addToSet: '$size' }, psRatios: { $addToSet: '$psRatio' } } },
+      { $match: { lengths: { $nin: [null, '', undefined] }, breadths: { $nin: [null, '', undefined] } } }
+    ])
+    res.send(types);
+  })
+);
+
 
 productRouter.get(
   '/brands',
@@ -693,6 +706,7 @@ productRouter.post(
 productRouter.post(
   '/purchase',
   asyncHandler(async (req, res) => {
+    const session = await mongoose.startSession();
     try {
       const {
         sellerId,
@@ -706,22 +720,23 @@ productRouter.post(
         totals,
         transportationDetails,
         otherExpenses,
-        submittedBy
+        submittedBy,
+        roundOff
       } = req.body;
-
+      
       let { purchaseId } = req.body;
-
+      
       // 1. Check if Purchase with the same invoiceNo or purchaseId already exists
       let existingPurchase = await Purchase.findOne({
         $or: [{ invoiceNo }, { purchaseId }],
       });
-
+      
       // Generate new purchaseId if it already exists or not provided
       if (existingPurchase || !purchaseId) {
         const latestPurchase = await Purchase.findOne({ purchaseId: /^KP\d+$/ })
-          .sort({ purchaseId: -1 })
-          .collation({ locale: 'en', numericOrdering: true });
-
+        .sort({ purchaseId: -1 })
+        .collation({ locale: 'en', numericOrdering: true });
+        
         if (!latestPurchase) {
           purchaseId = 'KP1';
         } else {
@@ -730,6 +745,8 @@ productRouter.post(
         }
       }
 
+      await session.withTransaction(async () => {
+      
       // 2. Adjust product stock and update or create products
       for (const item of items) {
         const product = await Product.findOne({ item_id: item.itemId });
@@ -751,8 +768,9 @@ productRouter.post(
           product.pUnit = item.pUnit;
           product.hsnCode = item.hsnCode;
           product.gstPercent = item.gstPercent,
+          product.type = item.itemType
           Object.assign(product, item);
-          await product.save();
+          await product.save({ session });
 
               // --- 📌 Add StockRegistry Entry Here ---
     const stockEntry = new StockRegistry({
@@ -768,16 +786,17 @@ productRouter.post(
       finalStock: product.countInStock,
     });
 
-    await stockEntry.save();
+    await stockEntry.save({ session });
         } else {
           const newProduct = new Product({
             item_id: item.itemId,
             ...item,
+            type: item.itemType,
             countInStock: quantityInNumbers,
             price: parseFloat(item.totalPriceInNumbers),
             gstPercent: item.gstPercent,
           });
-          await newProduct.save();
+          await newProduct.save({ session });
 
 
           // --- 📌 Add StockRegistry Entry for New Product ---
@@ -794,7 +813,7 @@ productRouter.post(
       finalStock: newProduct.countInStock,
     });
 
-    await stockEntry.save();
+    await stockEntry.save({ session });
         }
       }
 
@@ -812,10 +831,11 @@ productRouter.post(
         totals,
         transportationDetails,
         otherExpenses,
-        submittedBy
+        submittedBy,
+        roundOff
       });
 
-      await purchase.save();
+      await purchase.save({session});
 
       // 4. Save transportation details and update TransportPayment
       if (transportationDetails) {
@@ -838,7 +858,7 @@ productRouter.post(
             remarks: logistic.remark,
           });
 
-          await logisticTransport.save();
+          await logisticTransport.save({session});
 
           // Create billing entry for TransportPayment
           const logisticBillingEntry = {
@@ -871,7 +891,7 @@ productRouter.post(
           );
           logisticTransportPayment.paymentRemaining =
             logisticTransportPayment.totalAmountBilled - logisticTransportPayment.totalAmountPaid;
-          await logisticTransportPayment.save();
+          await logisticTransportPayment.save({session});
         }
 
         // Local Transportation (similar logic)
@@ -894,7 +914,7 @@ productRouter.post(
             remarks: local.remark,
           });
 
-          await localTransport.save();
+          await localTransport.save({session});
 
           // Create billing entry for TransportPayment
           const localBillingEntry = {
@@ -927,7 +947,7 @@ productRouter.post(
           );
           localTransportPayment.paymentRemaining =
           localTransportPayment.totalAmountBilled - localTransportPayment.totalAmountPaid;
-          await localTransportPayment.save();
+          await localTransportPayment.save({session});
         }
       }
 
@@ -958,7 +978,7 @@ productRouter.post(
       );
       sellerPayment.paymentRemaining =
         sellerPayment.totalAmountBilled - sellerPayment.totalAmountPaid;
-      await sellerPayment.save();
+      await sellerPayment.save({session});
 
       // 6. Update or create SupplierAccount
       let supplierAccount = await SupplierAccount.findOne({ sellerId });
@@ -989,12 +1009,16 @@ productRouter.post(
       );
       supplierAccount.pendingAmount =
         supplierAccount.totalBillAmount - supplierAccount.paidAmount;
-      await supplierAccount.save();
+      await supplierAccount.save({session});
 
-      res.json(purchaseId);
+    })
+
+      res.status(200).json(purchaseId);
     } catch (error) {
-      console.error('Error creating purchase:', error);
+
       res.status(500).json({ message: 'Error creating purchase', error: error.message });
+    }finally{
+      await session.endSession()
     }
   })
 );
@@ -1004,6 +1028,7 @@ productRouter.post(
 productRouter.put(
   '/purchase/:purchaseId',
   asyncHandler(async (req, res) => {
+    const session = await mongoose.startSession();
     try {
       const { purchaseId } = req.params;
       const {
@@ -1018,12 +1043,15 @@ productRouter.put(
         totals,
         transportationDetails,
         otherExpenses,
-        submittedBy
+        submittedBy,
+        roundOff
       } = req.body;
+
+        await session.withTransaction(async () => {
 
       const existingPurchase = await Purchase.findOne({ purchaseId });
       if (!existingPurchase) {
-        return res.status(404).json({ message: 'Purchase not found' });
+        throw new Error('Purchase not found');
       }
 
       const oldSellerId = existingPurchase.sellerId;
@@ -1057,18 +1085,20 @@ productRouter.put(
           product.pUnit = item.pUnit;
           product.hsnCode = item.hsnCode;
           product.price = parseFloat(item.totalPriceInNumbers);
-          product.gstPercent = item.gstPercent,
+          product.gstPercent = item.gstPercent;
+          product.type = item.itemType;
           Object.assign(product, item);
-          await product.save();
+          await product.save({ session });
         } else {
           const newProduct = new Product({
             item_id: item.itemId,
             ...item,
+            type: item.itemType,
             countInStock: newQuantity,
             price: parseFloat(item.totalPriceInNumbers),
             gstPercent: item.gstPercent,
           });
-          await newProduct.save();
+          await newProduct.save({ session });
         }
 
 
@@ -1086,7 +1116,7 @@ productRouter.put(
             finalStock: product ? product.countInStock : newQuantity,
           });
 
-          await stockEntry.save();
+          await stockEntry.save({ session });
         }
       }
 
@@ -1101,6 +1131,7 @@ productRouter.put(
       existingPurchase.invoiceDate = invoiceDate || existingPurchase.invoiceDate;
       existingPurchase.totals = totals;
       existingPurchase.otherExpenses = otherExpenses;
+      existingPurchase.roundOff = roundOff;
       existingPurchase.submittedBy = submittedBy || existingPurchase.submittedBy;
 
 
@@ -1118,7 +1149,7 @@ productRouter.put(
           );
           oldSupplierAccount.pendingAmount =
             oldSupplierAccount.totalBillAmount - oldSupplierAccount.paidAmount;
-          await oldSupplierAccount.save();
+          await oldSupplierAccount.save({ session });
         }
 
         // Add bill to new supplier
@@ -1149,7 +1180,7 @@ productRouter.put(
         );
         newSupplierAccount.pendingAmount =
           newSupplierAccount.totalBillAmount - newSupplierAccount.paidAmount;
-        await newSupplierAccount.save();
+        await newSupplierAccount.save({ session });
       } else {
         // Update bill in the same supplier
         const supplierAccount = await SupplierAccount.findOne({ sellerId });
@@ -1181,7 +1212,7 @@ productRouter.put(
           );
           supplierAccount.pendingAmount =
             supplierAccount.totalBillAmount - supplierAccount.paidAmount;
-          await supplierAccount.save();
+          await supplierAccount.save({ session });
         }
       }
 
@@ -1199,7 +1230,7 @@ productRouter.put(
           );
           oldSellerPayment.paymentRemaining =
             oldSellerPayment.totalAmountBilled - oldSellerPayment.totalAmountPaid;
-          await oldSellerPayment.save();
+          await oldSellerPayment.save({ session });
         }
 
         // Add billing to new seller
@@ -1228,7 +1259,7 @@ productRouter.put(
           );
         newSellerPayment.paymentRemaining =
           newSellerPayment.totalAmountBilled - newSellerPayment.totalAmountPaid;
-        await newSellerPayment.save();
+        await newSellerPayment.save({ session });
       } else {
         // Update billing in the same seller
         const sellerPayment = await SellerPayment.findOne({ sellerId });
@@ -1260,7 +1291,7 @@ productRouter.put(
           );
           sellerPayment.paymentRemaining =
             sellerPayment.totalAmountBilled - sellerPayment.totalAmountPaid;
-          await sellerPayment.save();
+          await sellerPayment.save({ session });
         } else {
           // Create new SellerPayment
           const newSellerPayment = new SellerPayment({
@@ -1283,7 +1314,7 @@ productRouter.put(
           );
           newSellerPayment.paymentRemaining =
             newSellerPayment.totalAmountBilled - newSellerPayment.totalAmountPaid;
-          await newSellerPayment.save();
+          await newSellerPayment.save({ session });
         }
       }
 
@@ -1311,14 +1342,14 @@ productRouter.put(
             );
             transportPayment.paymentRemaining =
               transportPayment.totalAmountBilled - transportPayment.totalAmountPaid;
-            await transportPayment.save();
+            await transportPayment.save({ session });
           }
 
           // Remove from Transportation
           await Transportation.deleteOne({
             purchaseId,
             transportType: 'logistic',
-          });
+          },{ session });
         }
 
         if (oldLocal) {
@@ -1339,14 +1370,14 @@ productRouter.put(
             );
             transportPayment.paymentRemaining =
               transportPayment.totalAmountBilled - transportPayment.totalAmountPaid;
-            await transportPayment.save();
+            await transportPayment.save({ session });
           }
 
                     // Remove from Transportation
                     await Transportation.deleteOne({
                       purchaseId,
                       transportType: 'local',
-                    });
+                    },{ session });
         }
       }
 
@@ -1370,7 +1401,7 @@ productRouter.put(
             remarks: logistic.remark,
           });
 
-          await logisticTransport.save();
+          await logisticTransport.save({ session });
 
           const logisticBillingEntry = {
             amount: parseFloat(logistic.transportationCharges),
@@ -1402,7 +1433,7 @@ productRouter.put(
           );
           logisticTransportPayment.paymentRemaining =
             logisticTransportPayment.totalAmountBilled - logisticTransportPayment.totalAmountPaid;
-          await logisticTransportPayment.save();
+          await logisticTransportPayment.save({ session });
         }
 
         if (
@@ -1421,7 +1452,7 @@ productRouter.put(
             remarks: local.remark,
           });
 
-          await localTransport.save();
+          await localTransport.save({ session });
 
           const localBillingEntry = {
             amount: parseFloat(local.transportationCharges),
@@ -1453,7 +1484,7 @@ productRouter.put(
           );
           localTransportPayment.paymentRemaining =
           localTransportPayment.totalAmountBilled - localTransportPayment.totalAmountPaid;
-          await localTransportPayment.save();
+          await localTransportPayment.save({ session });
         }
 
         // Similar code for local transportation
@@ -1462,12 +1493,15 @@ productRouter.put(
       existingPurchase.transportationDetails =
       transportationDetails || existingPurchase.transportationDetails;
 
-    await existingPurchase.save();
+    await existingPurchase.save({ session });
+        })
 
-      res.json({ message: 'Purchase updated successfully' });
+      res.status(200).json({ message: 'Purchase updated successfully' });
     } catch (error) {
-      console.error('Error updating purchase:', error);
+
       res.status(500).json({ message: 'Error updating purchase', error: error.message });
+    } finally{
+      await session.endSession()
     }
   })
 );
@@ -1477,11 +1511,16 @@ productRouter.put(
 productRouter.delete(
   '/purchases/delete/:id',
   asyncHandler(async (req, res) => {
+    const session = await mongoose.startSession();
+
     try {
+
+      await session.withTransaction(async () => {
+
       const purchase = await Purchase.findById(req.params.id);
 
       if (!purchase) {
-        return res.status(404).json({ message: 'Purchase not found' });
+        throw new Error('Purchase not found');
       }
 
       // Adjust product stock
@@ -1506,13 +1545,13 @@ productRouter.delete(
             category: product.category,
             changeType: 'Purchase Deletion',
             invoiceNo: purchase.invoiceNo,
-            quantityChange: -deductedQuantity, // Reverse the stock addition
+            quantityChange: -parseFloat(item.quantityInNumbers), // Reverse the stock addition
             finalStock: product.countInStock,
           });
 
-          await stockEntry.save();
+          await stockEntry.save({session });
 
-          await product.save();
+          await product.save({ session });
         }
       }
 
@@ -1532,7 +1571,7 @@ productRouter.delete(
         );
         supplierAccount.pendingAmount =
           supplierAccount.totalBillAmount - supplierAccount.paidAmount;
-        await supplierAccount.save();
+        await supplierAccount.save({ session });
       }
 
       // Remove billing from SellerPayment
@@ -1547,7 +1586,7 @@ productRouter.delete(
         );
         sellerPayment.paymentRemaining =
           sellerPayment.totalAmountBilled - sellerPayment.totalAmountPaid;
-        await sellerPayment.save();
+        await sellerPayment.save({ session });
       }
 
       // Handle transportation payments if transportation details exist
@@ -1571,14 +1610,14 @@ productRouter.delete(
             );
             transportPayment.paymentRemaining =
               transportPayment.totalAmountBilled - transportPayment.totalAmountPaid;
-            await transportPayment.save();
+            await transportPayment.save({ session });
           }
 
           // Remove Transportation document
           await Transportation.deleteOne({
             purchaseId,
             transportType: 'logistic',
-          });
+          },{ session });
         }
 
         // Remove local transportation billing if exists
@@ -1600,24 +1639,28 @@ productRouter.delete(
             );
             transportPayment.paymentRemaining =
               transportPayment.totalAmountBilled - transportPayment.totalAmountPaid;
-            await transportPayment.save();
+            await transportPayment.save({ session });
           }
 
           // Remove Transportation document
           await Transportation.deleteOne({
             purchaseId,
             transportType: 'local',
-          });
+          },{ session });
         }
       }
 
+      
       // Delete the purchase
-      await Purchase.deleteOne({ _id: req.params.id });
+      await Purchase.deleteOne({ _id: req.params.id },{ session });
+    })
 
       res.json({ message: 'Purchase deleted successfully' });
     } catch (error) {
       console.error('Error deleting purchase:', error);
       res.status(500).json({ message: 'Error deleting purchase', error: error.message });
+    }finally{
+      await session.endSession();
     }
   })
 );
@@ -1777,6 +1820,10 @@ productRouter.get(
     if (req.query.itemName) {
       filter.name = { $regex: req.query.itemName, $options: 'i' };
     }
+    if (req.query.itemId) {
+      filter.itemId = { $regex: req.query.itemId, $options: 'i' };
+    }
+
     if (req.query.brand) {
       filter.brand = { $regex: req.query.brand, $options: 'i' };
     }
@@ -1787,7 +1834,11 @@ productRouter.get(
       filter.invoiceNo = { $regex: req.query.invoiceNo, $options: 'i' };
     }
     if (req.query.changeType) {
-      filter.changeType = req.query.changeType;
+      filter.changeType = {$regex: req.query.changeType , $options: 'i'  };
+    }
+
+    if(req.query.updatedBy) {
+      filter.updatedBy = { $regex: req.query.updatedBy , $options: 'i' }
     }
 
     /* ───── sorting ─────────────────────────────────────────────── */

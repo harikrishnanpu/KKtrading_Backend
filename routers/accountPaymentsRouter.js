@@ -1,9 +1,10 @@
 import express from 'express';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
+import { useAdminAuth } from '../middleware.js';
 const accountRouter = express.Router();
 
 
-accountRouter.post('/create', async (req, res) => {
+accountRouter.post('/create', useAdminAuth, async (req, res) => {
     try {
       const { accountName, balance} = req.body;
       const referenceId =  'BILL' + Date.now().toString();
@@ -34,7 +35,7 @@ accountRouter.post('/create', async (req, res) => {
   });
 
 
-  accountRouter.delete('/acc/:id/delete', async (req, res) => {
+  accountRouter.delete('/acc/:id/delete', useAdminAuth, async (req, res) => {
     try {
       const account = await PaymentsAccount.findByIdAndDelete(req.params.id);
       if (!account) {

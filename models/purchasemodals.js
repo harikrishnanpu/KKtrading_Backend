@@ -15,6 +15,7 @@ const itemSchema = new mongoose.Schema(
     breadth: { type: Number },
     actLength: {type: Number},
     actBreadth: {type: Number},
+    itemType: {type: String},
     size: { type: String },
     pUnit: { type: String },
     cashPartPrice: { type: Number, required: true },
@@ -64,6 +65,7 @@ const purchaseSchema = new mongoose.Schema(
     billingDate: { type: Date, required: true },
     invoiceDate: { type: Date, required: true },
     totals: totalsSchema,
+    roundOff: { type: String, default: '0' },
     transportationDetails: { type: Object }, // Include transportationDetails
     otherExpenses: [
       {

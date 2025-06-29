@@ -139,6 +139,8 @@ stockUpdateRouter.get(
       name,
       brand,
       category,
+      itemId,
+      remark,
       sortField = 'date',
       sortDirection = 'desc',
       page = 1,
@@ -161,6 +163,8 @@ stockUpdateRouter.get(
     if (name)      query.name     = { $regex: name,     $options: 'i' };
     if (brand)     query.brand    = { $regex: brand,    $options: 'i' };
     if (category)  query.category = { $regex: category, $options: 'i' };
+    if(itemId) query.item_id = {$regex: itemId, $options: 'i'  }
+    if(remark) query.remark = { $regex: remark, $options: 'i' }
 
     /* ───── sort ────────────────────────────────────────────── */
     const sort = { [sortField]: sortDirection === 'asc' ? 1 : -1 };
