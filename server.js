@@ -38,23 +38,38 @@ mongoose
 const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+const isTrusted =
+  req.hostname === 'localhost' ||
+  req.hostname === '127.0.0.1' ||
+  req.hostname === '192.168.1.50'
+
 /* ---------- security headers (Helmet) ---------- */
+
+if(isTrusted){
+    app.use(helmet({
+    crossOriginEmbedderPolicy: false,
+    crossOriginOpenerPolicy: { policy: 'same-origin' },
+    originAgentCluster: true,
+    // your CSP here
+  }));
+}else {
 app.use(
   helmet({
-    crossOriginEmbedderPolicy: false,
+    crossOriginEmbedderPolicy: false, // REMOVE or conditionally apply
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com'],
-        styleSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com', "'unsafe-inline'"],
-        imgSrc: ["'self'", 'data:', 'blob:'],
+        scriptSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'unpkg.com'],
+        styleSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'unpkg.com', "'unsafe-inline'"],
+        imgSrc: ["'self'", 'data:', 'blob:', FRONTEND_URL],
         connectSrc: ["'self'", FRONTEND_URL, 'wss://office.vrkkt.com'],
         objectSrc: ["'none'"],
         upgradeInsecureRequests: [],
-      },
-    },
+      }
+    }
   })
 );
+}
 
 /* ---------- CORS ---------- */
 
