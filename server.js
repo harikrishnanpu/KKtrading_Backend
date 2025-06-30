@@ -97,7 +97,7 @@ app.use(hpp());           // prevent HTTP param pollution
 /* ---------- rate limiter ---------- */
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 min
-  max: 100,
+  max: 500,
   standardHeaders: true,
   legacyHeaders: false,
 });
