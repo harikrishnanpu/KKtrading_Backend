@@ -3,14 +3,9 @@ import QRCode from 'qrcode';
 import QrCodeDB from '../models/qrcodeVerificstionModal.js';
 import { chromium } from 'playwright';
 import Return from '../models/returnModal.js';
-import { DailyTransaction } from '../models/dailyTransactionsModal.js';
-import puppeteer from 'puppeteer';
 import Billing from '../models/billingModal.js';
-import CustomerAccount from '../models/customerModal.js';
-import SupplierAccount from '../models/supplierAccountModal.js';
-import TransportPayment from '../models/transportPayments.js';
 import PaymentsAccount from '../models/paymentsAccountModal.js';
-import xlsx from 'xlsx'; // Use 'xlsx' import for ES modules
+import ExcelJS from 'exceljs';
 
 import mongoose from 'mongoose';
 
@@ -2552,7 +2547,7 @@ const flattenDocuments = (docs) => {
 printRouter.get('/export', async (req, res) => {
   try {
     const collections = await mongoose.connection.db.listCollections().toArray();
-    const workbook = xlsx.utils.book_new();
+    const workbook = new ExcelJS.Workbook();
 
     for (const collection of collections) {
       const collectionName = collection.name;
@@ -2563,17 +2558,28 @@ printRouter.get('/export', async (req, res) => {
         .toArray();
 
       // Convert ObjectIds and Dates to strings for readability
-      const sanitizedData = rawData.map(doc => {
-        return JSON.parse(JSON.stringify(doc));
-      });
-
+      const sanitizedData = rawData.map(doc => JSON.parse(JSON.stringify(doc)));
       const flattened = flattenDocuments(sanitizedData);
 
-      const worksheet = xlsx.utils.json_to_sheet(flattened);
-      xlsx.utils.book_append_sheet(workbook, worksheet, collectionName);
+      const worksheet = workbook.addWorksheet(collectionName);
+
+      if (flattened.length > 0) {
+        const columns = Object.keys(flattened[0]).map(key => ({
+          header: key,
+          key: key
+        }));
+
+        worksheet.columns = columns;
+
+        flattened.forEach(row => {
+          worksheet.addRow(row);
+        });
+      } else {
+        worksheet.addRow(['No data found in this collection']);
+      }
     }
 
-    const buffer = xlsx.write(workbook, { bookType: 'xlsx', type: 'buffer' });
+    const buffer = await workbook.xlsx.writeBuffer();
 
     res.setHeader('Content-Disposition', 'attachment; filename=all_data.xlsx');
     res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
