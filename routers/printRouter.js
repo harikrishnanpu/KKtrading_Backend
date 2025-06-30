@@ -2505,87 +2505,101 @@ printRouter.post('/generate-leave-application-pdf', async (req, res) => {
   res.send(htmlContent);
 });
 
+const toIST = (d) => new Date(d.getTime() + 5.5 * 60 * 60 * 1000);
 
+// Recursively convert ObjectId → string, Date → IST Date
+function cleanse(doc) {
+  if (doc instanceof mongoose.Types.ObjectId) return doc.toString();
+  if (doc instanceof Date) return toIST(doc);
 
-const flattenDocuments = (docs) => {
+  if (Array.isArray(doc))
+    return doc.map((item) => cleanse(item));
+
+  if (doc && typeof doc === 'object') {
+    const out = {};
+    for (const k in doc) out[k] = cleanse(doc[k]);
+    return out;
+  }
+  return doc;
+}
+
+// Flatten first array field (same logic you used) + keep others flat
+function flattenDocs(docs) {
   const flat = [];
+  docs.forEach(({ _id, ...rest }) => {
+    let pushed = false;
 
-  for (const doc of docs) {
-    const { _id, ...rest } = doc;
-
-    let hasArray = false;
-
-    for (const key in rest) {
-      if (Array.isArray(rest[key])) {
-        hasArray = true;
-        const arrayField = rest[key];
-
-        for (const item of arrayField) {
-          flat.push({
-            _id: _id.toString(),
-            ...rest,
-            ...item,
-            __arrayField: key // optional: to keep track of source array
-          });
-        }
-
-        break; // flatten only the first array field
+    for (const k in rest) {
+      if (Array.isArray(rest[k]) && rest[k].length) {
+        rest[k].forEach((item) =>
+          flat.push({ _id, ...rest, ...item, __arrayField: k })
+        );
+        pushed = true;
+        break; // only first array field
       }
     }
-
-    if (!hasArray) {
-      flat.push({
-        _id: _id.toString(),
-        ...rest
-      });
-    }
-  }
-
+    if (!pushed) flat.push({ _id, ...rest });
+  });
   return flat;
-};
+}
+
+/* ─────────────────── route ─────────────────── */
 
 printRouter.get('/export', async (req, res) => {
   try {
-    const collections = await mongoose.connection.db.listCollections().toArray();
-    const workbook = new ExcelJS.Workbook();
+    const collections = await mongoose.connection.db
+      .listCollections()
+      .toArray();
 
-    for (const collection of collections) {
-      const collectionName = collection.name;
+    const wb = new ExcelJS.Workbook();
 
-      const rawData = await mongoose.connection.db
-        .collection(collectionName)
+    for (const col of collections) {
+      const name = col.name;
+      const raw = await mongoose.connection.db
+        .collection(name)
         .find({})
         .toArray();
 
-      // Convert ObjectIds and Dates to strings for readability
-      const sanitizedData = rawData.map(doc => JSON.parse(JSON.stringify(doc)));
-      const flattened = flattenDocuments(sanitizedData);
+      const cleansed = raw.map(cleanse);      // ObjectId → string, Date → IST
+      const flattened = flattenDocs(cleansed);
 
-      const worksheet = workbook.addWorksheet(collectionName);
+      const ws = wb.addWorksheet(name || 'Sheet');
 
-      if (flattened.length > 0) {
-        const columns = Object.keys(flattened[0]).map(key => ({
-          header: key,
-          key: key
-        }));
-
-        worksheet.columns = columns;
-
-        flattened.forEach(row => {
-          worksheet.addRow(row);
-        });
-      } else {
-        worksheet.addRow(['No data found in this collection']);
+      if (!flattened.length) {
+        ws.addRow(['No data found in this collection']);
+        continue;
       }
+
+      // Define columns
+      ws.columns = Object.keys(flattened[0]).map((key) => ({
+        header: key,
+        key,
+        width: 20,
+      }));
+
+      // Excel date formatting
+      ws.columns.forEach((col) => {
+        const hasDate = flattened.some(
+          (row) => row[col.key] instanceof Date
+        );
+        if (hasDate) col.style = { numFmt: 'dd-mm-yyyy hh:mm:ss' };
+      });
+
+      // Add rows
+      flattened.forEach((row) => ws.addRow(row));
     }
 
-    const buffer = await workbook.xlsx.writeBuffer();
-
-    res.setHeader('Content-Disposition', 'attachment; filename=all_data.xlsx');
-    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    res.send(buffer);
-  } catch (error) {
-    console.error('Error exporting data:', error);
+    const buffer = await wb.xlsx.writeBuffer();
+    res
+      .status(200)
+      .set({
+        'Content-Type':
+          'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'Content-Disposition': 'attachment; filename=all_data.xlsx',
+      })
+      .send(buffer);
+  } catch (err) {
+    console.error('Export error:', err);
     res.status(500).send('Internal Server Error');
   }
 });
