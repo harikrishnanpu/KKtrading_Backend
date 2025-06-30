@@ -42,37 +42,34 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const trustedHosts = [
   'localhost',
   '127.0.0.1',
-  '192.168.1.50' // ✅ LAN IP marked as trusted
-];
+  '192.168.1.50'
+]
 
 /* ---------- security headers (Helmet) ---------- */
 app.use((req, res, next) => {
-  
   const hostname = req.hostname || req.headers.host?.split(':')[0];
   const isTrusted = trustedHosts.includes(hostname);
 
-  if (isTrusted) {
-    // Default Helmet: less restrictive, works locally
-    helmet()(req, res, next);
-  } else {
-
-  helmet({
-    crossOriginEmbedderPolicy: false, // REMOVE or conditionally apply
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'unpkg.com'],
-        styleSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'unpkg.com', "'unsafe-inline'"],
-        imgSrc: ["'self'", 'data:', 'blob:', FRONTEND_URL],
-        connectSrc: ["'self'", FRONTEND_URL, 'wss://office.vrkkt.com'],
-        objectSrc: ["'none'"],
-        upgradeInsecureRequests: [],
+  if (!isTrusted) {
+    return helmet({
+      crossOriginEmbedderPolicy: false,
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: ["'self'"],
+          scriptSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'unpkg.com'],
+          styleSrc: ["'self'", FRONTEND_URL, 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'unpkg.com', "'unsafe-inline'"],
+          imgSrc: ["'self'", 'data:', 'blob:', FRONTEND_URL],
+          connectSrc: ["'self'", FRONTEND_URL, 'wss://office.vrkkt.com'],
+          objectSrc: ["'none'"],
+          upgradeInsecureRequests: [],
+        }
       }
-    }
-  })(req, res, next);
-}
+    })(req, res, next); // Proper chaining
+  }
 
-})
+  return next(); // Only if trusted
+});
+
 
 /* ---------- CORS ---------- */
 
