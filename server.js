@@ -38,22 +38,25 @@ mongoose
 const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const isTrusted =
-  req.hostname === 'localhost' ||
-  req.hostname === '127.0.0.1' ||
-  req.hostname === '192.168.1.50'
+
 
 /* ---------- security headers (Helmet) ---------- */
+app.use((req, res, next) => {
+    const isTrusted =
+    req.hostname === 'localhost' ||
+    req.hostname === '127.0.0.1' ||
+    req.hostname === '192.168.1.50'
+
 
 if(isTrusted){
-    app.use(helmet({
+
+helmet({
     crossOriginEmbedderPolicy: false,
     crossOriginOpenerPolicy: { policy: 'same-origin' },
     originAgentCluster: true,
-    // your CSP here
-  }));
+  })(req, res, next);
 }else {
-app.use(
+
   helmet({
     crossOriginEmbedderPolicy: false, // REMOVE or conditionally apply
     contentSecurityPolicy: {
@@ -67,9 +70,10 @@ app.use(
         upgradeInsecureRequests: [],
       }
     }
-  })
-);
+  })(req, res, next);
 }
+
+})
 
 /* ---------- CORS ---------- */
 
