@@ -51,9 +51,50 @@ app.use((req, res, next) => {
 if(isTrusted){
 
 helmet({
-    crossOriginEmbedderPolicy: false,
-    crossOriginOpenerPolicy: { policy: 'same-origin' },
-    originAgentCluster: true,
+ crossOriginEmbedderPolicy: false, // disable since not HTTPS
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: [
+          "'self'",
+          'cdnjs.cloudflare.com',
+          'cdn.jsdelivr.net',
+          'unpkg.com',
+          "'unsafe-inline'" // allow inline scripts (like Flowbite needs)
+        ],
+        styleSrc: [
+          "'self'",
+          'cdnjs.cloudflare.com',
+          'cdn.jsdelivr.net',
+          'unpkg.com',
+          "'unsafe-inline'" // required for Tailwind/Flowbite
+        ],
+        fontSrc: [
+          "'self'",
+          'fonts.googleapis.com',
+          'fonts.gstatic.com',
+          'cdn.jsdelivr.net',
+          'unpkg.com'
+        ],
+        imgSrc: [
+          "'self'",
+          'data:',
+          'blob:',
+          'cdn.jsdelivr.net',
+          'unpkg.com'
+        ],
+        connectSrc: [
+          "'self'",
+          'ws:',
+          'wss:',
+          'cdn.jsdelivr.net',
+          'unpkg.com'
+        ],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: [] // disabled to allow http://
+      }
+    }
   })(req, res, next);
 }else {
 
