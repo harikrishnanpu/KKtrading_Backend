@@ -39,64 +39,22 @@ const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 
+const trustedHosts = [
+  'localhost',
+  '127.0.0.1',
+  '192.168.1.50' // ✅ LAN IP marked as trusted
+];
 
 /* ---------- security headers (Helmet) ---------- */
 app.use((req, res, next) => {
-    const isTrusted =
-    req.hostname === 'localhost' ||
-    req.hostname === '127.0.0.1' ||
-    req.hostname === '192.168.1.50'
+  
+  const hostname = req.hostname || req.headers.host?.split(':')[0];
+  const isTrusted = trustedHosts.includes(hostname);
 
-
-if(isTrusted){
-
-helmet({
- crossOriginEmbedderPolicy: false, // disable since not HTTPS
-    contentSecurityPolicy: {
-      useDefaults: true,
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: [
-          "'self'",
-          'cdnjs.cloudflare.com',
-          'cdn.jsdelivr.net',
-          'unpkg.com',
-          "'unsafe-inline'" // allow inline scripts (like Flowbite needs)
-        ],
-        styleSrc: [
-          "'self'",
-          'cdnjs.cloudflare.com',
-          'cdn.jsdelivr.net',
-          'unpkg.com',
-          "'unsafe-inline'" // required for Tailwind/Flowbite
-        ],
-        fontSrc: [
-          "'self'",
-          'fonts.googleapis.com',
-          'fonts.gstatic.com',
-          'cdn.jsdelivr.net',
-          'unpkg.com'
-        ],
-        imgSrc: [
-          "'self'",
-          'data:',
-          'blob:',
-          'cdn.jsdelivr.net',
-          'unpkg.com'
-        ],
-        connectSrc: [
-          "'self'",
-          'ws:',
-          'wss:',
-          'cdn.jsdelivr.net',
-          'unpkg.com'
-        ],
-        objectSrc: ["'none'"],
-        upgradeInsecureRequests: [] // disabled to allow http://
-      }
-    }
-  })(req, res, next);
-}else {
+  if (isTrusted) {
+    // Default Helmet: less restrictive, works locally
+    helmet()(req, res, next);
+  } else {
 
   helmet({
     crossOriginEmbedderPolicy: false, // REMOVE or conditionally apply
