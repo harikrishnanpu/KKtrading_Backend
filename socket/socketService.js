@@ -21,7 +21,6 @@ export async function registerUser(userId, socketId) {
 
 
 export async function removeUserBySocket(socketId) {
-  // console.log("errror in socket pending");
   let user = await Users.findOne({ socketId })
   if(user){
     user.online_status = 'offline';
@@ -49,17 +48,16 @@ export async function emitFirstNotificationEvent(userId,socketId) {
 
     io.to(socketId).emit("get-notification", { notifications, count: totalCount });
   } catch (err) {
-    console.error("Error emitting notification:", err);
+    console.log("Error emitting notification:", err);
   }
 }
 
 export async function emitNotificationEvent(userIds) {
   if (!io) {
-    console.error("Socket.io not initialized.");
+    console.log("Socket.io not initialized.");
     return;
   }
 
-  // Ensure we handle both a single ID or an array
   const targets = Array.isArray(userIds) ? userIds : [userIds];
 
   for (const userId of targets) {
@@ -67,7 +65,6 @@ export async function emitNotificationEvent(userIds) {
     try {
  
       let user = await Users.findById(userId);
-      // fetch latest 5 unread + total count
       const [ notifications, totalCount ] = await Promise.all([
         Notification.find({ read: false, assignTo: userId })
                     .sort({ createdAt: -1 }).limit(5),
